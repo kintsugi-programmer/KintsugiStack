@@ -51,7 +51,7 @@ Certainly! NPM (Node Package Manager) is a package manager for JavaScript and th
     ```
     npm update
     ```
-
+ 
     Or to update a specific package:
 
     ```
