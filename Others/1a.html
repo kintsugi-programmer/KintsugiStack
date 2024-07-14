@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Accessing Elements -->
+    <h2 id="myId">Accessing Elements</h2>
+    <div class="myClass">Element by Class</div>
+    <div>Element by Tag</div>
+    <div class="myClass">First Element by Selector</div>
+
+    <!-- Modifying Content -->
+    <h2>Modifying Content</h2>
+    <div id="contentElement">Original Content</div>
+
+    <!-- Changing Styles -->
+    <h2>Changing Styles</h2>
+    <div id="styleElement">Style Example</div>
+
+    <!-- Creating and Deleting Elements -->
+    <h2>Creating and Deleting Elements</h2>
+    <div id="parentElement">Parent Element</div>
+
+    <!-- Event Handling -->
+    <h2>Event Handling</h2>
+    <button id="clickButton">Click me</button>
+
+    <!-- Traversing the DOM -->
+    <h2>Traversing the DOM</h2>
+    <div id="traverseParent">
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
+    </div>
+
+    <!-- Debugging -->
+    <h2>Debugging</h2>
+
+ <!-- Html dont have multine comment ;( -->
+ <!-- Using JS in Html ;)  -->
+    <script>
+        /*
+        Html dont have multine comment ;(
+
+        xdg-open index.html //gnome
+        kde-open index.html //kde
+        firefox index.html  # Replace "firefox" with the name of your preferred browser
+
+
+
+        */
+        /**  DOM
+         * DOM (Document Object Model) manipulation is a fundamental concept in web development 
+         * using JavaScript. It allows you to interact with the HTML and XML documents in a web page,
+         *  dynamically updating content, structure, and style. Here's an in-depth explanation for beginners
+
+        - The DOM is a hierarchical tree-like structure representing the structure of a document.
+        - HTML elements are nodes in this tree, and each node can have child nodes.
+        - The topmost node is the document node, representing the entire document.
+
+         * 
+         * 
+         */
+
+
+
+
+
+        // Accessing Elements
+        const myElement = document.getElementById('myId');
+        const elementsByClass = document.getElementsByClassName('myClass');
+        const elementsByTag = document.getElementsByTagName('div');
+        const firstElement = document.querySelector('.myClass');
+        const allElements = document.querySelectorAll('.myClass');
+
+        // Modifying Content
+        const contentElement = document.getElementById('contentElement');
+        contentElement.innerHTML = '<p>New content</p>';
+
+        // Changing Styles
+        const styleElement = document.getElementById('styleElement');
+        styleElement.style.color = 'blue'; // change colour to blue
+        styleElement.classList.add('highlight'); // to bold i guess
+
+        // Creating and Deleting Elements
+        const parentElement = document.getElementById('parentElement');
+        const newElement = document.createElement('p');
+        newElement.innerText = 'New Element';
+        parentElement.appendChild(newElement);
+
+        // Event Handling
+        const clickButton = document.getElementById('clickButton');
+        clickButton.addEventListener('click', function () {
+            clickButton.innerText = 'Button Clicked!';
+        });
+
+        // here if we use console ,so it will run at browser's console : go to inspect Ctrl+Shift+I
+
+        // Traversing the DOM
+        const traverseParent = document.getElementById('traverseParent');
+        console.log(traverseParent);
+        const firstChild = traverseParent.firstChild;
+        console.log(firstChild);
+        const lastChild = traverseParent.lastChild;
+        console.log(lastChild);
+        const secondChild = firstChild.nextSibling;
+        console.log(secondChild);
+        const previousChild = lastChild.previousSibling;
+        console.log(previousChild); 
+
+        // Debugging
+        console.log('Debugging information');
+        
+    </script>
+</body>
+</html>
+ 
