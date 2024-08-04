@@ -80,6 +80,28 @@
         #text35{font-family: 'Dancing Script', cursive;}
 
 
+        /* L4 */
+        /* padding top bottom etc eg */
+        *{margin: 1%;  }
+        #text36{padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;}
+        /* padding shorthand */
+        /* #text36{padding: 5px 5px 5px 5px;} */
+        /* margin shorthand */
+        #text37{margin: 5px 5px 5px 5px;}
+        /* border dashed rounded */
+        #ID9{border: 5px solid rgb(255, 0, 0) ; border-radius: 50px; border-style: dashed;}
+
+        /* L5 */
+        /* display properties */
+        .bBox{background-color: rgb(0, 255, 0);width: 100px;display: block;}
+        .iBox{background-color: rgb(255, 0, 0);width: 100px;display: inline;}
+
+
+
+
+
+
+
     </style>
     <link rel="stylesheet" href="style.css">
 
@@ -214,6 +236,83 @@
     <div id="text35">Text35 Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolorem fuga et accusamus a, necessitatibus optio ab odit quam illum, consequatur asperiores! Labore corrupti expedita magnam ducimus, provident perspiciatis quidem.</div>
     <hr>
     <h1>L4</h1>
+    <hr>
+    Padding<br>
+    <div id="text36">Text36</div>
+    <div id="text37">Text37</div>
+    <hr>
+    <button id="ID9">Border</button>
+
+    <h1>L5</h1>
+    <hr>
+    Dislay Properties 
+    Block Elements : div , p , h1 , h2 , h3 , h4 , h5 , h6 , ol , ul , li , table , form
+    Inline Elements : span , a , img , input , button , select , textarea ,strong ,em 
+    <div id="block">
+        <div id="divbox1" class="bBox">box1</div>
+        <div id="divbox2" class="bBox">box2</div>
+        <div id="divbox3" class="bBox">box3</div>
+    </div>
+    <div id="inline">
+        <div id="divbox1" class="iBox">box1</div>
+        <div id="divbox2" class="iBox">box2</div>
+        <div id="divbox3" class="iBox">box3</div>
+    </div>
+    <hr>
+    Responsive Websites : Responsive Design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes.
+    <hr>
+    Relative Units css cheatsheet : 
+    <ol>
+        <li>em : Relative to the font-size of the element (2em means 2 times the size of the current font)</li>
+        <li>rem : Relative to font-size of the root element</li>
+        <li>vw : Relative to 1% of the width of the viewport</li>
+        <li>vh : Relative to 1% of the height of the viewport</li>
+        <li>% : Relative to the parent element</li>
+        <li>px : Relative to the screen pixel</li>
+    </ol>
+
+
+    <hr>
+    Position property
+    <ol>
+        <li>static : Default value , element is positioned according to the normal flow of the document</li>
+        <li>relative : Element is positioned relative to its normal position</li>
+        <li>absolute : Element is positioned relative to its first positioned (not static) ancestor element</li>
+        <li>fixed : Element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled</li>
+        <li>sticky : Element is positioned based on the user's scroll position</li>
+    </ol>
+
+    <hr>
+    Semantic Tags
+    <br>
+
+    <ol>
+        <li>header : Defines a header for a document or a section
+            <ol>
+                <li>nav : Defines navigation links</li>
+            </ol>
+        </li>
+        <li>main : Specifies the main content of a document
+            <ol>
+                <li>section : Defines a section in a document
+                    <ol>
+                        <li>article : Defines an article</li>
+                    </ol>
+                </li>
+                <li>aside : Defines content aside from the content (like a sidebar)</li>
+            </ol>
+        </li>
+        <li>footer : Defines a footer for a document or a section</li>
+    </ol>
+    Semenatic tag vs Non Semenatic tag
+    <br>
+    Semenatic : Clearly describes its meaning to both the browser and the developer ,enhances SEO and SCREEN READERs
+    <br>
+    Non Semenatic : Does not clearly describes its content to the browser and the developer
+
+
+
+
 
 
     
