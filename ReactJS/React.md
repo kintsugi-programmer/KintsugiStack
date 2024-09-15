@@ -202,7 +202,8 @@ export default App;
 ## React's Strict Mode in development mode
 - React 18 introduced a new feature called Strict Mode, which is enabled by default in development mode
 The reason the useEffect alert is popping up twice on page reload is likely due to React's Strict Mode in development mode. In React 18, the Strict Mode intentionally renders components twice during development (not in production) to help identify potential side effects and other issues. This causes the useEffect to run twice when the component mounts.
-
+![alt text](image-1.png)
+![alt text](image-2.png)
 ## JSX
 - js xml
 - html +js = JSX
@@ -691,3 +692,9 @@ const App = () => {
 export default App;
 
 ```
+
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
