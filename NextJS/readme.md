@@ -1,50 +1,55 @@
-crud app next
-node js shift to next
-react said the same that dont use base react
-simple
-optimise
+# NextJS
 
-render option is client side render or serverside(render at server before client see,easy seo and indexing ).react only does client side
-server is default
-
-"use client" for clint side and react hooks 
-
-see docs server vs clint comp
-use server default and at error use client
-
-rafce
-
-Page routing use for posts
-
-
-
-file base routing sys,no reat dom rout pack
-api routes serverless 
-
-react +express is 20k lines of extra code .by vercel founder
-10x fast
-
-automatic code split whn needed,automatic
-
-automating many background process and make us focues ion bussioness logic react code
-and its react 
-
-dynamic route : []
-
-
-ssr frest cylcle cache no store
-ssg cache blogs doc
-isr revalidate mix
-
-fullstack ready
-serverless stuff
-express server => no need
- 
-
- middleware parsig auyh server func deploy } next covber it all
-
-dont make route.js in sny inside foldrt
-instead make it in api folder
-
-you can amke a stativ maeta data nad a dynamic meta data
-
+## Introductuion to Next.js &Features
+- React official also recommend to not use base ,but with frameworks
+- best framework :Next JS
+  - Nasa, Amazon Prime, Nike, Notion etc. use
+- One Man Army
+- NextJS is upgraded ver of rect, optimised ,simplified
+  - Rendering
+    - React only do Client Side Rendering
+    - Next do both Client and Server 
+    - Client Side /Browser Side
+    - Server Side render page on web server ,and give fully rendered website on browser
+      - SEO inc
+      - SEO WebCrawlers can read website as its pre-rendered
+      - organic advantage
+      - Enhanced UX
+      - Credibility &Trustworthiness
+      - Competitive advantage /Ranking
+      - ONline presense
+  - Routing
+    - React import Router package and code routes
+    - NextJS has built in routing and dont need routes coding
+      - NextJS uses FILE BASED ROUTING SYSTEM
+        - i.e. routing is handled by file system
+      - No Need for external packs or complex config
+  - Fullstack capability by serverless APIs
+    - build and deploy serverless APIs
+    - no need of server
+    - no need of backend
+    - no need of express
+    - no need of scaling
+    - JUST MAKE route.js
+    - See Proj LifeLore => its fullstack
+  - makes less code by thousands and time by sec to ms
+  - 10x efficent
+  - Hot MOdule Reloading
+  - Automatic Code Splitting
+    - a technique that breaks  down a large codebase into smaller chunks,to load when needed
+    - results  in faster page loads
+    - its manual at REACT, use lazy suspence extra hard af shit
+    - Nextjs split pages into chunks and load chunk when click to it
+  - Automate Config and process 
+    - Linting
+    - Formatting
+    - Compiling
+    - Bundling
+    - Minifying
+    - Deploying
+    - .etc
+  - letting us to do actual code
+  - IT'S STILL REACT
+    - build on top of react
+    - simplify react
+    - so users not time waste building from  scratch
