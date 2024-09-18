@@ -4,6 +4,8 @@
   - [Table of Contents](#table-of-contents)
   - [Introductuion to Next.js \&Features](#introductuion-to-nextjs-features)
   - [create-next-app@latest](#create-next-applatest)
+  - [File \&Folder Structure](#file-folder-structure)
+  - [Rendering](#rendering)
 
 ## Introductuion to Next.js &Features
 - React official also recommend to not use base ,but with frameworks
@@ -81,3 +83,30 @@ npx create-next-app@latest dir-name
   - built in seo support
 - import alias custom no rn
   - they are shortcuts for refer file
+
+## File &Folder Structure
+- app/
+  - layout.js
+    - main entry point of proj
+    - all comp wrap in it as children 
+    - common layout
+    - customise metadata
+    - customise html
+    - customise font
+    - share /constant throughout application
+  - page.js
+    - hompage route
+  - global.css
+    - global css style of entire app
+    - tailwind imports to utilize tailwind in app
+- public
+  - all static data
+
+## Rendering
+- Next.js :within app folder all react components are by default server side SSR
+  - UX ,SEO OP
+- for making component client side CSR ,write it at top of code
+    ```js
+    "use client";
+    ```
+- dynamic ;0
