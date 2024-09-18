@@ -1,4 +1,9 @@
 # NextJS
+## Table of Contents
+- [NextJS](#nextjs)
+  - [Table of Contents](#table-of-contents)
+  - [Introductuion to Next.js \&Features](#introductuion-to-nextjs-features)
+  - [Hello World](#hello-world)
 
 ## Introductuion to Next.js &Features
 - React official also recommend to not use base ,but with frameworks
@@ -53,3 +58,26 @@
     - build on top of react
     - simplify react
     - so users not time waste building from  scratch
+
+##  Hello World
+- Create New dir
+- Open in Terminal
+```bash
+npx create-next-app@latest ./
+```
+or
+```bash
+npx create-next-app@latest dir-name
+```
+- Typescript Yes
+- ESLint No
+- Tailwind CSS Yess
+- src/ dir Yes,for more organised code and let all main code be in src ,not sit and mix with config files
+- app/ dir YEs,next js use app dir for pages and they made it stable
+  - react server comp
+  - nested routes and layouts
+  - simple data fetching
+  - streaming and suspence
+  - built in seo support
+- import alias custom no rn
+  - they are shortcuts for refer file
