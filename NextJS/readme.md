@@ -3,7 +3,7 @@
 - [NextJS](#nextjs)
   - [Table of Contents](#table-of-contents)
   - [Introductuion to Next.js \&Features](#introductuion-to-nextjs-features)
-  - [Hello World](#hello-world)
+  - [create-next-app@latest](#create-next-applatest)
 
 ## Introductuion to Next.js &Features
 - React official also recommend to not use base ,but with frameworks
@@ -59,7 +59,7 @@
     - simplify react
     - so users not time waste building from  scratch
 
-##  Hello World
+## create-next-app@latest
 - Create New dir
 - Open in Terminal
 ```bash
