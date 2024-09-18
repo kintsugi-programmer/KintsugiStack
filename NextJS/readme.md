@@ -6,6 +6,7 @@
   - [create-next-app@latest](#create-next-applatest)
   - [File \&Folder Structure](#file-folder-structure)
   - [Rendering](#rendering)
+- [Routing](#routing)
 
 ## Introductuion to Next.js &Features
 - React official also recommend to not use base ,but with frameworks
@@ -110,3 +111,12 @@ npx create-next-app@latest dir-name
     "use client";
     ```
 - dynamic ;0
+- Stage management is handled CSR
+- Sensative info SSR
+- CUstom hooks SSR
+- Interactivity CSR
+- SEE DOCS FOR TABLE OF USE
+- BASICALLY USE SSR TILL ERROR,AT ERROR USE CSR ;0
+  - Let NExt.js use its thing
+
+# Routing
