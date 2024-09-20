@@ -6,7 +6,10 @@
   - [create-next-app@latest](#create-next-applatest)
   - [File \&Folder Structure](#file-folder-structure)
   - [Rendering](#rendering)
-- [Routing](#routing)
+  - [Routing](#routing)
+  - [Data Fetching](#data-fetching)
+  - [API Endpoints](#api-endpoints)
+  - [SEO \& Metadata](#seo--metadata)
 
 ## Introductuion to Next.js &Features
 - React official also recommend to not use base ,but with frameworks
@@ -91,10 +94,17 @@ npx create-next-app@latest dir-name
     - main entry point of proj
     - all comp wrap in it as children 
     - common layout
+    - to share UI components b/w routes
     - customise metadata
     - customise html
     - customise font
     - share /constant throughout application
+    - you can make layout of each subpages
+  - loading.js
+    - to show loading animation
+  - error.js
+    - error handling
+    - can be for subpages
   - page.js
     - hompage route
   - global.css
@@ -119,4 +129,155 @@ npx create-next-app@latest dir-name
 - BASICALLY USE SSR TILL ERROR,AT ERROR USE CSR ;0
   - Let NExt.js use its thing
 
-# Routing
+## Routing
+- make Folders and file inside it as `page.js` only [page name only]
+- Folder name = route name
+- Folder dir = route path
+- Nested routing EXISTS
+- Without Next ,we have to write all files routes at top of app.js
+- RAFCE : React App Function Component Template, name component anything
+```js
+rafce
+```
+- Result
+```js
+# app/page1/page.jsx
+import React from 'react'
+
+const Page = () => {
+  return (
+    <div>Page</div>
+  )
+}
+
+export default Page
+```
+- Dynamic routing : `/posts/:postId`
+- Nested  routing : `/posts/:postId/comments/:commentId`
+- React :
+```js
+<Router>
+  <Routes>
+    <Route path= '/' element={<Home/>} />
+    <Route path= 'posts' element={<Posts/>} >
+      <Route path= 'new' element=  {<NewPost/>} /> {/*Nested route*/}
+      <Route path=":postId" element={<Post />} />{/*Dynamic route*/}
+      </Route>
+  </Routes>
+</Router>
+
+```
+-  Next.js
+```
+/posts
+/new/page.js
+/[postid]/page.js rafce {postId}
+page.js
+layout.js
+```  
+
+```js
+# /[postid]/page.js 
+import React from 'react'
+
+const Page = () => {
+  return (
+    <div>{postId}</div>
+  )
+}
+
+export default Page
+```
+## Data Fetching  
+- ways  
+  - SSR
+    - Server side rendering
+    -  cache ,no store : to refetch every single time
+  - SSG
+    - Static side generation
+    - remove cache ,no store : automatic ssg,and fetch data and then cache it
+  - ISR
+    - Incremental Side Generation
+    - next : {revalidate:10} ,data will cache, but will refetch after specified sec
+
+## API Endpoints
+- serverless feature of next js
+- no need of backend server to get api
+- Trad. React
+  - import express
+  - app.get
+  - execute code
+  - return users
+  - listen to certain port 
+  - to be live on server
+- Next.js
+  - cover all middleware,parsing,auth checks,serverless
+  - helps in scaling
+  - way 1: File Based
+  - way 2: route.js
+    - route.js can't be nested ,store all routes in api folder 
+    - api/posts/route.js
+- Next.js supports following HTTP Methods
+  - GET : 
+  - POST :
+  - PUT :
+  - PATCH :
+  - DELETE :
+  - HEAD :
+  - OPTIONS :
+- eg:
+```js
+#route.js
+export async funtion GET(request) {
+  return {
+    status: 200,
+    body: { message: 'Hello World' }
+    }
+}
+
+export  async function POST(request) {
+  return {
+    status: 201,
+    body: { message: 'Hello World' }
+  }
+}
+
+export  async function PUT(request) {
+  return  {
+    status: 200,
+    body: { message: 'Hello World' }
+    }
+    }
+```
+
+```js
+#route.js
+export async  function GET(request) {
+  const users = [
+    {id:1,name:'Sid'},
+    {id:2,name:'Rahul'}
+    ]
+  
+  return new Response (JSON.stringify(users))
+}
+
+```
+## SEO & Metadata
+- Next.js supports SEO & metadata
+- Ways
+  - way1 :Static Metadata
+    ```js
+    export const metadata = {title:'Home',};
+    ```
+  - way2 :Dynamic Metadata
+    - for sub dynamic products
+    ```js
+    export async function generateMetadata({params,searchParams}) {
+      const product = await getProduct(params.id);
+      return {
+        title: product.title,
+        description: product.description,
+        };
+    }
+    ```
+- Output : `<head><title> dynamic/static name </title></head>`
