@@ -10,6 +10,12 @@
   - [Data Fetching](#data-fetching)
   - [API Endpoints](#api-endpoints)
   - [SEO \& Metadata](#seo--metadata)
+  - [Install NODEJS and NPM](#install-nodejs-and-npm)
+- [LifeLore](#lifelore)
+  - [bcrypt](#bcrypt)
+  - [mongodb](#mongodb)
+  - [mongoose](#mongoose)
+  - [next-auth](#next-auth)
 
 ## Introductuion to Next.js &Features
 - React official also recommend to not use base ,but with frameworks
@@ -281,3 +287,60 @@ export async  function GET(request) {
     }
     ```
 - Output : `<head><title> dynamic/static name </title></head>`
+
+## Install NODEJS and NPM
+- [Official Website](https://nodejs.org/en)
+- Linux Mint
+```bash
+# installs nvm (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+
+# download and install Node.js (you may need to restart the terminal)
+nvm install 20
+
+# verifies the right Node.js version is in the environment
+node -v # should print `v20.17.0`
+
+# verifies the right npm version is in the environment
+npm -v # should print `10.8.2`
+```
+- Win
+```batch
+# installs fnm (Fast Node Manager)
+winget install Schniz.fnm
+
+# configure fnm environment
+fnm env --use-on-cd | Out-String | Invoke-Expression
+
+# download and install Node.js
+fnm use --install-if-missing 20
+
+# verifies the right Node.js version is in the environment
+node -v # should print `v20.17.0`
+
+# verifies the right npm version is in the environment
+npm -v # should print `10.8.2`
+```
+# LifeLore
+- Google Auth.
+- Fullstack 
+- Next.js 13
+- CRUD App
+- dependencies dev install 
+  ```
+  npm install mongodb moongoose next-auth bcrypt
+  ```
+
+## bcrypt
+- hash passwords
+
+## mongodb
+- database
+
+## mongoose
+- manage db
+
+## next-auth
+- authentication
+
+48.14
