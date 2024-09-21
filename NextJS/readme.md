@@ -597,6 +597,7 @@ NEXTAUTH_URL_INTERNAL=http://localhost:3000
 NEXTAUTH_SECRET=
 ```
 - nextauth secret is random code 
+- [Openssl online terminal](https://www.cryptool.org/en/cto/openssl/)
 ```
 openssl rand -base64 32
 ```
