@@ -1,4 +1,6 @@
 # NextJS
+- don't dare to speedrun ;long gradual great learning research journey
+
 ## Table of Contents
 - [NextJS](#nextjs)
   - [Table of Contents](#table-of-contents)
