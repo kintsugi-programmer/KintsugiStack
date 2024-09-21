@@ -20,7 +20,10 @@
   - [Image](#image)
   - [useState ,useEffect](#usestate-useeffect)
   - [next-auth/react's signIn ,signOut ,useSession,getProviders](#next-authreacts-signin-signout-usesessiongetproviders)
+  - [db](#db)
+  - [delete commot and fallback to stable](#delete-commot-and-fallback-to-stable)
   - [Ui testing with dummy auth](#ui-testing-with-dummy-auth)
+  - [Model](#model)
 
 ## Introductuion to Next.js &Features
 - React official also recommend to not use base ,but with frameworks
@@ -327,10 +330,17 @@ node -v # should print `v20.17.0`
 npm -v # should print `10.8.2`
 ```
 # LifeLore
+
+@FemiAdigun
+1 year ago
+Great tutorial. [31:22] if you are using typescript, you may need to pass the postId to your component as params e.g const page = ({params: {params: {postId: number}}) => {return <div>{params.postId}}</div>
+- 1:34:10 guide ;)
 - Google Auth.
 - Fullstack 
 - Next.js 13
+- next auth
 - CRUD App
+- MongDB Cluster
 - dependencies dev install 
   ```
   npm install mongodb moongoose next-auth bcrypt
@@ -473,7 +483,318 @@ const RootLayout = ({children}) => {
 
 export default RootLayout;
 ```
-- nextjs apis; backend endpoints
+- nextjs apis; backend endpoints BASIC
+```js
+// auth backend
+// lifelore\app\api\auth\[...nextauth]\route.js
+// here we can use providers like google auth
+// backend endpoints
+// 1;19;00
+
+import NextAuth from "next-auth/next";
+import GoogleProvider from "next-auth/providers/google";
+
+
+const handler = NextAuth({
+    providers: [
+      GoogleProvider({
+        clientId: "",
+        clientSecret: ""
+      })
+    ],
+    callbacks: {
+      async session({ session }) {
+      },
+      async signIn({ profile, }) {
+      },
+    }
+  })
+  
+  export { handler as GET, handler as POST }
+  
+
+```
+- [console.cloud.google.com](https://console.cloud.google.com/)
+  - new project
+  - name the proj
+  - select proj
+  - generally at dev: http://localhost:3000 is link of website
+  - menu>api7 services>oauth consent screen
+    - fillstuff
+  - create  credentials
+    - oauth clientid
+      - web
+      - origin
+- .env fill them
+```js
+GOOGLE_ID=
+GOOGLE_CLIENT_SECRET=
+```
+-
+```
+console.log({
+  clientiId: process.env.GOOGLE_ID,
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET
+})
+``` 
+```
+// auth backend
+// lifelore\app\api\auth\[...nextauth]\route.js
+// here we can use providers like google auth
+// backend endpointsimport NextAuth from 'next-auth';
+import GoogleProvider from 'next-auth/providers/google';
+
+import User from '@models/user';
+import { connectToDB } from '@utils/database';
+
+const handler = NextAuth({
+  providers: [
+    GoogleProvider({
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    })
+  ],
+  callbacks: {
+    async session({ session }) {
+      // store the user id from MongoDB to session
+      const sessionUser = await User.findOne({ email: session.user.email });
+      session.user.id = sessionUser._id.toString();
+
+      return session;
+    },
+    async signIn({ account, profile, user, credentials }) {
+      try {
+        await connectToDB();
+
+        // check if user already exists
+        const userExists = await User.findOne({ email: profile.email });
+
+        // if not, create a new document and save user in MongoDB
+        if (!userExists) {
+          await User.create({
+            email: profile.email,
+            username: profile.name.replace(" ", "").toLowerCase(),
+            image: profile.picture,
+          });
+        }
+
+        return true
+      } catch (error) {
+        console.log("Error checking if user exists: ", error.message);
+        return false
+      }
+    },
+  }
+})
+
+export { handler as GET, handler as POST }
+
+```
+- next auth docs
+```
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_URL_INTERNAL=http://localhost:3000
+NEXTAUTH_SECRET=
+```
+- nextauth secret is random code 
+```
+openssl rand -base64 32
+```
+- Terminal
+```
+PS C:\Users\Siddhant bali\OneDrive\Documents\GitHub\lifelore> npm run dev
+
+> lifelore@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.7
+  - Local:        http://localhost:3000
+  - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1484ms
+ ○ Compiling /api/auth/[...nextauth] ...
+ ✓ Compiled /api/auth/[...nextauth] in 844ms (264 modules)
+ GET /api/auth/providers 200 in 2020ms
+ POST /api/auth/_log 200 in 2021ms
+ POST /api/auth/_log 200 in 2021ms
+ GET /api/auth/providers 200 in 189ms
+ GET /api/auth/providers 200 in 13ms
+ GET /api/auth/providers 200 in 14ms
+ GET /api/auth/providers 200 in 18ms
+ GET /api/auth/providers 200 in 13ms
+ GET /api/auth/providers 200 in 18ms
+ GET /api/auth/providers 200 in 13ms
+ GET /api/auth/providers 200 in 12ms
+ GET /api/auth/providers 200 in 14ms
+ GET /api/auth/providers 200 in 14ms
+ GET /api/auth/providers 200 in 11ms
+ GET /api/auth/providers 200 in 11ms
+ GET /api/auth/providers 200 in 15ms
+ GET /api/auth/providers 200 in 11ms
+ GET /api/auth/providers 200 in 10ms
+ GET /api/auth/providers 200 in 11ms
+ GET /api/auth/providers 200 in 16ms
+ GET /api/auth/providers 200 in 10ms
+ GET /api/auth/providers 200 in 11ms
+ GET /api/auth/providers 200 in 11ms
+ GET /api/auth/providers 200 in 11ms
+ GET /api/auth/providers 200 in 12ms
+ GET /api/auth/providers 200 in 11ms
+Terminate batch job (Y/N)? 
+
+^C
+
+```
+- next.config.js :ext packs,topLevelAwait: true,
+```
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    appDir: true,
+    serverComponentsExternalPackages: ["mongoose"],
+  },
+  images: {
+    domains: ['lh3.googleusercontent.com'],
+  },
+  webpack(config) {
+    config.experiments = {
+      ...config.experiments,
+      topLevelAwait: true,
+    }
+    return config
+  }
+}
+
+module.exports = nextConfig
+
+```
+
+or
+```
+
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    experimental: {
+      appDir: true,
+      serverComponentsExternalPackages: ["mongoose"],
+    },
+    images: {
+      domains: ['lh3.googleusercontent.com'],
+    },
+    webpack(config) {
+      config.experiments = {
+        ...config.experiments,
+        topLevelAwait: true,
+      }
+      return config
+    }
+  }
+  
+export default nextConfig;  
+```
+## db
+- meaning : ????
+```js
+// utils/database.js
+import mongoose from 'mongoose';
+
+let isConnected = false; // track the connection
+
+export const connectToDB = async () => {
+  mongoose.set('strictQuery', true);
+
+  if(isConnected) {
+    console.log('MongoDB is already connected');
+    return;
+  }
+
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
+      dbName: "lifelore",
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    })
+
+    isConnected = true;
+
+    console.log('MongoDB connected')
+  } catch (error) {
+    console.log(error);
+  }
+}
+```
+- create db
+- [mongodb.com/atlas](https://www.mongodb.com/atlas)
+- try free
+- creater cluster
+- Free forever! Your M0 cluster is ideal for experimenting in a limited sandbox. You can upgrade to a production cluster anytime.
+- add user and password
+- add ip addresss of your pc and 
+- 0.0.0.0/0 to accessible from anywhere machine
+- .env : new cred. `MONGODB_URI=`
+  - dont forget to replace <password> with actual password 
+- route.js
+```js
+// auth backend
+// lifelore\app\api\auth\[...nextauth]\route.js
+// here we can use providers like google auth
+// backend endpointsimport NextAuth from 'next-auth';
+import GoogleProvider from 'next-auth/providers/google';
+
+import User from '@models/user';
+import { connectToDB } from '@utils/database';
+
+const handler = NextAuth({
+  providers: [
+    GoogleProvider({
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    })
+  ],
+  callbacks: {
+    async session({ session }) {
+      // store the user id from MongoDB to session
+      const sessionUser = await User.findOne({ email: session.user.email });
+      session.user.id = sessionUser._id.toString();
+
+      return session;
+    },
+    async signIn({ account, profile, user, credentials }) {
+      try {
+        await connectToDB();
+
+        // check if user already exists
+        const userExists = await User.findOne({ email: profile.email });
+
+        // if not, create a new document and save user in MongoDB
+        if (!userExists) {
+          await User.create({
+            email: profile.email,
+            username: profile.name.replace(" ", "").toLowerCase(),
+            image: profile.picture,
+          });
+        }
+
+        return true
+      } catch (error) {
+        console.log("Error checking if user exists: ", error.message);
+        return false
+      }
+    },
+  }
+})
+
+export { handler as GET, handler as POST }
+
+```
+## delete commot and fallback to stable
+```bash
+git reset --hard HEAD^
+git push origin main --force
+```
+
 
 
 
@@ -629,3 +950,65 @@ export default Nav;
 
 48.14
 
+
+
+## Model
+```
+import { Schema, model, models } from 'mongoose';
+// models/exp.js
+const ExpSchema = new Schema({
+  creator: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+  },
+  Exp: {
+    type: String,
+    required: [true, 'Exp is required.'],
+  },
+  tag: {
+    type: String,
+    required: [true, 'Tag is required.'],
+  }
+});
+
+const Exp = models.Exp || model('Exp', ExpSchema);
+
+export default Exp;
+```
+
+```
+
+// func to pass obj
+
+import { Schema, model, models } from 'mongoose';
+// models/user.js
+const UserSchema = new Schema({
+  email: {
+    type: String,
+    unique: [true, 'Email already exists!'],
+    required: [true, 'Email is required!'],
+  },
+  username: {
+    type: String,
+    required: [true, 'Username is required!'],
+    match: [/^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/, "Username invalid, it should contain 8-20 alphanumeric letters and be unique!"]
+  },
+  image: {
+    type: String,
+  }
+});
+
+const User = models.User || model("User", UserSchema);
+
+export default User;
+```
+- unique: [true, 'Email already exists!'] : true or false condition
+- `match: [/^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/, "Username invalid, it should contain 8-20 alphanumeric letters and be unique!"]`
+- at trad express server,which is always on
+```
+const User = model("User",UserSchema);
+```
+- next.js :route to be run when only called
+```
+const User = models.User || model("User", UserSchema);
+```
