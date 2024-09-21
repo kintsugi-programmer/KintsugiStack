@@ -16,6 +16,11 @@
   - [mongodb](#mongodb)
   - [mongoose](#mongoose)
   - [next-auth](#next-auth)
+  - [Link](#link)
+  - [Image](#image)
+  - [useState ,useEffect](#usestate-useeffect)
+  - [next-auth/react's signIn ,signOut ,useSession,getProviders](#next-authreacts-signin-signout-usesessiongetproviders)
+  - [Ui testing with dummy auth](#ui-testing-with-dummy-auth)
 
 ## Introductuion to Next.js &Features
 - React official also recommend to not use base ,but with frameworks
@@ -330,6 +335,30 @@ npm -v # should print `10.8.2`
   ```
   npm install mongodb moongoose next-auth bcrypt
   ```
+- ES+7 extension vsc
+- no need to put 'import 'react'  from 'react';' in every file
+- layout.jsx
+- '@styles/global.css'
+- jsconfig.json
+```js
+{
+  "compilerOptions": {
+    "paths": {
+      "@*": ["./*"]
+    }
+  }
+}
+
+
+// {
+//   "compilerOptions": {
+//     "paths": {
+//       "@/*": ["./*"] // remove this / for the path to work
+//     }
+//   }
+// }
+```
+
 
 ## bcrypt
 - hash passwords
@@ -343,4 +372,260 @@ npm -v # should print `10.8.2`
 ## next-auth
 - authentication
 
+
+## Link
+```js
+import Link from 'next/link';
+
+<Link href='/' className='flex gap-2 flex-center'>
+        <p className='logo_text'>LifeLore</p>
+      </Link>
+
+```
+
+## Image
+```js
+import Image from 'next/image';
+
+        <Image
+          src='/assets/images/logo.svg'
+          alt='lifelore logo'
+          width={30}
+          height={30}
+          className='object-contain'
+        />
+```
+
+## useState ,useEffect
+- useEffect only works in a Client component
+
+## next-auth/react's signIn ,signOut ,useSession,getProviders
+- google auth tech
+- browser capabilities, thus SSG
+```js
+// Provider.jsx
+"use client"
+
+import { SessionProvider } from "next-auth/react";
+//using google auth ;)
+const Provider = ({children,session}) => {
+  return (
+    <SessionProvider session ={session}
+    >{children}</SessionProvider>
+  )
+}
+
+export default Provider
+```
+- layout.jsx : where we sandwich Provider under body ,before main
+```js
+// import React from 'react'
+//no path needed
+// we call navbar to use it everywhere in the app
+
+import '@styles/globals.css';
+import Nav from '@components/Nav';
+import Feed from '@components/Feed';
+import Provider from '@components/Provider';
+
+export const metadata = {
+    title: 'LifeLore - Share and Discover Life Lessons',
+    description: 'LifeLore is a platform for sharing and discovering life values, lessons, and advice across various fields. Join our community-driven repository of knowledge and experiences.',
+    keywords: 'LifeLore, life lessons, advice, community, Next.js, MongoDB, NextAuth, TailwindCSS',
+    author: 'Siddhant Bali',
+    og: {
+      title: 'LifeLore - Share and Discover Life Lessons',
+      description: 'Explore and share life lessons on LifeLore. Connect with a community dedicated to learning and growth.',
+      image: 'https://example.com/path-to-your-image.jpg',
+      url: 'https://yourlifestyleplatform.com',
+      type: 'website'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'LifeLore - Share and Discover Life Lessons',
+      description: 'Explore and share life lessons on LifeLore. Join our community to learn and grow together.',
+      image: 'https://example.com/path-to-your-image.jpg',
+      site: '@yourtwitterhandle'
+    }
+  };
+  
+const RootLayout = ({children}) => {
+  return (
+    <html lang='en'>
+        <body>
+          <Provider>
+
+          
+            <div className='main'>
+                <div className='gradient' />
+            </div>
+
+            <main className='app'>
+                <Nav />
+              {children}
+            </main>
+          </Provider>
+        </body>
+
+    </html>
+  )
+}
+
+export default RootLayout;
+```
+- nextjs apis; backend endpoints
+
+
+
+
+
+## Ui testing with dummy auth 
+
+```js
+"use client"; // Add this directive to indicate that this is a client component
+
+import Link from 'next/link';
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
+import React from 'react';
+import Provider from './Provider';
+
+const Nav = () => {
+  // sign in using google and next auth 
+  const [providers,setProviders] = useState(null);
+  useEffect(() => {
+    const setProviders = async () => {
+      const response = await getProviders();
+      setProviders(response);
+    };
+    setProviders();
+  }, []);
+
+  const[toggleDropDown,setToggleDropDown]=useState(false);
+
+
+
+
+  const isUserLoggedIn = true; //test phase 
+  return (
+    <nav className='flex-between w-full mb-16 pt-3'>
+      <Link href='/' className='flex gap-2 flex-center'>
+        <Image
+          src='/assets/images/logo.svg'
+          alt='lifelore logo'
+          width={30}
+          height={30}
+          className='object-contain'
+        />
+        <p className='logo_text'>LifeLore</p>
+      </Link>
+
+      {/* Desktop Nav */}
+      <div className='sm:flex hidden'>
+      {isUserLoggedIn ? (
+        <div className='flex gap-3 md:gap-5'>
+          <Link className='black_btn' href="/create-exp" >Create Post</Link>
+          <button type="button" className='outline_btn' onClick={signOut}>Sign Out</button>
+          <Image src="/assets/images/logo.svg" width={37} height={37} className='rounded-full' alt='profile'></Image>
+        </div>
+
+        ):(
+          <>
+          {/* signin */}
+          {providers &&
+          Object.values(providers).map(
+            (provider)=>
+            (
+              <button
+                type='button'
+                key={provider.name}
+                className='black_btn'
+                onClick={()=>
+                  signIn(provider.id)
+                }>
+                  Sign In
+                
+              </button>
+            )
+          )}
+          </>
+        )}
+      </div>
+
+      {/* Mobile Nav */}
+      <div className="sm:hidden flex relative">
+        {isUserLoggedIn?(<div className='flex'>
+          {/* setToggleDropDown(!toggleDropDown) is wrong as its leads to unexpected results 
+          setToggleDropDown((prev)=>(!prev) is good*/}
+          <Image src="/assets/images/logo.svg" width={37} height={37} className='rounded-full' alt='profile' onClick={()=>setToggleDropDown((prev)=>(!prev))}></Image>
+          {toggleDropDown && (
+        <div className='dropdown'>
+          <Link 
+          href='/profile'
+          className='dropdown_link'
+          onClick={()=>(setToggleDropDown(false))}
+          >
+            My Profile
+          </Link>
+          <Link 
+          href='/create-exp'
+          className='dropdown_link'
+          onClick={()=>(setToggleDropDown(false))}
+          >
+            Create Advice
+          </Link>
+          <button
+                type='button'
+                onClick={()=>{
+                  setToggleDropDown(false);
+                  signOut();}
+                }
+                className='mt-5 w-full black_btn'>
+                  Sign Out
+                
+              </button>
+
+        </div>)}
+        </div>
+        
+      
+      ):(
+          <>
+          {/* signin */}
+          {providers &&
+          Object.values(providers).map(
+            (provider)=>
+            (
+              <button
+                type='button'
+                key={provider.name}
+                className='black_btn'
+                onClick={()=>
+                  signIn(provider.id)
+                }>
+                  Sign In
+                
+              </button>
+            )
+          )}
+          
+        </>)}
+
+      </div>
+
+      </nav>
+  );
+}
+
+export default Nav;
+
+```
+- `  const isUserLoggedIn = true; //test phase `
+- ` onClick = {() => {}} ` empty fragment
+- `onClick= {()=> setToggleDropdown(!toggleDropdown)` , react don't recommend this. Instead use `onClick= {()=> setToggleDropdown( (prev)  => !prev)}`
+
+
+
 48.14
+
