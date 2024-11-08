@@ -13,6 +13,7 @@
   - [API Endpoints](#api-endpoints)
   - [SEO \& Metadata](#seo--metadata)
   - [Install NODEJS and NPM](#install-nodejs-and-npm)
+  - [Next 15\& React 19](#next-15-react-19)
 - [LifeLore notebook](#lifelore-notebook)
   - [Files](#files)
     - [layout.jsx](#layoutjsx)
@@ -351,6 +352,26 @@ node -v # should print `v20.17.0`
 # verifies the right npm version is in the environment
 npm -v # should print `10.8.2`
 ```
+
+## Next 15& React 19
+- turbopack: new build script 1ms in package.json
+```tsx
+  "scripts": {
+    "dev": "next dev --turbopack",
+```
+- install all
+- tailwind and es6 extension vsc
+- package.json
+to ext dependencies use new versions of reac5t and not fall in react 18
+```tsx
+  "packageManager": "npm@10.5.2",
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom",
+    "next": "$next"
+  },
+```
+
 # LifeLore notebook
 - Google Auth.
 - Fullstack 
