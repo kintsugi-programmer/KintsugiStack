@@ -18,8 +18,7 @@
 ## EXTERNAL LINKS@Kintsugi-Programmer
 
 - [KintsugiStarterPack](https://github.com/kintsugi-programmer/kintsugi-starter-pack): Kintsugi Programmer's JumpStart WebDev Templates
-
-## UI
+- [DigitalDrzRepo](https://github.com/kintsugi-programmer/drz): डिजिटल दर्ज़ी Repository 
 - [DigitalDrz](https://digitaldrz.vercel.app/): DigitalDrz (डिजिटल दर्ज़ी) is your exclusive catalog of world-class UI/UX components, custom-built by KintsugiDevStudio.
 - [Magic UI](https://magicui.design/docs/components/marquee): Beautiful animations for modern websites.
 - [Aeternity UI](https://ui.aceternity.com/components): Comprehensive UI components with a design system.
