@@ -1,7 +1,8 @@
-# Ruby:  A Programmer's Best Friend
+# RUBY EMG
+> Ruby, A Programmer's Best Friend
 
 ## Table Of Contents
-- [Ruby:  A Programmer's Best Friend](#ruby--a-programmers-best-friend)
+- [RUBY EMG](#ruby-emg)
   - [Table Of Contents](#table-of-contents)
   - [🧠 Overview](#-overview)
   - [📈 Rise in Popularity](#-rise-in-popularity)
@@ -10,7 +11,7 @@
   - [📦 Package Management](#-package-management)
   - [Setup](#setup)
   - [ruby.rb](#rubyrb)
-    - [Ruby Documentation with Detailed Code Explanation](#ruby-documentation-with-detailed-code-explanation)
+  - [Ruby Concepts + Detailed Code Explanation](#ruby-concepts--detailed-code-explanation)
     - [1. Introduction to Ruby Programming](#1-introduction-to-ruby-programming)
     - [2. Constants](#2-constants)
     - [3. Methods in Ruby](#3-methods-in-ruby)
@@ -72,14 +73,16 @@ RubyGems: The official package manager.
 Gem: Self-contained library/module/package.
 
 ## Setup
-'''
+
+```bash
 sudo apt install ruby
 ruby -v    # Should print something like: ruby 3.x.x
-'''
-'''
+```
+
+```bash
 nano file.rb
 ruby file.rb
-'''
+```
 
 🧠 Takeaways Box
 - ✅ Simple, English-like syntax
@@ -90,6 +93,9 @@ ruby file.rb
 - ✅ Huge ecosystem with RubyGems
 
 ## ruby.rb
+- install ruby `sudo apt-get install ruby-full`
+- save file in extension `file.rb`
+- run command `ruby file.rb`
 ```ruby
 # extension: file.rb
 # run:ruby file.rb
@@ -466,7 +472,7 @@ admin1.putts
 # Name Bali
 ```
 
-### Ruby Documentation with Detailed Code Explanation
+## Ruby Concepts + Detailed Code Explanation
 
 ---
 
