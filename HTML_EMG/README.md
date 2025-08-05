@@ -2,6 +2,29 @@
 
 HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page using a series of elements.
 
+This Module is consist of 6 parts
+```bash
+bali-king@war-machine:~/BaliGit/KintsugiStack/HTML_EMG$ tree
+.
+├── HTML
+│   ├── images
+│   │   ├── Screenshot from 2024-05-31 19-37-23.png
+│   │   └── Screenshot from 2024-05-31 19-37-59.png
+│   ├── index.html # P6
+│   └── pages
+│       ├── Compiled.htm # COMPILED
+│       ├── p1.html # P1
+│       ├── p2.html # P2
+│       ├── p3.html # P3
+│       ├── p4.html # P4
+│       └── p5.html # P5
+└── README.md
+
+4 directories, 10 files
+```
+
+- Download `LiveServer` Extension in VSC, easy to setup Dev.Server GUI
+
 ## Table of contents
 - [HTML EMG](#html-emg)
   - [Table of contents](#table-of-contents)
