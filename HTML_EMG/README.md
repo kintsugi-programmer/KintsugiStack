@@ -119,6 +119,8 @@ bali-king@war-machine:~/BaliGit/KintsugiStack/HTML_EMG$ tree
 </html>
 ```
 
+- save with file extension `.htm`,`.html`
+
 ## 1. Introduction to HTML Document Structure
 
 Every HTML document follows a basic structure, including the `DOCTYPE`, `<html>`, `<head>`, and `<body>` elements. Let's break down a simple HTML document:
