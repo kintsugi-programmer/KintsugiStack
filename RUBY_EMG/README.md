@@ -1,5 +1,39 @@
 # Ruby:  A Programmer's Best Friend
 
+## Table Of Contents
+- [Ruby:  A Programmer's Best Friend](#ruby--a-programmers-best-friend)
+  - [Table Of Contents](#table-of-contents)
+  - [🧠 Overview](#-overview)
+  - [📈 Rise in Popularity](#-rise-in-popularity)
+  - [🧱 What is an Object in OOP (Object-Oriented Programming)?](#-what-is-an-object-in-oop-object-oriented-programming)
+  - [🧠 MVC: Model–View–Controller](#-mvc-modelviewcontroller)
+  - [📦 Package Management](#-package-management)
+  - [Setup](#setup)
+  - [ruby.rb](#rubyrb)
+    - [Ruby Documentation with Detailed Code Explanation](#ruby-documentation-with-detailed-code-explanation)
+    - [1. Introduction to Ruby Programming](#1-introduction-to-ruby-programming)
+    - [2. Constants](#2-constants)
+    - [3. Methods in Ruby](#3-methods-in-ruby)
+    - [4. String Manipulation Methods](#4-string-manipulation-methods)
+    - [5. Numbers in Ruby](#5-numbers-in-ruby)
+    - [6. Boolean Operations](#6-boolean-operations)
+    - [7. Arrays in Ruby](#7-arrays-in-ruby)
+    - [8. Hashes in Ruby](#8-hashes-in-ruby)
+    - [9. Conditional Statements](#9-conditional-statements)
+    - [10. Loops in Ruby](#10-loops-in-ruby)
+      - [1. While Loop](#1-while-loop)
+      - [2. Until Loop](#2-until-loop)
+      - [3. Times Loop](#3-times-loop)
+      - [4. For Loop](#4-for-loop)
+      - [5. Each Loop](#5-each-loop)
+    - [11. Defining Blocks](#11-defining-blocks)
+    - [12. Symbols](#12-symbols)
+    - [13. Keyword Arguments in Methods](#13-keyword-arguments-in-methods)
+    - [14. Classes and Objects](#14-classes-and-objects)
+    - [15. Modules in Ruby](#15-modules-in-ruby)
+    - [16. Inheritance in Ruby](#16-inheritance-in-ruby)
+
+
 ## 🧠 Overview
 Ruby: Interpreted, dynamic, object-oriented scripting language.
 
@@ -28,9 +62,9 @@ MVC is a software design pattern commonly used for developing user interfaces th
 ⚙️ Components of MVC
 | Component      | Responsibility                                                                                                              |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **Model**      | Handles **data**, business logic, and rules of the application.                                                             |
-| **View**       | Manages the **UI** – what the user sees.                                                                                    |
-| **Controller** | Acts as the **intermediary** between Model and View – handles user input, processes it, and updates Model/View accordingly. |
+| Model      | Handles data, business logic, and rules of the application.                                                             |
+| View       | Manages the UI – what the user sees.                                                                                    |
+| Controller | Acts as the intermediary between Model and View – handles user input, processes it, and updates Model/View accordingly. |
 
 ## 📦 Package Management
 RubyGems: The official package manager.
@@ -431,3 +465,354 @@ admin1.putts
 # Welcome Bali, Your Id is 2022496
 # Name Bali
 ```
+
+### Ruby Documentation with Detailed Code Explanation
+
+---
+
+### 1. Introduction to Ruby Programming
+
+* Ruby is an Object-Oriented Programming Language (OOP).
+* It is dynamically typed, meaning variable types are inferred at runtime, not at compile-time.
+* Everything in Ruby is an object, and every object can be modified.
+
+```ruby
+# Variable Declaration
+name = "Bali"  # String variable
+$age = 25      # Global variable
+```
+
+* Global Variables: `$age` is a global variable, meaning it is accessible throughout the program.
+
+---
+
+### 2. Constants
+
+* Constants in Ruby are declared using uppercase names and should not be reassigned.
+
+```ruby
+# Constants in Ruby
+LANG = "Ruby"            # Constant
+$GlobalVar = "3.0"       # Another global variable (not a constant)
+```
+
+* Warning: If a constant is reassigned, Ruby will give a warning.
+
+---
+
+### 3. Methods in Ruby
+
+* Methods are declared using `def` and closed with `end`.
+* They can return a single object (implicitly or explicitly).
+* Parameters can have default values.
+
+```ruby
+# Method with a parameter
+def greet(name)
+    "Hello, #{name}"
+end
+
+puts greet("Bhati")  # Output: Hello, Bhati
+```
+
+* Default Values in Methods: If no argument is passed, a default value can be used.
+
+```ruby
+def greet(name="Bali")
+  puts "Hello, #{name}!"
+end
+
+greet("Bhati")  # Output: Hello, Bhati
+greet()         # Output: Hello, Bali
+```
+
+---
+
+### 4. String Manipulation Methods
+
+* Ruby has various built-in string methods for manipulation.
+
+```ruby
+# String Methods
+name = "Ruby"
+puts name.downcase  # ruby
+puts name.upcase    # RUBY
+puts name.class     # String
+puts name.length    # 4
+puts name.reverse   # ybuR
+puts name.include?("B") # false
+```
+
+* Explanation:
+
+  * `downcase`, `upcase`: Convert the string to lowercase/uppercase.
+  * `reverse`: Reverses the string.
+  * `include?`: Checks if a substring exists in the string.
+
+---
+
+### 5. Numbers in Ruby
+
+* Ruby supports basic arithmetic operations and conversion between data types.
+
+```ruby
+# Numbers in Ruby
+a = 3
+b = 16
+puts a + b            # 19
+puts (a + b) / (a * b)  # Fraction result
+puts a.to_f           # 3.0 (convert to float)
+```
+
+---
+
+### 6. Boolean Operations
+
+* Ruby provides boolean logic (`and`, `or`, `not`).
+
+```ruby
+# Boolean Operations
+puts true && false    # false (AND)
+puts true || false    # true (OR)
+puts !true            # false (NOT)
+```
+
+---
+
+### 7. Arrays in Ruby
+
+* Arrays are ordered collections that can hold multiple data types.
+
+```ruby
+# Arrays in Ruby
+fruits = ["apple", "banana", "mango"]
+puts fruits
+puts fruits[0]         # apple
+fruits.each {|n| puts n.upcase}  # APPLE, BANANA, MANGO
+```
+
+---
+
+### 8. Hashes in Ruby
+
+* Hashes are key-value pairs.
+
+```ruby
+# Hash in Ruby
+user = { name: "Alice", age: 25 }
+puts user             # {:name=>"Alice", :age=>25}
+puts user[:name]      # Alice
+puts user.keys        # [:name, :age]
+```
+
+---
+
+### 9. Conditional Statements
+
+* Ruby uses `if`, `elsif`, `else`, and `end`.
+
+```ruby
+# Conditional Statements
+age = 18
+if age >= 18
+    puts "You are an adult"
+elsif age == 17
+    puts "Wait one year"
+else
+    puts "Minor"
+end
+```
+
+* Shortcut for conditions: You can use `between?` to check ranges.
+
+```ruby
+# If shortcut
+puts "Teen" if age.between?(13, 19)  # Output: Teen
+```
+
+---
+
+### 10. Loops in Ruby
+
+* Ruby supports multiple loop types:
+
+#### 1. While Loop
+
+```ruby
+i = 1
+while i <= 5
+    puts "Counter #{i}"
+    i += 1
+end
+```
+
+#### 2. Until Loop
+
+```ruby
+i = 1
+until i > 10
+    puts "Counter #{i}"
+    i += 1
+end
+```
+
+#### 3. Times Loop
+
+```ruby
+10.times do |i|
+    puts "Times #{i}"
+end
+```
+
+#### 4. For Loop
+
+```ruby
+for i in 1..15
+    puts "#{i}"
+end
+```
+
+#### 5. Each Loop
+
+```ruby
+arr1 = [1, 2, 4]
+arr1.each do |e|
+    puts "arr1 #{e}"
+end
+```
+
+---
+
+### 11. Defining Blocks
+
+* Blocks are anonymous functions passed to methods.
+
+```ruby
+# Each loop with a block
+[5, 6, 8].each { |n| puts n }
+
+# Yielding inside a method
+def greet
+    puts "Before yield"
+    yield
+    puts "After yield"
+end
+
+greet { puts "Hello from the block!" }
+```
+
+---
+
+### 12. Symbols
+
+* Symbols are lightweight strings used for identifiers.
+
+```ruby
+# Symbols in Ruby
+puts :admin == :admin  # true
+puts "admin" == "admin" # true
+```
+
+* Symbols are memory efficient and point to the same internal object.
+
+---
+
+### 13. Keyword Arguments in Methods
+
+* You can define named arguments in Ruby methods.
+
+```ruby
+# Keyword arguments
+def create_user(name:, age:)
+    puts "Created #{name}, age #{age}"
+end
+
+create_user(name: "Bob", age: 22)
+```
+
+---
+
+### 14. Classes and Objects
+
+* Classes define the blueprint for objects. Objects are instances of a class.
+
+```ruby
+# Class Definition
+class User
+  attr_accessor :name, :email
+
+  def initialize(name, email)
+    @name = name
+    @email = email
+  end
+
+  def greet
+    "Hi, I am #{@name}"
+  end
+end
+
+# Creating an object
+user1 = User.new("Siddhant Bali", "kintsugidevstudio@gmail.com")
+
+# Calling methods
+puts user1.greet     # Hi, I am Siddhant Bali
+puts user1.name      # Siddhant Bali
+```
+
+* `attr_accessor`: Automatically creates getter and setter methods for instance variables.
+
+---
+
+### 15. Modules in Ruby
+
+* Modules provide reusable methods that can be mixed into classes.
+
+```ruby
+# Defining a module
+module Printer
+  def print_name
+    puts "Name #{@name}"
+  end
+end
+
+# Including a module
+class Admin
+  include Printer
+end
+
+admin = Admin.new("Bali", 2022496)
+admin.print_name  # Name Bali
+```
+
+---
+
+### 16. Inheritance in Ruby
+
+* Ruby allows classes to inherit from other classes, enabling reuse of code.
+
+```ruby
+# Parent Class
+class Employee
+  attr_accessor :name, :id
+
+  def initialize(name, id)
+    @name = name
+    @id = id
+  end
+
+  def greet
+    "Welcome #{@name}, Your Id is #{@id}"
+  end
+end
+
+# Child Class Inheritance
+class Admin < Employee
+  include Printer
+end
+
+admin1 = Admin.new("Bali", 2022496)
+puts admin1.greet   # Welcome Bali, Your Id is 2022496
+admin1.print_name   # Name Bali
+```
+
+* Inheritance: `Admin` class inherits from `Employee`, reusing `greet` and adding `print_name` functionality through `Printer` module.
