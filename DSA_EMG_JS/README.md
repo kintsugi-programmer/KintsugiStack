@@ -17,7 +17,7 @@ code .
 - F1 > set keyboard extension > run code to be `ctrl+enter`
 
 ## Need of DSA
-- 09:00
+- 09:00 https://www.youtube.com/embed/wBtPGnVnA9g?si=LQiXrnsNA9oSaa5R
 
 
 

@@ -1,3 +1,4 @@
+// 2.js
 /*
 2. **ES6 and Modern JavaScript:**
    - Arrow functions

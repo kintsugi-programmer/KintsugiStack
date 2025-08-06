@@ -1,3 +1,4 @@
+// 1.js
 // To run js file > open terminal > node file_name.js
 
 // Single Line Comment
@@ -310,8 +311,8 @@ const Component = () => {return age>10?<div>Bhati</div>:<div>Bali</div>;};
 
 let names = ["Bali","Bhaskar","Bhati","Bali","Bali"];
 // i want to make each element have 1 at last Bali1
-//normal way,for loop
-//mentos way
+// normal way,for loop
+// mentos way
 
 names.map((name)=>{
     return name + "1"
@@ -346,3 +347,4 @@ error.
 
 
 */
+
