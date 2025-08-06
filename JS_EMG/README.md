@@ -1,5 +1,12 @@
 # JS EMG
 
+## Table Of Contents
+- [JS EMG](#js-emg)
+  - [Table Of Contents](#table-of-contents)
+  - [Basics of JS](#basics-of-js)
+  - [ES6 and Modern JS](#es6-and-modern-js)
+  - [Asynchronous JavaScript](#asynchronous-javascript)
+
 ## Basics of JS
 
 - Basic JavaScript Concepts

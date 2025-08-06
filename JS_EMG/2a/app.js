@@ -18,7 +18,7 @@ console.log(subtract(5, 2));   // Output: 3
 console.log(multiply(2, 4));   // Output: 8
 console.log(divide(10, 2));    // Output: 5
 // console.log(sum(2, 3));         // Output: 5
-console.log(math.multiply(3, 3)); // Output: 9
+// console.log(math.multiply(3, 3)); // Output: 9
 console.log(mod(5,2));
 
 // Dynamic import
