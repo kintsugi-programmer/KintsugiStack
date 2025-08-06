@@ -4,11 +4,11 @@
 ## Table Of Contents
 - [RUBY EMG](#ruby-emg)
   - [Table Of Contents](#table-of-contents)
-  - [🧠 Overview](#-overview)
-  - [📈 Rise in Popularity](#-rise-in-popularity)
-  - [🧱 What is an Object in OOP (Object-Oriented Programming)?](#-what-is-an-object-in-oop-object-oriented-programming)
-  - [🧠 MVC: Model–View–Controller](#-mvc-modelviewcontroller)
-  - [📦 Package Management](#-package-management)
+  - [Overview](#overview)
+  - [Rise in Popularity](#rise-in-popularity)
+  - [What is an Object in OOP (Object-Oriented Programming)?](#what-is-an-object-in-oop-object-oriented-programming)
+  - [MVC: Model–View–Controller](#mvc-modelviewcontroller)
+  - [Package Management](#package-management)
   - [Setup](#setup)
   - [ruby.rb](#rubyrb)
   - [Ruby Concepts + Detailed Code Explanation](#ruby-concepts--detailed-code-explanation)
@@ -35,14 +35,14 @@
     - [16. Inheritance in Ruby](#16-inheritance-in-ruby)
 
 
-## 🧠 Overview
+## Overview
 Ruby: Interpreted, dynamic, object-oriented scripting language.
 
 Created By: Matz 1993
 
 Inspiration: Combines Python’s simplicity with Smalltalk’s true OOP.
 
-## 📈 Rise in Popularity
+## Rise in Popularity
 Boom: After David Heinemeier Hansson (DHH) released Ruby on Rails (Rails) in 2005.
 
 Why Popular?:
@@ -53,21 +53,21 @@ Why Popular?:
 
 - Used By: Twitter, Shopify, GitHub, Airbnb.
 
-## 🧱 What is an Object in OOP (Object-Oriented Programming)?
+## What is an Object in OOP (Object-Oriented Programming)?
 An object is a real-world entity or instance of a class that contains:
 - Data (called attributes or properties)
 - Behavior (defined through methods or functions)
-## 🧠 MVC: Model–View–Controller
+## MVC: Model–View–Controller
 MVC is a software design pattern commonly used for developing user interfaces that divide an application into three interconnected components:
 
-⚙️ Components of MVC
+Components of MVC
 | Component      | Responsibility                                                                                                              |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | Model      | Handles data, business logic, and rules of the application.                                                             |
 | View       | Manages the UI – what the user sees.                                                                                    |
 | Controller | Acts as the intermediary between Model and View – handles user input, processes it, and updates Model/View accordingly. |
 
-## 📦 Package Management
+## Package Management
 RubyGems: The official package manager.
 
 Gem: Self-contained library/module/package.
@@ -84,13 +84,13 @@ nano file.rb
 ruby file.rb
 ```
 
-🧠 Takeaways Box
-- ✅ Simple, English-like syntax
-- ✅ Everything is an object
-- ✅ Full OOP + functional flexibility
-- ✅ Duck typing allows polymorphism without inheritance
-- ✅ Rails made it legendary for web apps
-- ✅ Huge ecosystem with RubyGems
+Takeaways
+- Simple, English-like syntax
+- Everything is an object
+- Full OOP + functional flexibility
+- Duck typing allows polymorphism without inheritance
+- Rails made it legendary for web apps
+- Huge ecosystem with RubyGems
 
 ## ruby.rb
 - install ruby `sudo apt-get install ruby-full`
