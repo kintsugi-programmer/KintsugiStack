@@ -94,11 +94,16 @@
         styleElement.style.color = 'blue'; // change colour to blue
         styleElement.classList.add('highlight'); // to bold i guess
 
-        // Creating and Deleting Elements
+        // Creating and Appending Elements
         const parentElement = document.getElementById('parentElement');
         const newElement = document.createElement('p');
         newElement.innerText = 'New Element';
         parentElement.appendChild(newElement);
+        // Get the element you want to remove
+        const elementToRemove = document.getElementById('parentElement');
+
+        // Remove the element from the DOM
+        elementToRemove.remove();
 
         // Event Handling
         const clickButton = document.getElementById('clickButton');
@@ -122,6 +127,32 @@
 
         // Debugging
         console.log('Debugging information');
+
+// DOM
+//        [document]
+//            |
+//        [<html>]
+//            |
+//   +--------+--------+
+//   |                 |
+// [<head>]         [<body>]
+//   |                 |
+// [<title>]      +----+----+
+//   |            |         |
+// [text]       [<h1>]     [<p>]
+//                |         |
+//              [text]    [text]
+
+// DOM, Parent, Child, and Sibling Explained
+// The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects.
+
+// In the example above, document is the root of the tree. Let's break down the relationships:
+
+// Parent: A node that has other nodes branching off of it. In the diagram, <html> is the parent of both <head> and <body>.
+
+// Child: A node that is directly connected to another node, which is its parent. <head> and <body> are both children of <html>.
+
+// Sibling: Nodes that share the same parent. <head> and <body> are siblings because they both have <html> as their parent.
         
     </script>
 </body>

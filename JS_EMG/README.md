@@ -37,7 +37,7 @@
 
 // Single Line Comment
 
-//JavaScript is your browser has a built-in execution environment.
+//JavaScript ib your browser has a built-in execution environment.
 
 /*
 Multi
@@ -107,6 +107,7 @@ let notResult = !isTrue; // Logical NOT
 
 // Printing results
 console.log("Sum:", sum);
+//have default new line character "\n"
 console.log("Difference:", difference);
 console.log("Product:", product);
 console.log("Quotient:", quotient);
@@ -133,6 +134,10 @@ greet(name);
 
 //Anonymous Function
 var greet2 = function(usrname){return "Hello "+usrname+" in this tutorial program ";};
+// *Consise
+// *Arrow func. are too anonymous
+// *Callback functions, meaning they are passed as an argument to another function
+// *Assign to a Variable
 
 //Immediately Invoked Function Expression (IIFE)
 const result1 = (function (usrname) {return "Hello "+usrname+" in this tutorial program ";})("Siddhant Bali"); 
@@ -146,7 +151,7 @@ function createFunction() {
       return sum;
   }
 }
-const f = createFunction();
+const f = createFunction(); // stores func with a=3
 console.log(f(3, 4)); // 7
 
 // Closures : A closure is a function that has access to its outer function scope even after the outer function has returned. This means a closure can remember and access variables and arguments of its outer function even after the function has finished. 
@@ -163,6 +168,7 @@ console.log(f(4)); // 7
 
 // Arrow Functions (ES6)
 let Multiplication = (a,b) => a*b;
+// ECMAScript ,is a major update to the JavaScript programming language.
 
 // Arrow Function's Omit Return {f2 and f3 are same}
 const f2 = (a, b) => {
@@ -171,7 +177,7 @@ const f2 = (a, b) => {
 };
 console.log(f2(3, 4)); // 7
 
-const f3 = (a, b) => a + b;
+const f3 = (a, b) => a + b; // way shorterrrr !!!
 console.log(f3(3, 4)); // 7
 
 /*
@@ -197,16 +203,17 @@ function f11(...args) {
 }
 console.log(f11(3, 4)); // 7
 
-function log(inputFunction) {
-  return function(...args) {
+// wrapper function
+function log(inputFunction) {//takes input of func
+  return function(...args) {//return another func
       console.log("Input", args);
-      const result = inputFunction(...args);
+      const result = inputFunction(...args);//now the input function is played
       console.log("Output", result);
       return result;
   }
 }
 const f111 = log((a, b) => a + b);
-f(1, 2); // Logs: Input [1, 2] Output 3
+f111(1, 2); // Logs: Input [1, 2] Output 3
 
 // Conditional Statements
 // if,else,else if
@@ -245,7 +252,7 @@ let person = {
 const age_person = person.age;
 const {a1,a2,a3} = person ; //deconstruct (easy way to assign stuff) 
 
-let car= {model: "Swift Dezire",company:"Maruti Suzuki",desc:function(){return this.model+" by "+this.company;}};
+let car= {model: "Swift Dezire",company:"Maruti Suzuki",desc:function(){return this.model+" by "+this.company;}};// another example
   
 
 const b1 = "hi";
@@ -324,12 +331,13 @@ let message2 = (age >= 18) ? 'You are an adult' : 'You are a minor';
 console.log(message2);
 // Output: 'You are an adult' (since age is 20, which is greater than or equal to 18)
 
-let tier = 1;
-let college = (tier=1)?'Premium College': (tier=2)?'Decent College':'Bekar College';
-console.log(college);
+let Qual = 1;
+let ProdQual = (Qual=1)?'Premium': (Qual=2)?'Medium':'Worst';
+console.log(ProdQual);
 
 let num1 = 10;
 
+// nested
 // Check if num1 is greater than 0
 let result = (num1 > 0) 
   ? 'Positive' // If true, set result to 'Positive'
@@ -340,6 +348,7 @@ let result = (num1 > 0)
 console.log(result);
 // Output: 'Positive' (since num1 is 10, which is greater than 0)
 
+// application of ternary
 const Component = () => {return age>10?<div>Bhati</div>:<div>Bali</div>;};
 
 
@@ -352,6 +361,8 @@ names.map((name)=>{
     return name + "1"
 });
 
+
+// its application
 names.map((name)=>{
     return <h1>{name}</h1>
 });
@@ -483,7 +494,7 @@ error.
 
 
         */
-        /  DOM
+        /**  DOM
          * DOM (Document Object Model) manipulation is a fundamental concept in web development 
          * using JavaScript. It allows you to interact with the HTML and XML documents in a web page,
          *  dynamically updating content, structure, and style. Here's an in-depth explanation for beginners
@@ -516,11 +527,16 @@ error.
         styleElement.style.color = 'blue'; // change colour to blue
         styleElement.classList.add('highlight'); // to bold i guess
 
-        // Creating and Deleting Elements
+        // Creating and Appending Elements
         const parentElement = document.getElementById('parentElement');
         const newElement = document.createElement('p');
         newElement.innerText = 'New Element';
         parentElement.appendChild(newElement);
+        // Get the element you want to remove
+        const elementToRemove = document.getElementById('parentElement');
+
+        // Remove the element from the DOM
+        elementToRemove.remove();
 
         // Event Handling
         const clickButton = document.getElementById('clickButton');
@@ -545,9 +561,37 @@ error.
         // Debugging
         console.log('Debugging information');
         
+
+// DOM
+//        [document]
+//            |
+//        [<html>]
+//            |
+//   +--------+--------+
+//   |                 |
+// [<head>]         [<body>]
+//   |                 |
+// [<title>]      +----+----+
+//   |            |         |
+// [text]       [<h1>]     [<p>]
+//                |         |
+//              [text]    [text]
+
+// DOM, Parent, Child, and Sibling Explained
+// The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects.
+
+// In the example above, document is the root of the tree. Let's break down the relationships:
+
+// Parent: A node that has other nodes branching off of it. In the diagram, <html> is the parent of both <head> and <body>.
+
+// Child: A node that is directly connected to another node, which is its parent. <head> and <body> are both children of <html>.
+
+// Sibling: Nodes that share the same parent. <head> and <body> are siblings because they both have <html> as their parent.
+       
     </script>
 </body>
 </html>
+ 
 ```
 
 ## ES6 and Modern JS

@@ -6,13 +6,13 @@
 - [RUBY\_EMG](/RUBY_EMG/README.md)
 - [HTML\_EMG](/HTML_EMG/README.md)
 - [CSS\_EMG](/CSS_EMG/README.md)
+- [JS\_EMG](/JS_EMG/README.md)
 
 ## At Progress
 
 - [CP31](/CP31/README.md)
 - [DSA](/DSA/README.md)
 - [FULLSTACK\_WEBDEV](/FULLSTACK_WEBDEV/README.md)
-- [JS\_EMG](/JS_EMG/README.md)
 - [NEXT\_JS\_EMG](/NEXT_JS_EMG/README.md)
 - [RUBY\_ON\_RAILS\_EMG](/RUBY_ON_RAILS_EMG/README.md)
 - [DSA\_EMG\_C](/DSA_EMG_C/README.md)
@@ -44,10 +44,10 @@
 ## KintsugiProgrammer's Teaching Intro 
 
 ### Version 1: Professional & Direct
-Welcome, everyone, to this in-depth session on the [SUBJECT], brought to you by KintsugiDevStudio. This is part of our [MASTERY/EMERGENCY] Series, designed to cover the core essentials of a subject with a direct, code-first approach. This series is intended for the developer community and assumes a foundational understanding. We'll progress from the basics to [ADVANCED/INTERMEDIATE] concepts, incorporating insights from our professional experience. We hope this session proves beneficial to your development journey. Let's begin.
+Welcome, everyone, to this in-depth session on the [SUBJECT], brought to you by KintsugiDevStudio. This is part of our [MASTERY/EMERGENCY/NUTSHELL] Series, designed to cover the core essentials of a subject with a direct, code-first approach. This series is intended for the developer community and assumes a foundational understanding. We'll progress from the basics to [ADVANCED/INTERMEDIATE] concepts, incorporating insights from our professional experience. We hope this session proves beneficial to your development journey. Let's begin.
 
 ### Version 2: Slightly More Formal & Structured
-Greetings, and welcome to this comprehensive deep-dive into the [SUBJECT], presented by KintsugiDevStudio. As part of our [MASTERY/EMERGENCY] Series, this session is meticulously crafted to deliver the foundational knowledge and [ADVANCED/INTERMEDIATE] techniques essential for professional developers. Our approach is hands-on and code-centric, moving swiftly from core principles to intricate topics, enriched by practical, real-world experience. While the pace may be intense, the goal is to provide a solid, career-accelerating foundation. We appreciate your dedication and look forward to an enlightening and productive session.
+Greetings, and welcome to this comprehensive deep-dive into the [SUBJECT], presented by KintsugiDevStudio. As part of our [MASTERY/EMERGENCY/NUTSHELL] Series, this session is meticulously crafted to deliver the foundational knowledge and [ADVANCED/INTERMEDIATE] techniques essential for professional developers. Our approach is hands-on and code-centric, moving swiftly from core principles to intricate topics, enriched by practical, real-world experience. While the pace may be intense, the goal is to provide a solid, career-accelerating foundation. We appreciate your dedication and look forward to an enlightening and productive session.
 
 ### Version 3: Concise & Action-Oriented
-Welcome to this deep-dive into [SUBJECT] by KintsugiDevStudio. This is a special, high-intensity session in our [MASTERY/EMERGENCY] Series, created for the developer community. We will cover the essential aspects of [SUBJECT], from foundational concepts to [ADVANCED/INTERMEDIATE] techniques, with a focus on practical code and professional insights. This isn't a beginner's guide; it's a direct, no-fluff approach designed to quickly and effectively enhance your skills. Let's get started.
+Welcome to this deep-dive into [SUBJECT] by KintsugiDevStudio. This is a special, high-intensity session in our [MASTERY/EMERGENCY/NUTSHELL] Series, created for the developer community. We will cover the essential aspects of [SUBJECT], from foundational concepts to [ADVANCED/INTERMEDIATE] techniques, with a focus on practical code and professional insights. This isn't a beginner's guide; it's a direct, no-fluff approach designed to quickly and effectively enhance your skills. Let's get started.
