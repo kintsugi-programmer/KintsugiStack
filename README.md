@@ -51,3 +51,6 @@ Greetings, and welcome to this comprehensive deep-dive into the [SUBJECT], prese
 
 ### Version 3: Concise & Action-Oriented
 Welcome to this deep-dive into [SUBJECT] by KintsugiDevStudio. This is a special, high-intensity session in our [MASTERY/EMERGENCY] Series, created for the developer community. We will cover the essential aspects of [SUBJECT], from foundational concepts to [ADVANCED/INTERMEDIATE] techniques, with a focus on practical code and professional insights. This isn't a beginner's guide; it's a direct, no-fluff approach designed to quickly and effectively enhance your skills. Let's get started.
+
+> Disclaimer:
+The content presented here is a curated blend of my personal learning journey, experiences, open-source documentation, and invaluable guidance from my teachers and mentors. I do not claim sole ownership over all the material—this is a community-driven effort to learn, share, and grow together.
