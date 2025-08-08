@@ -99,6 +99,7 @@ function test(){
 greet(name);
 
 //Anonymous Function
+// An anonymous function is a function that is defined without a name. These functions are often used for short-lived operations, such as passing them as arguments to other functions. In JavaScript, anonymous functions are commonly used in callbacks or event handlers.
 var greet2 = function(usrname){return "Hello "+usrname+" in this tutorial program ";};
 // *Consise
 // *Arrow func. are too anonymous
