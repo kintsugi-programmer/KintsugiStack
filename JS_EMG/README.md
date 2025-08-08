@@ -1250,4 +1250,91 @@ async function performAsyncOperation2(data) {
   
   // Calling the async function
   fetchData();
+
+
+
 ```
+```plaintext
+Callbacks: Functions passed as arguments to handle asynchronous operations, but can lead to messy nesting (callback hell).
+Promises: A cleaner alternative to callbacks, allowing chaining of .then() and .catch() for success and error handling.
+async: Marks a function as asynchronous and makes it return a Promise.
+await: Pauses the function until a Promise resolves, then continues with the result.
+
+
+// Callback
+This code demonstrates how callbacks work in JavaScript for handling asynchronous operations.
+
+myCallback(result) is a simple function that logs the result passed to it.
+
+performAsyncOperation(data, callback) is a function that simulates an asynchronous operation using setTimeout(). After 1 second, it computes data * 2 and calls the provided callback function with the result.
+
+performAsyncOperation(5, myCallback) calls the function with 5 as input. After the 1-second delay, myCallback is executed, logging the result of 5 * 2, which is 10.
+
+In summary, a callback is a function passed as an argument to another function, and it gets executed once the asynchronous operation is complete. This is how JavaScript traditionally handles async tasks, but it can lead to callback hell if multiple nested callbacks are used.
+
+//Promises
+This code demonstrates how Promises are used to handle asynchronous operations in a cleaner and more manageable way compared to callbacks.
+
+Key Concepts:
+Promises represent the eventual completion (or failure) of an asynchronous operation. A Promise has three states:
+
+Pending — Initial state, operation is not finished.
+
+Resolved (Fulfilled) — Operation completed successfully.
+
+Rejected — Operation failed (error occurred).
+
+Breakdown:
+performAsyncOperation1(data):
+
+This function returns a Promise.
+
+Inside the Promise, it simulates an asynchronous operation using setTimeout() to wait 1 second.
+
+If the operation is successful, it calls resolve(result) to pass the result.
+
+If there’s an error, reject(error) can be used (though it’s not used in this case).
+
+Using Promises:
+
+.then() is used to handle a successful resolution of the Promise, where the result is logged to the console.
+
+.catch() is used to handle a rejection (error), and in this case, logs an error message if the operation fails.
+
+performAsyncOperation11(data):
+
+This function also returns a Promise, but with added validation:
+
+If data > 0, it resolves with data * 2.
+
+If data <= 0, it rejects the Promise with an error message.
+
+Using the Promise with rejection:
+
+When the function is called with 5, the Promise resolves successfully.
+
+When the function is called with -2, the Promise rejects and logs an error message.
+
+Summary:
+Promises provide a more structured and readable way to handle asynchronous operations compared to callbacks.
+
+They allow handling success (.then()) and failure (.catch()) in a clean manner, avoiding deeply nested callbacks.
+
+// async/await
+
+This code demonstrates async/await for handling asynchronous operations in JavaScript.
+
+performAsyncOperation2(data) is a function that returns a Promise, simulating an asynchronous operation (multiplying a number after a 1-second delay).
+
+fetchData() is an async function, which means it can use await to pause execution until the performAsyncOperation2() Promise resolves. This makes it appear as if the asynchronous operation is happening synchronously (like a normal function).
+
+Inside fetchData(), await pauses the function until performAsyncOperation2(5) completes. Once it resolves, the result is printed to the console.
+
+In short, async/await simplifies working with asynchronous code by making it more readable and less prone to complex chaining or callback issues.
+```
+
+
+
+
+
+
