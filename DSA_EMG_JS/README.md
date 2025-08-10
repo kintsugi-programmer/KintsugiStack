@@ -11,6 +11,10 @@
     - [`O(1)`](#o1)
     - [`O(n^2)`](#on2)
     - [`O(log n)`](#olog-n)
+  - [Arrays](#arrays)
+    - [Arrays DS](#arrays-ds)
+    - [Custom Array](#custom-array)
+    - [Reverse String 54:00](#reverse-string-5400)
 
 
 ## What is DSA
@@ -184,4 +188,141 @@ eg3pairsPrint(eg3arr);
 ### `O(log n)`
 - O(log n) time complexity refers to an algorithm's runtime that grows logarithmically with the size of the input (represented by n).
 - In simpler terms: as the input size increases, the time it takes for the algorithm to run increases slowly.
-- 30:00 https://www.youtube.com/watch?v=wBtPGnVnA9g&t
+- eg : Divide and conquer
+
+```plaintext
+[1 2 3 4 | 5 6 7 8]        <- Step 1: Divide into two halves
+[1 2 3 4]   [5 6 7 8]      <- Step 2: Work on each half separately
+[1 2] [3 4]   [5 6] [7 8]  <- Step 3: Further divide
+[1] [2] [3] [4] [5] [6] [7] [8] <- Step 4: Base case reached
+
+(Then conquer: combine results)
+[1 2] [3 4]   [5 6] [7 8]
+[1 2 3 4]     [5 6 7 8]
+[1 2 3 4 5 6 7 8]
+```
+
+> log2(8) = 3 = 3 steps of this algo
+
+- in bs,trees etc., we will discuss more of it in depth
+
+## Arrays
+### Arrays DS
+- A data structure array is an ordered collection of elements that can be accessed using a numerical index.
+
+- primitive arrays
+```js
+// eg4 : Array DS in JS
+console.log('eg4')
+const eg4stringArr = ["a","b","c"]; //string
+const eg4numArr = [1,2,3,4]; //number
+const eg4boolArr = [true,false,false,true]; //bool
+const eg4mixedArr = ["a",2,true,undefined,null,{c:"c"},["d"]];
+console.log(eg4stringArr,eg4numArr,eg4boolArr,eg4mixedArr);
+// these are premitive arrays
+
+// eg4
+// [ 'a', 'b', 'c' ] [ 1, 2, 3, 4 ] [ true, false, false, true ] [ 'a', 2, true, undefined, null, { c: 'c' }, [ 'd' ] ]
+```
+
+### Custom Array
+```js
+
+// eg5 : Custom Array
+console.log('eg5');
+class eg5CustomArray {
+    constructor(){// initialize :)
+        this.length = 0;
+        this.data = {} ;
+    }
+
+    // custom operations
+    // append
+    push(element){
+        // this.data+=element; // NO
+        this.data[this.length]=element;
+        this.length++;
+        console.log(this.data);
+    }
+
+    // access
+    get(index){
+        // index
+        return this.data[index];
+    }
+
+    // remove element from last
+    pop(){
+        const lastElement =this.get(this.length-1);
+        delete this.data[this.length-1]; //IMP
+        this.length--;
+        return lastElement;
+    }
+
+    // remove element from first
+    shift(){
+        const firstElement = this.get(0);
+        for ( let i=0; i<this.length && i+1 !== this.length; i++){
+            this.data[i]=this.data[i+1];
+        }
+        this.pop();
+        return firstElement;
+
+    }
+
+    // delete by index
+    delete(index){
+        const indexElement = this.data[index];
+        for ( let i=index; i<this.length && i+1 !== this.length; i++){
+            this.data[i]=this.data[i+1];
+        }
+        this.pop();
+        return indexElement;
+    }
+}
+
+const eg5MyNewArray = new eg5CustomArray();
+console.log(eg5MyNewArray); //eg5CustomArray { length: 0, data: {} }
+eg5MyNewArray.push(10);//{ '0': 10 }
+eg5MyNewArray.push(200);//{ '0': 10, '1': 200 }
+console.log(eg5MyNewArray.length);//2
+console.log(eg5MyNewArray.get(1));//200
+console.log(eg5MyNewArray.pop());//200
+console.log(eg5MyNewArray); //eg5CustomArray { length: 1, data: { '0': 10 } }
+eg5MyNewArray.push(20);//{ '0': 10, '1': 20 }
+eg5MyNewArray.push(30);//{ '0': 10, '1': 20, '2': 30 }
+eg5MyNewArray.push(40);//{ '0': 10, '1': 20, '2': 30, '3': 40 }
+console.log(eg5MyNewArray); 
+// eg5CustomArray {
+//   length: 4,
+//   data: { '0': 10, '1': 20, '2': 30, '3': 40 }
+// }
+console.log(eg5MyNewArray.shift());//10
+console.log(eg5MyNewArray); 
+// eg5CustomArray { length: 3, data: { '0': 20, '1': 30, '2': 40 } }
+console.log(eg5MyNewArray.delete(1)      );//30
+console.log(eg5MyNewArray); 
+// eg5CustomArray { length: 2, data: { '0': 20, '1': 40 } }
+
+// eg5
+// eg5CustomArray { length: 0, data: {} }
+// { '0': 10 }
+// { '0': 10, '1': 200 }
+// 2
+// 200
+// 200
+// eg5CustomArray { length: 1, data: { '0': 10 } }
+// { '0': 10, '1': 20 }
+// { '0': 10, '1': 20, '2': 30 }
+// { '0': 10, '1': 20, '2': 30, '3': 40 }
+// eg5CustomArray {
+//   length: 4,
+//   data: { '0': 10, '1': 20, '2': 30, '3': 40 }
+// }
+// 10
+// eg5CustomArray { length: 3, data: { '0': 20, '1': 30, '2': 40 } }
+// 30
+// eg5CustomArray { length: 2, data: { '0': 20, '1': 40 } }
+```
+### Reverse String 54:00
+
