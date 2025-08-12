@@ -193,3 +193,85 @@ console.log(eg5MyNewArray);
 // eg5CustomArray { length: 3, data: { '0': 20, '1': 30, '2': 40 } }
 // 30
 // eg5CustomArray { length: 2, data: { '0': 20, '1': 40 } }
+
+//eg6 : Reverse String 
+console.log('eg6');
+//- Hello => olleH
+//- convert string => array, reverse the array, convert array => string
+
+const eg6ReverseString = (eg6String) => {
+    let eg6Array = eg6String.split(''); // typecast str => `arr`
+    eg6Array.reverse();
+    return eg6Array.join(''); // typecast `str`<= arr
+};
+
+let eg6String = "Hello";//Hello
+console.log(eg6String);
+eg6String= eg6ReverseString(eg6String); 
+console.log(eg6String);//olleH
+
+const eg6ReverseStringSmall = (eg6String) => eg6String.split("").reverse().join("");
+eg6String= eg6ReverseStringSmall(eg6String); 
+console.log(eg6String);//Hello
+
+eg6String= eg6String.split("").reverse().join("");
+console.log(eg6String);//olleH
+
+// eg6
+// Hello
+// olleH
+// Hello
+// olleH
+
+//eg7 : Palindrome Checker
+console.log("eg7")
+
+const eg7PalindromeChecker = (str) => { return str===str.split("").reverse().join("") };
+
+// more short
+const eg7PalindromeCheckerShort = str => str.split("").reverse().join("") === str;
+
+console.log(eg7PalindromeChecker("Hello"));//false
+console.log(eg7PalindromeChecker("h"));//true
+console.log(eg7PalindromeCheckerShort("cddc"));//true
+
+// eg7
+// false
+// true
+// true
+
+//eg8 : Integer Reversal
+console.log("eg8");
+const eg8IntegerReverser = (Integer) => parseInt(Integer.toString().split("").reverse().join(""))*Math.sign(Integer);
+console.log(eg8IntegerReverser(-1234));// -4321
+
+// eg8
+// -4321
+
+// eg9:Sentence Capitalization
+console.log("eg9");
+
+//ASCII Complex way
+const eg9SentenceCapitalizerASCII = (Sentence) =>{
+    let eg9Array = Sentence.split(" ");
+    for (let i =0; i<eg9Array.length;i++){ // never put any extraCondition at bw because it will stop,not skip where extraCondition fails
+
+        if (eg9Array[i][0].charCodeAt(0)>=97 && eg9Array[i][0].charCodeAt(0)<=122){
+        
+         eg9Array[i] = String.fromCharCode(eg9Array[i][0].charCodeAt(0) - 32) // convert 1st letter
+        +
+        eg9Array[i].slice(1);// rest of stuff
+        }
+
+    }
+    return eg9Array.join(" ");
+}
+console.log(eg9SentenceCapitalizerASCII("hello World i Am bALI"));// Hello World I Am BALI
+
+//typical approach
+const eg9SentenceCapitalizer = (str) => str.toLowerCase().split(" ").map((word)=>word[0].toUpperCase()+word.slice(1)).join(" "); 
+console.log(eg9SentenceCapitalizer("hello World i Am bALI"));//Hello World I Am Bali
+
+// eg9
+// Hello World I Am BALI
+// Hello World I Am Bali

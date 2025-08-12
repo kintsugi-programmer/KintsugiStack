@@ -14,7 +14,13 @@
   - [Arrays](#arrays)
     - [Arrays DS](#arrays-ds)
     - [Custom Array](#custom-array)
-    - [Reverse String 54:00](#reverse-string-5400)
+  - [Numbers+Strings+Arrays](#numbersstringsarrays)
+    - [ASCII](#ascii)
+    - [Reverse String](#reverse-string)
+    - [Palindromes](#palindromes)
+    - [Integer Reversal](#integer-reversal)
+    - [Sentence Capitalization](#sentence-capitalization)
+    - [FizzBuzz](#fizzbuzz)
 
 
 ## What is DSA
@@ -32,6 +38,8 @@ code .
 ```
 - install `coderunner` extension
 - F1 > set keyboard extension > run code to be `ctrl+enter`
+- sometimes refresh js code run ,in case wrong output glitch in vsc terminal
+- each `eg` is a challenge to practice :0. Good Luck !!!
 
 ## Need of DSA
 
@@ -324,5 +332,169 @@ console.log(eg5MyNewArray);
 // 30
 // eg5CustomArray { length: 2, data: { '0': 20, '1': 40 } }
 ```
-### Reverse String 54:00
 
+## Numbers+Strings+Arrays
+
+### ASCII
+- ASCII Table
+```
+Lowercase Letters (a-z):
+a: 97
+z: 122
+
+Uppercase Letters (A-Z):
+A: 65
+Z: 90
+
+Numbers (0-9):
+0: 48
+9: 57
+```
+- `String.fromCharCode(97)` method to find `String` <= ASCII no.
+- `"a".charCodeAt(0)` method to find String => `ASCII no`.
+- American Standard Code for Information Interchange. It is a character encoding standard used for representing text and control characters in computers and communication equipment.
+
+### Reverse String 
+- Hello => olleH
+- Approach
+  - convert string => array
+  - reverse the array
+  - convert array => string
+- `eg6Array = eg6String.split('');` typecast str => `arr`
+- `eg6Array.reverse();` reverse the original array
+- `eg6String = eg6Array.join('');` typecast str`<= arr
+- basically just this in short `eg6String.split("").reverse().join("")`
+```js
+
+//eg6 : Reverse String 
+console.log('eg6');
+//- Hello => olleH
+//- convert string => array, reverse the array, convert array => string
+
+const eg6ReverseString = (eg6String) => {
+    let eg6Array = eg6String.split(''); // typecast str => `arr`
+    eg6Array.reverse();
+    return eg6Array.join(''); // typecast `str`<= arr
+};
+
+let eg6String = "Hello";//Hello
+console.log(eg6String);
+eg6String= eg6ReverseString(eg6String); 
+console.log(eg6String);//olleH
+
+const eg6ReverseStringSmall = (eg6String) => eg6String.split("").reverse().join("");
+eg6String= eg6ReverseStringSmall(eg6String); 
+console.log(eg6String);//Hello
+
+eg6String= eg6String.split("").reverse().join("");
+console.log(eg6String);//olleH
+
+// eg6
+// Hello
+// olleH
+// Hello
+// olleH
+```
+
+### Palindromes
+- if the reverse string is equal to the original one then that word is palindrome
+- eg: abba === abba [CORRECT]
+- eg: cddc === cddc [CORRECT]
+- eg: Hello !== olleH [INCORRECT]
+- Approach
+  - make stingCopy <= string 
+  - convert stingCopy => array
+  - reverse the array
+  - convert array => stingCopy
+  - compare stingCopy === sting
+
+```js
+
+//eg7 : Palindrome Checker
+console.log("eg7")
+
+const eg7PalindromeChecker = (str) => { return str===str.split("").reverse().join("") };
+
+// more short
+const eg7PalindromeCheckerShort = str => str.split("").reverse().join("") === str ;
+
+console.log(eg7PalindromeChecker("Hello"));//false
+console.log(eg7PalindromeChecker("h"));//true
+console.log(eg7PalindromeCheckerShort("cddc"));//true
+
+// eg7
+// false
+// true
+// true
+```
+
+### Integer Reversal
+- 1234 => 4321
+- 5678 => 8765
+- Approach
+  - convert number => string
+  - convert string => array
+  - reverse the array
+  - convert array => string
+  - convert string => number
+- typecast number => string by `String(num)` or `num.toString()` or ``${num}``
+- typecast number <= string by `parseInt(str)*Math.sign(str)`
+```js
+//eg8 : Integer Reversal
+console.log("eg8");
+const eg8IntegerReverser = (Integer) => parseInt(Integer.toString().split("").reverse().join(""))*Math.sign(Integer);
+console.log(eg8IntegerReverser(-1234));// -4321
+
+// eg8
+// -4321
+```
+
+### Sentence Capitalization
+- hello world => Hello World
+- typical approach
+  - convert string lowercase
+  - convert string to array
+  - capitalize each word
+  - convert array to string
+- ASCII Complex Approach
+  - convert string to array
+  - iterate each word
+    - if any word's 1st letter is in range of a-z(97-112)
+      - word = convert the first letter into Uppercase in range A-Z(65-90)+ rest of letters
+        - convert firstLetter to ASCII number
+        - -32 from it
+        - convert this ASCII of A-Z range to String
+        - add with rest of letters
+  - convert array to string
+```js
+
+// eg9:Sentence Capitalization
+console.log("eg9");
+
+//ASCII Complex way
+const eg9SentenceCapitalizerASCII = (Sentence) =>{
+    let eg9Array = Sentence.split(" ");
+    for (let i =0; i<eg9Array.length;i++){ // never put any extraCondition at bw because it will stop,not skip where extraCondition fails
+
+        if (eg9Array[i][0].charCodeAt(0)>=97 && eg9Array[i][0].charCodeAt(0)<=122){
+        
+         eg9Array[i] = String.fromCharCode(eg9Array[i][0].charCodeAt(0) - 32) // convert 1st letter
+        +
+        eg9Array[i].slice(1);// rest of stuff
+        }
+
+    }
+    return eg9Array.join(" ");
+}
+console.log(eg9SentenceCapitalizerASCII("hello World i Am bALI"));// Hello World I Am BALI
+
+//typical approach
+const eg9SentenceCapitalizer = (str) => str.toLowerCase().split(" ").map((word)=>word[0].toUpperCase()+word.slice(1)).join(" "); 
+console.log(eg9SentenceCapitalizer("hello World i Am bALI"));//Hello World I Am Bali
+
+// eg9
+// Hello World I Am BALI
+// Hello World I Am Bali
+```
+
+### FizzBuzz
