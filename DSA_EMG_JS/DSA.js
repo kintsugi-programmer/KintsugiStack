@@ -275,3 +275,212 @@ console.log(eg9SentenceCapitalizer("hello World i Am bALI"));//Hello World I Am 
 // eg9
 // Hello World I Am BALI
 // Hello World I Am Bali
+
+// eg10: FizzBuzz
+// new way of console log
+console.log('eg10');
+const eg10FizzBuzzNew = (n) => {for (let i =1; i<=n; i++) {
+    console.log(
+        i%3==0 ? 
+        (
+            (i%5==0 ?
+            ("FizzBuzz"):("Fizz")
+        )
+        )
+        :
+        (i%5==0 ?
+            ("Buzz"):(i)
+        )
+    );
+}};
+
+eg10FizzBuzzNew(10);
+// 1
+// 2
+// Fizz
+// 4
+// Buzz
+// Fizz
+// 7
+// 8
+// Fizz
+// Buzz
+
+//old normal way
+const eg10FizzBuzzNormal = (n) => {
+    for (let i =1; i<=n; i++) 
+    {
+        if ( i%3==0 && i%5==0) console.log("FizzBuzz");
+        else if ( i%3==0 ) console.log("Fizz");
+        else if ( i%5==0 ) console.log("Buzz");
+        else console.log(i);
+    }
+};
+
+eg10FizzBuzzNormal(10);
+// 1
+// 2
+// Fizz
+// 4
+// Buzz
+// Fizz
+// 7
+// 8
+// Fizz
+// Buzz
+
+
+// eg10
+// 1
+// 2
+// Fizz
+// 4
+// Buzz
+// Fizz
+// 7
+// 8
+// Fizz
+// Buzz
+// 1
+// 2
+// Fizz
+// 4
+// Buzz
+// Fizz
+// 7
+// 8
+// Fizz
+// Buzz
+
+
+
+// eg11: Max Profit
+console.log("eg11");
+// [7, 1, 5, 3, 6, 4]
+
+const eg11MaxProfitCal = (array) => {
+    let Min=Infinity, MaxProfit=0; //min_so_far = +∞ (or first element), max_profit = 0
+    for (let i =0; i<array.length; i++){
+        let TodayPrice = array[i];
+
+        if (TodayPrice-Min > MaxProfit){MaxProfit=TodayPrice-Min};// or MaxProfit = Math.max(MaxProfit, TodayPrice-Min);
+        if (TodayPrice<Min) {Min=TodayPrice;}// or Min = Math.min(Min,TodayPrice);
+
+
+    }
+    return MaxProfit;
+};
+[7, 1, 5, 3, 6, 4]
+console.log(eg11MaxProfitCal([3, 2, 6, 5, 0, 3])); //4
+console.log(eg11MaxProfitCal([7, 1, 5, 3, 6, 4])); //5
+
+// // Wrong Approach, Calculating just differences won't solve the problem, it doesn't compare previous profit
+// const eg11MaxProfitCal = (array) => {
+//     let Min=Infinity, Max=0; //min_so_far = +∞ (or first element), max_profit = 0
+//     for (let i =0; i<array.length; i++){
+//         let TodayPrice = array[i];
+//         if (TodayPrice<Min) {Min=TodayPrice;} //3 2 2 2 0 3
+//         if (TodayPrice>Max) {Max=TodayPrice;} //3 0 6 6 0 3
+//         if (Min===TodayPrice) {Max=0;}
+//     }
+//     return Max-Min;
+// };
+// console.log(eg11MaxProfitCal([3, 2, 6, 5, 0, 3])); //3
+
+// eg11
+// 4
+// 5
+
+// eg12: Array Chunk
+console.log("eg12");
+
+const eg12ArrayChunker1 = (array,chunkSize) => {
+    let index=0;
+    let chunkArray=[];
+    while (index<array.length){
+        const chunk = array.slice(index,index+chunkSize);
+        chunkArray.push(chunk);
+        index+=chunkSize;
+    }
+    return chunkArray;
+};
+
+const eg12ArrayChunker2 = (array,chunk) => {
+    
+    let chunkArray = [];
+    let subChunk = [];
+    let chunkCount = 0;
+
+    const allotChunk= (chunkArray,subChunk) => {chunkArray.push(subChunk);}
+
+    const reset = () => {subChunk=[]; chunkCount=0}; 
+
+    let lastElement = array[array.length-1];
+
+    for(let i=0; i<array.length; i++){
+        chunkCount++;
+
+        let element = array[i];
+        
+        subChunk.push(element);
+        if (chunkCount===chunk || element===lastElement){
+            allotChunk(chunkArray,subChunk);
+            reset();
+
+        }
+        
+        
+    }
+    return chunkArray;
+};
+
+console.log(eg12ArrayChunker1([1, 2, 3, 4, 5, 6, 7, 8], 3)); //[ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8 ] ]
+console.log(eg12ArrayChunker1([1, 2, 3, 4, 5], 2));//[ [ 1, 2 ], [ 3, 4 ], [ 5 ] ]
+console.log(eg12ArrayChunker2([1, 2, 3, 4, 5, 6, 7, 8], 3)); //[ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8 ] ]
+console.log(eg12ArrayChunker2([1, 2, 3, 4, 5], 2));//[ [ 1, 2 ], [ 3, 4 ], [ 5 ] ]
+
+// eg12
+// [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8 ] ]
+// [ [ 1, 2 ], [ 3, 4 ], [ 5 ] ]
+// [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8 ] ]
+// [ [ 1, 2 ], [ 3, 4 ], [ 5 ] ]
+
+// eg13: Two Sum ( Ugly Code )
+// this is not better solution, there exists a better approach
+console.log("eg13");
+
+const eg13TwoSumUgly = (array, target) => {
+    for( let i=0; i<array.length; i++){
+        for( let j=0; j<array.length; j++){
+            if (i!==j && (array[i]+array[j]===target)){
+                return [i,j];
+            }
+        }
+    }
+};
+const eg13TwoSumUgly2 = (array, target) => {
+    for( let i=0; i<array.length; i++){
+        for( let j=i+1; j<array.length; j++){
+            if (array[i]+array[j]===target){
+                return [i,j];
+            }
+        }
+    }
+    return []; //return empty if not exists 
+};
+const eg13TwoSumLessUgly= (array, target) => {
+    for( let i=0; i<array.length; i++){
+        if ( array.includes(target-array[i]) ) { // array.includes()
+            return [i,array.indexOf(target-array[i])];// array.indexOf()
+        }
+    }
+};
+
+console.log(eg13TwoSumUgly([2, 7, 11, 15],9));//[ 0, 1 ]
+console.log(eg13TwoSumUgly2([2, 7, 11, 15],9));//[ 0, 1 ]
+console.log(eg13TwoSumLessUgly([2, 7, 11, 15],9));//[ 0, 1 ]
+
+// eg13
+// [ 0, 1 ]
+// [ 0, 1 ]
+// [ 0, 1 ]
