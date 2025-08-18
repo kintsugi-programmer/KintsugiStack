@@ -484,3 +484,6 @@ console.log(eg13TwoSumLessUgly([2, 7, 11, 15],9));//[ 0, 1 ]
 // [ 0, 1 ]
 // [ 0, 1 ]
 // [ 0, 1 ]
+
+// eg14
+console.log("eg14");

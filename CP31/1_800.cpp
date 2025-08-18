@@ -25,4 +25,4 @@ int main(){
     return 0;
 }
 // tc O(nlogn)
-// sc O(n)
+// sc O(n)3

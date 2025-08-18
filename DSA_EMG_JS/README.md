@@ -23,6 +23,7 @@
     - [Max Profit](#max-profit)
     - [Array Chunk](#array-chunk)
     - [Two Sum ( Ugly Code )](#two-sum--ugly-code-)
+  - [Linked List](#linked-list)
 
 
 ## What is DSA
@@ -770,3 +771,4 @@ console.log(eg13TwoSumLessUgly([2, 7, 11, 15],9));//[ 0, 1 ]
 // [ 0, 1 ]
 // [ 0, 1 ]
 ```
+## Linked List
