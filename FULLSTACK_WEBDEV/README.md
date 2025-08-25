@@ -1,5 +1,545 @@
-# fullstack-webdev-essentials
-## Asynchronous Javascript, Callbacks and more
+# FULLSTACK_WEBDEV
+- https://github.com/Bharat2044/100xDevs-Cohort3-WebDev-and-Devops/blob/main/Lecture%20Slides.md
+- https://app.100xdevs.com/courses/14
+## Table of Contents
+- [FULLSTACK\_WEBDEV](#fullstack_webdev)
+  - [Table of Contents](#table-of-contents)
+  - [1 Orientation](#1-orientation)
+    - [Web Dev + Devops Cohort by 100xDevs](#web-dev--devops-cohort-by-100xdevs)
+    - [Goal](#goal)
+    - [Cohort Projects](#cohort-projects)
+    - [Avoid the spikes](#avoid-the-spikes)
+    - [What would I do if I was you?](#what-would-i-do-if-i-was-you)
+    - [Select your level](#select-your-level)
+    - [Good things to hash out](#good-things-to-hash-out)
+    - [VSCode Installation](#vscode-installation)
+    - [HTML](#html)
+    - [CSS](#css)
+  - [2 Javascript Basics](#2-javascript-basics)
+    - [Javascript - The basics](#javascript---the-basics)
+    - [Properties of JS](#properties-of-js)
+    - [Syntax of Javascript](#syntax-of-javascript)
+    - [Complex types](#complex-types)
+  - [3 Asynchronous Javascript, Callbacks and more](#3-asynchronous-javascript-callbacks-and-more)
+    - [Intro](#intro)
+    - [Normal functions in JS](#normal-functions-in-js)
+    - [Synchronous code](#synchronous-code)
+    - [I/O heavy operations](#io-heavy-operations)
+    - [I/O bound tasks vs CPU bound tasks](#io-bound-tasks-vs-cpu-bound-tasks)
+    - [Doing I/O bound tasks in the real world](#doing-io-bound-tasks-in-the-real-world)
+    - [Functional arguments](#functional-arguments)
+    - [Asynchronous code, callbacks](#asynchronous-code-callbacks)
+    - [JS Architecture for async code](#js-architecture-for-async-code)
+  - [4 Promises and async, await](#4-promises-and-async-await)
+    - [Classes in JS](#classes-in-js)
+    - [Inheritance in classes](#inheritance-in-classes)
+    - [Some more classes](#some-more-classes)
+    - [Promise class](#promise-class)
+    - [Callback hell](#callback-hell)
+    - [Async await syntax](#async-await-syntax)
+    - [Defining your own async function](#defining-your-own-async-function)
+    - [err first callback vs rejects in promises](#err-first-callback-vs-rejects-in-promises)
+    - [Assignment](#assignment)
+
+## 1 Orientation
+
+### Web Dev + Devops Cohort by 100xDevs
+
+### Goal
+
+Make you incredibly solid at building and deploying Web apps.
+
+### Cohort Projects
+
+1. https://github.com/code100x/cms/ - Led by hsingh
+2. https://github.com/code100x/daily-code/ - Led by Sargam
+3. https://github.com/code100x/job-board - Led by Vineet
+4. https://github.com/code100x/algorithmic-arena/pull/10 - Led by Nimit
+5. Framer like app - Up for grabs
+
+### Avoid the spikes
+
+1. We will go slow, today only focussing on HTML/CSS/JS
+2. Any topic that you feel is missing / you want we will do polls from time to time we can add
+3. Go slow but stay consistent, avoid the spikes
+
+### What would I do if I was you?
+
+1. Get to know people in discord, try to find a group of 3-4 motivated people.
+2. Look at all the success stories here and how they got a job - https://www.youtube.com/@100xDevs-n1w
+3. Repeated advise - GSoC is the best internship you can do. Already start prepping for it competition is high. Tell me how can I help here we’re hoping for ~50 GSoC selections from the cohort this year. Good video to watch - https://www.youtube.com/watch?v=OmzCvb-QBak
+
+<aside>
+💡 We’ll be covering things slowly in Cohort 3, so if you think things are going too slow you can 
+1. Participate in projects/hackathons
+2. Sprint through Cohort 2.0
+
+</aside>
+
+### Select your level
+
+- Complete beginner (very basic/no coding before)
+
+Things will be hard. You should spend ~20 hours/week atleast on Cohort material, assignments, other content covering what we’re doing in the Cohort. Don’t slack off
+
+- Intermediate (Done basic JS, HTML and some DSA)
+
+You should be for the first ~10 weeks or so. We see major drop off after the first major project. 
+
+Try chewing some glass after week 10, that is where you will actually learn things that differentiate you from a typical MERN developer
+
+- Advance (Know MERN decent/well)
+
+Feel free to drop off for the first few weeks. I’ll see you on Github. Participate in the Superteam hackathon , aim for GSoC this year. Already start looking at orgs
+
+### Good things to hash out
+
+1. Installing VSCode locally
+2. HTML/CSS
+3. Cloning the landing page of a simple website
+
+### VSCode Installation
+
+Download from here - https://code.visualstudio.com/
+
+### HTML
+
+HTML stands for hyper text markup language. It is the foundation of building `unstyled` websites.
+
+- Step 1 - Creating a simple HTML file locally
+
+1. Create a folder on your machine called `website`
+2. Add a `index.html` file inside it
+3. Write the following code in it - 
+
+```rust
+<html>
+	<title>
+		Visual Studio Code - Code Editor
+	</title>
+</html>
+```
+
+Now open this in your browser
+
+
+- Step 2 - Tags
+
+1. div, span
+2. head
+3. body
+4. h1, h2, h3, h4, h5, h6
+5. b, i, u
+6. a
+7. img
+8. input
+9. button
+10. br
+
+- Step 3 - Building a basic HTML page
+
+```rust
+<html>
+	<title>
+		Visual Studio Code - Code Editor
+	</title>
+</html>
+<body>
+	<div>
+		<span>Visual Studio Code</span>
+		<a href="/">Docs</span> 
+		<a href="/">Updates</span> 
+		<a href="/">Blog</span> 
+		<a href="/">API</span> 
+		<a href="/">Extensions</span> 
+		<a href="/">FAQs</span>
+		<a href="/">Learn</span>
+		
+		<input type="text" placeholder="Search Docs">
+		<button>Download</button>
+	</div>
+	<br/>
+
+	<div>
+		<a href="/">Version 1.82</a> is now available! Read about the new features and fixes from July.
+	</div>
+
+	<br/>
+</body>
+```
+
+
+### CSS
+
+CSS stands for Cascading Style Sheets. It is used to style our applications
+
+You can add CSS to your HTML app by using - 
+
+1. The  `style` attribute (inline styles)
+2. In an external css file
+
+- Approach #1 - Inline styles
+
+Try updating the `body` tag in the last style as follows - 
+
+```rust
+<body style="background-color: black;">
+... rest of the code
+</body>
+```
+
+- Approach #2 - External styles
+
+1. Add a new file called index.css
+2. Add the following code in it
+
+```rust
+body {
+    background-color: black;
+}
+```
+
+- Update index.html
+
+```rust
+<html>
+	<title>
+		Visual Studio Code - Code Editor
+	</title>
+	<link rel="stylesheet" href="index.css">
+</html>
+<body>
+... rest of the code
+</body>
+```
+
+- Common style attributes
+
+- `color`: Sets the text color.
+- `background-color`: Sets the background color.
+- `font-size`: Sets the size of the text.
+- `margin`: Sets the outer space around an element.
+- `padding`: Sets the inner space within an element.
+- `border`: Sets the border around an element.
+
+- Flexbox
+
+Flexbox is a CSS layout model designed to help with the arrangement of items within a container.
+
+Update the website to the following - 
+
+```rust
+<html>
+	<title>
+		Visual Studio Code - Code Editor
+	</title>
+</html>
+<body>
+	<div style="display: flex;">
+		<div>Visual Studio Code</div>
+		<a href="/">Docs</span> 
+		<a href="/">Updates</span> 
+		<a href="/">Blog</span> 
+		<a href="/">API</span> 
+		<a href="/">Extensions</span> 
+		<a href="/">FAQs</span>
+		<a href="/">Learn</span>
+	</div>
+	<div>
+		<input type="text" placeholder="Search Docs">
+		<button>Download</button>
+	</div>
+	<br/>
+
+	<div>
+		<a href="/">Version 1.82</a> is now available! Read about the new features and fixes from July.
+	</div>
+
+	<br/>
+</body>
+```
+
+Notice that the elements are positioned right next to each other even though `Visual Studio code` is inside a `div`
+
+- Justify content
+
+Try experimenting with the `justify-centent`  property
+
+```rust
+<html>
+	<title>
+		Visual Studio Code - Code Editor
+	</title>
+</html>
+<body>
+	<div style="display: flex; justify-content: space-between;">
+		<div>Visual Studio Code</div>
+		<a href="/">Docs</span> 
+		<a href="/">Updates</span> 
+		<a href="/">Blog</span> 
+		<a href="/">API</span> 
+		<a href="/">Extensions</span> 
+		<a href="/">FAQs</span>
+		<a href="/">Learn</span>
+	</div>
+	<div>
+		<input type="text" placeholder="Search Docs">
+		<button>Download</button>
+	</div>
+	<br/>
+
+	<div>
+		<a href="/">Version 1.82</a> is now available! Read about the new features and fixes from July.
+	</div>
+
+	<br/>
+</body>
+```
+
+- Another example
+
+```rust
+<html>
+
+</html>
+<body>
+    <header>
+
+    </header>
+    <section>
+    <div style="border-width: thick; border-style: solid; display: flex; justify-content: space-between; margin-left: 200px; margin-right: 200px;">
+        <div style="background: red; "> 
+            <h1>
+                Code with GitHub Copilot
+            </h1>
+            <h6>
+                Write code faster and smarter with GitHub Copilot, your AI pair programmer.
+            </h6>            
+            Try GitHub Copilot free for 30 days
+            Completions present suggestions automatically to help you code more efficiently.
+            
+            Copilot Chat understands the context of your code, workspace, extensions, settings, and more.
+            
+            Inline Chat enables you to iteratively generate edits and get answers to quick questions, directly on your code.
+        </div>
+        <div style="background: green;">
+        <img src="https://code.visualstudio.com/assets/home/swimlane-copilot.png" width="800px" /></div>
+    </div>
+</section>
+    <footer>
+
+    </footer>
+</body>
+```
+
+- Classes and ids
+
+In CSS, classes and IDs are used as selectors to apply styles to HTML elements. They help in targeting specific elements for styling and can be used to enhance the modularity and reusability of CSS code.
+
+## 2 Javascript Basics
+### Javascript - The basics
+- Web development
+
+Web development involves writing a lot of HTML, CSS and JS code. 
+Historically (and even today to some extend), browsers could only understand HTML, CSS and JS
+Any website that you see, is a bunch of HTML, CSS and JS files along with some assets (images, videos etc)
+ 
+![alt text](image-3.png)
+- Facts/Callouts
+
+React, NextJS are frameworks . They compile down to HTML, CSS, JS in the end. That is what your browser understands.
+When you run your C++ code on leetcode , it does not run on your browser/machine. It runs somewhere else. Your browser can’t (almost) compile and run C++ code.
+If someone asks — What all languages can your browser interpret, the answer is HTML, CSS, JS and WebAssembly. It can, technically, run C++/Rust code that is compiled down to Wasm
+ 
+- Before we proceed, do one of the following  
+
+Create an account on replit
+Install Node.js locally
+Keep your browser console open for testing locally
+
+### Properties of JS
+Every language comes with it’s unique set of features. 
+- Javascript has the following -
+- 1. Interpreted
+ JavaScript is an interpreted language, meaning it's executed line-by-line at runtime by the JavaScript engine in the browser or server environment, rather than being compiled into machine code beforehand.
+![alt text](image-4.png)
+ 
+Upsides - 
+There is one less step to do before running your code
+Downsides - 
+Performance Overhead:
+More prone to runtime errors
+
+- 2. Dynamically Typed
+ Variables in JavaScript are not bound to a specific data type. Types are determined at runtime and can change as the program executes
+C++ Code (won’t compile)
+```cpp
+#include <iostream>
+
+int main() { 
+  int a = 1;
+  a = "hello";
+  a = true;
+}
+
+JS Code (will compile)
+
+var a = 1;
+a = "harkirat";
+a = true;
+
+console.log(a)
+```
+ 
+- 3. Single threaded
+JavaScript executes code in a single-threaded environment, meaning it processes one task at a time. We will dive deeper into this next week.
+![alt text](image-5.png)
+![alt text](image-6.png)
+- 4. Garbage collected
+![alt text](image-7.png)
+JavaScript automatically manages memory allocation and deallocation through garbage collection, which helps prevent memory leaks by automatically reclaiming memory used by objects no longer in use.
+ 
+
+ 
+- Conclusion
+Is JS a good language?
+Yes and no. It is beginner friendly, but has a lot of performance overhead. Bun is trying to solve for a lot of this, but there’s a long way to go before JS can compete with languages like C++/Rust
+
+
+### Syntax of Javascript
+- 1. Variables
+Variables are used to store data. In JavaScript, you declare variables using var, let, or const.
+```ja
+let name = "John";     // Variable that can be reassigned
+const age = 30;        // Constant variable that cannot be reassigned
+var isStudent = true;  // Older way to declare variables, function-scoped
+```
+- Assignment
+Create a variable for each of the following: your favorite color, your height in centimeters, and whether you like pizza. Use appropriate variable declarations (let, const, or var). Try logging it using console.log
+- 2. Data types
+```js
+let number = 42;             // Number
+let string = "Hello World";  // String
+let isActive = false;        // Boolean
+let numbers = [1, 2, 3];     // Array
+```
+- 3. Operators
+```js
+let sum = 10 + 5;          // Arithmetic operator
+let isEqual = (10 === 10); // Comparison operator
+let isTrue = (true && false); // Logical operator
+```
+
+- 4. Functions
+```js
+// Function declaration
+function greet(name) {
+    return "Hello, " + name;
+}
+
+// Function call
+let message = greet("John"); // "Hello, John"
+```
+- Assignment #1
+Write a function sum that finds the sum of two numbers. 
+Side quest - Try passing in a string instead of a number and see what happens?
+Assignment #2
+Write a function called canVote that returns true or false if the age of a user is > 18
+- 5. If/Else
+```js
+if (age >= 18) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are a minor.");
+}
+```
+
+- Assignment
+Write an if/else statement that checks if a number is even or odd. If it's even, print "The number is even." Otherwise, print "The number is odd."
+- 6. Loops
+```js
+// For loop
+for (let i = 0; i < 5; i++) {
+    console.log(i); // Outputs 0 to 4
+}
+
+// While loop
+let j = 0;
+while (j < 5) {
+    console.log(j); // Outputs 0 to 4
+    j++;
+}
+```
+ 
+- Assignment
+Write a function called sum that finds the sum from 1 to a number
+
+### Complex types
+- Objects
+An object in JavaScript is a collection of key-value pairs, where each key is a string and each value can be any valid JavaScript data type, including another object.
+ 
+![alt text](image-8.png)
+```js
+let user = {
+	name: "Harkirat",
+	age: 19
+}
+
+console.log("Harkirats age is " + user.age);
+```
+- Assignment #1
+Write a function that takes a user as an input and greets them with their name and age
+- Assignment #2
+Write a function that takes a new object as input which has name , age  and gender and greets the user with their gender (Hi Mr/Mrs/Others harkirat, your age is 21)
+Assignment #3
+Also tell the user if they are legal to vote or not
+- Arrays
+Arrays let you group data together
+```js
+const users = ["harkirat", "raman", "diljeet"];
+const tatalUsers = users.length;
+const firstUser = users[0];
+```
+- Assignment
+Write a function that takes an array of numbers as input, and returns a new array with only even values. Read about filter in JS
+- Array of Objects
+We can have more complex objects, for example an array of objects
+```js
+const users = [{
+		name: "Harkirat",
+		age: 21
+	}, {
+		name: "raman",
+		age: 22
+	}
+}
+
+const user1 = users[0] 
+const user1Age = users[0].age
+```
+- Assignment
+Write a function that takes an array of users as inputs and returns only the users who are more than 18 years old
+- Object of Objects
+We can have an even more complex object (object of objects)
+```js
+const user1 = {
+	name: "harkirat",
+	age: 19,
+	address: {
+		city: "Delhi",
+		country: "India",
+		address: "1122 DLF"
+	}
+}
+
+const city = user1.address.city;
+```
+- Assignment
+Create a function that takes an array of objects as input,
+and returns the users whose age > 18 and are male
+
+
+## 3 Asynchronous Javascript, Callbacks and more
 
 ### Intro
 - Goal of todays class:
@@ -295,7 +835,7 @@ second();
   - The event loop constantly checks if the call stack is empty. If it is, and there are callbacks in the callback queue, it will push the first callback from the queue onto the call stack for execution.
  
 
-## Promises and async, await
+## 4 Promises and async, await
 `Aaj ghode khuleinge.`
 ![alt text](image-2.png)
 
@@ -310,7 +850,7 @@ What we’re doing today
 - https://github.com/100xdevs-cohort-3/assignments/
 
 
-## Classes in JS
+### Classes in JS
 - Primitive types
   - number
   - string
@@ -362,3 +902,344 @@ console.log(area)
 - Getters and Setters:
   - Special methods that allow you to define how properties are accessed and modified.
  
+### Inheritance in classes
+Inheritance in JavaScript classes allows one class to inherit properties and methods from another class. This mechanism enables code reuse, making it easier to create new classes that are based on existing ones, without having to duplicate code.
+- Assignment #1 - Create a Circle class
+```js
+class Circle {
+   constructor(radius, color) {
+       this.radius = radius;  
+       this.color = color;
+   }
+
+   area() {
+      const area = this.radius * this.radius * Math.PI;
+       return area;
+   }
+   
+   paint() {
+			console.log(`Painting with color ${this.color}`);
+   }
+
+}
+
+const circle = new Circle(2, "red")
+const area = circle.area();
+console.log(area)
+```
+
+> Can you see there is code repetition here and in the Rectangle class?
+ 
+- Assignment #2 - Create a base shape class
+- Base class
+```js
+class Shape {
+    constructor(color) {
+        this.color = color;
+    }
+
+    paint() {
+			console.log(`Painting with color ${this.color}`);
+    }
+
+    area() {
+        throw new Error('The area method must be implemented in the subclass');
+    }
+
+    getDescription() {
+        return `A shape with color ${this.color}`;
+    }
+}
+```
+
+- Rectangle class
+```js
+class Rectangle extends Shape {
+    constructor(width, height, color) {
+        super(color);  // Call the parent class constructor to set the color
+        this.width = width;
+        this.height = height;
+    }
+
+    area() {
+        return this.width * this.height;
+    }
+
+    getDescription() {
+        return `A rectangle with width ${this.width}, height ${this.height}, and color ${this.color}`;
+    }
+}
+```
+- Circle class
+```js
+class Circle extends Shape {
+    constructor(radius, color) {
+        super(color);  // Call the parent class constructor to set the color
+        this.radius = radius;
+    }
+
+    area() {
+        return Math.PI * this.radius * this.radius;
+    }
+
+    getDescription() {
+        return `A circle with radius ${this.radius} and color ${this.color}`;
+    }
+}
+```
+ 
+- Try playing with it
+```js
+const circle = new Circle(20);
+console.log(circle.area()); 
+```
+
+### Some more classes
+ 
+- Date
+```js
+const now = new Date(); // Current date and time
+console.log(now.toISOString()); // Outputs the date in ISO format
+```
+ 
+- Maps
+```js
+const map = new Map();
+map.set('name', 'Alice');
+map.set('age', 30);
+console.log(map.get('name'));
+```
+
+### Promise class
+💡
+- Calling a promise is easy, defining your own promise is where things get hard
+- A Promise in JavaScript is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises are used to handle asynchronous operations more effectively than traditional callback functions, providing a cleaner and more manageable way to deal with code that executes asynchronously, such as API calls, file I/O, or timers.
+- Using a function that returns a promise
+  - Ignore the function definition of setTimeoutPromisifed for now
+
+```js
+function setTimeoutPromisified(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function callback() {
+	console.log("3 seconds have passed");
+}
+
+setTimeoutPromisified(3000).then(callback)
+```
+![alt text](image-9.png)
+ 
+### Callback hell
+ 
+- Q: Write code that
+  - logs hi after 1 second
+  - logs hello 3 seconds after step 1
+  - logs hello there 5 seconds after step 2
+ 
+  - Solution (has callback hell)
+  ```js
+  setTimeout(function () {
+    console.log("hi");
+    setTimeout(function () {
+      console.log("hello");
+
+      setTimeout(function () {
+        console.log("hello there");
+      }, 5000);
+    }, 3000);
+  }, 1000);
+  ```
+  - Alt solution (doesnt really have callback hell)
+  ```js
+  function step3Done() {
+    console.log("hello there");
+  }
+
+  function step2Done() {
+    console.log("hello");
+    setTimeout(step3Done, 5000);
+  }
+
+  function step1Done() {
+    console.log("hi");
+    setTimeout(step2Done, 3000);
+  }
+
+  setTimeout(step1Done, 1000);
+  ```
+ 
+- Promisified version
+  - Now use the promisified version we saw in the last slide
+  ```js
+  function setTimeoutPromisified(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  ```
+
+  - Solution #1 (has callback hell)
+  ```
+  function setTimeoutPromisified(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  setTimeoutPromisified(1000).then(function () {
+    console.log("hi");
+    setTimeoutPromisified(3000).then(function () {
+      console.log("hello");
+      setTimeoutPromisified(5000).then(function () {
+        console.log("hello there");
+      });
+    });
+  });
+  ```
+  - Alt solution
+  ```js
+  setTimeoutPromisified(1000)
+    .then(function () {
+      console.log("hi");
+      return setTimeoutPromisified(3000);
+    })
+    .then(function () {
+      console.log("hello");
+      return setTimeoutPromisified(5000);
+    })
+    .then(function () {
+      console.log("hello there");
+    });
+  ```
+### Async await syntax
+- The async and await syntax in JavaScript provides a way to write asynchronous code that looks and behaves like synchronous code, making it easier to read and maintain. 
+- It builds on top of Promises and allows you to avoid chaining .then() and .catch() methods while still working with asynchronous operations.
+- async/await is essentially syntactic sugar on top of Promises. 
+- Assignment
+  - Write code that
+  - logs hi after 1 second
+  - logs hello 3 seconds after step 1
+  - logs hello there 5 seconds after step 2
+  ```js
+  function setTimeoutPromisified(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async function solve() {
+  	await setTimeoutPromisified(1000);
+  	console.log("hi");
+  	await setTimeoutPromisified(3000);
+  	console.log("hello");
+  	await setTimeoutPromisified(5000);
+  	console.log("hi there");
+  }
+
+  solve();
+  ```
+  - Things to keep in mind
+    - You can only call await inside a function if that function is async
+    - You cant have a top level await 
+
+### Defining your own async function
+- Q: Write a function that
+  - Reads the contents of a file
+  - Trims the extra space from the left and right
+  - Writes it back to the file
+- 1. Callback approach
+In the callback approach, the function signature should look something like this 
+```js
+function onDone() {
+	console.log("file has been cleaned");
+}
+cleanFile("a.txt", onDone)
+```
+  - Solution
+  ```js
+  const fs = require("fs");
+  function cleanFile(filePath, cb) {
+    fs.readFile(filePath, "utf-8", function (err, data) {
+      data = data.trim();
+      fs.writeFile(filePath, data, function () {
+        cb();
+      });
+    });
+  }
+
+  function onDone() {
+    console.log("file has been cleaned");
+  }
+  cleanFile("a.txt", onDone);
+  ```
+- 2. Promisified approach
+In the promisified approach, the function signature should look something like this 
+```js
+async function main() {
+   await cleanFile("a.txt")
+   console.log("Done cleaning file");
+}
+
+main();
+```
+  - Solution
+  ```js
+  const fs = require("fs");
+  function cleanFile(filePath, cb) {
+    return new Promise(function (resolve) {
+      fs.readFile(filePath, "utf-8", function (err, data) {
+        data = data.trim();
+        fs.writeFile(filePath, data, function () {
+          resolve();
+        });
+      });
+    });
+  }
+
+  async function main() {
+    await cleanFile("a.txt");
+    console.log("Done cleaning file");
+  }
+
+  main();
+  ```
+### err first callback vs rejects in promises
+- Callbacks
+  - fs.readFile function used an err first callback approach to propagate back errors
+```js
+const fs = require("fs")
+function afterDone(err, data) {
+  if (err) {
+    console.log("Error while reading file");
+  } else {
+    console.log(data)
+  }
+}
+
+fs.readFile("a.txt", "utf-8", afterDone);
+```
+- Promises
+  - Promises use the reject  argument to propagate errors
+```js
+const fs = require("fs");
+
+function readFilePromisified(filePath) {
+  return new Promise(function (resolve, reject) {
+    fs.readFile(filePath, "utf-8", function (err, data) {
+      if (err) {
+        reject("Error while reading file");
+      } else {
+        resolve(data);
+      }
+    });
+  });
+}
+
+function onDone(data) {
+  console.log(data);
+}
+
+function onError(err) {
+  console.log("Error: " + err);
+}
+
+readFilePromisified("a.txt").then(onDone).catch(onError);
+```
+
+### Assignment
+![alt text](image-10.png)
