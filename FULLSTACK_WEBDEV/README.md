@@ -88,6 +88,7 @@ body{
 
 Make you incredibly solid at building and deploying Web apps.
 
+---
 - Cohort Projects
 
 1. https://github.com/code100x/cms/ - Led by hsingh
@@ -96,18 +97,22 @@ Make you incredibly solid at building and deploying Web apps.
 4. https://github.com/code100x/algorithmic-arena/pull/10 - Led by Nimit
 5. Framer like app - Up for grabs
 
+---
+
 - Avoid the Spikes Strategy
 
 1. We will go slow, today only focussing on HTML/CSS/JS
 2. Any topic that you feel is missing / you want we will do polls from time to time we can add
 3. Go slow but stay consistent, avoid the spikes
 
+---
 - What would I do if I was you?
 
 1. Get to know people in discord, try to find a group of 3-4 motivated people
 2. Look at all the success stories here and how they got a job - https://www.youtube.com/@100xDevs-n1w
 3. Repeated advice - GSoC is the best internship you can do. Already start prepping for it competition is high. Tell me how can I help here we're hoping for ~50 GSoC selections from the cohort this year. Good video to watch - https://www.youtube.com/watch?v=OmzCvb-QBak
 
+---
 - Sprint Options
 
 If things are going too slow you can:
@@ -119,9 +124,13 @@ If things are going too slow you can:
 - Complete Beginner (very basic/no coding before)
   - Things will be hard. You should spend ~20 hours/week at least on Cohort material, assignments, other content covering what we're doing in the Cohort. Don't slack off
 
+---
+
 - Intermediate (Done basic JS, HTML and some DSA)
   - You should be for the first ~10 weeks or so. We see major drop off after the first major project
   - Try chewing some glass after week 10, that is where you will actually learn things that differentiate you from a typical MERN developer
+
+---
 
 - Advanced (Know MERN decent/well)
   - Feel free to drop off for the first few weeks. I'll see you on Github. Participate in the Superteam hackathon, aim for GSoC this year. Already start looking at orgs
@@ -129,38 +138,40 @@ If things are going too slow you can:
 ### Development Environment
 
 - VSCode Installation
-
-Download from here - https://code.visualstudio.com/
+  - Download from here - https://code.visualstudio.com/
 
 - Good Things to Hash Out
-
-1. Installing VSCode locally
-2. HTML/CSS
-3. Cloning the landing page of a simple website
+  1. Installing VSCode locally
+  2. HTML/CSS
+  3. Cloning the landing page of a simple website
 
 - Step 1: Creating a Simple HTML File Locally
+  1. Create a folder on your machine called `website`
+  2. Add a `index.html` file inside it
+  3. Write the following code in it
 
-1. Create a folder on your machine called `website`
-2. Add a `index.html` file inside it
-3. Write the following code in it
+  ```html
+  <html>
+      <title>
+          Visual Studio Code - Code Editor
+      </title>
+  </html>
+  ```
 
-```html
-<html>
-    <title>
-        Visual Studio Code - Code Editor
-    </title>
-</html>
-```
-
-Now open this in your browser
+  Now open this in your browser
 
 ### HTML Fundamentals
 
 HTML stands for HyperText Markup Language. It is the foundation of building `unstyled` websites.
+
+---
+
 - not case sensitive
 - sandwich code language
 - `/` : root directory of website
 - `<br/>` : eg of autoclosing tag
+
+---
 
 - Step 2: Tags
 
@@ -174,6 +185,8 @@ HTML stands for HyperText Markup Language. It is the foundation of building `uns
 8. input
 9. button
 10. br
+
+---
 
 - HTML Tag Structure
 
@@ -193,6 +206,8 @@ html - root element
     ├── button - clickable buttons
     └── br - line breaks
 ```
+
+---
 
 - Step 3: Building a Basic HTML Page
 
@@ -230,11 +245,15 @@ html - root element
 
 CSS stands for Cascading Style Sheets. It is used to style our applications.
 
+---
+
 - CSS Integration Methods
 
 You can add CSS to your HTML app by using:
 1. The `style` attribute (inline styles)
 2. In an external css file
+
+---
 
 - Approach 1: Inline Styles
 
@@ -245,6 +264,8 @@ Try updating the `body` tag in the last style as follows:
 ... rest of the code
 </body>
 ```
+
+---
 
 - Approach 2: External Styles
 
@@ -257,7 +278,11 @@ body {
 }
 ```
 
+---
+
 > Priority: Inline styles >> External style
+
+---
 
 Update index.html:
 ```html
@@ -272,18 +297,21 @@ Update index.html:
 </body>
 ```
 
-- Common Style Attributes
+---
 
-- `color`: Sets the text color
-- `background-color`: Sets the background color  
-- `font-size`: Sets the size of the text
-- `margin`: Sets the outer space around an element
-- `padding`: Sets the inner space within an element
-- `border`: Sets the border around an element
+- Common Style Attributes
+  - `color`: Sets the text color
+  - `background-color`: Sets the background color  
+  - `font-size`: Sets the size of the text
+  - `margin`: Sets the outer space around an element
+  - `padding`: Sets the inner space within an element
+  - `border`: Sets the border around an element
 
 ### Flexbox Layout System
 
 Flexbox is a CSS layout model designed to help with the arrangement of items within a container.
+
+---
 
 - Basic Flexbox Implementation
 
@@ -322,6 +350,8 @@ Update the website to the following:
 
 Notice that the elements are positioned right next to each other even though `Visual Studio code` is inside a `div`.
 
+---
+
 - Justify Content Property
 
 Try experimenting with the `justify-content` property:
@@ -357,8 +387,9 @@ Try experimenting with the `justify-content` property:
 </body>
 ```
 
+---
+
 - Flexbox Properties from Note
-s
 
 - Display and Justify Content
 
@@ -452,7 +483,11 @@ justify-content: space-evenly;    /* Space items with even distribution */
 
 In CSS, classes and IDs are used as selectors to apply styles to HTML elements. They help in targeting specific elements for styling and can be used to enhance the modularity and reusability of CSS code.
 
+---
+
 - Classes vs IDs Usage
+
+---
 
 - Classes (.) - Reusable Styles
 
@@ -466,6 +501,9 @@ In CSS, classes and IDs are used as selectors to apply styles to HTML elements. 
     color: gray;
 }
 ```
+
+---
+
 
 - IDs (#) - Unique Elements
 
@@ -483,6 +521,8 @@ In CSS, classes and IDs are used as selectors to apply styles to HTML elements. 
 - RGB is a color model used to represent colors in digital displays
 - r (0 - 255), g (0 - 255), b (0 - 255) [min- max values]
 
+---
+
 - RGB Color Model
 
 ```css
@@ -494,12 +534,16 @@ rgb(255, 0, 255)   /* Purple */
 rgb(0, 255, 255)   /* Cyan */
 ```
 
+---
+
 - RGBA with Transparency
 
 ```css
 rgba(255, 0, 0, 0.5)   /* Semi-transparent red */
 rgba(0, 0, 0, 0.3)     /* Semi-transparent black */
 ```
+
+---
 
 - Hex Color Codes
 
@@ -542,12 +586,16 @@ text-align: center;            /* Text alignment */
 text-decoration: underline;    /* Text decoration */
 ```
 
+---
+
 - Background Properties
 
 ```css
 background-color: black;       /* Background color */
 background: red;               /* Shorthand background */
 ```
+
+---
 
 - Element Positioning and Layout
 
@@ -556,6 +604,8 @@ margin-left: 200px;           /* Left margin */
 margin-right: 200px;          /* Right margin */
 width: 800px;                 /* Element width */
 ```
+
+---
 
 - CSS Selectors Hierarchy
 
@@ -569,12 +619,18 @@ Element Selectors:
 
 ### Browser Tools and Development
 
+---
+
 - Google Chrome Developer Tools
+
+---
 
 - Right-click → Inspect Element
 - F12 or Ctrl+Shift+I
 - Elements tab for HTML structure
 - Styles tab for CSS properties
+
+---
 
 - File Structure Organization
 
@@ -585,6 +641,8 @@ website/
 ├── images/
 └── js/ (for future JavaScript)
 ```
+
+---
 
 - HTML Document Structure Best Practices
 
@@ -606,57 +664,58 @@ website/
 
 ### Key Concepts Summary
 
-- HTML Core Concepts
+---
 
-- HyperText Markup Language foundation
-- Tag-based structure with opening/closing tags
-- Semantic elements for content organization
-- Attributes provide additional information
+- HTML Core Concepts
+  - HyperText Markup Language foundation
+  - Tag-based structure with opening/closing tags
+  - Semantic elements for content organization
+  - Attributes provide additional information
+
+---
 
 - CSS Core Concepts  
+  - Cascading Style Sheets for presentation
+  - Selectors target HTML elements
+  - Properties define visual characteristics
+  - Values specify property settings
 
-- Cascading Style Sheets for presentation
-- Selectors target HTML elements
-- Properties define visual characteristics
-- Values specify property settings
+---
 
 - Flexbox Layout Model
+  - Modern CSS layout system
+  - Container and item relationship
+  - Main axis and cross axis alignment
+  - Flexible item sizing and positioning
 
-- Modern CSS layout system
-- Container and item relationship
-- Main axis and cross axis alignment
-- Flexible item sizing and positioning
+---
 
 - Development Workflow
-
-1. Create HTML structure
-2. Add CSS styling
-3. Test in browser
-4. Iterate and refine
-5. Validate code quality
+  1. Create HTML structure
+  2. Add CSS styling
+  3. Test in browser
+  4. Iterate and refine
+  5. Validate code quality
 
 ### Next Steps and Advanced Topics
 
 - Upcoming Technologies
-
-- JavaScript for interactivity
-- Responsive design principles
-- CSS Grid layout system
-- Modern development tools
+  - JavaScript for interactivity
+  - Responsive design principles
+  - CSS Grid layout system
+  - Modern development tools
 
 - Project Milestones
-
-- Clone simple website landing pages
-- Build responsive layouts
-- Implement interactive features
-- Deploy to web hosting platforms
+  - Clone simple website landing pages
+  - Build responsive layouts
+  - Implement interactive features
+  - Deploy to web hosting platforms
 
 - Learning Resources
-
-- 100xDevs community Discord
-- YouTube success stories and tutorials
-- GitHub project repositories
-- GSoC preparation materials
+  - 100xDevs community Discord
+  - YouTube success stories and tutorials
+  - GitHub project repositories
+  - GSoC preparation materials
 
 ## 2 Javascript Basics
 ```js
@@ -809,6 +868,9 @@ console.log(maleAdultChecker(users1),maleAdultChecker2(users1)); // [ { userName
 
 ```
 ### Javascript - The basics
+
+---
+
 - Web development
 
 Web development involves writing a lot of HTML, CSS and JS code. 
@@ -816,12 +878,17 @@ Historically (and even today to some extend), browsers could only understand HTM
 Any website that you see, is a bunch of HTML, CSS and JS files along with some assets (images, videos etc)
  
 ![alt text](image-3.png)
+
+---
+
 - Facts/Callouts
 
 React, NextJS are frameworks . They compile down to HTML, CSS, JS in the end. That is what your browser understands.
 When you run your C++ code on leetcode , it does not run on your browser/machine. It runs somewhere else. Your browser can’t (almost) compile and run C++ code.
 If someone asks — What all languages can your browser interpret, the answer is HTML, CSS, JS and WebAssembly. It can, technically, run C++/Rust code that is compiled down to Wasm
- 
+
+---
+
 - Before we proceed, do one of the following  
 
 Create an account on replit
@@ -831,15 +898,17 @@ Keep your browser console open for testing locally
 ### Properties of JS
 Every language comes with it’s unique set of features. 
 - Javascript has the following -
+
+---
+
 - 1. Interpreted
  JavaScript is an interpreted language, meaning it's executed line-by-line at runtime by the JavaScript engine in the browser or server environment, rather than being compiled into machine code beforehand.
 ![alt text](image-4.png)
  
-Upsides - 
-There is one less step to do before running your code
-Downsides - 
-Performance Overhead:
-More prone to runtime errors
+- Upsides - There is one less step to do before running your code
+- Downsides - Performance Overhead:More prone to runtime errors
+
+---
 
 - 2. Dynamically Typed
  Variables in JavaScript are not bound to a specific data type. Types are determined at runtime and can change as the program executes
@@ -871,6 +940,8 @@ console.log(a)
   - extreme memory safe
   - extreme slow compile
  
+---
+
 - 3. Single threaded
 JavaScript executes code in a single-threaded environment, meaning it processes one task at a time. We will dive deeper into this next week.
 ![alt text](image-5.png)
@@ -890,6 +961,8 @@ JavaScript executes code in a single-threaded environment, meaning it processes 
   - faster Run
   - Max. Safety
 
+---
+
 - 4. Garbage collected
 ![alt text](image-7.png)
 JavaScript automatically manages memory allocation and deallocation through garbage collection, which helps prevent memory leaks by automatically reclaiming memory used by objects no longer in use.
@@ -901,12 +974,17 @@ JavaScript automatically manages memory allocation and deallocation through garb
 - code runs in RAM
 
  
+---
+
 - Conclusion
 Is JS a good language?
 Yes and no. It is beginner friendly, but has a lot of performance overhead. Bun is trying to solve for a lot of this, but there’s a long way to go before JS can compete with languages like C++/Rust
 
 
 ### Syntax of Javascript
+
+---
+
 - 1. Variables
 Variables are used to store data. In JavaScript, you declare variables using var, let, or const.
 ```ja
@@ -924,6 +1002,9 @@ var isStudent = true;  // Older way to declare variables, function-scoped
 
 - Assignment
 Create a variable for each of the following: your favorite color, your height in centimeters, and whether you like pizza. Use appropriate variable declarations (let, const, or var). Try logging it using console.log
+
+---
+
 - 2. Data types
 ```js
 let number = 42;             // Number
@@ -931,12 +1012,17 @@ let string = "Hello World";  // String
 let isActive = false;        // Boolean
 let numbers = [1, 2, 3];     // Array
 ```
+
+---
+
 - 3. Operators
 ```js
 let sum = 10 + 5;          // Arithmetic operator
 let isEqual = (10 === 10); // Comparison operator
 let isTrue = (true && false); // Logical operator
 ```
+
+---
 
 - 4. Functions
 ```js
@@ -957,6 +1043,9 @@ Write a function sum that finds the sum of two numbers.
 Side quest - Try passing in a string instead of a number and see what happens?
 Assignment #2
 Write a function called canVote that returns true or false if the age of a user is > 18
+
+---
+
 - 5. If/Else
 ```js
 if (age >= 18) {
@@ -966,8 +1055,14 @@ if (age >= 18) {
 }
 ```
 
+---
+
 - Assignment
 Write an if/else statement that checks if a number is even or odd. If it's even, print "The number is even." Otherwise, print "The number is odd."
+
+
+---
+
 - 6. Loops
 ```js
 // For loop
@@ -983,6 +1078,8 @@ while (j < 5) {
 }
 ```
  
+---
+
 - Assignment
 Write a function called sum that finds the sum from 1 to a number
 
@@ -999,12 +1096,24 @@ let user = {
 
 console.log("Harkirats age is " + user.age);
 ```
+
+---
+
 - Assignment #1
 Write a function that takes a user as an input and greets them with their name and age
+
+---
+
 - Assignment #2
 Write a function that takes a new object as input which has name , age  and gender and greets the user with their gender (Hi Mr/Mrs/Others harkirat, your age is 21)
-Assignment #3
+
+---
+
+- Assignment #3
 Also tell the user if they are legal to vote or not
+
+---
+
 - Arrays
 Arrays let you group data together
 ```js
@@ -1012,8 +1121,14 @@ const users = ["harkirat", "raman", "diljeet"];
 const tatalUsers = users.length;
 const firstUser = users[0];
 ```
+
+---
+
 - Assignment
 Write a function that takes an array of numbers as input, and returns a new array with only even values. Read about filter in JS
+
+---
+
 - Array of Objects
 We can have more complex objects, for example an array of objects
 ```js
@@ -1029,8 +1144,15 @@ const users = [{
 const user1 = users[0] 
 const user1Age = users[0].age
 ```
+- `user1.name` , `user1[name]` both works in JS
+
+---
+
 - Assignment
 Write a function that takes an array of users as inputs and returns only the users who are more than 18 years old
+
+---
+
 - Object of Objects
 We can have an even more complex object (object of objects)
 ```js
@@ -1046,9 +1168,23 @@ const user1 = {
 
 const city = user1.address.city;
 ```
+
+---
+
 - Assignment
 Create a function that takes an array of objects as input,
 and returns the users whose age > 18 and are male
+
+---
+
+- Arrays in js
+  - = arr/vector in C++
+  - = vectors in rust
+  - = arraylist in java
+- Objects in js
+  - = Map in C++
+  - = Hashmaps in Rust
+  - = Hashmaps in JAVA
 
 
 ## 3 Asynchronous Javascript, Callbacks and more
@@ -1064,6 +1200,8 @@ and returns the users whose age > 18 and are male
   - Practising async JS
  
 Hopefully, by the end of the class, you are able to understand the following code:
+
+---
 
 - Functional arguments
 
@@ -1090,6 +1228,9 @@ function doOperation(a, b, op) {
 
 console.log(doOperation(1, 2, sum))
 ```
+
+---
+
 - Callbacks
 ```js
 const fs = require("fs");
@@ -1111,6 +1252,8 @@ let ans = sum(2, 3)
 console.log(sum);
 ```
  
+---
+
 Find sum from 1 to a number
 ```js
 function sum(n) {
@@ -1127,6 +1270,8 @@ console.log(ans);
 
 ### Synchronous code
 Synchronous code is executed line by line, in the order it's written. Each operation waits for the previous one to complete before moving on to the next one.
+
+---
 
 For example
 ```js
@@ -1157,6 +1302,8 @@ I/O (Input/Output) heavy operations refer to tasks in a computer program that in
  
 > 💡 We’re going to introduce imports/requires next. A require statement lets you import code/functions export from another file/module.
  
+---
+
 Let’s try to write code to do an I/O heavy operation - 
 - Open repl.it
 - Create a file in there (a.txt) with some text inside
@@ -1167,6 +1314,9 @@ const fs = require("fs");
 const contents = fs.readFileSync("a.txt", "utf-8");
 console.log(contents);
 ```
+
+---
+
 - Create another file (b.txt)
 - Write the code to read the other file synchronously
 ```js
@@ -1178,9 +1328,15 @@ console.log(contents);
 const contents2 = fs.readFileSync("b.txt", "utf-8");
 console.log(contents2);
 ```
+
+---
+
 > 💡What is wrong in this code above?
 
 ### I/O bound tasks vs CPU bound tasks
+
+---
+
 - CPU bound tasks
 
 CPU-bound tasks are operations that are limited by the speed and power of the CPU. These tasks require significant computation and processing power, meaning that the performance bottleneck is the CPU itself.
@@ -1192,6 +1348,8 @@ for (let i = 1; i <= 1000000; i++) {
 console.log(ans);	
 ```
 > 💡A real world example of a CPU intensive task is running for 3 miles. Your legs/brain have to constantly be engaged for 3 miles while you run.
+
+---
 
 - I/O bound tasks
 
@@ -1210,12 +1368,16 @@ What if you were tasked with doing 3 things
 - Do some laundry
 - Send a package via mail
 
+---
+
 Would you do these 
 - One by one (synchronously)
 - Context switch between them (Concurrently)
 - Start all 3 tasks together, and wait for them to finish. The first one that finishes gets catered to first.
  
 > 💡Good talk - Concurrency is not parallelism  - https://www.youtube.com/watch?v=oV9rvDllKEg
+
+---
 
 - Synchronously (One by one)
 ```js
@@ -1230,6 +1392,8 @@ console.log(contents2);
 const contents3 = fs.readFileSync("b.txt", "utf-8");
 console.log(contents3);
 ```
+
+---
 
 - Start all 3 tasks together, and wait for them to finish.
 ```js
@@ -1251,6 +1415,9 @@ fs.readFile("a.txt", "utf-8", function (err, contents) {
 
 ### Functional arguments
 Write a calculator program that adds, subtracts, multiplies, divides two arguments.
+
+---
+
 - Approach #1
 - Calling the respective function
 ```js
@@ -1276,6 +1443,9 @@ function doOperation(a, b, op) {
 
 console.log(sum(1, 2))
 ```
+
+---
+
 - Approach #2
 - Passing in what needs to be done as an argument.
 ```js
@@ -1305,6 +1475,9 @@ console.log(doOperation(1, 2, sum))
 ### Asynchronous code, callbacks
 Let’s look at the code to read from a file asynchronously. Here, we pass in a function as an argument. This function is called a callback since the function gets called back when the file is read 
 ![alt text](image.png)
+
+---
+
 ```js
 const fs = require("fs");
 
@@ -1312,6 +1485,9 @@ fs.readFile("a.txt", "utf-8", function (err, contents) {
   console.log(contents);
 });
 ```
+
+---
+
 - setTimeout
 - setTimeout is another asynchronous function that executes a certain code after some time
 ```js
@@ -1326,6 +1502,9 @@ console.log("I will run immedietely");
 ### JS Architecture for async code
 How JS executes asynchronous code - http://latentflip.com/loupe/
 ![alt text](image-1.png)
+
+---
+
 - 1. Call Stack
   - The call stack is a data structure that keeps track of the function calls in your program. It operates in a "Last In, First Out" (LIFO) manner, meaning the last function that was called is the first one to be executed and removed from the stack.
   - When a function is called, it gets pushed onto the call stack. When the function completes, it's popped off the stack.
@@ -1339,6 +1518,9 @@ function second() {
 }
 second();
 ```
+
+---
+
 - 2. Web APIs
   - Web APIs are provided by the browser (or the Node.js runtime) and allow you to perform tasks that are outside the scope of the JavaScript language itself, such as making network requests, setting timers, or handling DOM events.
 - 3. Callback Queue 
@@ -1350,6 +1532,8 @@ second();
 ## 4 Promises and async, await
 `Aaj ghode khuleinge.`
 ![alt text](image-2.png)
+
+---
 
 What we’re doing today
 - Classes in JS
@@ -1367,11 +1551,12 @@ What we’re doing today
   - number
   - string
   - boolean
- 
 - Complex types
   - Objects
   - Arrays
  
+---
+
 - Classes
 - In JavaScript, classes are a way to define blueprints for creating objects (these objects are different from the objects defined in the last section).
 - For example
@@ -1397,7 +1582,9 @@ class Rectangle {
 const rect = new Rectangle(2, 4)
 const area = rect.area();
 console.log(area)
+
 ```
+
 - Key Concepts
 - Class Declaration:
   - You declare a class using the class keyword.
@@ -1416,6 +1603,9 @@ console.log(area)
  
 ### Inheritance in classes
 Inheritance in JavaScript classes allows one class to inherit properties and methods from another class. This mechanism enables code reuse, making it easier to create new classes that are based on existing ones, without having to duplicate code.
+
+---
+
 - Assignment #1 - Create a Circle class
 ```js
 class Circle {
@@ -1441,6 +1631,9 @@ console.log(area)
 ```
 
 > Can you see there is code repetition here and in the Rectangle class?
+
+---
+
  
 - Assignment #2 - Create a base shape class
 - Base class
@@ -1464,6 +1657,8 @@ class Shape {
 }
 ```
 
+---
+
 - Rectangle class
 ```js
 class Rectangle extends Shape {
@@ -1482,6 +1677,9 @@ class Rectangle extends Shape {
     }
 }
 ```
+
+---
+
 - Circle class
 ```js
 class Circle extends Shape {
@@ -1500,6 +1698,8 @@ class Circle extends Shape {
 }
 ```
  
+---
+
 - Try playing with it
 ```js
 const circle = new Circle(20);
@@ -1514,6 +1714,8 @@ const now = new Date(); // Current date and time
 console.log(now.toISOString()); // Outputs the date in ISO format
 ```
  
+---
+
 - Maps
 ```js
 const map = new Map();
@@ -1523,7 +1725,7 @@ console.log(map.get('name'));
 ```
 
 ### Promise class
-💡
+
 - Calling a promise is easy, defining your own promise is where things get hard
 - A Promise in JavaScript is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises are used to handle asynchronous operations more effectively than traditional callback functions, providing a cleaner and more manageable way to deal with code that executes asynchronously, such as API calls, file I/O, or timers.
 - Using a function that returns a promise
@@ -1581,6 +1783,8 @@ setTimeoutPromisified(3000).then(callback)
   setTimeout(step1Done, 1000);
   ```
  
+---
+
 - Promisified version
   - Now use the promisified version we saw in the last slide
   ```js
@@ -1605,6 +1809,9 @@ setTimeoutPromisified(3000).then(callback)
     });
   });
   ```
+
+---
+
   - Alt solution
   ```js
   setTimeoutPromisified(1000)
@@ -1624,6 +1831,9 @@ setTimeoutPromisified(3000).then(callback)
 - The async and await syntax in JavaScript provides a way to write asynchronous code that looks and behaves like synchronous code, making it easier to read and maintain. 
 - It builds on top of Promises and allows you to avoid chaining .then() and .catch() methods while still working with asynchronous operations.
 - async/await is essentially syntactic sugar on top of Promises. 
+
+---
+
 - Assignment
   - Write code that
   - logs hi after 1 second
@@ -1654,6 +1864,9 @@ setTimeoutPromisified(3000).then(callback)
   - Reads the contents of a file
   - Trims the extra space from the left and right
   - Writes it back to the file
+  
+---
+
 - 1. Callback approach
 In the callback approach, the function signature should look something like this 
 ```js
@@ -1679,6 +1892,9 @@ cleanFile("a.txt", onDone)
   }
   cleanFile("a.txt", onDone);
   ```
+
+---
+  
 - 2. Promisified approach
 In the promisified approach, the function signature should look something like this 
 ```js
@@ -1725,6 +1941,9 @@ function afterDone(err, data) {
 
 fs.readFile("a.txt", "utf-8", afterDone);
 ```
+
+---
+ 
 - Promises
   - Promises use the reject  argument to propagate errors
 ```js

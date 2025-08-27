@@ -1,28 +1,16 @@
 # DSA
+- https://github.com/kishanrajput23/Love-Babbar-CPP-DSA-Course/tree/main
+- https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA
+
+## Table of Contents
 - [DSA](#dsa)
+  - [Table of Contents](#table-of-contents)
   - [DSA Lecture 1: Flowcharts, Pseudocode \& Programming Languages](#dsa-lecture-1-flowcharts-pseudocode--programming-languages)
-    - [Table of Contents](#table-of-contents)
+    - [Table of Contents](#table-of-contents-1)
     - [Course Intent \& Problem Solving](#course-intent--problem-solving)
       - [Problem Solving Approach](#problem-solving-approach)
       - [Development Flow](#development-flow)
     - [Flowcharts](#flowcharts)
-      - [Basic Components](#basic-components)
-        - [1. Terminator (Start/End)](#1-terminator-startend)
-        - [2. Input/Output](#2-inputoutput)
-        - [3. Process/Calculation](#3-processcalculation)
-        - [4. Decision Making](#4-decision-making)
-        - [5. Flow Arrows](#5-flow-arrows)
-      - [Example 1: Sum of Two Numbers](#example-1-sum-of-two-numbers)
-      - [Example 2: Simple Interest](#example-2-simple-interest)
-      - [Example 3: Average of Three Numbers](#example-3-average-of-three-numbers)
-      - [Example 4: Comparison (a \< b?)](#example-4-comparison-a--b)
-      - [Example 5: Even/Odd Check](#example-5-evenodd-check)
-      - [Example 6: Positive/Negative/Zero](#example-6-positivenegativezero)
-    - [Loop Examples](#loop-examples)
-      - [Example 7: Print Numbers 1 to N](#example-7-print-numbers-1-to-n)
-      - [Example 8: Print Even Numbers 1 to N](#example-8-print-even-numbers-1-to-n)
-      - [Example 9: Sum from 1 to N](#example-9-sum-from-1-to-n)
-      - [Example 10: Prime Number Check](#example-10-prime-number-check)
     - [Pseudocode](#pseudocode)
       - [What is Pseudocode?](#what-is-pseudocode)
       - [Example Pseudocodes](#example-pseudocodes)
@@ -47,7 +35,7 @@
       - [Flowchart Components](#flowchart-components)
       - [Programming Fundamentals](#programming-fundamentals)
   - [DSA Lecture 2: First Program \& Data Types](#dsa-lecture-2-first-program--data-types)
-    - [Table of Contents](#table-of-contents-1)
+    - [Table of Contents](#table-of-contents-2)
     - [Compilation Process](#compilation-process)
       - [How Programs Work](#how-programs-work)
       - [Compiler Functions](#compiler-functions)
@@ -80,6 +68,7 @@
       - [Important Rules](#important-rules)
     - [Practice Problems](#practice-problems-1)
     - [Complete Example Program](#complete-example-program)
+- [](#)
 
 ## DSA Lecture 1: Flowcharts, Pseudocode & Programming Languages  
 
@@ -115,401 +104,7 @@ Problem → Rough Solution → High Level Code → Machine Code → Executable
 ---
 
 ### Flowcharts
-
-#### Basic Components
-
-##### 1. Terminator (Start/End)
-```
-┌─────────────┐
-│    START    │  ← Oval shape
-└─────────────┘
-
-┌─────────────┐
-│     END     │
-└─────────────┘
-```
-
-##### 2. Input/Output
-```
-┌─────────────┐
-│ Read a, b   │  ← Parallelogram
-└─────────────┘
-
-┌─────────────┐
-│ Print sum   │
-└─────────────┘
-```
-
-##### 3. Process/Calculation
-```
-┌─────────────┐
-│ sum = a + b │  ← Rectangle
-└─────────────┘
-
-┌─────────────┐
-│   i = i+1   │
-└─────────────┘
-```
-
-##### 4. Decision Making
-```
-     ◇
-   /   \
-  / a<b? \      ← Diamond shape
- /_______\
-  │      │
- YES    NO
-```
-
-##### 5. Flow Arrows
-```
-    │         ← Shows program flow
-    ▼
-```
-
-#### Example 1: Sum of Two Numbers
-```
-    START
-      │
-      ▼
-┌─────────────┐
-│  Read a, b  │
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│ sum = a + b │
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│ Print sum   │
-└─────────────┘
-      │
-      ▼
-     END
-```
-
-**Trace:** Input a=5, b=10 → sum=15 → Output: 15
-
-#### Example 2: Simple Interest
-```
-Formula: SI = (P × R × T) / 100
-
-    START
-      │
-      ▼
-┌─────────────┐
-│Read P,R,T   │
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│SI=(P*R*T)/100│
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│  Print SI   │
-└─────────────┘
-      │
-      ▼
-     END
-```
-
-#### Example 3: Average of Three Numbers
-```
-Formula: avg = (a + b + c) / 3
-
-    START
-      │
-      ▼
-┌─────────────┐
-│Read a,b,c   │
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│avg=(a+b+c)/3│
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│ Print avg   │
-└─────────────┘
-      │
-      ▼
-     END
-```
-
-#### Example 4: Comparison (a < b?)
-```
-    START
-      │
-      ▼
-┌─────────────┐
-│  Read a, b  │
-└─────────────┘
-      │
-      ▼
-     ◇
-   /   \
-  / a<b? \
- /_______\
-  │      │
- YES    NO
-  │      │
-  ▼      ▼
-┌──────┐ ┌──────┐
-│Print │ │Print │
-│"YES" │ │"NO"  │
-└──────┘ └──────┘
-  │      │
-  └──┬───┘
-     │
-     ▼
-    END
-```
-
-#### Example 5: Even/Odd Check
-```
-Logic: If N%2 == 0 → Even, else → Odd
-
-    START
-      │
-      ▼
-┌─────────────┐
-│   Read N    │
-└─────────────┘
-      │
-      ▼
-     ◇
-   /   \
-  /N%2==0?\
- /_______\
-  │      │
- YES    NO
-  │      │
-  ▼      ▼
-┌──────┐ ┌──────┐
-│Print │ │Print │
-│"EVEN"│ │"ODD" │
-└──────┘ └──────┘
-  │      │
-  └──┬───┘
-     │
-     ▼
-    END
-```
-
-#### Example 6: Positive/Negative/Zero
-```
-    START
-      │
-      ▼
-┌─────────────┐
-│   Read N    │
-└─────────────┘
-      │
-      ▼
-     ◇
-   /   \
-  / N>0? \
- /_______\
-  │      │
- YES    NO
-  │      │
-  ▼      ▼
-┌──────┐    ◇
-│Print │  /   \
-│"+ve" │ / N<0? \
-└──────┘/_______\
-  │      │      │
-  │     YES    NO
-  │      │      │
-  │      ▼      ▼
-  │   ┌──────┐ ┌──────┐
-  │   │Print │ │Print │
-  │   │"-ve" │ │ "0"  │
-  │   └──────┘ └──────┘
-  │      │      │
-  └──────┼──────┘
-         │
-         ▼
-        END
-```
-
----
-
-### Loop Examples
-
-#### Example 7: Print Numbers 1 to N
-```
-    START
-      │
-      ▼
-┌─────────────┐
-│   Read N    │
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│   num = 1   │
-└─────────────┘
-      │
-      ▼
-     ◇
-   /   \
-  /num<=N?\
- /_______\
-  │      │
- YES    NO
-  │      │
-  ▼      ▼
-┌──────┐    END
-│Print │
-│ num  │
-└──────┘
-  │
-  ▼
-┌──────┐
-│num = │
-│num+1 │
-└──────┘
-  │
-  └──────┘
-     (back to condition)
-```
-
-**Trace for N=3:** num=1 → Print 1 → num=2 → Print 2 → num=3 → Print 3 → num=4 → End
-
-#### Example 8: Print Even Numbers 1 to N
-```
-    START
-      │
-      ▼
-┌─────────────┐
-│   Read N    │
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│   num = 2   │
-└─────────────┘
-      │
-      ▼
-     ◇
-   /   \
-  / num<N?\
- /_______\
-  │      │
- YES    NO
-  │      │
-  ▼      ▼
-┌──────┐    END
-│Print │
-│ num  │
-└──────┘
-  │
-  ▼
-┌──────┐
-│num = │
-│num+2 │
-└──────┘
-  │
-  └──────┘
-     (back to condition)
-```
-
-**Trace for N=5:** num=2 → Print 2 → num=4 → Print 4 → num=6 → End
-
-#### Example 9: Sum from 1 to N
-```
-    START
-      │
-      ▼
-┌─────────────┐
-│   Read N    │
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│   num = 1   │
-│   sum = 0   │
-└─────────────┘
-      │
-      ▼
-     ◇
-   /   \
-  /num<=N?\
- /_______\
-  │      │
- YES    NO
-  │      │
-  ▼      ▼
-┌──────┐ ┌──────┐
-│sum = │ │Print │
-│sum+  │ │ sum  │
-│num   │ └──────┘
-└──────┘    │
-  │         ▼
-  ▼        END
-┌──────┐
-│num = │
-│num+1 │
-└──────┘
-  │
-  └──────┘
-     (back to condition)
-```
-
-**Trace for N=3:** sum=0+1=1, sum=1+2=3, sum=3+3=6 → Print 6
-
-#### Example 10: Prime Number Check
-```
-Logic: Check if N is divisible by any number from 2 to N-1
-
-    START
-      │
-      ▼
-┌─────────────┐
-│   Read N    │
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│   num = 2   │
-└─────────────┘
-      │
-      ▼
-     ◇
-   /   \
-  / num<N?\
- /_______\
-  │      │
- YES    NO
-  │      │
-  ▼      ▼
-   ◇   ┌──────┐
- /   \  │Print │
-/N%num \ │"PRIME"│
-\==0? / └──────┘
- \___/     │
-  │  │     ▼
- YES NO    END
-  │  │
-  ▼  ▼
-┌────┐ ┌──────┐
-│Print│ │num = │
-│"NOT"│ │num+1 │
-│PRIME│ └──────┘
-└────┘    │
-  │       └──────┘
-  ▼          (back to condition)
- END
-```
-
----
+- [Flowcharts Class Notes](1_Flowcharts.pdf)
 
 ### Pseudocode
 
@@ -673,13 +268,9 @@ Write pseudocode for all the flowchart examples covered in the lecture.
 ```
 Source Code → Compiler → Executable File → Output
     (.cpp)       (gcc)      (.exe/.out)    (result)
-
-┌─────────────┐   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐
-│ a = 1       │ → │   Compiler  │ → │  Machine    │ → │   Output    │
-│ b = 2       │   │             │   │   Code      │   │   c = 3     │
-│ c = a + b   │   │             │   │ (Binary)    │   │             │
-└─────────────┘   └─────────────┘   └─────────────┘   └─────────────┘
 ```
+
+- C/ C++ is inbuilt in Linux, as Linux is made in C/ C++ !!!
 
 #### Compiler Functions
 1. **Translation**: Converts source code to machine code
@@ -700,8 +291,22 @@ int main() {
 }
 ```
 
+- IDE
+  - Integrated Development Environment
+  - Let's You code, debug, execute 
+  - gives you a lab to experiment
+  - eg: VSC(Local IDE), Replit(Remote IDE)
+- `;` end of statement, EOL
+- `<<` means enterline, syntax of cout function
+- `return 0;` :  end/exit
+- `"abcd"` : string & syntax
+- library : collection of pre-built code essentials to directy plug and play
+- `endl` : newline + flush operation, slower than `\n`
+- `iostream` : library contains all input output codes
+- `\n` : newline character, faster
+
 #### Code Breakdown
-```
+```cpp
 #include <iostream>  ← Include file for input/output functions
 using namespace std; ← Use standard namespace
 int main() {         ← START block (entry point)
@@ -730,6 +335,12 @@ Next Line
 ---
 
 ### Data Types & Variables
+- `dataType VarName = Value; `
+- `int` = 4bytes, 2bytes etc. DEPENDS ON COMPUTER
+- once you defined a Variable with one datatype, YOU CAN'T REDEFINE IN CODE, USE A DIFFERENT VAR !!!
+- `char a = '123';` [NO], Can't store more than 1 char
+- `char a  = "b";` [NO], use single-quotes`'`, not `"` double-quotes
+- even `bool b = true;` then when cout, it gives `1`
 
 #### Primary Data Types
 ```
@@ -993,3 +604,5 @@ Percentage: 85.5
 Size of int: 4 bytes
 Size of char: 1 bytes
 ```
+
+# 
