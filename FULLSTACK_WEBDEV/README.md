@@ -1,20 +1,27 @@
 # FULLSTACK_WEBDEV
 - https://github.com/Bharat2044/100xDevs-Cohort3-WebDev-and-Devops/blob/main/Lecture%20Slides.md
 - https://app.100xdevs.com/courses/14
+- 2-3 Years Work => Muscle Memory forever
+- DevOps+ MERN => SDE2/ TECH LEAD/ STAFF ENGINEER LEVEL
+- 
 ## Table of Contents
 - [FULLSTACK\_WEBDEV](#fullstack_webdev)
   - [Table of Contents](#table-of-contents)
   - [1 Orientation](#1-orientation)
-    - [Web Dev + Devops Cohort by 100xDevs](#web-dev--devops-cohort-by-100xdevs)
-    - [Goal](#goal)
-    - [Cohort Projects](#cohort-projects)
-    - [Avoid the spikes](#avoid-the-spikes)
-    - [What would I do if I was you?](#what-would-i-do-if-i-was-you)
-    - [Select your level](#select-your-level)
-    - [Good things to hash out](#good-things-to-hash-out)
-    - [VSCode Installation](#vscode-installation)
-    - [HTML](#html)
-    - [CSS](#css)
+    - [Course Overview](#course-overview)
+    - [Student Level Classifications](#student-level-classifications)
+    - [Development Environment](#development-environment)
+    - [HTML Fundamentals](#html-fundamentals)
+    - [CSS Fundamentals](#css-fundamentals)
+    - [Flexbox Layout System](#flexbox-layout-system)
+    - [CSS Classes and IDs](#css-classes-and-ids)
+    - [Color Systems and RGB Values](#color-systems-and-rgb-values)
+    - [CSS Margin and Padding Values](#css-margin-and-padding-values)
+    - [Border Properties](#border-properties)
+    - [Advanced CSS Concepts](#advanced-css-concepts)
+    - [Browser Tools and Development](#browser-tools-and-development)
+    - [Key Concepts Summary](#key-concepts-summary)
+    - [Next Steps and Advanced Topics](#next-steps-and-advanced-topics)
   - [2 Javascript Basics](#2-javascript-basics)
     - [Javascript - The basics](#javascript---the-basics)
     - [Properties of JS](#properties-of-js)
@@ -42,14 +49,46 @@
     - [Assignment](#assignment)
 
 ## 1 Orientation
+```html
+<html>
+    <head>
+        <title>Orientation</title>
+        <link href="index.css" rel="stylesheet">
+        <style>
+            .toplink{
+                text-align: center ;
+            }
+        </style>
+    </head>
+    <body style="background-color: aqua; ">
+        <div>hi there</div>
+        <span ><h2>Macbeth</h2> <h1> Introduction</h1> <a href="/">hi</a><a href="/">bye</a></span>
+        <a href="/">hi</a><a href="/">bye</a>
+        <span>-shakespear</span>
+        <div style="display:flex ;justify-content:space-evenly; background-color:red ;cursor: pointer; padding: 200px; margin: 200px;" >
+        
+        <a href="/">hi</a><a href="/">bye</a>
+        <div class="toplink">LLL</div>
+        </div>
+        <button>Download</button>
+        <input type="text" placeholder="Search">
+        <img src="https://code.visualstudio.com/favicon.ico" width="200px" height="200px"/>
+    </body>
+</html>
+```
+```css
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+```
 
-### Web Dev + Devops Cohort by 100xDevs
+### Course Overview
 
-### Goal
+- Goal
 
 Make you incredibly solid at building and deploying Web apps.
 
-### Cohort Projects
+- Cohort Projects
 
 1. https://github.com/code100x/cms/ - Led by hsingh
 2. https://github.com/code100x/daily-code/ - Led by Sargam
@@ -57,73 +96,73 @@ Make you incredibly solid at building and deploying Web apps.
 4. https://github.com/code100x/algorithmic-arena/pull/10 - Led by Nimit
 5. Framer like app - Up for grabs
 
-### Avoid the spikes
+- Avoid the Spikes Strategy
 
 1. We will go slow, today only focussing on HTML/CSS/JS
 2. Any topic that you feel is missing / you want we will do polls from time to time we can add
 3. Go slow but stay consistent, avoid the spikes
 
-### What would I do if I was you?
+- What would I do if I was you?
 
-1. Get to know people in discord, try to find a group of 3-4 motivated people.
+1. Get to know people in discord, try to find a group of 3-4 motivated people
 2. Look at all the success stories here and how they got a job - https://www.youtube.com/@100xDevs-n1w
-3. Repeated advise - GSoC is the best internship you can do. Already start prepping for it competition is high. Tell me how can I help here we’re hoping for ~50 GSoC selections from the cohort this year. Good video to watch - https://www.youtube.com/watch?v=OmzCvb-QBak
+3. Repeated advice - GSoC is the best internship you can do. Already start prepping for it competition is high. Tell me how can I help here we're hoping for ~50 GSoC selections from the cohort this year. Good video to watch - https://www.youtube.com/watch?v=OmzCvb-QBak
 
-<aside>
-💡 We’ll be covering things slowly in Cohort 3, so if you think things are going too slow you can 
+- Sprint Options
+
+If things are going too slow you can:
 1. Participate in projects/hackathons
 2. Sprint through Cohort 2.0
 
-</aside>
+### Student Level Classifications
 
-### Select your level
-
-- Complete beginner (very basic/no coding before)
-
-Things will be hard. You should spend ~20 hours/week atleast on Cohort material, assignments, other content covering what we’re doing in the Cohort. Don’t slack off
+- Complete Beginner (very basic/no coding before)
+  - Things will be hard. You should spend ~20 hours/week at least on Cohort material, assignments, other content covering what we're doing in the Cohort. Don't slack off
 
 - Intermediate (Done basic JS, HTML and some DSA)
+  - You should be for the first ~10 weeks or so. We see major drop off after the first major project
+  - Try chewing some glass after week 10, that is where you will actually learn things that differentiate you from a typical MERN developer
 
-You should be for the first ~10 weeks or so. We see major drop off after the first major project. 
+- Advanced (Know MERN decent/well)
+  - Feel free to drop off for the first few weeks. I'll see you on Github. Participate in the Superteam hackathon, aim for GSoC this year. Already start looking at orgs
 
-Try chewing some glass after week 10, that is where you will actually learn things that differentiate you from a typical MERN developer
+### Development Environment
 
-- Advance (Know MERN decent/well)
+- VSCode Installation
 
-Feel free to drop off for the first few weeks. I’ll see you on Github. Participate in the Superteam hackathon , aim for GSoC this year. Already start looking at orgs
+Download from here - https://code.visualstudio.com/
 
-### Good things to hash out
+- Good Things to Hash Out
 
 1. Installing VSCode locally
 2. HTML/CSS
 3. Cloning the landing page of a simple website
 
-### VSCode Installation
-
-Download from here - https://code.visualstudio.com/
-
-### HTML
-
-HTML stands for hyper text markup language. It is the foundation of building `unstyled` websites.
-
-- Step 1 - Creating a simple HTML file locally
+- Step 1: Creating a Simple HTML File Locally
 
 1. Create a folder on your machine called `website`
 2. Add a `index.html` file inside it
-3. Write the following code in it - 
+3. Write the following code in it
 
-```rust
+```html
 <html>
-	<title>
-		Visual Studio Code - Code Editor
-	</title>
+    <title>
+        Visual Studio Code - Code Editor
+    </title>
 </html>
 ```
 
 Now open this in your browser
 
+### HTML Fundamentals
 
-- Step 2 - Tags
+HTML stands for HyperText Markup Language. It is the foundation of building `unstyled` websites.
+- not case sensitive
+- sandwich code language
+- `/` : root directory of website
+- `<br/>` : eg of autoclosing tag
+
+- Step 2: Tags
 
 1. div, span
 2. head
@@ -136,207 +175,639 @@ Now open this in your browser
 9. button
 10. br
 
-- Step 3 - Building a basic HTML page
+- HTML Tag Structure
 
 ```rust
+html - root element
+├── head - metadata container
+│   ├── title - page title
+│   └── style - internal styles
+└── body - main content container
+    ├── div - block-level container
+    ├── span - inline container  
+    ├── h1-h6 - headings (largest to smallest)
+    ├── b, i, u - bold, italic, underline
+    ├── a href - links to navigate
+    ├── img src - embed images
+    ├── input type - user input fields
+    ├── button - clickable buttons
+    └── br - line breaks
+```
+
+- Step 3: Building a Basic HTML Page
+
+```html
 <html>
-	<title>
-		Visual Studio Code - Code Editor
-	</title>
+    <title>
+        Visual Studio Code - Code Editor
+    </title>
 </html>
 <body>
-	<div>
-		<span>Visual Studio Code</span>
-		<a href="/">Docs</span> 
-		<a href="/">Updates</span> 
-		<a href="/">Blog</span> 
-		<a href="/">API</span> 
-		<a href="/">Extensions</span> 
-		<a href="/">FAQs</span>
-		<a href="/">Learn</span>
-		
-		<input type="text" placeholder="Search Docs">
-		<button>Download</button>
-	</div>
-	<br/>
+    <div>
+        <span>Visual Studio Code</span>
+        <a href="/">Docs</a> 
+        <a href="/">Updates</a> 
+        <a href="/">Blog</a> 
+        <a href="/">API</a> 
+        <a href="/">Extensions</a> 
+        <a href="/">FAQs</a>
+        <a href="/">Learn</a>
+        
+        <input type="text" placeholder="Search Docs">
+        <button>Download</button>
+    </div>
+    <br/>
 
-	<div>
-		<a href="/">Version 1.82</a> is now available! Read about the new features and fixes from July.
-	</div>
+    <div>
+        <a href="/">Version 1.82</a> is now available! Read about the new features and fixes from July.
+    </div>
 
-	<br/>
+    <br/>
 </body>
 ```
 
+### CSS Fundamentals
 
-### CSS
+CSS stands for Cascading Style Sheets. It is used to style our applications.
 
-CSS stands for Cascading Style Sheets. It is used to style our applications
+- CSS Integration Methods
 
-You can add CSS to your HTML app by using - 
-
-1. The  `style` attribute (inline styles)
+You can add CSS to your HTML app by using:
+1. The `style` attribute (inline styles)
 2. In an external css file
 
-- Approach #1 - Inline styles
+- Approach 1: Inline Styles
 
-Try updating the `body` tag in the last style as follows - 
+Try updating the `body` tag in the last style as follows:
 
-```rust
+```html
 <body style="background-color: black;">
 ... rest of the code
 </body>
 ```
 
-- Approach #2 - External styles
+- Approach 2: External Styles
 
 1. Add a new file called index.css
 2. Add the following code in it
 
-```rust
+```css
 body {
     background-color: black;
 }
 ```
 
-- Update index.html
+> Priority: Inline styles >> External style
 
-```rust
+Update index.html:
+```html
 <html>
-	<title>
-		Visual Studio Code - Code Editor
-	</title>
-	<link rel="stylesheet" href="index.css">
+    <title>
+        Visual Studio Code - Code Editor
+    </title>
+    <link rel="stylesheet" href="index.css">
 </html>
 <body>
 ... rest of the code
 </body>
 ```
 
-- Common style attributes
+- Common Style Attributes
 
-- `color`: Sets the text color.
-- `background-color`: Sets the background color.
-- `font-size`: Sets the size of the text.
-- `margin`: Sets the outer space around an element.
-- `padding`: Sets the inner space within an element.
-- `border`: Sets the border around an element.
+- `color`: Sets the text color
+- `background-color`: Sets the background color  
+- `font-size`: Sets the size of the text
+- `margin`: Sets the outer space around an element
+- `padding`: Sets the inner space within an element
+- `border`: Sets the border around an element
 
-- Flexbox
+### Flexbox Layout System
 
 Flexbox is a CSS layout model designed to help with the arrangement of items within a container.
 
-Update the website to the following - 
+- Basic Flexbox Implementation
 
-```rust
+Update the website to the following:
+
+```html
 <html>
-	<title>
-		Visual Studio Code - Code Editor
-	</title>
+    <title>
+        Visual Studio Code - Code Editor
+    </title>
 </html>
 <body>
-	<div style="display: flex;">
-		<div>Visual Studio Code</div>
-		<a href="/">Docs</span> 
-		<a href="/">Updates</span> 
-		<a href="/">Blog</span> 
-		<a href="/">API</span> 
-		<a href="/">Extensions</span> 
-		<a href="/">FAQs</span>
-		<a href="/">Learn</span>
-	</div>
-	<div>
-		<input type="text" placeholder="Search Docs">
-		<button>Download</button>
-	</div>
-	<br/>
+    <div style="display: flex;">
+        <div>Visual Studio Code</div>
+        <a href="/">Docs</a> 
+        <a href="/">Updates</a> 
+        <a href="/">Blog</a> 
+        <a href="/">API</a> 
+        <a href="/">Extensions</a> 
+        <a href="/">FAQs</a>
+        <a href="/">Learn</a>
+    </div>
+    <div>
+        <input type="text" placeholder="Search Docs">
+        <button>Download</button>
+    </div>
+    <br/>
 
-	<div>
-		<a href="/">Version 1.82</a> is now available! Read about the new features and fixes from July.
-	</div>
+    <div>
+        <a href="/">Version 1.82</a> is now available! Read about the new features and fixes from July.
+    </div>
 
-	<br/>
+    <br/>
 </body>
 ```
 
-Notice that the elements are positioned right next to each other even though `Visual Studio code` is inside a `div`
+Notice that the elements are positioned right next to each other even though `Visual Studio code` is inside a `div`.
 
-- Justify content
+- Justify Content Property
 
-Try experimenting with the `justify-centent`  property
+Try experimenting with the `justify-content` property:
 
-```rust
+```html
 <html>
-	<title>
-		Visual Studio Code - Code Editor
-	</title>
+    <title>
+        Visual Studio Code - Code Editor
+    </title>
 </html>
 <body>
-	<div style="display: flex; justify-content: space-between;">
-		<div>Visual Studio Code</div>
-		<a href="/">Docs</span> 
-		<a href="/">Updates</span> 
-		<a href="/">Blog</span> 
-		<a href="/">API</span> 
-		<a href="/">Extensions</span> 
-		<a href="/">FAQs</span>
-		<a href="/">Learn</span>
-	</div>
-	<div>
-		<input type="text" placeholder="Search Docs">
-		<button>Download</button>
-	</div>
-	<br/>
+    <div style="display: flex; justify-content: space-between;">
+        <div>Visual Studio Code</div>
+        <a href="/">Docs</a> 
+        <a href="/">Updates</a> 
+        <a href="/">Blog</a> 
+        <a href="/">API</a> 
+        <a href="/">Extensions</a> 
+        <a href="/">FAQs</a>
+        <a href="/">Learn</a>
+    </div>
+    <div>
+        <input type="text" placeholder="Search Docs">
+        <button>Download</button>
+    </div>
+    <br/>
 
-	<div>
-		<a href="/">Version 1.82</a> is now available! Read about the new features and fixes from July.
-	</div>
+    <div>
+        <a href="/">Version 1.82</a> is now available! Read about the new features and fixes from July.
+    </div>
 
-	<br/>
+    <br/>
 </body>
 ```
 
-- Another example
+- Flexbox Properties from Note
+s
 
-```rust
+- Display and Justify Content
+
+```css
+display: flex;                    /* Enable flexbox layout */
+justify-content: flex-start;      /* Align items to start */
+justify-content: flex-end;        /* Align items to end */
+justify-content: center;          /* Center items */
+justify-content: space-between;   /* Space items with gaps between */
+justify-content: space-around;    /* Space items with equal space around */
+justify-content: space-evenly;    /* Space items with even distribution */
+```
+```css
+display: flex;                    /* Enable flexbox layout */
+
+/* justify-content property controls main axis alignment */
+
+justify-content: flex-start;      /* Align items to start */
+/*
+┌─────────────────────────────────┐
+│ [A] [B] [C]                     │
+└─────────────────────────────────┘
+*/
+
+justify-content: flex-end;        /* Align items to end */
+/*
+┌─────────────────────────────────┐
+│                     [A] [B] [C] │
+└─────────────────────────────────┘
+*/
+
+justify-content: center;          /* Center items */
+/*
+┌─────────────────────────────────┐
+│          [A] [B] [C]            │
+└─────────────────────────────────┘
+*/
+
+justify-content: space-between;   /* Space items with gaps between */
+/*
+┌─────────────────────────────────┐
+│ [A]        [B]        [C]       │
+└─────────────────────────────────┘
+*/
+
+justify-content: space-around;    /* Space items with equal space around */
+/*
+┌─────────────────────────────────┐
+│   [A]      [B]      [C]         │
+└─────────────────────────────────┘
+*/
+
+justify-content: space-evenly;    /* Space items with even distribution */
+/*
+┌─────────────────────────────────┐
+│    [A]     [B]     [C]          │
+└─────────────────────────────────┘
+*/
+```
+- Advanced Flexbox Example
+
+```html
 <html>
-
 </html>
 <body>
     <header>
-
     </header>
     <section>
-    <div style="border-width: thick; border-style: solid; display: flex; justify-content: space-between; margin-left: 200px; margin-right: 200px;">
-        <div style="background: red; "> 
-            <h1>
-                Code with GitHub Copilot
-            </h1>
-            <h6>
-                Write code faster and smarter with GitHub Copilot, your AI pair programmer.
-            </h6>            
-            Try GitHub Copilot free for 30 days
-            Completions present suggestions automatically to help you code more efficiently.
-            
-            Copilot Chat understands the context of your code, workspace, extensions, settings, and more.
-            
-            Inline Chat enables you to iteratively generate edits and get answers to quick questions, directly on your code.
+        <div style="border-width: thick; border-style: solid; display: flex; justify-content: space-between; margin-left: 200px; margin-right: 200px;">
+            <div style="background: red;"> 
+                <h1>Code with GitHub Copilot</h1>
+                <h6>Write code faster and smarter with GitHub Copilot, your AI pair programmer.</h6>            
+                Try GitHub Copilot free for 30 days
+                Completions present suggestions automatically to help you code more efficiently.
+                
+                Copilot Chat understands the context of your code, workspace, extensions, settings, and more.
+                
+                Inline Chat enables you to iteratively generate edits and get answers to quick questions, directly on your code.
+            </div>
+            <div style="background: green;">
+                <img src="https://code.visualstudio.com/assets/home/swimlane-copilot.png" width="800px" />
+            </div>
         </div>
-        <div style="background: green;">
-        <img src="https://code.visualstudio.com/assets/home/swimlane-copilot.png" width="800px" /></div>
-    </div>
-</section>
+    </section>
     <footer>
-
     </footer>
 </body>
 ```
 
-- Classes and ids
+### CSS Classes and IDs
 
 In CSS, classes and IDs are used as selectors to apply styles to HTML elements. They help in targeting specific elements for styling and can be used to enhance the modularity and reusability of CSS code.
 
+- Classes vs IDs Usage
+
+- Classes (.) - Reusable Styles
+
+```html
+<span class="toplink">Docs</span>
+<span class="toplink">Updates</span>
+```
+
+```css
+.toplink {
+    color: gray;
+}
+```
+
+- IDs (#) - Unique Elements
+
+```html
+<div id="header">Content</div>
+```
+
+```css
+#header {
+    background-color: blue;
+}
+```
+### Color Systems and RGB Values
+- You can create any color with combination of Red, Blue, Green
+- RGB is a color model used to represent colors in digital displays
+- r (0 - 255), g (0 - 255), b (0 - 255) [min- max values]
+
+- RGB Color Model
+
+```css
+rgb(255, 0, 0)     /* Red */
+rgb(0, 255, 0)     /* Green */  
+rgb(0, 0, 255)     /* Blue */
+rgb(255, 255, 0)   /* Yellow */
+rgb(255, 0, 255)   /* Purple */
+rgb(0, 255, 255)   /* Cyan */
+```
+
+- RGBA with Transparency
+
+```css
+rgba(255, 0, 0, 0.5)   /* Semi-transparent red */
+rgba(0, 0, 0, 0.3)     /* Semi-transparent black */
+```
+
+- Hex Color Codes
+
+```css
+#FF0000   /* Red */
+#00FF00   /* Green */
+#0000FF   /* Blue */
+#FFFF00   /* Yellow */
+```
+
+### CSS Margin and Padding Values
+
+```css
+margin: 10px;           /* All sides 10px */
+margin: 10px 20px;      /* Top/bottom 10px, left/right 20px */
+margin: 10px 20px 30px; /* Top 10px, left/right 20px, bottom 30px */
+margin: 10px 20px 30px 40px; /* Top, right, bottom, left */
+
+padding: 15px;          /* All sides 15px */
+padding: 10px 20px;     /* Top/bottom 10px, left/right 20px */
+```
+
+### Border Properties
+
+```css
+border: 1px solid black;        /* Width style color */
+border-width: thick;            /* Border thickness */
+border-style: solid;            /* Border style */
+border-color: red;              /* Border color */
+```
+
+### Advanced CSS Concepts
+
+- Font and Text Properties
+
+```css
+font-size: 16px;               /* Text size */
+font-weight: bold;             /* Text weight */
+text-align: center;            /* Text alignment */
+text-decoration: underline;    /* Text decoration */
+```
+
+- Background Properties
+
+```css
+background-color: black;       /* Background color */
+background: red;               /* Shorthand background */
+```
+
+- Element Positioning and Layout
+
+```css
+margin-left: 200px;           /* Left margin */
+margin-right: 200px;          /* Right margin */
+width: 800px;                 /* Element width */
+```
+
+- CSS Selectors Hierarchy
+
+```
+Element Selectors:
+├── Tag selectors: div, span, body
+├── Class selectors: .classname
+├── ID selectors: #idname
+└── Attribute selectors: [type="text"]
+```
+
+### Browser Tools and Development
+
+- Google Chrome Developer Tools
+
+- Right-click → Inspect Element
+- F12 or Ctrl+Shift+I
+- Elements tab for HTML structure
+- Styles tab for CSS properties
+
+- File Structure Organization
+
+```
+website/
+├── index.html
+├── index.css
+├── images/
+└── js/ (for future JavaScript)
+```
+
+- HTML Document Structure Best Practices
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <style>
+        /* Internal styles */
+    </style>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Page content -->
+</body>
+</html>
+```
+
+### Key Concepts Summary
+
+- HTML Core Concepts
+
+- HyperText Markup Language foundation
+- Tag-based structure with opening/closing tags
+- Semantic elements for content organization
+- Attributes provide additional information
+
+- CSS Core Concepts  
+
+- Cascading Style Sheets for presentation
+- Selectors target HTML elements
+- Properties define visual characteristics
+- Values specify property settings
+
+- Flexbox Layout Model
+
+- Modern CSS layout system
+- Container and item relationship
+- Main axis and cross axis alignment
+- Flexible item sizing and positioning
+
+- Development Workflow
+
+1. Create HTML structure
+2. Add CSS styling
+3. Test in browser
+4. Iterate and refine
+5. Validate code quality
+
+### Next Steps and Advanced Topics
+
+- Upcoming Technologies
+
+- JavaScript for interactivity
+- Responsive design principles
+- CSS Grid layout system
+- Modern development tools
+
+- Project Milestones
+
+- Clone simple website landing pages
+- Build responsive layouts
+- Implement interactive features
+- Deploy to web hosting platforms
+
+- Learning Resources
+
+- 100xDevs community Discord
+- YouTube success stories and tutorials
+- GitHub project repositories
+- GSoC preparation materials
+
 ## 2 Javascript Basics
+```js
+// variable
+// let
+// can be reassigned
+let name = "Bali";
+name ="Siddhant ";
+
+// constants
+// cannot be reassigned
+// make code more stricter
+const name2 = "Bhati";
+const age=21 ;
+// age=22; //TypeError: Assignment to constant variable.
+
+// console.log() //print method
+// it has default newline/linebreak
+console.log(age); //21
+console.log("age") //age
+
+// var
+// older way to define variables
+// function scoped 
+// please don't use it
+// forget it
+var name3 = "Bhaskar";
+
+var isStudent=true;
+console.log(isStudent); //true
+
+// keyword = reserved words in lang to do somestuff
+// deprecated = used here to support already existing code, but is not advised to use 
+
+// js is line-to-line interpreated lang
+// it will run till crash occour ,then stop
+// but it will execute till crash error come
+
+// comment
+// ; means statement end
+
+// DataTypes
+let no=42; //number
+let str="String";// String
+let boo=true;// boolean
+let arr3=[1,2,3];//array
+console.log(arr3[3]); //undefined
+
+// Operators
+let sum = 1+5; //arithmatic
+let isEqual= (1===10); //comparison operator
+let isTrue = (true&&false) //logical operator
+
+// == ,!= , Loose equality , typecasting , return true even type is different
+console.log('5'==5, null==undefined, false==0); //true true true
+// === ,!== , Strict equality , compare both value and type without any type conversion , return true only both value and type are EXACT
+console.log('5'===5, null===undefined, false===0, 5===5); //false false false true
+
+// Function, workers/helpers, that can be use any number of times
+// only executed when called :)
+function greet0(name) {console.log("Hi, ",name,"!!")}
+let name4 = "Bali"
+greet0(name4); //Hi,  Bali !!
+
+function sum1(n1,n2){return n1+n2;}
+console.log(sum1(1,5)); //6
+
+function isEven ( n1){
+    // If Else
+    if (n1%2===0){return true;} // % mod operator,gives remainder
+    if (n1%2!==0){return false;}
+}
+
+console.log(isEven(10),isEven(11)); //true false
+
+// for loop 
+for (var i =0; i<5; i++){
+    console.log(i);
+}
+
+// while loop
+var i1=5;
+while(i1--){
+    console.log(i1)
+}
+
+
+// complex data types
+// objects, key value pairs {stingKey:valueAnyDatatype}
+let user = {userName:"Rijusmit",userAge:20};
+console.log("Hi "+user["userName"]+" Brother,you have age:"+user.userAge); // user["userName"] = user.userName, you can use any
+
+function greet(user)// accepting not primitive but complex datatype
+{
+    console.log("Hi "+user.userName+" Brother,you have age:"+user.userAge);
+}
+
+let user1 = {userName:"Bhati",userAge:21};
+greet(user1);
+
+// Array, help to grp data together
+let arr= [1,2,3];
+const lenArr= arr.length;
+console.log(arr,lenArr); //[ 1, 2, 3 ] 3
+
+// Array of Objects, more complex :)
+const user2= [{userName:"Bhaskar",userAge:20},{userName:"Kintsugi",userAge:21}];
+let user3 = user2[0].userName;
+let user3all = user2[0];
+console.log(user3,user3all); //Bhaskar { userName: 'Bhaskar', userAge: 20 }
+
+let arr2= ["Bali",21,{userName:"Bhaskar",userAge:20}];
+let let1 = arr2[2];
+let let2 =  {userName:"Bhaskar",userAge:20} ;
+console.log(let1,let2); // { userName: 'Bhaskar', userAge: 20 } { userName: 'Bhaskar', userAge: 20 } // litrally same thing
+
+
+// Object of Objects
+let user4 = {userName:"Bhaskar",userAge:20,userAddress:{city:"Delhi", country: "India", pin:110091}};
+const city= user4.userAddress.city;
+const city2= user4["userAddress"]["city"];
+console.log(city,city2); // Delhi Delhi //Same :)
+
+// create a function that takes an arr of a obj as input and return the users who age>18 and are male
+const users1 =[
+    // {userName:"Bhaskar",userAge:20,userGender:"Male"},
+    {userName:"DoggoBhai",userAge:2,userGender:"Male"},
+    {userName:"IIITDBilli",userAge:5,userGender:"Female"},
+];
+
+function maleAdultChecker(users1){
+    return users1.filter( // return array
+        users1=>
+        users1.userAge>=18 && users1.userGender==="Male"); //[ { userName: 'Bhaskar', userAge: 20, userGender: 'Male' } ]
+}
+function maleAdultChecker2(users1){
+    for (let i=0; i<users1.length; i++){ //return object
+        if (
+            users1[i]["userAge"] >= 18
+            &&
+            users1[i]["userGender"] === "Male"
+        )
+            return users1[i]; //{ userName: 'Bhaskar', userAge: 20, userGender: 'Male' }
+    } 
+    return 0;
+}
+
+console.log(maleAdultChecker(users1),maleAdultChecker2(users1)); // [ { userName: 'Bhaskar', userAge: 20, userGender: 'Male' } ] { userName: 'Bhaskar', userAge: 20, userGender: 'Male' } //NOTsame
+// [] 0 // in case no Bhaskar entry 
+
+```
 ### Javascript - The basics
 - Web development
 
@@ -381,8 +852,10 @@ int main() {
   a = "hello";
   a = true;
 }
+```
 
 JS Code (will compile)
+```js
 
 var a = 1;
 a = "harkirat";
@@ -390,15 +863,42 @@ a = true;
 
 console.log(a)
 ```
+- cpp code is statically typed
+- js code is dynamically typed
+- Rust
+  - do ownership checks
+  - compiler very strict
+  - extreme memory safe
+  - extreme slow compile
  
 - 3. Single threaded
 JavaScript executes code in a single-threaded environment, meaning it processes one task at a time. We will dive deeper into this next week.
 ![alt text](image-5.png)
 ![alt text](image-6.png)
+
+- even JS infinite loop(most expensive operation :0 ) can utilize max only 1CPU !!! 
+- (do htop ;0 )
+  - at htop, nodejs process => 98% CPU
+  - it uses ~100%CPU out of `100% * number of CPUs total`
+  - eg: i have 20 CPU Cores, uses 98% nodejs app, from 20*100 % total= 2000% total CPU space
+  - `Rust/ C++`(Multithreaded) can go to 200%, 300% etc.
+  - `ffmpeg`(c++ ) go upto 300% / even use full CPUs
+- to reduce JS Runtime errors, TS was introduced
+  - TS(Like C++) =(compile)> JS => Run
+  - it reduces disadvantages 
+- companies go from JS to Rust, Golang for
+  - faster Run
+  - Max. Safety
+
 - 4. Garbage collected
 ![alt text](image-7.png)
 JavaScript automatically manages memory allocation and deallocation through garbage collection, which helps prevent memory leaks by automatically reclaiming memory used by objects no longer in use.
  
+- garbage collection does
+  - stores data
+  - change data
+  - removing data
+- code runs in RAM
 
  
 - Conclusion
@@ -414,6 +914,14 @@ let name = "John";     // Variable that can be reassigned
 const age = 30;        // Constant variable that cannot be reassigned
 var isStudent = true;  // Older way to declare variables, function-scoped
 ```
+- let, const helps to make code more stricter, when used logically correctly
+- deprecated
+  - disapproved / "don't use it"
+  - Something that's still tolerated or accepted to support already written code , but it's not recommended or highly discouraged
+- keywords
+  - reserved words in JS not to use as var name
+---
+
 - Assignment
 Create a variable for each of the following: your favorite color, your height in centimeters, and whether you like pizza. Use appropriate variable declarations (let, const, or var). Try logging it using console.log
 - 2. Data types
@@ -440,6 +948,10 @@ function greet(name) {
 // Function call
 let message = greet("John"); // "Hello, John"
 ```
+- js will not run/read function at 1st
+- only run/read when called
+- i.e. if written wrong function, it won't show error until called
+---
 - Assignment #1
 Write a function sum that finds the sum of two numbers. 
 Side quest - Try passing in a string instead of a number and see what happens?
