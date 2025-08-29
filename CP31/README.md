@@ -2,6 +2,7 @@
 - https://codeforces.com/profile/kintsugi-programmer
 - https://www.tle-eliminators.com/cp-sheet
 
+
 ## Table of Contents
 - [CP31](#cp31)
   - [Table of Contents](#table-of-contents)
@@ -16,33 +17,61 @@
   - [8 How Much Does Daytona Cost?](#8-how-much-does-daytona-cost)
   - [10 Target Practice](#10-target-practice)
 - [TipsCollectedFromExperiences](#tipscollectedfromexperiences)
+- [Ambitious Kid](#ambitious-kid)
+- [Target Practice](#target-practice)
+
 
 # R800
+
 ## 1 Halloumi Boxes
 - https://codeforces.com/problemset/problem/1903/A
 - Analysis
   - n boxes/array a1 a2 ... an
+  - a = {a0, a1, a2 ... an-1}
+  - subarray = segment taken out of array not manipulated ,no change in order 
+    - eg: {a0, a1}, {a1,a2,a3}, etc
   - He wants to sort them in non-decreasing order based on their number
+  - non-decreasing = increasing
+  - s is atmost k , means : s<=k
   - however, his machine works in a strange way. It can only reverse any subarray of boxes with length `at most k` 
   - subarrsize<=k
   - Find if it's possible to sort the boxes using any number of reverses.
   - So, if K>=2 ,Machine's sort is 100%possible at `any number of reverses` `ANY_TIMES`
+    - if k=2 atleast => i have power to shift any element anywhere 
   - eg: 
     - 6421
-      - 6421
-      - 6412
-      - 6142
-      - 1642
-      - 1624
-      - 1264
-      - 1246
+      - 6421 rev 2 nos sub array my initial thought
+      - 6412 rev 2 nos sub array
+      - 6142 rev 2 nos sub array
+      - 1642 rev 2 nos sub array
+      - 1624 rev 2 nos sub array
+      - 1264 rev 2 nos sub array
+      - 1246 rev 2 nos sub array
       - sorting done :0
+    - 6421 
+      - 1246 rev 4 nos sub array optimal from tuts
+  - atq : according to question
+  - tl per test = 1sec atq
+    - 1sec = 10^8 Operations = per test operations
+    - 1 <=k <= n (minitests)<= 100 acc.to ques (atq)
+    - consider n=100 upperbound
+    - tl per mini test = 1sec /100
+    - per mini test operations = 10^8 / 100 = 10^6
+    - if tc per mini test = O(n^3)
+      - so n=100, then operation = O(n^3) = O(100^6) = per mini test operations
+      - so O(n^3) is the upper bound
+      - even sol. can have O(n^2), O(n), O(nlogn) etc. anything below O(n^3), but not above O(n^3)
+    - Expected TC = O(n^3)
+  - ml per test = 256mB atq
   - at k=1, no sorting is possible
+    - because the foundation of reverse is actually swap any atleast 2 stuff
+    - if stuff is only one then it wont make sense to reverse as we lost power to shift any element
 - Approach
   - Passing Condition where return YES
     - K>=2
     - or given array is already sorted
   - else, return False
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -56,13 +85,14 @@ int main(){
         cin>>n>>k;
         vector<int> v(n);
         int i=0;
+        //input
         while(i<n){
-            cin>>v[i];
+            cin>>v[i]; // n order
             i++;
         }
-        vector<int> v2=v;
-        sort(v2.begin(), v2.end());
-        if ((v2==v)or(k>=2)){
+        vector<int> v2=v; // copy // n order
+        sort(v2.begin(), v2.end());  // nlogn order
+        if ((v2==v)or(k>=2)){ // to check whether initial array is sorted or not // n order
             cout<<"YES\n";
         } else {
             cout<<"NO\n";
@@ -70,8 +100,11 @@ int main(){
     }
     return 0;
 }
-// tc O(nlogn)
-// sc O(n)3
+// tc O(nlogn) // highest order here
+// at n = 100 , tc = 100log100 = 100*7 = 700
+// 2^7 ~ 100
+// log2(n) = ln n / ln 2
+// sc O(n)
 ```
 
 ## 2 Line Trip
@@ -79,11 +112,46 @@ int main(){
 - Analysis
   - location&road on number line
     - 0 , a1 , a2 , ... , x
-    - Round Trip
-    - a1,a2 ... Gas station for Tanki Full
+    - Round Trip i.e. total path => 0, a1, ... an, x, an, ..., a1,0
+    - a1,a2 ... Gas station for Tanki Full/ Refill
     - 0 start point
-    - if stop at non-station location= gameover
-  - In this ques, we have to find the capacity of gas tank car should take it for journey
+    - if stop at non-station location due to gas empty = gameover
+    - no refuel at dest x
+  - In this ques, we have to find the capacity of gas tank car should take it for journey, efficiently without stopping
+  - tl per test = 2secs
+    - 2secs = 2*(10^8) operations
+    - t=1000 atq
+    - time/testcase = O(2* 10^5)
+    - n=50 max atq
+    - then at O(n^3) = O(125000) = O(1.25 * 10^5) <= O(2* 10^5)
+    - TC for minitest = Expected TC = O(n^3) upper bound
+  - tlpt = time limit per test
+  - mlpt = 256mB
+  - in test case 1
+    - n=3
+    - x=7
+    - a{1,2,5}
+    - `0-1-2-5-7-5-2-1-0`
+    - output = 4
+    - gaschanges=
+      - 4 start
+      - 3 at 1
+      - 4 refill
+      - 3 at 2
+      - 4 refill
+      - 1 at 5 
+      - 4 refill
+      - 2 at 7 
+      - NO Refill at dest x
+      - 0 at 5 ,biggest gas consumption, 5->7->5 , 4 units distance
+      - 4 refill
+      - 1 at 2 
+      - 4 refill
+      - 3 at 1
+      - 4 refill
+      - 3 end, fully reached ,gas still remaining 
+    - biggest gas consumption, 5->7->5 , 4 units distance
+    - thus min threshold gas capacity is 4 units ,as below it , car would stop at 5->7->5
   - now the max capacity of gas tank in any journey = max distance of any 2 gas stations throughout journey
   - througout journey means a round trip 
     - so, after lastGasStation, car will go to x(dest), and find lastGasStation first in return journey
@@ -104,22 +172,30 @@ int main(){
         cin>>n>>x;
         long long i=1;
         long long smax=0;
-        vector<long long> v1(n+1,0);
+        vector<long long> v1(n+1,0); //initialize safety //O(n)
         v1[0]=0;
-        while(i<=n){
+        while(i<=n){// O(n)
             cin>>v1[i];
             // cout<<v1[i];
             long long buff=smax;
             smax=max(buff,(v1[i]-v1[i-1]));
             i++;
         }
-        long long smax2=(x-v1[n])*2;
+        long long smax2=(x-v1[n])*2; // O(1)
         cout<< max(smax,smax2)<<endl;
         // cout<< smax<<" "<<v1[n-1]<<" "<<smax2<<endl;
  
     }return 0;
 }
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+//  max(a, b); O(1) // just checks (a < b)
+//  min(a, b); O(1) // just checks (a < b)
+// max_element(v.begin(), v.end()) O(n)
+// min_element(v.begin(), v.end()) O(n)
 ```
+- my code is more optimised than tut ;0
 
 ## 3 Cover in Water
 - https://codeforces.com/problemset/problem/1900/A
@@ -516,3 +592,149 @@ int main(){
 - max/min : `max(var1 ,var2)`, `min(var1, var2)`
   - make sure var1,var2 has SAME DATATYPE
   - inbuilt
+- subarray = segment taken out of array not manipulated ,no change in order 
+  - eg of a = {a0, a1, a2 ... an-1}, subarrs : {a0, a1}, {a1,a2,a3}, etc
+- non-decreasing = increasing
+- s is atmost k , means : s<=k
+- atq : according to question
+- How to Calculate Expected TC? eg: in 1R800
+  - tl per test = 1sec atq
+    - 1sec = 10^8 Operations = per test operations
+    - 1 <=k <= n (minitests)<= 100 acc.to ques (atq)
+    - consider n=100 upperbound
+    - tl per mini test = 1sec /100
+    - per mini test operations = 10^8 / 100 = 10^6
+    - if tc per mini test = O(n^3)
+      - so n=100, then operation = O(n^3) = O(100^6) = per mini test operations
+      - so O(n^3) is the upper bound
+      - even sol. can have O(n^2), O(n), O(nlogn) etc. anything below O(n^3), but not above O(n^3)
+    - Expected TC = O(n^3)
+- ```cpp
+  // 1R800
+  // at extreme proof case use :
+  long long t;
+  ```
+- ```cpp 
+  // 1R800
+  // at n = 100 , tc = 100log100 = 100*7 = 700
+  // 2^7 ~ 100
+  // log2(n) = ln n / ln 2
+  ```
+- ```cpp
+  // 1R800
+  // input, n order
+  cin>>v[i]; // n order
+
+  // vector copy, n order
+  vector<int> v2=v; // copy // n order
+
+  // sort stl func, n order
+  sort(v2.begin(), v2.end());  // nlogn order
+
+  // vector compare, n order
+  if (v2==v) // vector compare // n order
+  ```
+- tlpt = time limit per test
+- 2secs = 2*(10^8) operations
+- at 2R800 , tl per test = 2secs
+  - 2secs = 2*(10^8) operations
+  - t=1000 atq
+  - time/testcase = O(2* 10^5)
+  - n=50 max atq
+  - then at O(n^3) = O(125000) = O(1.25 * 10^5) <= O(2* 10^5)
+  - TC for minitest = Expected TC = O(n^3) upper bound
+- ```cpp
+  //  max(a, b); O(1) // just checks (a < b)
+  //  min(a, b); O(1) // just checks (a < b)
+  // max_element(v.begin(), v.end()) O(n)
+  // min_element(v.begin(), v.end()) O(n)
+  ```
+-  `vector<long long> v1(10,0);` initialize safety vector
+
+
+# Ambitious Kid
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin >> n;
+    vector<int> v1(n,0);
+    for (int i=0; i<n;i++){
+        int i1 =0;
+        cin>>i1;
+        v1[i]=(i1>=0) ? i1: (i1*-1); // or v1[i] = abs(i1);
+    }
+    cout<<*min_element(v1.begin(),v1.end());// min_element & max_element return pointer
+    // not sort then v1[1] as its nlogn
+    return 0;
+}
+// TC O(n)
+// SC O(n)
+```
+
+# Target Practice
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+// 1
+/*
+00 01 02 03 04 05 06 07 08 09
+10 19
+20 29
+30 39
+40 49 
+50 59
+60 69 
+70 79 
+80 89
+90 91 92 93 94 95 96 97 98 99
+*/
+// 2
+/*
+11 12 13 14 15 16 17 18
+21 28
+31 38
+41 48 
+51 58
+61 68 
+71 78 
+81 82 83 84 85 86 87 88 
+*/
+
+int calScore(int row, int col, char c){
+    int bound1 =0;
+    int bound2 =9;
+
+    for ( int ring =1; ring<=5; ring++){
+        if ( (row==bound1) || (row==bound2) ){ return ring;}
+        else if ((col==bound1) || (col==bound2)) {return ring;}
+        
+        bound1++;bound2--;
+    }
+    return 0; // fallback
+    
+}
+void miniTest(){
+    int finalScore=0;
+    for (int row=0; row<10; row++){
+        for (int col=0; col<10; col++){
+            char c;
+            cin>>c;
+            if (c=='X') finalScore+=calScore(row,col,c);
+        }
+
+    }
+    cout<<finalScore<<"\n";
+}
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);;
+    int t;
+    cin>>t;
+    while(t--){
+        miniTest();
+    }
+    return 0;
+}
+```
