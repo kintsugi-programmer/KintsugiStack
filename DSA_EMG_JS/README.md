@@ -1,5 +1,6 @@
 # DSA EMG JS
-
+- https://www.youtube.com/watch?v=wBtPGnVnA9g
+- https://www.youtube.com/watch?v=lvO88XxNAzs
 ### Table of Contents
 - [DSA EMG JS](#dsa-emg-js)
     - [Table of Contents](#table-of-contents)

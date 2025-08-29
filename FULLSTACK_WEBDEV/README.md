@@ -3,7 +3,7 @@
 - https://app.100xdevs.com/courses/14
 - 2-3 Years Work => Muscle Memory forever
 - DevOps+ MERN => SDE2/ TECH LEAD/ STAFF ENGINEER LEVEL
-- 
+
 ## Table of Contents
 - [FULLSTACK\_WEBDEV](#fullstack_webdev)
   - [Table of Contents](#table-of-contents)
@@ -438,14 +438,14 @@ justify-content: space-between;   /* Space items with gaps between */
 justify-content: space-around;    /* Space items with equal space around */
 /*
 ┌─────────────────────────────────┐
-│   [A]      [B]      [C]         │
+│[A]            [B]            [C]│
 └─────────────────────────────────┘
 */
 
 justify-content: space-evenly;    /* Space items with even distribution */
 /*
 ┌─────────────────────────────────┐
-│    [A]     [B]     [C]          │
+│      [A]     [B]     [C]        │
 └─────────────────────────────────┘
 */
 ```

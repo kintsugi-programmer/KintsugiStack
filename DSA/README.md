@@ -30,6 +30,7 @@
         - [2. Print Odd Numbers 1 to N (Inclusive)](#2-print-odd-numbers-1-to-n-inclusive)
         - [3. Factorial of N](#3-factorial-of-n)
       - [Additional Practice](#additional-practice)
+    - [Mod Operator](#mod-operator)
     - [Key Takeaways](#key-takeaways)
       - [Problem Solving Steps](#problem-solving-steps)
       - [Flowchart Components](#flowchart-components)
@@ -222,6 +223,13 @@ Logic: fact = 1, multiply by each number from 1 to N
 #### Additional Practice
 Write pseudocode for all the flowchart examples covered in the lecture.
 
+### Mod Operator
+- gives remainder
+- a%b = remainder of a/b
+- `5%2=1`
+- `8%2=0`
+- `4%9=4`, when a>b, a%b=a
+- if n%2 =0 , n is even, else n is odd
 ---
 
 ### Key Takeaways

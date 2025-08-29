@@ -9,4 +9,13 @@
   - [HR Interview Questions - IndiaBix](https://www.indiabix.com/hr-interview/questions-and-answers/)
   - [Mock Interviews and HR Questions - IndiaBix](https://www.indiabix.com/)
   - [Common HR Interview Questions - First Naukri](https://www.firstnaukri.com/interview-questions-and-answers?utm_source=chpeventbyrg&utm_medium=email&utm_campaign=piqa)
-
+- Materials
+  - [CN.pdf](/CORE_CS_EMG/CN.pdf)
+  - [OS.pdf](/CORE_CS_EMG/OS.pdf)
+  - [DBMS.pdf](/CORE_CS_EMG/DBMS.pdf)
+  - [OOPS.pdf](/CORE_CS_EMG/OOPS.pdf)
+  - [InterviewBitCN.pdf](/CORE_CS_EMG/InterviewBitCN.pdf)
+  - [InterviewBitOOPS.pdf](/CORE_CS_EMG/InterviewBitOOPS.pdf)
+  - [InterviewBitSysDes.pdf](/CORE_CS_EMG/InterviewBitSysDes.pdf)
+  - [InterviewBitDBMS.pdf](/CORE_CS_EMG/InterviewBitDBMS.pdf)
+  - [InterviewBitOS.pdf](/CORE_CS_EMG/InterviewBitOS.pdf)
