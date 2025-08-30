@@ -10,7 +10,7 @@
   - [1 Halloumi Boxes](#1-halloumi-boxes)
   - [2 Line Trip](#2-line-trip)
   - [3 Cover in Water](#3-cover-in-water)
-  - [4 Game with Integers](#4-game-with-integers)
+  - [4 WTF Game with Integers](#4-wtf-game-with-integers)
   - [5 Jagged Swaps](#5-jagged-swaps)
   - [6 Doremy's Paint 3](#6-doremys-paint-3)
   - [7 Don't Try to Count](#7-dont-try-to-count)
@@ -25,6 +25,7 @@
 
 ## 1 Halloumi Boxes
 - https://codeforces.com/problemset/problem/1903/A
+- brute force, greedy, sortings, *800
 - Analysis
   - n boxes/array a1 a2 ... an
   - a = {a0, a1, a2 ... an-1}
@@ -109,6 +110,7 @@ int main(){
 
 ## 2 Line Trip
 - https://codeforces.com/problemset/problem/1901/A
+- greedy, math, *800
 - Analysis
   - location&road on number line
     - 0 , a1 , a2 , ... , x
@@ -199,6 +201,7 @@ int main(){
 
 ## 3 Cover in Water
 - https://codeforces.com/problemset/problem/1900/A
+- constructive algorithms, greedy, implementation, strings, *800
 - Analysis
   - Filip has a row of cells, some of which are blocked, and some are empty. 
   - He wants all empty cells to have water in them. 
@@ -207,9 +210,38 @@ int main(){
     - 2. remove water from a cell and place it in any other empty cell. `ANY_TIMES`
   - autoOperation
     - if at some moment cell i (2≤i≤n−1) is empty and both cells i−1 and i+1 contains water, then it becomes filled with water. `ANY_TIMES`
+    - magic autofill
+  - N => s = s1,s2,s3....,sn
+    - = ...##.#....##
+    - now in ...
+      - if we just w.w (w=water) => www 
+      - then we can transfer the middle water to other cells one by one
+      - w.w sill it get refill=> www
+    - ...##.#....##
+      - w.w##.#....## 2times fill water manual 
+      - www##.#....## autofill 
+      - w.w##.#w...## swap water
+      - www##.#w...## autofill
+      - w.w##w#w...## swap water
+      - www##w#w...## autofill
+      - w.w##w#ww..## swap water
+      - www##w#ww..## autofill
+      - w.w##w#www.## swap water
+      - www##w#www.## autofill
+      - w.w##w#wwww## swap water
+      - www##w#wwww## auto fill 
+      - all buckets filled ;0, count=2 operation 1
   - C1: if no. of Consecutive dots(emptyBoxes) >= 3
     - then we only need 1 operation only 2TIMES as we could fill at corner of 3 boxes and middle box will autoOperationAutoFillWater and we can transfer that water to other cells `ANY_TIMES` 2 operation, and regenerate autoOperationAutoFillWater
   - C2: else we need to fill all boxes by 1 operation only as here autoOperationAutoFillWater fails
+  - Expected TC
+    - tlpt 1sec atq
+      - mt = t max= 100 atq
+      - tlpmt = 10^8 / 100 = 10^6
+      - n = 100 atq
+      - TCpmt = O(n^3) upperbound
+        -  as O(100^3) = O(10^6) = order of tlpmt
+    - mlpt 256mB atq
 - Approach
   - count no. of dots(emptyBoxes)
   - count no. of Consecutive dots(emptyBoxes)
@@ -218,7 +250,10 @@ int main(){
   - else 
     - return no. of dots(emptyBoxes)
 - AnotherApproach 
+  - if i have 3 contineous empty cell, answer is 2 else ,answer is count of all empty cells
   - similar 
+  - ... => (i-1), (i), (i+1)
+    - just fill i-1, i+1
   - if `(s[i]=="." && i+1<n && s[i+1]=="." && i+2<n && s[i+2]=="." `
     - return 2
   - else 
@@ -269,16 +304,44 @@ int main(){
     return 0;
     
 }
+// TC O(n)
+// SC O(n)
 ```
 
-## 4 Game with Integers
+## 4 WTF Game with Integers
 - https://codeforces.com/problemset/problem/1899/A
+- games, math, number theory, *800
 - Analysis
   - Vanya and Vova are playing a game. Players are given an integer n. On their turn, the player can add 1 to the current integer or subtract 1
+  - Operations any ne
+    - n=n-1
+    - n=n+1
   - The players take turns; Vanya starts. If after Vanya's move the integer is divisible by 3, then he wins. If 10 moves have passed and Vanya has not won, then Vova wins.
   - if both players play optimally
     - then in each of player turn he/she will try move to make other one lose
-  - NOW
+  - eg: if nos is 5
+    - nos = 5
+    - 6 ( vanya n++ ) OR 4 ( vanya n--)
+    - 5 ( vova n-- ) or 7 ( vova n++ ) OR 3 ( vova n-- ) or 5 ( vova n++ )
+    - 6 ( vanya n++ ) OR 4 ( vanya n--) or 6 ( vanya n-- ) OR 8 ( vanya n++) or 2 ( vanya n-- ) OR 4 ( vanya n++) or 4 ( vanya n-- ) OR 6 ( vanya n++)
+    - basically she will counter , to remake it even, repetitive till 10
+    - she won
+  - Expected TC ?
+    - tlpt = 1sec atq
+    - mlpt = 256mB atq
+    - t = 100 atq
+    - n = 1000 atq
+    - 1sec = 10^8 ops
+    - tlpmt = 10^8 / t = 10^8 / 100 = 10^6
+    - Expected TC = O(n^2)
+      - not O(n^3)
+        - as 1000^3 = 10^9 < tlpmt
+      - as putting n in mt O(n^2)
+      - = 1000^2
+      - = 10^6
+      - = tlpmt
+  - NOW , if both play most optimal, then they will reverse each other operations and exhause the turns
+    - eg: n=6 => 7 (vanya n++) => 6 (vova n--) => infinite loop
     - n%3 == 0
       - if True, divisible before vanya move
         - even vanya could +1/ -1
@@ -325,7 +388,8 @@ int main(){
     }
     return 0;
 }
- 
+// TC O(1)
+// SC O(1)
 ```
 
 ## 5 Jagged Swaps
@@ -650,6 +714,7 @@ int main(){
   // min_element(v.begin(), v.end()) O(n)
   ```
 -  `vector<long long> v1(10,0);` initialize safety vector
+-  WTF : What the Fish Ques
 
 
 # Ambitious Kid
