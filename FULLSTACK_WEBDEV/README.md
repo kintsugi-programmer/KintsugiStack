@@ -877,7 +877,30 @@ Web development involves writing a lot of HTML, CSS and JS code.
 Historically (and even today to some extend), browsers could only understand HTML, CSS and JS
 Any website that you see, is a bunch of HTML, CSS and JS files along with some assets (images, videos etc)
  
-![alt text](image-3.png)
+```
+                    ┌─────────────────────────────────────────────┐
+                    │                                             │
+                    │           G O O G L E                       │
+     ┌─────────┐    │                                             │
+     │         │    │    ┌───────────────────────────────────┐    │
+     │  HTML   │────┼───▶│                                   │    │
+     │  CSS    │    │    │         [Search Box]              │    │
+     │  JS     │    │    │                                   │    │
+     │ Images  │    │    │    ┌─────────────────────────┐    │    │
+     │         │    │    │    │     Special Doodle      │    │    │
+     └─────────┘    │    │    │    (Holiday/Event)      │    │    │
+                    │    │    └─────────────────────────┘    │    │
+                    │    │                                   │    │
+                    │    │[Google Search][I'm Feeling Lucky] │    │
+                    │    │                                   │    │
+                    │    └───────────────────────────────────┘    │
+                    │                                             │
+                    │  India                                      │
+                    │                                             │
+                    │  Advertising  Business  How Search works    │
+                    │                          Privacy  Terms     │
+                    └─────────────────────────────────────────────┘
+```
 
 ---
 
@@ -903,7 +926,23 @@ Every language comes with it’s unique set of features.
 
 - 1. Interpreted
  JavaScript is an interpreted language, meaning it's executed line-by-line at runtime by the JavaScript engine in the browser or server environment, rather than being compiled into machine code beforehand.
-![alt text](image-4.png)
+```
+C++ Code
+┌─────────────────┐         ┌─────────┐                    Runs on
+│                 │────────▶│         │───────────────────▶your machine
+│                 │         │ Binary  │
+│                 │         │         │
+│                 │         └─────────┘
+└─────────────────┘
+
+
+JS Code
+┌─────────────────┐
+│                 │───────────────────────────────────────▶Runs on
+│                 │                                        your machine
+│                 │
+└─────────────────┘
+```
  
 - Upsides - There is one less step to do before running your code
 - Downsides - Performance Overhead:More prone to runtime errors
@@ -927,7 +966,7 @@ JS Code (will compile)
 ```js
 
 var a = 1;
-a = "harkirat";
+a = "Doraemon";
 a = true;
 
 console.log(a)
@@ -944,8 +983,18 @@ console.log(a)
 
 - 3. Single threaded
 JavaScript executes code in a single-threaded environment, meaning it processes one task at a time. We will dive deeper into this next week.
-![alt text](image-5.png)
-![alt text](image-6.png)
+```
++-------------------------+    +-------------------------+
+|     ( Rust / C++ )      |    |     ( index.js )        |
+|                         |    |                         |
+|   [CPU1*][CPU2*][CPU3*] |    |   [CPU1*][cpu2] [cpu3]  |
+|   [CPU4*][CPU5*][CPU6*] |    |   [cpu4] [cpu5] [cpu6]  |
+|   [CPU7*][CPU8*][CPU9*] |    |   [cpu7] [cpu8] [cpu9]  |
+|                         |    |                         |
+|  * All CPUs in use      |    |  * Only one CPU in use  |
++-------------------------+    +-------------------------+
+
+```
 
 - even JS infinite loop(most expensive operation :0 ) can utilize max only 1CPU !!! 
 - (do htop ;0 )
@@ -964,7 +1013,24 @@ JavaScript executes code in a single-threaded environment, meaning it processes 
 ---
 
 - 4. Garbage collected
-![alt text](image-7.png)
+```
++---------------------------------------------------------------+
+|                       Memory Management                       |
++-------------------+-------------------+-----------------------+
+| Garbage Collector | Manual            | The Rust Way          |
+|-------------------|-------------------|-----------------------|
+| 1. Written by     | 1. You allocate   | 1. Rust has its own   |
+|    smart people   |    and deallocate |    ownership model    |
+| 2. No dangling    |    memory yourself|    for memory mgmt    |
+|    pointers issue | 2. Can lead to    | 2. Extremely safe     |
+| 3. No manual      |    dangling ptrs  |    from memory errors |
+|    memory mgmt    |    / memory issues|                       |
+| 4. Ex: Java, JS   | 3. Hard learning  |                       |
+|                   |    curve          |                       |
+|                   | 4. Ex: C          |                       |
++-------------------+-------------------+-----------------------+
+
+```
 JavaScript automatically manages memory allocation and deallocation through garbage collection, which helps prevent memory leaks by automatically reclaiming memory used by objects no longer in use.
  
 - garbage collection does
@@ -1087,14 +1153,26 @@ Write a function called sum that finds the sum from 1 to a number
 - Objects
 An object in JavaScript is a collection of key-value pairs, where each key is a string and each value can be any valid JavaScript data type, including another object.
  
-![alt text](image-8.png)
+```
++-------------------------------------------+
+|                                           |
+|   let user = {                            |
+|       name: "Doraemon",   <--- key:value  |
+|       age: 19                             |
+|   }                                       |
+|                                           |
+|   key  --->  "name"                       |
+|   value --->  "Doraemon"                  |
++-------------------------------------------+
+
+```
 ```js
 let user = {
-	name: "Harkirat",
+	name: "Doraemon",
 	age: 19
 }
 
-console.log("Harkirats age is " + user.age);
+console.log("Doraemons age is " + user.age);
 ```
 
 ---
@@ -1105,7 +1183,7 @@ Write a function that takes a user as an input and greets them with their name a
 ---
 
 - Assignment #2
-Write a function that takes a new object as input which has name , age  and gender and greets the user with their gender (Hi Mr/Mrs/Others harkirat, your age is 21)
+Write a function that takes a new object as input which has name , age  and gender and greets the user with their gender (Hi Mr/Mrs/Others Doraemon, your age is 21)
 
 ---
 
@@ -1117,7 +1195,7 @@ Also tell the user if they are legal to vote or not
 - Arrays
 Arrays let you group data together
 ```js
-const users = ["harkirat", "raman", "diljeet"];
+const users = ["Doraemon", "raman", "diljeet"];
 const tatalUsers = users.length;
 const firstUser = users[0];
 ```
@@ -1133,7 +1211,7 @@ Write a function that takes an array of numbers as input, and returns a new arra
 We can have more complex objects, for example an array of objects
 ```js
 const users = [{
-		name: "Harkirat",
+		name: "Doraemon",
 		age: 21
 	}, {
 		name: "raman",
@@ -1157,7 +1235,7 @@ Write a function that takes an array of users as inputs and returns only the use
 We can have an even more complex object (object of objects)
 ```js
 const user1 = {
-	name: "harkirat",
+	name: "Doraemon",
 	age: 19,
 	address: {
 		city: "Delhi",

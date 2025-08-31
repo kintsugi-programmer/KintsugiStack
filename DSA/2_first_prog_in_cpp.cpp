@@ -1,7 +1,30 @@
+
 #include <iostream>
 using namespace std;
 
 int main() {
+   // Variable declarations
+    int age = 20;
+    char grade = 'A';
+    bool isPassed = true;
+    float percentage = 85.5f;
+    
+    // Output
+    cout << "Age: " << age << endl;
+    cout << "Grade: " << grade << endl;
+    cout << "Passed: " << isPassed << endl;
+    cout << "Percentage: " << percentage << endl;
+    
+    // Size information
+    cout << "Size of int: " << sizeof(int) << " bytes" << endl;
+    cout << "Size of char: " << sizeof(char) << " bytes" << endl;
+    // Age: 20
+    // Grade: A
+    // Passed: 1
+    // Percentage: 85.5
+    // Size of int: 4 bytes
+    // Size of char: 1 bytes
+
     cout<<"Hello World"
         <<endl
         <<'h'
