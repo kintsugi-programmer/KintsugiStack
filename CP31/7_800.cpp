@@ -38,3 +38,4 @@ int main(){
 }
 
 // passed 58 tests containing test cases :)
+// 109 ms	100 KB

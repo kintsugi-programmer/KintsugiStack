@@ -11,14 +11,15 @@
   - [2 Line Trip](#2-line-trip)
   - [3 Cover in Water](#3-cover-in-water)
   - [4 WTF Game with Integers](#4-wtf-game-with-integers)
-  - [5 Jagged Swaps](#5-jagged-swaps)
-  - [6 Doremy's Paint 3](#6-doremys-paint-3)
-  - [7 Don't Try to Count](#7-dont-try-to-count)
-  - [8 How Much Does Daytona Cost?](#8-how-much-does-daytona-cost)
+  - [5 WTF Jagged Swaps](#5-wtf-jagged-swaps)
+  - [6 WTF Doremy's Paint 3](#6-wtf-doremys-paint-3)
+  - [7 WTF Don't Try to Count](#7-wtf-dont-try-to-count)
+  - [8 WTF How Much Does Daytona Cost?](#8-wtf-how-much-does-daytona-cost)
   - [10 Target Practice](#10-target-practice)
 - [TipsCollectedFromExperiences](#tipscollectedfromexperiences)
 - [Ambitious Kid](#ambitious-kid)
 - [Target Practice](#target-practice)
+- [Array Coloring \[ONSIGHT\]](#array-coloring-onsight)
 
 
 # R800
@@ -29,7 +30,7 @@
 - Analysis
   - n boxes/array a1 a2 ... an
   - a = {a0, a1, a2 ... an-1}
-  - subarray = segment taken out of array not manipulated ,no change in order 
+  - subarray = subsegment = segment taken out of array not manipulated ,no change in order 
     - eg: {a0, a1}, {a1,a2,a3}, etc
   - He wants to sort them in non-decreasing order based on their number
   - non-decreasing = increasing
@@ -392,22 +393,73 @@ int main(){
 // SC O(1)
 ```
 
-## 5 Jagged Swaps
+## 5 WTF Jagged Swaps
 - https://codeforces.com/problemset/problem/1896/A
+- sortings, *800
 - Analysis
   - here, permutation is an array
     - of unique elements
     - if array of `n` integers, then integet exists of all 1,..to.,n
+    - => ORDER DOES NOT MATTER
   - we want to check if we could sort the permutation with special operation `ANY_TIMES`
   - special operation
     - if `a[i-1] < a[i] > a[i+1]`
       - then swap a[i], a[i+1]
-- Approach
+  - eg: 1 3 2 5 4
+    - target: 1 2 3 4 5
+    - now
+      - 1 3 2 5 4
+      - 1<3>2 5 4 satisfies spec ops
+      - 1 2 3 5 4 swap :0
+      - 1 2 3<5>4 satisfies spec ops
+      - 1 2 3 4 5 swap :0
+      - = target
+  - Expected TC
+    - tlpt 1sec atq
+      - t max 5000 atq
+      - n max 10 atq
+      - 1 sec = 10^8 ops
+      - tlpmt = 10^8 / 5* 10^3
+        - = 10^5/ 5
+        - = 2* 10^4 ops
+      - O(10^4)< tlpmt
+      - O(n^4) = Expected TC = tcpmt
+    - mlpt 256mB atq
+- Approach Optimised
+  - IF THE FIRST NUMBER IN THE INITIAL ARRAY IS 1, THEN ANSWER IS YES , ELSE ANSWER IS NO
+  - if not 1st element is 1 ,then that element can never shift towards its desired side
+  - this is technically bubble sort
+  - as if a number is largest, then it would be `a[i-1] < a[i] > a[i+1]` obviously
+  - our input arrays are already a permutation perfect, so no need to crosscheck
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main(){
+ 
+    long long t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        vector<int> arr(n,0);
+        for (int i=0; i<n; i++) cin>>arr[i];
+        if (arr[0]==1) cout<<"YES\n";
+        else cout<<"NO\n";
+        
+    } 
+ 
+    return 0;
+}
+// TC O(n)
+// SC O(n) 
+```
+- Approach Brute Force
   - if this is permution
     - if permutation is already sorted
       - return "YES"
     - else
-      - try sort by special operation one time
+      - try sort by special operation n times
       - if sorted 
         - return "YES"
       - else
@@ -416,27 +468,244 @@ int main(){
     - return "NO"
     - TTYL
 ```cpp
+#include<bits/stdc++.h>
+using namespace std;
+ 
+string checkSort(vector<int> arr,vector<int> arr2, int n){     
+    for ( int faltu=0; faltu<n; faltu++){
+    for ( int idx=0; idx<n; idx++){
+        if (
+            arr[idx]<arr[idx+1] &&
+            arr[idx+1]>arr[idx+2] &&
+            idx+2<n
+        ){
+            int temp= arr[idx+1];
+            arr[idx+1]= arr[idx+2];
+            arr[idx+2]=temp;
+ 
+        }
+    }
+    if(arr2==arr) { return "YES"; }
+}
+    return "NO";
+}
+ 
+
+// NO NEED 
+string checkPert(int n){
+    vector<int> arr(n);
+    for (int i=0; i<n; i++) cin>>arr[i];
+    
+    vector<int> arr2=arr;
+    sort(arr2.begin(),arr2.end());
+ 
+    for ( int idx=0; idx<n; idx++){if (arr2[idx]!=idx+1) {return "NO";}}
+    if(arr2==arr) { return "YES"; } // already sorted
+    return checkSort(arr,arr2, n);// we dont feed data types as arguements   
+}
+ 
+ 
+int main(){
+ 
+    long long t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        cout<<checkPert(n)<<"\n";
+        
+    } 
+ 
+    return 0;
+}
 ```
 
-## 6 Doremy's Paint 3
+## 6 WTF Doremy's Paint 3
 - https://codeforces.com/problemset/problem/1890/A
+- constructive algorithms, *800
 - Analysis
+  - array a = { a1,a2,a3...an} 
+  - n sized array
+  - you want equality among the adjacent sums
   - array is good for this ques as
-  - there exists a k such that b1+b2=b2+b3=…=bn−1+bn=k
-- Approach
-  - and at case of array of 2, 1 elements
-    - return "Yes"
-  - else
-    - int k = a[1]-a[0];
-    - run a loop
-    - if `( i>-1 && i+1<n && a[i]+a[i+1]==k)`
-    - or reverse also k [TTYL]
-      - return "Yes"
-    - else
-      - return "No"
+  - there exists a k such that a1+a2=a2+a3=…=an−1+an=k
+  - Can you reorder the elements such that the condition becomes true ???
+  - `permute its element` = change its order
+  - eg : {1,1,2}
+    - 1,2,1 permute done
+    - now 1+2 = 2+1 = 3 :0 Done
+    - "YES"
+  - Expected TC?
+    - tlpt = 1sec atq 
+    - = 10^8 ops
+    - t max=100 = mt atq
+    - tlmt = 10^8 / 100 = 10^6
+    - n = 100
+    - O(n^3) = 100^3 = 10^6 = tlmt
+    - Expected TC = O(n^3)
+    - mlpt = 256mB atq
+    - if Expected TC = O(n^3) ,then 
+      - O(n^4) NO ABOVE UPPER BOUND
+      - O(n^3) YES UPPER BOUND
+      - O(n^2) YES BELOW UPPER BOUND
+      - O(n) YES BELOW UPPER BOUND
+      - O(nlog2(n)) YES BELOW UPPER BOUND
+      - O(n1) YES BELOW UPPER BOUND
+      - this helps in thinking solution limits and optimisation 
+      - solution can be minimal, not exact O(n^3)
+      - but still we got to know our limits
+- Approach Optimised
+  - => Generalise the condition
+    - a1 + a2 = a2 + a3 = ... = an-1 = an atq
+    - => ai-1 + ai = ai + ai+1
+    - => ai-1 + ai(cancelled) = ai(cancelled) + ai+1
+    - => `ai-1 = ai+1` !!!
+    - i.e. a1=a3=a4=a5=.... && a2=a4=a6=....
+  - odd index positions should have same nos && even index positions should have same nos
+  - NO when i have more than or equal to 3 distinct integers in my array, eg: 1 1 2 3 => no, you cant create any fair ordering
+    - => Case of 3 Distinct Integers
+  - ELSE NOW if we have N1 & N2, freq. f1, f2
+    - we want either of both cases in n=6
+      - { N1 N2 N1 N2 N1 N2 }
+      - { N2 N1 N2 N1 N2 N1 }
+      - => f1=f2 AT ODD N
+      - YES
+    - n=7
+      - { N1 N2 N1 N2 N1 N2 N1 }
+      - { N2 N1 N2 N1 N2 N1 N2 }
+      - => f1= f2 +1
+      - => f2= f1 +1
+      - => abs(f1-f2) = 1 AT EVEN N
+    - if not then we cant achieve our `ai-1 = ai+1` !!!, then NO
+    - => Case of 2 Distinct Integers 
+  - => Case of 1 Distinct Integers
+    - N1 , any n
+    - then N1 N1 N1 N1 ... 
+    - whole array same 
+    - direct YES
+  - else NO
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
 
-## 7 Don't Try to Count
+    // t
+    // mini tests
+    int t;
+    cin>> t;
+    while (t--){
+        long long n;
+        cin>>n;
+        vector<long long> a(n,0);
+        // vector input
+        for (long long i=0; i<n; i++) {cin>>a[i];} //n
+        
+        // freq map
+        map<long long, long long> freq_map;
+        for (long long i =0; i<n; i++){//n
+            freq_map[a[i]]++;//logn
+        }
+        //nlogn
+        
+
+        if (freq_map.size()>=3) cout<<"No"<<endl;
+        else {
+
+            // begin- first element
+            // rbegin- last element
+
+            long long freq1 = freq_map.begin()->second;
+            long long freq2 = freq_map.rbegin()->second;
+
+            //odd size array
+            if (freq1==freq2) cout<<"Yes"<<endl;
+            else if ( n%2 ==1 && abs(freq1-freq2)==1) cout<<"Yes"<<endl;
+            else cout<<"No"<<endl;
+        }
+    }
+    return 0;
+}
+
+// TC O(nlog2n) = O(100*log2(100)) = O(100*7) = O(700)
+// SC O(n+n)= O(2n) = O(200)
+
+// this problem is imp to teach map,begin,rbegin iterators
+```
+- this problem is imp to teach map,begin,rbegin iterators
+```cpp
+// freq map
+map<long long, long long> freq_map;
+for (long long i =0; i<n; i++){//n
+freq_map[a[i]]++;//logn
+}
+```
+```cpp
+if (freq_map.size()>=3) cout<<"No"<<endl;
+```
+```cpp
+
+// begin- first element
+// rbegin- last element
+
+long long freq1 = freq_map.begin()->second;
+long long freq2 = freq_map.rbegin()->second;
+
+```
+- Approach Brute force
+  - Similar thinking but not organised enough at first try out of clue
+  - Read number of test cases `t`
+  - For each test case:
+    - Read array size `x`
+    - Read `x` elements into array `v1`
+    - Make a copy `v2` and sort it
+    - Make a copy `v3` from `v2` and remove duplicates from `v3`
+    - If `v3.size() > 2`, return `"NO"`
+    - If all elements are equal, return `"YES"`
+    - If array size is even:
+      - If frequency of smallest and largest elements is equal, return `"YES"`
+    - If array size is odd:
+      - If the frequency difference between smallest and largest elements is exactly 1, return `"YES"`
+    - If array size is 2, return `"YES"`
+    - Else, return `"NO"`
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+string goodAPCheck(int x){
+    vector<int> v1(x);
+    for ( int i=0; i<x; i++) cin>>v1[i];
+    vector<int> v2=v1;
+    sort(v2.begin(),v2.end());
+
+    vector<int> v3=v2;
+    // remove duplicates
+    v3.erase(unique(v3.begin(),v3.end()),v3.end());
+    if (v3.size()>2 ) return "NO";
+    
+    if (count(v1.begin(), v1.end(),v2[0])==x) return "YES";
+    if (x%2==0 && count(v1.begin(), v1.end(),v2[0])==count(v1.begin(), v1.end(),v2[x-1])) return "YES";
+    if(x%2!=0 && (count(v1.begin(), v1.end(),v2[0])==count(v1.begin(), v1.end(),v2[x-1])+1 ||count(v1.begin(), v1.end(),v2[0])+1==count(v1.begin(), v1.end(),v2[x-1])  )) return "YES";
+    if(x==2) return "YES";
+    else return "NO";
+
+
+
+}
+int main(){
+
+    long long t;
+    cin>>t;
+    while(t--) {
+        int x = 0;
+        cin>>x;
+        cout<<goodAPCheck(x)<<"\n";
+    }
+    return 0;
+}
+```
+## 7 WTF Don't Try to Count
 - https://codeforces.com/problemset/problem/1881/A
+- brute force, strings, *800
 - Analysis
   - string x, len n
   - string s, len m
@@ -446,11 +715,75 @@ int main(){
     - 25, 1
   - operation `ANY_TIMES`
     - if x= "abc"
-    - return x+x "abcabc"
+    - x= x+x "abcabc"
   - Find 
     - min. no of operation by which 
     - s is substring of x
-- Approach
+  - Expected TC?
+    - tlpt 2sec atq
+      - t 10^4 max atq
+      - 1sec = 2*10^8 ops per test
+      - ops/minitests = 2*10^8 / 10^4 = 2*10^4 ops = 20000 ops = 25*10^2 ops
+      - n*m 25 max atq
+      - O(n*m*10^2) Upper bound Expected TC
+    - mlpt 256mB atq
+- Approach Brute Force Tuts
+  - where do i finally say ,this is the end ?
+    - x-> x+x -> x+x + x+x -> ... -> not infinity but a upperbound
+    - arguement = upper bound is 5
+    - should not go beyond 5
+    - n-> x, m-> s
+    - worst, n=1, m=25
+    - eg : x='a', s='aa...25times...a'
+    - x.size()< s.size(), till this condition is true, you can never find s within x
+    - a => aa => aaaa => a.8..a => a..16..a => a..32..a
+    - 1=> 2=> 4=> 8 => 16 => 32(its enough ,more than 25 to become super set ), these changes done within 5 operation
+    - if not done in even 5 operations then ,at 6, x=a...64..a
+    - if couldnt find str in 25 ,then you can't find in 64 or more ... .answer is impossible => -1 
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+bool check(string s,string x)
+{
+    if (x.size()<s.size()) return false;
+    for (int i=0; i<x.size()- s.size()+1; i++) if (x.substr(i,s.size())==s) return true; //x.substr(i,s.size())==s substring extract
+    return false;
+}// O((n-m+1)*m)=O(n*m) 
+int main(){
+    int t;
+    cin>>t;
+    while (t--){
+        long long n,m;
+        cin>>n>>m;
+        string x,s;
+        cin>>x>>s;
+
+        string x0 = x;
+        string x1 = x0+x0;
+        string x2 = x1+x1;
+        string x3 = x2+x2;
+        string x4 = x3+x3;
+        string x5 = x4+x4;
+
+        long long ans = -1;
+        if(check(s,x0)) ans=0;
+        else if (check(s,x1)) ans=1;
+        else if (check(s,x2)) ans=2;
+        else if (check(s,x3)) ans=3;
+        else if (check(s,x4)) ans=4;
+        else if (check(s,x5)) ans=5;
+        cout<<ans<<endl;
+
+
+
+    }return 0;
+}
+//187 ms	100 KB
+// TC O(2^5 *n*m) = O(32*n*m)
+// SC O(2^5*n) = O(32*n)
+```
+- Approach Optimised Mine
+  - SAME
   - input t testcases
   - each test cases
     - input n,m
@@ -467,15 +800,105 @@ int main(){
     - concatnate till s is substring of x
       - counter++
   - return counter
+  - why counter =5 ??
+    - counter=m*n
+    - NO, Memory limit exceeded on test 2	1734 ms	262100 KB
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int checkCount(string x,string s){
+    int counter = 0;
+    
+    while (counter<=5){
+        if ((x).find(s) != string::npos){
+            return counter;
+        }
+        counter++;
+        x=x+x;
 
-## 8 How Much Does Daytona Cost?
+        
+    }
+    return -1;
+
+};
+
+int main(){
+    long long t;
+    cin >> t;
+    while(t--){
+        int n=0, m=0;
+        string x="",s="";
+        cin>>n>>m>>x>>s;
+        
+        // if ((s+s).find(x) == string::npos){
+        //     cout<<-1<<"\n";
+        // }
+        // else{
+            cout<<checkCount(x,s)<<"\n";
+        // }
+
+
+    }
+
+    return 0;
+}
+
+// passed 58 tests containing test cases :)
+// 109 ms	100 KB
+// Time Complexity: O(n * m)
+// Space Complexity: O(n + m) (worst case 32n + m).
+```
+## 8 WTF How Much Does Daytona Cost?
 - https://codeforces.com/problemset/problem/1878/A
+- greedy, *800
 - Analysis
   - array a 
   - size n
   - int k
   - Find?
-    - subsegment of a where k is most common element
+    - if exists subsegment(sub array) of a where k is most common element
+  - a = { a0,a1,... an-1}
+  - n,k
+  - subarray
+    - {a1,a2,a3}
+    - {a1}
+    - {a1 ,a2}
+    - {a3,a4}
+  - eg: n=5,k=4, a={1,4,3,4,1}
+    - => {4,3,4}
+    - => YES
+  - Expected TC?
+    - tlpt 1sec atq
+    - mlpt 256mB atq
+    - t max 1000 atq
+    - n max 100 atq
+    - 1 sec = 10^8 ops
+    - tlpmt = 10^8 / 1000 = 10^5
+    - O(100^3) = 10^6 NO
+    - O(100^2) = 10^4 YES
+    - Expected TC = tcpmt = O(n^2) 
+- Approach Optimised
+  - IF k is present in array anywhere, then answer is YES, else no
+  - a = { a0,a1,a2,k,a4...an}
+  - we haven't told lenght of subarray
+  - we can take length =1 , {k} is correct too , now in this subarray, k is the highest occurance as k is only
+  - WTF
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;cin>>t;while(t--){long long n,k;cin>>n>>k;
+    long long a[n];for (int i=0; i<n; i++) cin>>a[i];
+    long long number_is_present =0;
+    for (int i=0; i<n; i++){if (a[i]==k) {number_is_present=1;break;}}
+    if(number_is_present) cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;}return 0;
+}
+// TC O(n)
+// SC O(n)
+```
+- Approach Brute Force
+  - SAME nearly
   - One sec, 
     - if number exists
       - if array size is 2 or 1
@@ -483,12 +906,46 @@ int main(){
       - or if its>2
         - if in array bw that 1st occur and last occur ,that number the most occur 
   - return yes if any satisfy, else no :0
-- Approach
   - FREAKING, the the limits, loopholes are hidden
   - functions returns>if else with breaks
   - if number exists 
     - then its largest at subarray len = 1
+```cpp
+// template miniTests int1 int2 vectorArrayInt1
+#include<bits/stdc++.h>
+using namespace std;
+string mainGame(int x1, int x2, vector<int> v1){
+    // code here
+    // x1 n
+    // x2 k
+    // v1 a
+    for ( int i =0; i<x1; i++ ){
+        if (x2==v1[i]) {return "YES";}
+    }
+    return "NO";
+    
+}
 
+void eachMiniTest(){ 
+    int x1=0, x2=0;// factor1 factor2
+        cin>>x1>>x2;
+    vector<int> v1(x1);
+
+    for (int i=0; i<x1; i++ ) cin>>v1[i];
+    cout<< mainGame(x1,x2,v1)<<"\n";
+
+}
+
+int main(){
+    long long t; //mini test cases
+    cin>>t;
+    while(t--){
+        eachMiniTest();
+    }
+
+    return 0;
+}
+```
 ## 10 Target Practice
 - Analysis
   - given board 
@@ -570,9 +1027,25 @@ int main(){
     - O(n^3) is UpperLimit of the question's code
       - as O(n^3) = O(100^3) = 10^6 === operationsPerTestCase
 - always think of extra testcases
+- if Expected TC = O(n^3) ,then 
+  - O(n^4) NO ABOVE UPPER BOUND
+  - O(n^3) YES UPPER BOUND
+  - O(n^2) YES BELOW UPPER BOUND
+  - O(n) YES BELOW UPPER BOUND
+  - O(nlog2(n)) YES BELOW UPPER BOUND
+  - O(n1) YES BELOW UPPER BOUND
+  - this helps in thinking solution limits and optimisation 
+  - solution can be minimal, not exact O(n^3)
+  - but still we got to know our limits
 - and in cp submission , you can see testcases in ID :0
 - FREAKING, the the limits, loopholes are hidden
 - functions returns>if else with breaks
+- => Generalise the condition in question 6R800
+  - a1 + a2 = a2 + a3 = ... = an-1 = an atq
+  - => ai-1 + ai = ai + ai+1
+  - => ai-1 + ai(cancelled) = ai(cancelled) + ai+1
+  - => `ai-1 = ai+1` !!!
+  - i.e. a1=a3=a4=a5=.... && a2=a4=a6=....
 - put this at 1st line of main() code, to fix bug of compiler at running test cases, not interactive program
   ```cpp
   ios::sync_with_stdio(0);
@@ -656,7 +1129,7 @@ int main(){
 - max/min : `max(var1 ,var2)`, `min(var1, var2)`
   - make sure var1,var2 has SAME DATATYPE
   - inbuilt
-- subarray = segment taken out of array not manipulated ,no change in order 
+- subarray = sub segment =segment taken out of array not manipulated ,no change in order 
   - eg of a = {a0, a1, a2 ... an-1}, subarrs : {a0, a1}, {a1,a2,a3}, etc
 - non-decreasing = increasing
 - s is atmost k , means : s<=k
@@ -715,8 +1188,31 @@ int main(){
   ```
 -  `vector<long long> v1(10,0);` initialize safety vector
 -  WTF : What the Fish Ques
+- Parity 
+  - Parity is simply whether a number is even or odd.
+  - Even parity: divisible by 2 (like 2, 4, 6, 8...)
+  - Odd parity: not divisible by 2 (like 1, 3, 5, 7...)
 
+- 6R800 this problem is imp to teach map,begin,rbegin iterators
+```cpp
+// freq map
+map<long long, long long> freq_map;
+for (long long i =0; i<n; i++){//n
+freq_map[a[i]]++;//logn
+}
+```
+```cpp
+if (freq_map.size()>=3) cout<<"No"<<endl;
+```
+```cpp
 
+// begin- first element
+// rbegin- last element
+
+long long freq1 = freq_map.begin()->second;
+long long freq2 = freq_map.rbegin()->second;
+
+```
 # Ambitious Kid
 ```cpp
 #include<bits/stdc++.h>
@@ -800,6 +1296,93 @@ int main(){
     while(t--){
         miniTest();
     }
+    return 0;
+}
+```
+
+# Array Coloring [ONSIGHT]
+- https://codeforces.com/problemset/problem/1857/A
+- greedy, math, *800
+- Analysis
+  - given Array, n integers
+  - to do
+    - if you can
+      - colour array elements in 2 groups/ 2 colors
+      - parity of color 1 elements sum = parity of color 2 elements sum
+      - print YES 
+    - else print NO
+  - Parity 
+    - Parity is simply whether a number is even or odd.
+    - Even parity: divisible by 2 (like 2, 4, 6, 8...)
+    - Odd parity: not divisible by 2 (like 1, 3, 5, 7...)
+  - eg: [1,2,4,3,2,3,5,4]
+    - c1: [1,2,3] , c1 sum = even parity
+    - c2: [4,2,3,5,4], c2 sum = odd parity
+    - YES
+  - eg: [4,7]
+    - NO
+  - eg: [3,9,8]
+    - YES
+    - c1: [3,9]
+    - c2: [8]
+    - both sum even parity
+  - eg: [1,7]
+    - YES
+    - c1: [1]
+    - c2: [7]
+    - both sum odd parity
+  - eg: [5,4,3,2,1]
+    - NO
+    - can't make 2color groups with same parity
+- Approach
+  - if no. of odds = no. of evens 
+    - YES
+  - else if n=3 && no. of odds != 3 or !=1 
+    - YES
+    - actually if [even,even,even] works YES
+    - [odd,odd,odd] NO
+    - [odd,odd,even] YES
+    - [odd,even,even] NO
+  - so iff n is odd && odd< even && abs(odd-even)!=1
+    - YES
+    - [odd,odd,odd,even,even] NO
+    - [odd,odd,even,even,even] YES
+    - [odd,odd,odd,even,even,even,even] NO
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int t;
+    cin>> t;
+    while (t--)
+    {
+        int n,odd=0,even=0;
+        cin>>n;
+        vector<int> v1(n,0);
+        for (int i=0; i<n; i++){
+            cin>>v1[i];
+            if (v1[i]%2==0) {even++;}
+            else {odd++;}
+        }
+        // cout<<odd<<" "<< even<<endl;
+        if (odd==even && n>2) {
+            cout<<"YES\n";
+        }
+        else if ((n==2 && odd!=even) || (n==3 && odd>even) || (n%2!=0 && odd<even && abs(odd-even)!=1) || even==1 || odd==1)
+        {
+            cout<<"YES\n";
+        }
+        else 
+        {
+            cout<<"NO\n";
+        }
+        
+    }
+    
     return 0;
 }
 ```
