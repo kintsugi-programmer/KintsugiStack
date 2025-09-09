@@ -1,8 +1,8 @@
-# TailwindCSS
+# TAILWIND CSS EMG
 
-## Table of contents 
-- [TailwindCSS](#tailwindcss)
-  - [Table of contents](#table-of-contents)
+## Table of Contents 
+- [TAILWIND CSS EMG](#tailwind-css-emg)
+  - [Table of Contents](#table-of-contents)
   - [Tailwind](#tailwind)
   - [Basics](#basics)
   - [Layout](#layout)

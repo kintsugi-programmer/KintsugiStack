@@ -1,9 +1,9 @@
-# ReactJS
+# REACT JS EMG
 
-## Table of content
-- [ReactJS](#reactjs)
-  - [Table of content](#table-of-content)
-  - [ReactJS](#reactjs-1)
+## Table of Contents
+- [REACT JS EMG](#react-js-emg)
+  - [Table of Contents](#table-of-contents)
+  - [ReactJS](#reactjs)
   - [Component](#component)
   - [Functional component](#functional-component)
   - [Props](#props)

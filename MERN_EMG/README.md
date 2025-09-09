@@ -22,8 +22,48 @@ Welcome to building web apps with the MERN stack (MongoDB, Express, React, Node.
 ![alt text](others/image-2.png)
 ![alt text](others/image-3.png)
 
+- Project Directory Structure
+```
+MERN_EMG/                        # Root of the MERN stack project
+├── backend/                    # Node.js + Express backend
+│   ├── .env                    # Environment variables
+│   ├── .gitignore              # Git ignore file
+│   ├── package.json            # Backend dependencies and scripts
+│   ├── package-lock.json       # Dependency lock file
+│   ├── server.js               # Entry point for Express server
+│   ├── models/                 # Mongoose models for MongoDB
+│   │   ├── exercise.model.js       # Exercise schema
+│   │   └── user.model.js           # User schema
+│   └── routes/                 # Express route handlers
+│       ├── exercises.js            # Routes for exercise operations
+│       └── users.js                # Routes for user operations
+│
+├── mern-exercise-tracker/     # React frontend application
+│   ├── public/                # Static public files (e.g., HTML, icons)
+│   │   └── [HTML, icons, manifest files, etc.]
+│   ├── src/                   # React source code
+│   │   ├── App.js                 # Main App component
+│   │   ├── index.js               # React entry point
+│   │   ├── components/            # All React components
+│   │   │   ├── CreateExercise.component.js
+│   │   │   ├── EditExercise.component.js
+│   │   │   ├── ExerciseList.component.js
+│   │   │   ├── CreateUser.component.js
+│   │   │   ├── EditUser.component.js
+│   │   │   ├── User.component.js
+│   │   │   ├── Navbar.component.js
+│   │   │   └── withRouter.js
+│   │   └── [styles, tests, setup files...]
+│   ├── package.json           # Frontend dependencies and scripts
+│   └── README.md              # Frontend README
+│
+├── mern-excercise-tracker.postman_collection.json # Postman API test collection
+├── others/                    # Miscellaneous assets (e.g., images)
+│   └── [image-1.png ... image-4.png, image.png]
+├── README.md                  # General project README
+└── README.pdf                 # Possibly formatted documentation
 
-
+```
 ---
 
 ## 2. Technology Stack
