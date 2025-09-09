@@ -1518,6 +1518,7 @@ function divide(a, b) {
 function doOperation(a, b, op) {
   return op(a, b)
 }
+// WOW , func. name as arg
 
 console.log(sum(1, 2))
 ```
@@ -1552,8 +1553,19 @@ console.log(doOperation(1, 2, sum))
 
 ### Asynchronous code, callbacks
 Let’s look at the code to read from a file asynchronously. Here, we pass in a function as an argument. This function is called a callback since the function gets called back when the file is read 
-![alt text](image.png)
+```
+const fs = require("fs");
 
+function afterFileRead(err, contents) {
+    console.log(contents);
+}
+
+fs.readFile("a.txt", "utf-8", afterFileRead);
+                  |         |           |
+                  |         |           |
+               string    string      function
+
+```
 ---
 
 ```js
@@ -1578,9 +1590,8 @@ console.log("I will run immedietely");
 ```
 
 ### JS Architecture for async code
-How JS executes asynchronous code - http://latentflip.com/loupe/
-![alt text](image-1.png)
-
+- How JS executes asynchronous code - http://latentflip.com/loupe/
+- Shows realtime process related to js run
 ---
 
 - 1. Call Stack
