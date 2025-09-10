@@ -61,6 +61,8 @@ greet0(name4); //Hi,  Bali !!
 
 function sum1(n1,n2){return n1+n2;}
 console.log(sum1(1,5)); //6
+console.log(sum1(1,"o1")); //1o1 
+// this is called string concatnation
 
 function isEven ( n1){
     // If Else

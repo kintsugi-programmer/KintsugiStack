@@ -6,7 +6,6 @@
 - [DSA](#dsa)
   - [Table of Contents](#table-of-contents)
   - [1 Flowcharts, Pseudocode \& Programming Languages](#1-flowcharts-pseudocode--programming-languages)
-    - [Table of Contents](#table-of-contents-1)
     - [Course Intent \& Problem Solving](#course-intent--problem-solving)
     - [Flowcharts](#flowcharts)
     - [Pseudocode](#pseudocode)
@@ -16,7 +15,6 @@
     - [Key Takeaways](#key-takeaways)
   - [2 First Program \& Data Types](#2-first-program--data-types)
     - [Complete Example Program](#complete-example-program)
-    - [Table of Contents](#table-of-contents-2)
     - [Compilation Process](#compilation-process)
     - [First Program - Hello World](#first-program---hello-world)
     - [Data Types \& Variables](#data-types--variables)
@@ -30,13 +28,6 @@
     - [Patterns](#patterns)
 
 ## 1 Flowcharts, Pseudocode & Programming Languages  
-
-### Table of Contents
-- [Course Intent & Problem Solving](#course-intent--problem-solving)
-- [Flowcharts](#flowcharts)
-- [Pseudocode](#pseudocode)
-- [Programming Languages](#programming-languages)
-- [Practice Problems](#practice-problems)
 
 ---
 
@@ -346,19 +337,7 @@ cout<<endl;
 
     return 0;
 }
-
 ```
-
-
-### Table of Contents
-- [Compilation Process](#compilation-process)
-- [First Program - Hello World](#first-program---hello-world)
-- [Data Types & Variables](#data-types--variables)
-- [Memory Storage](#memory-storage)
-- [Type Casting](#type-casting)
-- [Operators](#operators)
-- [Key Takeaways](#key-takeaways)
-
 ---
 
 ### Compilation Process
@@ -723,6 +702,7 @@ A conditional statement can be visualized using a flowchart, where a diamond sha
        Code?
          |
          V
+    (Diamond box)
     +----------+
     |  a > b?  |<-- YES ----> Executes code if true
     +----------+
@@ -752,15 +732,13 @@ Given two inputs, `a` and `b`.
 if (a > b) {
     cout << "Answer is A";
 }
-```
 
-
-```cpp
 if (b > a) {
     cout << "Answer is B";
 }
 ```
 
+> to get inside the if block commands, if's conditions must be satisfied
 
 **Example Trace:**
 Consider `a = 5` and `b = 14`.
@@ -813,6 +791,8 @@ if (condition1) {
 }
 ```
 
+> `std::cin>>n` waits for user to give input and assign it to n at its address. it doesn't read " "(space), "\t"(tab), "\n"(newline).
+> `cin.get()` took a character. eg: `int a;a=cin.get();`;even after you put 1 at console, it will take as char ; in this case 1 mapped to 49, so a=49 number as a is declared int; if put "    ", tab => 9; if put " ", space=> 10 ASCII
 
 ---
 

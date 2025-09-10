@@ -7,24 +7,23 @@
 - [CP31](#cp31)
   - [Table of Contents](#table-of-contents)
 - [R800](#r800)
-  - [1 Halloumi Boxes](#1-halloumi-boxes)
-  - [2 Line Trip](#2-line-trip)
-  - [3 Cover in Water](#3-cover-in-water)
-  - [4 WTF Game with Integers](#4-wtf-game-with-integers)
-  - [5 WTF Jagged Swaps](#5-wtf-jagged-swaps)
-  - [6 WTF Doremy's Paint 3](#6-wtf-doremys-paint-3)
-  - [7 WTF Don't Try to Count](#7-wtf-dont-try-to-count)
-  - [8 WTF How Much Does Daytona Cost?](#8-wtf-how-much-does-daytona-cost)
+  - [01 A Halloumi Boxes](#01-a-halloumi-boxes)
+  - [02 A Line Trip](#02-a-line-trip)
+  - [03 A Cover in Water](#03-a-cover-in-water)
+  - [04 A Game with Integers](#04-a-game-with-integers)
+  - [05 A Jagged Swaps](#05-a-jagged-swaps)
+  - [06 A Doremy's Paint 3](#06-a-doremys-paint-3)
+  - [07 A Don't Try to Count](#07-a-dont-try-to-count)
+  - [08 A How Much Does Daytona Cost?](#08-a-how-much-does-daytona-cost)
+  - [09 Goals of Victory](#09-goals-of-victory)
   - [10 Target Practice](#10-target-practice)
 - [TipsCollectedFromExperiences](#tipscollectedfromexperiences)
-- [Ambitious Kid](#ambitious-kid)
-- [Target Practice](#target-practice)
 - [Array Coloring \[ONSIGHT\]](#array-coloring-onsight)
 
 
 # R800
 
-## 1 Halloumi Boxes
+## 01 A Halloumi Boxes
 - https://codeforces.com/problemset/problem/1903/A
 - brute force, greedy, sortings, *800
 - Analysis
@@ -109,7 +108,7 @@ int main(){
 // sc O(n)
 ```
 
-## 2 Line Trip
+## 02 A Line Trip
 - https://codeforces.com/problemset/problem/1901/A
 - greedy, math, *800
 - Analysis
@@ -200,7 +199,7 @@ int main(){
 ```
 - my code is more optimised than tut ;0
 
-## 3 Cover in Water
+## 03 A Cover in Water
 - https://codeforces.com/problemset/problem/1900/A
 - constructive algorithms, greedy, implementation, strings, *800
 - Analysis
@@ -309,7 +308,7 @@ int main(){
 // SC O(n)
 ```
 
-## 4 WTF Game with Integers
+## 04 A Game with Integers
 - https://codeforces.com/problemset/problem/1899/A
 - games, math, number theory, *800
 - Analysis
@@ -393,7 +392,7 @@ int main(){
 // SC O(1)
 ```
 
-## 5 WTF Jagged Swaps
+## 05 A Jagged Swaps
 - https://codeforces.com/problemset/problem/1896/A
 - sortings, *800
 - Analysis
@@ -520,7 +519,7 @@ int main(){
 }
 ```
 
-## 6 WTF Doremy's Paint 3
+## 06 A Doremy's Paint 3
 - https://codeforces.com/problemset/problem/1890/A
 - constructive algorithms, *800
 - Analysis
@@ -703,7 +702,7 @@ int main(){
     return 0;
 }
 ```
-## 7 WTF Don't Try to Count
+## 07 A Don't Try to Count
 - https://codeforces.com/problemset/problem/1881/A
 - brute force, strings, *800
 - Analysis
@@ -848,7 +847,7 @@ int main(){
 // Time Complexity: O(n * m)
 // Space Complexity: O(n + m) (worst case 32n + m).
 ```
-## 8 WTF How Much Does Daytona Cost?
+## 08 A How Much Does Daytona Cost?
 - https://codeforces.com/problemset/problem/1878/A
 - greedy, *800
 - Analysis
@@ -882,7 +881,7 @@ int main(){
   - a = { a0,a1,a2,k,a4...an}
   - we haven't told lenght of subarray
   - we can take length =1 , {k} is correct too , now in this subarray, k is the highest occurance as k is only
-  - WTF
+  -
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -946,7 +945,22 @@ int main(){
     return 0;
 }
 ```
+## 09 Goals of Victory
+- https://codeforces.com/problemset/problem/1877/A
+- math, *800
+- Analysis
+  - Expected TC ?
+    - tlpt 1sec atq
+    - mlpt 256 mB atq
+    - t max 500 atq = 5*100
+    - n max 100 atq
+    - 1sec = 10^8 ops
+    - tlpmt = 10^8 / 500
+- Approach
+
 ## 10 Target Practice
+- https://codeforces.com/problemset/problem/1873/C
+- implementationmath, *800
 - Analysis
   - given board 
   - 10x10
@@ -1013,7 +1027,70 @@ int main(){
   - this not 2D Array
   - this is char incoming
 - Approach
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+// 1
+/*
+00 01 02 03 04 05 06 07 08 09
+10 19
+20 29
+30 39
+40 49 
+50 59
+60 69 
+70 79 
+80 89
+90 91 92 93 94 95 96 97 98 99
+*/
+// 2
+/*
+11 12 13 14 15 16 17 18
+21 28
+31 38
+41 48 
+51 58
+61 68 
+71 78 
+81 82 83 84 85 86 87 88 
+*/
 
+int calScore(int row, int col, char c){
+    int bound1 =0;
+    int bound2 =9;
+
+    for ( int ring =1; ring<=5; ring++){
+        if ( (row==bound1) || (row==bound2) ){ return ring;}
+        else if ((col==bound1) || (col==bound2)) {return ring;}
+        
+        bound1++;bound2--;
+    }
+    return 0; // fallback
+    
+}
+void miniTest(){
+    int finalScore=0;
+    for (int row=0; row<10; row++){
+        for (int col=0; col<10; col++){
+            char c;
+            cin>>c;
+            if (c=='X') finalScore+=calScore(row,col,c);
+        }
+
+    }
+    cout<<finalScore<<"\n";
+}
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);;
+    int t;
+    cin>>t;
+    while(t--){
+        miniTest();
+    }
+    return 0;
+}
+```
 
 
 # TipsCollectedFromExperiences
@@ -1187,7 +1264,7 @@ int main(){
   // min_element(v.begin(), v.end()) O(n)
   ```
 -  `vector<long long> v1(10,0);` initialize safety vector
--  WTF : What the Fish Ques
+-  : What the Fish Ques
 - Parity 
   - Parity is simply whether a number is even or odd.
   - Even parity: divisible by 2 (like 2, 4, 6, 8...)
@@ -1212,92 +1289,6 @@ if (freq_map.size()>=3) cout<<"No"<<endl;
 long long freq1 = freq_map.begin()->second;
 long long freq2 = freq_map.rbegin()->second;
 
-```
-# Ambitious Kid
-```cpp
-#include<bits/stdc++.h>
-using namespace std;
-int main(){
-    int n;
-    cin >> n;
-    vector<int> v1(n,0);
-    for (int i=0; i<n;i++){
-        int i1 =0;
-        cin>>i1;
-        v1[i]=(i1>=0) ? i1: (i1*-1); // or v1[i] = abs(i1);
-    }
-    cout<<*min_element(v1.begin(),v1.end());// min_element & max_element return pointer
-    // not sort then v1[1] as its nlogn
-    return 0;
-}
-// TC O(n)
-// SC O(n)
-```
-
-# Target Practice
-```cpp
-#include<bits/stdc++.h>
-using namespace std;
-// 1
-/*
-00 01 02 03 04 05 06 07 08 09
-10 19
-20 29
-30 39
-40 49 
-50 59
-60 69 
-70 79 
-80 89
-90 91 92 93 94 95 96 97 98 99
-*/
-// 2
-/*
-11 12 13 14 15 16 17 18
-21 28
-31 38
-41 48 
-51 58
-61 68 
-71 78 
-81 82 83 84 85 86 87 88 
-*/
-
-int calScore(int row, int col, char c){
-    int bound1 =0;
-    int bound2 =9;
-
-    for ( int ring =1; ring<=5; ring++){
-        if ( (row==bound1) || (row==bound2) ){ return ring;}
-        else if ((col==bound1) || (col==bound2)) {return ring;}
-        
-        bound1++;bound2--;
-    }
-    return 0; // fallback
-    
-}
-void miniTest(){
-    int finalScore=0;
-    for (int row=0; row<10; row++){
-        for (int col=0; col<10; col++){
-            char c;
-            cin>>c;
-            if (c=='X') finalScore+=calScore(row,col,c);
-        }
-
-    }
-    cout<<finalScore<<"\n";
-}
-int main(){
-    ios::sync_with_stdio(0);
-    cin.tie(0);;
-    int t;
-    cin>>t;
-    while(t--){
-        miniTest();
-    }
-    return 0;
-}
 ```
 
 # Array Coloring [ONSIGHT]
