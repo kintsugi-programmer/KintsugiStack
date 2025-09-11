@@ -47,6 +47,7 @@
     - [Defining your own async function](#defining-your-own-async-function)
     - [err first callback vs rejects in promises](#err-first-callback-vs-rejects-in-promises)
     - [Assignment](#assignment)
+  - [5 Bash\& Terminal](#5-bash-terminal)
 
 ## 1 Orientation
 ```html
@@ -785,6 +786,13 @@ console.log(sum1(1,5)); //6
 console.log(sum1(1,"o1")); //1o1 
 // this is called string concatnation
 
+function sum11(n1,n2){return parseInt(n1)+parseInt(n2);}
+// if args ,then it will parseInt
+// parseInt : is a function that converts a string into an integer number
+// "42" => 42, "42sfsdfs" => 42, "meow" => NaN 
+console.log(sum11(1,5)); //6
+console.log(sum11(1,"o1")); //NaN
+
 function isEven ( n1){
     // If Else
     if (n1%2===0){return true;} // % mod operator,gives remainder
@@ -1332,6 +1340,22 @@ let ans = sum(2, 3)
 console.log(sum);
 ```
  
+> In JavaScript, just writing a function doesn’t do anything immediately; it only defines the function. The function’s code will not run until the function is actually called (or invoked).
+
+```js
+function sum1(n1,n2){return n1+n2;}
+console.log(sum1(1,5)); //6
+console.log(sum1(1,"o1")); //1o1 
+// this is called string concatnation
+
+function sum11(n1,n2){return parseInt(n1)+parseInt(n2);}
+// if args ,then it will parseInt
+// parseInt : is a function that converts a string into an integer number
+// "42" => 42, "42sfsdfs" => 42, "meow" => NaN 
+console.log(sum11(1,5)); //6
+console.log(sum11(1,"o1")); //NaN
+
+```
 ---
 
 Find sum from 1 to a number
@@ -1344,12 +1368,18 @@ function sum(n) {
 	return ans;
 }
 
+function sum1(n){
+  return n*(n+1);
+}
+
+
 const ans = sum(100);
 console.log(ans);
 ```
 
 ### Synchronous code
-Synchronous code is executed line by line, in the order it's written. Each operation waits for the previous one to complete before moving on to the next one.
+- Synchronous code is executed line by line, in the order it's written. 
+- Each operation waits for the previous one to complete before moving on to the next one.
 
 ---
 
@@ -1372,14 +1402,18 @@ console.log(ans3);
 ```
 
 ### I/O heavy operations
+> sync i-o tasks => performance downside
 
-I/O (Input/Output) heavy operations refer to tasks in a computer program that involve a lot of data transfer between the program and external systems or devices. These operations usually require waiting for data to be read from or written to sources like disks, networks, databases, or other external devices, which can be time-consuming compared to in-memory computations.
+- I/O (Input/Output) heavy operations refer to tasks in a computer program that involve a lot of data transfer between the program and external systems or devices.
+- These operations usually require waiting for data to be read from or written to sources like disks, networks, databases, or other external devices, which can be time-consuming compared to in-memory computations.
 
 - Examples of I/O Heavy Operations:
   - Reading a file
   - Starting a clock
-  - HTTP Requests
+  - HTTP Requests 
  
+> HTTP Requests can be seen from Networks Tab in Dev Console
+
 > 💡 We’re going to introduce imports/requires next. A require statement lets you import code/functions export from another file/module.
  
 ---
@@ -1389,12 +1423,59 @@ Let’s try to write code to do an I/O heavy operation -
 - Create a file in there (a.txt) with some text inside
 - Write the code to read a file synchronously
 ```js
-const fs = require("fs");
+// filesystem nodejs library, external library, need to import
+const fs = require("fs");// import it 
+// 35
+const contents = fs.readFileSync("a.txt", "utf-8"); // fs is object here, having key readFileSync leads to a func.
+// an I/O heavy operation
+// outside js code context
+// comm. with os
+// utf-8 encoding
 
-const contents = fs.readFileSync("a.txt", "utf-8");
+// in-memory computations; is typical js code var ops like; var a = "joe";
 console.log(contents);
 ```
 
+> The "utf-8" argument in fs.readFileSync tells Node.js to decode the raw buffer (bytes) into a human-readable string instead of returning the binary buffer.
+
+```
+case 1: fs.readFileSync("a.txt", "utf-8")
+     +--------------------+
+     | File: a.txt        |
+     | Content: hi there  |
+     +--------------------+
+                |
+                v
+      fs.readFileSync("a.txt", "utf-8")
+                |
+                v
+        "hi there"   <-- String (decoded text)
+
+case 2: fs.readFileSync("a.txt")
+     +--------------------+
+     | File: a.txt        |
+     | Content: hi there  |
+     +--------------------+
+                |
+                v
+        fs.readFileSync("a.txt")
+                |
+                v
+    <Buffer 68 69 20 74 68 65 72 65>
+         (hex representation)
+                |
+                +--> 68 = 'h'
+                +--> 69 = 'i'
+                +--> 20 = ' ' (space)
+                +--> 74 = 't'
+                +--> 68 = 'h'
+                +--> 65 = 'e'
+                +--> 72 = 'r'
+                +--> 65 = 'e'
+
+- With "utf-8" → you directly get a string ("hi there")
+- Without "utf-8" → you get a Buffer object (raw binary data, stored in hex)
+```
 ---
 
 - Create another file (b.txt)
@@ -1404,6 +1485,8 @@ const fs = require("fs");
 
 const contents = fs.readFileSync("a.txt", "utf-8");
 console.log(contents);
+// may take 10sec if big data,slow machine
+// performance downside
 
 const contents2 = fs.readFileSync("b.txt", "utf-8");
 console.log(contents2);
@@ -1472,9 +1555,29 @@ console.log(contents2);
 const contents3 = fs.readFileSync("b.txt", "utf-8");
 console.log(contents3);
 ```
+```
+SYNC
+----
+ Start
+   |
+Read a.txt
+   |
+ print
+   |
+Read b.txt
+   |
+ print
+   |
+Read a.txt
+   |
+ print
+   |
+  End
 
+- Tasks happen one after another, blocking the flow.
+```
 ---
-
+- Asynchronously 
 - Start all 3 tasks together, and wait for them to finish.
 ```js
 const fs = require("fs");
@@ -1492,7 +1595,23 @@ fs.readFile("a.txt", "utf-8", function (err, contents) {
 });
 
 ```
+```
+ASYNC
+-----
+        Start
+          |
+   -----------------
+   |       |       |
+Read a   Read b   Read a
+   |       |       |
+ (cb)    (cb)    (cb)
+   |       |       |
+ print   print   print
 
+        End (main thread doesn’t wait)
+
+- Tasks branch out in parallel, main thread ends while callbacks finish later.
+```
 ### Functional arguments
 Write a calculator program that adds, subtracts, multiplies, divides two arguments.
 
@@ -1546,13 +1665,43 @@ function divide(a, b) {
   return a / b;
 }
 
+
+// Functional arguments
+// Passing in what needs to be done as an argument.
 function doOperation(a, b, op) {
+  // during use; eg: 
+  // console.log(doOperation(1, 2, sum))
+  
+  // a =1
+  // b= 2
+  // op=divide // WOW WOW WOW
+  let val = op(a,b);
+
+  return val;
+}
+// wow
+// doOperation(a, b, op)
+//    a=1 , b=2
+//         |
+//         v
+//       [ op ]  ---> sum / subtract / multiply / divide
+//         |
+//         v
+//      result
+
+function doOperationSimple(a, b, op) {
   return op(a, b)
 }
-
 console.log(doOperation(1, 2, sum))
 ```
+- 55:00
+--- 
 
+```
+Approach #1:   a,b ---> sum()       ---> result
+Approach #2:   a,b,op ---> doOperation(op) ---> result
+
+```
 ### Asynchronous code, callbacks
 Let’s look at the code to read from a file asynchronously. Here, we pass in a function as an argument. This function is called a callback since the function gets called back when the file is read 
 ```
@@ -2065,3 +2214,429 @@ readFilePromisified("a.txt").then(onDone).catch(onError);
 
 ### Assignment
 ![alt text](image-10.png)
+
+## 5 Bash& Terminal
+
+Terminal is nothing but another interface to do things on your machine.
+
+1. `pwd`: Print Working Directory
+
+    ```sh
+    $ pwd
+    ```
+
+2. `cd`: Change Directory
+
+    ```sh
+    $ cd Desktop
+    $ cd ../
+    $ cd Desktop/screenshots
+    $ cd ../..
+    ```
+
+3. `ls`: Listing all the files and folders in your current folder.
+
+    ```sh
+    $ ls
+    ```
+
+4. `mkdir`: Create new folder
+
+    ```sh
+    $ mkdir test
+    ```
+
+5. `touch`: Create new empty file
+
+    ```sh
+    $ touch index.js
+    ```
+
+6. `cat`: Prints contents of the file
+
+    ```sh
+    $ cat index.js
+    $ cat test/index.js
+    ```
+
+7. `vi`: Vim Editor
+
+    ```sh
+    $ vi index.text
+
+    Press `i` for insert mode and write anything in your file
+
+    Bharat
+    Kumar
+    a
+    ab
+
+    Esc + :q! to exit from Vim Editor without saving the file
+    Esc + :wq! to exit from Vim Editor with saving the file
+    ```
+
+8. `mv`: Move the file or folders
+
+    ```sh
+    $ mv index.js new-folder
+    $ mv folder1 folder2
+    ```
+
+9. `cp`: Copy the files or folders
+
+    ```sh
+    $ cp index.js new-folder
+    $ cp -r folder1 folder2
+    ```
+
+10. `clear`: Clear the terminal
+
+    ```sh
+    $ clear
+    ```
+
+11. `nvm`: Node Version Manager - Using this you can install node.
+
+12. `npm`: Node Package Manager
+
+    ```sh
+    $ npm install express
+    $ npm install array
+    ```
+
+13. `node`: Use to run file.
+
+    ```sh
+    $ node index.js
+    ```
+
+14. `git` : entire new segment :0
+
+Bash is `Command Line Interepreter` language that lets you interact with your `Operating System`.
+
+1. `pwd` (Print Working Directory): Display the current working directory
+
+    ```sh
+    $ pwd
+    ```
+
+2. `ls` (List Fies): This command displays a list of files and directories in the current directories.
+
+    ```sh
+    $ ls
+    $ ls -l
+    $ ls -l folder1
+    $ ls -t
+    $ ls -lt
+    $ ls -R
+    $ ls -lR
+    $ ls -lRa
+    $ ls -lr
+    $ ls -s
+    $ ls *.json
+    $ ls Zoo*
+    $ ls -lR | grep .json
+    $ ls ..
+    ```
+
+3. `cd`: Change Directory
+
+    ```sh
+    $ cd folder1
+    $ cd folder2/folder3
+    $ cd ../../
+    ```
+
+4. `mkdir` (Make Directory): Command to create new directory/folder.
+
+    ```sh
+    <!-- Creating one folder/directory at a time -->
+    $ mkdir frontend
+
+    <!-- Creating multiple folder/directory at a time -->
+    $ mkdir folder1 folder2 folder3
+
+    <!-- Creating Recursively folder/directory -->
+    $ mkdir fullstack/frontend/scripts
+    ```
+
+5. `touch`: Command to create new file.
+
+    ```sh
+    <!-- Creating one file at a time -->
+    $ touch newFile.js
+
+    <!-- Creating multiple file at a time -->
+    $ touch file1 file2 file3
+
+    <!-- Creating Recursively file -->
+    $ touch folder1/folder2/mewFile.txt
+    ```
+
+6. `cat` (Concatenate): Command to display the contents of a file, insert and append contents to the file.
+
+    ```sh
+    <!-- Insert Data to File -->
+    $ cat > newFile.js
+
+    <!-- Append Data to File -->
+    $ cat >> newFile.js
+
+    <!-- Print Data of the File File -->
+    $ cat newFile.js
+    ```
+
+7. `mv` (Move File/Folder & Rename File/Folder): Command to move File or Folder one directory/folder to another directory/folder and it is also used to rename File or Folder.
+
+    ```sh
+    <!-- Moving File to Another Folder/Directory -->
+    mv index.js frontend
+
+    <!-- Moving Folder to Another Folder/Directory -->
+    mv folder1 folder2
+
+    <!-- Renaming File -->
+    mv index.js script.js
+
+    <!-- Renaming Folder -->
+    mv folder1 folder2
+    ```
+
+8. `cp` (Copy File or Folder/Directory): Command to copy File or Folder into another Folder/Directory.
+
+    ```sh
+    <!-- Copy File to Another Folder/Directory -->
+    cp index.js frontend
+
+    <!-- Copy Folder to Another Folder/Directory -->
+    cp -r folder1 frontend
+    ```
+
+9. `rm` (Remove File or Folder/Directory): Command to Remove File or Folder/Directory.
+
+    ```sh
+    <!-- Remove File -->
+    rm index.js
+
+    <!-- Remove Empty Folder/Directory -->
+    rmdir folderName
+
+    <!-- Remove Empty Folder/Directory of Folder with Content -->
+    rm -rf folderName
+    ```
+
+10. `chmod` (Change File Permission): Modify the read, write and execute permission of a file.
+
+    ```js
+    ## There are three options for permission groups available to you in Linux. These are
+
+    `users` (u): these permissions will apply to all users, and as a result, they present the greatest security risk and should be assigned with caution.
+
+    `groups` (g): you can assign a group of users specific permissions, which will only impact users within the group.
+
+    `owners` (o): these permissions will only apply to owners and will not affect other groups.
+
+
+    ## There are three kinds of file permissions in Linux:
+
+    `Read` (r): Allows a user or group to view a file.
+
+    `Write` (w): Permits the user to write or modify a file or directory.
+
+    `Execute` (x): A user or grup with execute permissions can execute a file or view a directory.
+
+    $ `chmod ugo+rwx filename` to give read, write, and execute to everyone.
+    $ `chmod -R ugo+rwx foldername` to give read, write, and execute to everyone.
+
+    ## Changing Linux permissions in numeric code
+
+    You may need to know how to change permissions in numeric code in Linux, so to do this you use numbers instead of “r”, “w”, or “x”.
+
+    0 = No Permission
+    1 = Execute
+    2 = Write
+    4 = Read
+
+    => Permission numbers are:
+    0 = ---
+    1 = --x
+    2 = -w-
+    3 = -wx
+    4 = r-
+    5 = r-x
+    6 = rw-
+    7 = rwx
+
+    => For example:
+        `chmod 777 filename/foldername` will give read, write, and execute permissions for everyone.
+
+        `chmod 700 filename/foldername` will give read, write, and execute permissions for the user only.
+
+        `chmod 327 filename/foldername` will give write and execute (3) permission for the user, w (2) for the group, and read, write, and execute for the users.
+    ```
+
+    ```sh
+    <!-- For File -->
+    <!-- Add execute permission for users -->
+    $ chmod u+x index.js
+    <!-- Add write and execute permission for groups -->
+    $ chmod g+wx index.js
+    <!-- Remove execute permission for users -->
+    $ chmod u-x index.js
+    <!-- Add read, write & execute permission for owners -->
+    $ chmod o+rwx index.js
+    <!-- Add read, write & execute permission for all(users, groups & owners) -->
+    $ chmod ugo+rwx index.js
+    $ chmod 777 index.js
+
+    <!-- For Folder/Directory -->
+    <!-- Add execute permission for users -->
+    $ chmod -R u+x folderName
+    <!-- Add write and execute permission for groups -->
+    $ chmod -R g+wx folderName
+    <!-- Remove execute permission for users -->
+    $ chmod -R u-x folderName
+    <!-- Add read, write & execute permission for owners -->
+    $ chmod -R o+rwx folderName
+    <!-- Add read, write & execute permission for all(users, groups & owners) -->
+    $ chmod -R ugo+rwx folderName
+    $ chmod -R 777 folderName
+    ```
+
+11. `echo`: Display message on terminal.
+
+    ```sh
+    $ echo "Hello, World!"
+    $ echo $PATH
+    ```
+
+12. `head`: Show the content from top of the file.
+
+    ```sh
+    <!-- Bydefault show first 10 rows -->
+    $ head index.js
+
+    <!-- Show first 20 rows -->
+    $ head -20 index.js
+    ```
+
+13. `tail`: Show the content from bottom of the file.
+
+    ```sh
+    <!-- Bydefault show last 10 rows -->
+    $ tail index.js
+
+    <!-- Show last 20 rows -->
+    $ tail -20 index.js
+    ```
+
+14. `|` (Pipe Operator): Combine multiple command. `command1 | command2` - Whatever output comes from command1 it flows to command2
+
+    ```sh
+    <!-- gives 5 rows after 15th rows - means shows lines 16 to 20 -->
+    $ tail -n +15 index.js | head -5
+    ```
+
+15. `wc` (Word Cound): Shows numbers of lines, words and characters.
+
+    ```sh
+    <!-- print numbers of lines, words and characters of index.js file -->
+    $ wc index.js
+    ```
+
+16. `grep`: Use for matching operations. Print those line which contains particular characters, words, sentences.
+
+    ```sh
+    <!-- print all line which contains character 'a' -->
+    $ grep "a" index.js
+
+    <!-- print all line which contains word 'Hello' -->
+    $ grep "Hello" index.js
+
+    <!-- print all line which contains sentence 'Hi, Everyone!!' -->
+    $ grep "Hi, Everyone!!" index.js
+
+    <!-- Print all lines which does not contains Bharat -->
+    $ grep -v "Bharat" index.js
+
+    <!-- Print before 5 lines, which line contains Bharat -->
+    $ grep -B 5 "Bharat" data.txt
+
+    <!-- Print after 5 lines, which line contains Bharat -->
+    $ grep -A 5 "Bharat" data.txt
+
+    <!-- Print before and after 5 lines, which line contains Bharat -->
+    $ grep -C 5 "Bharat" data.txt
+
+    <!-- print numbers of lines, words and characters of index.js file which contains word "Bharat" -->
+    $ grep "Bharat" index.js | wc
+
+    <!-- only occurence of a parthicular word -->
+    $ grep "Bharat" index.js | wc -l
+
+    <!-- Print Occurence Count -->
+    $ grep -c "Bharat" index.js
+
+    <!-- Print Matched Line -->
+    $ grep -h "Bharat" index.js
+
+    <!-- ignore case -->
+    $ grep -hi "Bharat" index.js
+
+    <!-- Print matched line data after ignoring case with line number -->
+    $ grep -hin "Bharat" index.js
+
+    <!-- Print those line which contains word "Bharat", but seperate -->
+    $ grep -hinw "Bharat" index.js
+
+    <!-- Print only the matched Part -->
+    $ grep -o "Bharat" index.js
+
+    <!-- For current directory -->
+    $ grep -hir "Bharat" index.js
+    ```
+
+17. `history`: History of all command that you ran.
+
+    ```sh
+    $ history
+    ```
+
+18. `Bash Scripting`: Using Bash Scripting we can Automate our work. It is a language.
+
+    ```sh
+    <!-- script.sh -->
+
+    #!/bin/bash
+    echo "Hello, World!!"
+    mkdir automated_dir
+    cd automated_dir && touch newFile.txt
+    ```
+
+19. `bash`: Command to run bash scripting file.
+
+    ```sh
+    <!-- Run the script.sh file - first it will print "Hello, World", then it will create a folder autemated_dir and after that it will move to automated_dir folder and create newFile.txt inside that folder. -->
+    $ bash script.sh
+    ```
+
+20. `clear`: Clear the terminal
+
+    ```sh
+    $ clear
+    ```
+
+21. `nvm`: Node Version Manager - Using this you can install node.
+
+22. `npm`: Node Package Manager
+
+    ```sh
+    $ npm install express
+    $ npm install array
+    ```
+
+23. `node fileName.js`: Use to run file.
+    ```sh
+    $ node index.js
+    ```
+

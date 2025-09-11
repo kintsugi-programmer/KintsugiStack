@@ -813,7 +813,184 @@ if (conditionA) {
     // Code for not A
 }
 ```
+- normal else-if
+```cpp
+int a;cin>>a;
+if (a>0){cout<<"+ve";}
+else {if (a<0){cout<<"+ve";}
+else {if (a==0){cout<<"zero";}else{
+{cout<<"err";}
+}}}
+```
+- using else-if block, more cleaner code
+```cpp
+int a;cin>>a;
+if (a>0){cout<<"+ve";}
+else if (a<0){cout<<"+ve";}
+else if (a==0){cout<<"zero";}
+else {cout<<"err";}
+```
 
+> Lowercase char : 'a' - 'z'
+> Uppercase char : 'A' - 'Z'
+> numeric char : '0' - '9'
+
+--- 
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 9;
+    if (a == 9) {
+        cout << "NINEY";
+    }
+    if (a > 0) {
+        cout << "POSITIVE";
+    }
+    else {
+        cout << "NEGATIVE";
+    }
+}
+```
+
+**Answer:**
+
+```
+NINEYPOSITIVE
+```
+
+---
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 2;
+    int b = a + 1;
+
+    if ((a = 3) == b) {
+        cout << a;
+    }
+    else {
+        cout << a + 1;
+    }
+}
+```
+
+* Here, `a` is assigned `3`.
+* Now `a == b` is true (since `a = 3`, `b = 3`).
+
+**Answer:**
+
+```
+3
+```
+
+---
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 24;
+
+    if (a > 20) {
+        cout << "Love ";
+    }
+    else if (a == 24) {
+        cout << "Lovely";
+    }
+    else {
+        cout << "Babbar";
+    }
+
+    cout << a;
+}
+```
+
+* Condition `a > 20` is true, so `"Love "` is printed.
+* The `else if` does not execute.
+* Finally, `a` is printed (`24`).
+
+**Answer:**
+
+```
+Love 24
+```
+
+```
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char ch;
+    cout<<"Enter a character value : ";
+    cin>>ch;
+    
+    if (ch >= '0' && ch <= '9') {
+        cout<<"This is numeric character."<<endl;
+    }
+    else if (ch >= 'a' &&  ch <= 'z') {
+        cout<<"This is lowercase character."<<endl;
+    }
+    else {
+        cout<<"This is uppercase character."<<endl;
+    }
+
+    return 0;
+}
+```
+```
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    int i=2;
+    int sum = 0;
+    
+    cout<<"Enter a number : ";
+    cin>>n;
+    
+    while (i<=n) {
+        if (i%2==0) {
+            sum = sum + i;
+        }
+        i = i+1;
+    }
+    cout<<"The sum of even numbers are : "<<sum<<endl;
+    
+    return 0;
+}
+
+```
+```
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int f;
+    cout<<"Enter the temprature in fahrenheit (F) : ";
+    cin>>f;
+    
+    float c = (f-32) * (5.0/9);
+    
+    cout<<"The temprature in celcius (C) : "<<c<<endl;
+    
+    return 0;
+}
+
+```
 
 ---
 
@@ -863,42 +1040,28 @@ Loops are programming constructs that execute a block of code repeatedly until a
 
 - 2.2 `while` Loop Flowchart
 
-The `while` loop continues to execute "jab tak" (as long as) its condition remains true.
-
-**Flowchart for Printing Numbers 1 to N:**
-
 ```
-      Start
-        |
-        V
-    +-------+
-    | Read N |
-    +-------+
-        |
-        V
-    +-------+
-    | Let i = 1 |
-    +-------+
-        |
-        V
-    +----------+
-    |  i <= N? |<--- YES -----+
-    +----------+              |
-         | NO                 |
-         V                    |
-        End                   |
-                              |
-        +---------------------+
-        |
-        V
-    +-------+
-    | Print i |
-    +-------+
-        |
-        V
-    +---------+
-    | i = i + 1 |
-    +---------+
+Recollect from flowcharts :
+
+Start → n = 1 → Is n ≤ 5 ?
+   Yes → Print n → n = n + 1 → back to check
+   No → End
+
+Task: Print from 1 to 5
+
+
+while loop :
+
+while (condition) {
+    // statements
+}
+
+Meaning:
+- जब तक ये true है
+- तब तक ये करते रहो
+
+Explanation:
+while the condition is true, keep on executing the block
 ```
 
 
@@ -1039,6 +1202,51 @@ Since `isPrime` remains `true`, `7` is determined to be `Prime`.
 *   Loops are essential for tasks like counting, summing, and iterating through data.
 *   The `break` statement can be used to exit a loop prematurely, for example, once a condition is met (like finding a divisor for a prime check).
 
+```
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    int i=2;
+    int sum = 0;
+    
+    cout<<"Enter a number : ";
+    cin>>n;
+    
+    while (i<=n) {
+        if (i%2==0) {
+            sum = sum + i;
+        }
+        i = i+1;
+    }
+    cout<<"The sum of even numbers are : "<<sum<<endl;
+    
+    return 0;
+}
+
+```
+```
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int f;
+    cout<<"Enter the temprature in fahrenheit (F) : ";
+    cin>>f;
+    
+    float c = (f-32) * (5.0/9);
+    
+    cout<<"The temprature in celcius (C) : "<<c<<endl;
+    
+    return 0;
+}
+
+```
 ### Patterns
 
 ---

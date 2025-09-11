@@ -64,6 +64,14 @@ console.log(sum1(1,5)); //6
 console.log(sum1(1,"o1")); //1o1 
 // this is called string concatnation
 
+function sum11(n1,n2){return parseInt(n1)+parseInt(n2);}
+// if args ,then it will parseInt
+// parseInt : is a function that converts a string into an integer number
+// "42" => 42, "42sfsdfs" => 42, "meow" => NaN 
+console.log(sum11(1,5)); //6
+console.log(sum11(1,"o1")); //NaN
+
+
 function isEven ( n1){
     // If Else
     if (n1%2===0){return true;} // % mod operator,gives remainder
