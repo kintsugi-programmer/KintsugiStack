@@ -31,6 +31,17 @@
 - [KintsugiStarterPack](https://github.com/kintsugi-programmer/kintsugi-starter-pack): Kintsugi Programmer's JumpStart WebDev Templates
 - [DigitalDrzRepo](https://github.com/kintsugi-programmer/drz): डिजिटल दर्ज़ी Repository 
 - [DigitalDrz](https://digitaldrz.vercel.app/): DigitalDrz (डिजिटल दर्ज़ी) is your exclusive catalog of world-class UI/UX components, custom-built by KintsugiDevStudio.
+- [Google Fonts](https://fonts.google.com/): Highly optimized, customizable, cross-platform fonts with accessibility safety.
+- [Flaticon](https://www.flaticon.com/): Versatile and stylish collection of fancy icons.
+- [LottieFiles](https://lottiefiles.com/): Lightweight, scalable animations for modern apps—truly goated.
+- [Animata](https://animata.design/): Free & open-source animated ReactJS components.
+- [Skeleton CSS](http://getskeleton.com/): A lightweight responsive CSS boilerplate.
+- [Ant Design Skeleton](https://ant.design/components/skeleton): Prebuilt loading skeletons for Ant Design ecosystem.
+- [SyntaxUI](https://syntaxui.com/): Modern UI components and utilities for developers.
+- [MakerKit](https://makerkit.dev/): SaaS boilerplates and starter kits for rapid development.
+- [Polar](https://polar.sh/): Open-source funding platform for developers and maintainers.
+- [Radix UI](https://www.radix-ui.com/): Accessible, unstyled primitives for building design systems.
+- [Excalidraw](https://excalidraw.com/): Collaborative whiteboarding tool with a hand-drawn feel.
 - [Magic UI](https://magicui.design/docs/components/marquee): Beautiful animations for modern websites.
 - [Aeternity UI](https://ui.aceternity.com/components): Comprehensive UI components with a design system.
 - [Cursify](https://cursify.vercel.app/): Customizable cursors with engaging animations.
@@ -63,4 +74,13 @@ The content presented here is a curated blend of my personal learning journey, e
 Thank you for joining this session! I hope you found the content valuable and insightful. If you have any questions or need further clarification, feel free to reach out. Keep learning, keep growing, and I look forward to seeing you in the next session. Goodbye for now, and take care!
 Brought to you by Kintsugi Dev Studio.
 
-
+## Rough
+- Aptitude& Reasoning
+  - [Aptitude& Reasoning, Sheriyans Coding School ](https://sheryians.com/courses/courses-details/Aptitude%20&%20Reasoning%20for%20Campus%20Placements)
+  - [Aptitude Questions - GeeksforGeeks](https://www.geeksforgeeks.org/aptitude-gq/)
+  - [Aptitude Questions - IndiaBix](https://www.indiabix.com/)
+  - [Learn Aptitude - PrepInsta](https://prepinsta.com/learn-aptitude/)
+- HR
+  - [HR Interview Questions - IndiaBix](https://www.indiabix.com/hr-interview/questions-and-answers/)
+  - [Mock Interviews and HR Questions - IndiaBix](https://www.indiabix.com/)
+  - [Common HR Interview Questions - First Naukri](https://www.firstnaukri.com/interview-questions-and-answers?utm_source=chpeventbyrg&utm_medium=email&utm_campaign=piqa)

@@ -1,10 +1,27 @@
 # APTITUDE
-- Aptitude& Reasoning
-  - [Aptitude& Reasoning, Sheriyans Coding School ](https://sheryians.com/courses/courses-details/Aptitude%20&%20Reasoning%20for%20Campus%20Placements)
-  - [Aptitude Questions - GeeksforGeeks](https://www.geeksforgeeks.org/aptitude-gq/)
-  - [Aptitude Questions - IndiaBix](https://www.indiabix.com/)
-  - [Learn Aptitude - PrepInsta](https://prepinsta.com/learn-aptitude/)
-- HR
-  - [HR Interview Questions - IndiaBix](https://www.indiabix.com/hr-interview/questions-and-answers/)
-  - [Mock Interviews and HR Questions - IndiaBix](https://www.indiabix.com/)
-  - [Common HR Interview Questions - First Naukri](https://www.firstnaukri.com/interview-questions-and-answers?utm_source=chpeventbyrg&utm_medium=email&utm_campaign=piqa)
+- aptitude for campus placements
+- types of ques
+  - quantitive apt., maths
+    - number system
+    - profit, loss, interest
+    - time and work
+    - speed, distance, time, etc.
+  - logical apt., critical thinking
+    - series
+    - odd one out
+    - blood relations
+    - clock, etc.
+- Why This Course :
+  - Aptitude Carries a Good Percentage of Marks in Placement Tests
+  - Complete Aptitude Course for Placements
+  - Make you Aptitude Ready
+  - Students with no Knowledge of Aptitude could start with this course
+  - Explanation + Video Solutions + Sample Exercises
+  - no prereq. /from scratch
+
+## Quantitative Aptitude
+
+### Time and Work
+- given persons who do same work in some times individually
+- now if all person work together, how much time they would take ?
+
