@@ -26,11 +26,11 @@
 - given persons who do same work in some times individually
 - now if all person work together, how much time they would take ?
 - eg: 
-  - A => 2days
+  - A work => 2days
     - meaning
       - 1day => 1/2work
   - 1day => 1/2work  
-  - A => 3days
+  - A work  => 3days
     - meaning
       - 1day => 1/3work
       - 1day => 1/3work  
@@ -38,6 +38,23 @@
   - Together work => x hrs
     - then, Together 1hr => 1/x work
 - thus if person A does work in x days, work done per day => 1/x work
+- also, A work = A work ALONE
+- also, A work ALONE + B work ALONE != A&B Together Work 
+- A&B Together Work = A&B working simuntaneously as WHOLE SYNERGY
+- A work => x days; so A 1day => 1/x work
+  - also, A y days => y*(1/x) work
+  - eg: 
+    - B work => 40 days
+    - so B 1day => 1/40 work
+    - thus, B 23 days => 23*(1/40) work
+- case where someone ditch in the way
+  - Together A&B for x days + B ALONE 23 days(suppose) = total work = 1
+- now if 4 A 1 work => 20 days
+  - then, 1 A 1 work => 20/4 days INCORRECT REASONING
+  - the thing is that 4 people even identical are working SYNERGY TOGETHER and complete work in 20 days, they didn't split days for each person, everone work daily
+  - then, 4 A 1 day => 1/20 work CORRECT
+  - then, 1 A 1 day => 1/(20*4) work CORRECT
+  - always divide the work , not the time
 ```
 ```
 - LCM
@@ -79,8 +96,11 @@
   - 17 × 9 = 153 → perfect
   - => 153/17 = 9
 ```
+```
+- Have clean calculation for acurate calculation
+```
 ---
-> Q. A can do a piece of work in 12 hours and B alone can do it in 15 hours. In how much time will they finish the whole work, working together?
+> Q. A can do a piece of work in 12 hours and B alone can do it in 15 hours. In how much time will they finish the whole SYNERGY work, working together?
 ```
 - A work => 12hrs
 - B work => 15hrs
@@ -168,12 +188,16 @@
 ---
 > Q. A & B can do a piece of work in 45 & 40 days respectively. They began the work together but A leaves after some days & B finished the remaining work in 23 days. After how many days did A leave?
 ```
+- case where someone ditch in the way
+- Together A&B for x days + B ALONE 23 days = total work = 1
+
+- Together work
 - A work => 45 days
 - B work => 40 days
 
 - A 1 day => 1/45 work
 - B 1 day => 1/40 work
-- 
+- B 23 days => (1/40)*3 work
 
 - Together 1 day => A 1 day + B 1 day
   - = 1/45 + 1/40
@@ -199,4 +223,130 @@
   - 17 × 10 = 170 → too big
   - 17 × 9 = 153 → perfect
   - => 153/17 = 9
+
+- also, A work = A work ALONE
+- also, A work ALONE + B work ALONE != A&B Together Work 
+- A&B Together Work = A&B working simuntaneously as WHOLE SYNERGY
+- A work => x days; so A 1day => 1/x work
+  - also, A y days => y*(1/x) work
+  - eg: 
+    - B work => 40 days
+    - so B 1day => 1/40 work
+    - thus, B 23 days => 23*(1/40) work
+```
+---
+> Q. If 4 men or 6 boys can finish a piece of work in 20 days, in how many days can 6 men & 11 boys finish it?
+
+```
+- 4 men => 20 days
+- 6 boys => 20 days
+
+- 4 men 1 day => 1/20 work
+- 1 man 1 day => 1/(20×4) = 1/80 work
+
+- 6 boys 1 day => 1/20 work
+- 1 boy 1 day => 1/(20×6) = 1/120 work
+
+- 6 men & 11 boys 1 day => 6*(1/80) + 11*(1/120)
+  - = 6/80 + 11/120
+  - = 9/120 + 11/120      [LCM 240]
+  - = 20/240
+  - = 1/12
+
+- 6 men & 11 boys => 1 / (1/12)
+  - = 12 days
+
+- Have clean calculation for acurate calculation
+- now if 4 A 1 work => 20 days
+  - then, 1 A 1 work => 20/4 days INCORRECT REASONING
+  - the thing is that 4 people even identical are working SYNERGY TOGETHER and complete work in 20 days, they didn't split days for each person, everone work daily
+  - then, 4 A 1 day => 1/20 work CORRECT
+  - then, 1 A 1 day => 1/(20*4) work CORRECT
+  - always divide the work , not the time
+```
+---
+> Practice
+
+> Q1. If Roger can do a piece of work in 8 days and Antony can do the same work in 5 days, in how many days will both of them do it together? 
+
+> Q2. To complete a piece of work, A takes 50% more time than B. If together they take 18 days to complete the work, how much time shall B take to do it alone? 
+
+> Q3. A takes 3 days to complete a work while B takes 2 days. Both of them finish a work and earn Rs. 150. What is A’s share of money? (Hint - money should be divided.. in the ratio of how much work a person does in 1 day) Rs 70 Rs 30 Rs 60 Rs 75 
+
+> Q4. An exam was conducted and the following was analyzed. 4 men were able to check some exam papers in 8 days working 5 hours regularly. What is the total number of hours taken by 2 men in 20 days to check double the number of exam papers?
+```
+Q1.
+- Roger => 8 days
+- Antony => 5 days
+
+- Roger 1 day => 1/8 work
+- Antony 1 day => 1/5 work
+
+- (Roger + Antony) 1 day => 1/8 + 1/5
+  - = (5 + 8) / 40        [LCM 40]
+  - = 13 / 40
+
+- (Roger + Antony) => 1 / (13/40)
+  - = 40 / 13 days
+  - = 3 days + (1/13) day
+  - = 3 days 1 hour 50 minutes 46 seconds
+
+Q2.
+- A takes 50% more time than B ⇒ A = 1.5 × B
+
+- Let B => x days
+- Then A => 1.5x days
+
+- A 1 day => 1/(1.5x) = 2/(3x) work
+- B 1 day => 1/x work
+
+- (A + B) 1 day => 2/(3x) + 1/x
+  - = (2 + 3) / (3x)       [LCM 3x]
+  - = 5 / (3x)
+
+- (A + B) time => 1 / (5/(3x)) = 3x / 5 days
+- Given together they take 18 days:
+  - 3x / 5 = 18
+  - x = 18 × 5 / 3
+  - x = 30
+
+- B => 30 days
+
+Q3.
+- A => 3 days
+- B => 2 days
+
+- A 1 day => 1/3 work
+- B 1 day => 1/2 work
+
+- Ratio of daily work (A : B) => 1/3 : 1/2
+  - = (multiply by 6) => 2 : 3
+
+- Total money = Rs. 150
+- A's share => 2 / (2 + 3) × 150
+  - = 2/5 × 150
+  - = Rs. 60
+
+- Correct option: Rs 60
+
+Q4.
+- 4 men => 8 days × 5 hours/day to check N papers
+
+- Total man-hours for N papers => 4 × 8 × 5
+  - = 160 man-hours
+
+- Double the papers => 2N => required man-hours = 2 × 160
+  - = 320 man-hours
+
+- 2 men working 20 days for 2N papers:
+  - Let daily hours per man = h
+  - Total man-hours available = 2 × 20 × h = 40h
+  - 40h = 320
+  - h = 8 hours/day
+
+- Total number of hours taken by 2 men in 20 days (man-hours) => 2 × 20 × 8
+  - = 320 hours
+
+- Answer: 320 hours (i.e., each works 8 hours/day for 20 days) 
+
 ```
