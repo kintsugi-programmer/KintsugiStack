@@ -22,7 +22,7 @@
     - [Type Casting](#type-casting)
     - [Operators](#operators)
     - [Key Takeaways](#key-takeaways-1)
-  - [3 Conditionals, Loops \& Patterns](#3-conditionals-loops--patterns)
+  - [3 Conditionals, Loops \& Patterns \[ONSIGHT\]](#3-conditionals-loops--patterns-onsight)
     - [Conditionals](#conditionals)
     - [Loops](#loops)
     - [Patterns](#patterns)
@@ -685,7 +685,7 @@ a = 10;         // Updates value of a to 10
 
 ---
 
-## 3 Conditionals, Loops & Patterns
+## 3 Conditionals, Loops & Patterns [ONSIGHT]
 
 ### Conditionals
 

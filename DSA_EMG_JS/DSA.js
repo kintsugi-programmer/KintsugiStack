@@ -15,6 +15,7 @@ eg1findEmp(eg1empDb,"richa");
 // & eg1findEmp is our Algorithm 
 
 // bali-king@war-machine:~/BaliGit/KintsugiStack$ node "/home/bali-king/BaliGit/KintsugiStack/DSA_EMG_JS/DSA.js"
+
 // eg1
 // Found bhaskar at 2th index!!!
 // bali-king@war-machine:~/BaliGit/KintsugiStack$ 
@@ -358,6 +359,21 @@ eg10FizzBuzzNormal(10);
 console.log("eg11");
 // [7, 1, 5, 3, 6, 4]
 
+const eg11MaxProfitCalOpt = (prices) => {
+    let minPrice = prices[0]; // first day is cheapest day to buy for now assumption at first place
+    let maxProfit = 0;
+    for (let i=1; i<prices.length; i++){
+        const currentPrice = prices[i];
+        minPrice = Math.min(minPrice,currentPrice); //update min price if the lower price is found
+        const potentialProfit = currentPrice - minPrice;
+        maxProfit = Math.max(maxProfit, potentialProfit);
+        console.log(maxProfit);
+    }
+
+
+
+};
+
 const eg11MaxProfitCal = (array) => {
     let Min=Infinity, MaxProfit=0; //min_so_far = +∞ (or first element), max_profit = 0
     for (let i =0; i<array.length; i++){
@@ -370,9 +386,11 @@ const eg11MaxProfitCal = (array) => {
     }
     return MaxProfit;
 };
-[7, 1, 5, 3, 6, 4]
+// [7, 1, 5, 3, 6, 4]
 console.log(eg11MaxProfitCal([3, 2, 6, 5, 0, 3])); //4
 console.log(eg11MaxProfitCal([7, 1, 5, 3, 6, 4])); //5
+console.log(eg11MaxProfitCalOpt([3, 2, 6, 5, 0, 3])); //4
+console.log(eg11MaxProfitCalOpt([7, 1, 5, 3, 6, 4])); //5
 
 // // Wrong Approach, Calculating just differences won't solve the problem, it doesn't compare previous profit
 // const eg11MaxProfitCal = (array) => {
@@ -388,6 +406,8 @@ console.log(eg11MaxProfitCal([7, 1, 5, 3, 6, 4])); //5
 // console.log(eg11MaxProfitCal([3, 2, 6, 5, 0, 3])); //3
 
 // eg11
+// 4
+// 5
 // 4
 // 5
 

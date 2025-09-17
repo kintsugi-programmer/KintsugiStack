@@ -1,6 +1,7 @@
 # DSA EMG JS
 - https://www.youtube.com/watch?v=wBtPGnVnA9g
 - https://www.youtube.com/watch?v=lvO88XxNAzs
+- https://www.youtube.com/watch?v=DMeD8trbj6A
 ### Table of Contents
 - [DSA EMG JS](#dsa-emg-js)
     - [Table of Contents](#table-of-contents)
@@ -29,7 +30,8 @@
 
 ## What is DSA
 - Data structure is a specific way to of organizing, storing and accessing data
-- Algorithm is a set of instructions that tells computer how to do something. Algo = step-by-step solution of the problem
+- Algorithm is a set of instructions that tells computer how to do something. 
+    - Algo = step-by-step solution of the problem
 
 ## Setup
 - use vsc code editor
@@ -65,6 +67,7 @@ eg1findEmp(eg1empDb,"richa");
 // & eg1findEmp is our Algorithm 
 
 // bali-king@war-machine:~/BaliGit/KintsugiStack$ node "/home/bali-king/BaliGit/KintsugiStack/DSA_EMG_JS/DSA.js"
+
 // eg1
 // Found bhaskar at 2th index!!!
 // bali-king@war-machine:~/BaliGit/KintsugiStack$ 
@@ -84,10 +87,11 @@ eg1findEmp(eg1empDb,"richa");
 * Lifelong Learning
 * Critical Thinking Champion
 
+> Leads to a Great Problem Solver
 
 ## Big O Notation
 - it's a Notation/Convention/Measurement
-- tells if the code is good code or bad code
+- tells "if the code is good code or bad code ?"
 - helps in scaleability, handling large data, fastness, accuracy
 
 > BigO helps us to understand `how long [Time Complexity]` an algorithm will take to run or `how much [Space Complexity]` memory it will need as the amount of data it handle grows.
@@ -98,7 +102,8 @@ eg1findEmp(eg1empDb,"richa");
 
 - [no need to worry about maths ;0 ]
 - Signifies that the execution time of the algorithm grows linearly in proportion to the size of the input data (n).
-- n : As the number of items in the input data increases, the time it takes for the algorithm to run increases correspondingly.
+
+> As the number of items in the input data increases, the time it takes for the algorithm to run increases correspondingly.
 
 > In eg1, Imagine you have a list of employee names. To find a specific person (like “bhaskar”), you scan through each name in the list one by one. Even if you find “bhaskar” early, you still continue checking the remaining names.
 > If the list has only 4 employees, it’s quick. But if it grows to 4,000 employees, it’ll take much longer because the algorithm still compares each entry.
@@ -113,6 +118,7 @@ eg1findEmp(eg1empDb,"richa");
 
 ### `O(1)`
 
+- fastest
 - O(1), aka `constant` time, signifies that the execution time of an algorithm remains `constant` regardless of the input size.
 
 > When you withdraw cash from an ATM, it takes roughly the same amount of time to dispense the money whether you withdraw ₹500 or ₹50,000.
@@ -605,6 +611,21 @@ eg10FizzBuzzNormal(10);
 console.log("eg11");
 // [7, 1, 5, 3, 6, 4]
 
+const eg11MaxProfitCalOpt = (prices) => {
+    let minPrice = prices[0]; // first day is cheapest day to buy for now assumption at first place
+    let maxProfit = 0;
+    for (let i=1; i<prices.length; i++){
+        const currentPrice = prices[i];
+        minPrice = Math.min(minPrice,currentPrice); //update min price if the lower price is found
+        const potentialProfit = currentPrice - minPrice;
+        maxProfit = Math.max(maxProfit, potentialProfit);
+        console.log(maxProfit);
+    }
+
+
+
+};
+
 const eg11MaxProfitCal = (array) => {
     let Min=Infinity, MaxProfit=0; //min_so_far = +∞ (or first element), max_profit = 0
     for (let i =0; i<array.length; i++){
@@ -617,9 +638,11 @@ const eg11MaxProfitCal = (array) => {
     }
     return MaxProfit;
 };
-[7, 1, 5, 3, 6, 4]
+// [7, 1, 5, 3, 6, 4]
 console.log(eg11MaxProfitCal([3, 2, 6, 5, 0, 3])); //4
 console.log(eg11MaxProfitCal([7, 1, 5, 3, 6, 4])); //5
+console.log(eg11MaxProfitCalOpt([3, 2, 6, 5, 0, 3])); //4
+console.log(eg11MaxProfitCalOpt([7, 1, 5, 3, 6, 4])); //5
 
 // // Wrong Approach, Calculating just differences won't solve the problem, it doesn't compare previous profit
 // const eg11MaxProfitCal = (array) => {
@@ -635,6 +658,8 @@ console.log(eg11MaxProfitCal([7, 1, 5, 3, 6, 4])); //5
 // console.log(eg11MaxProfitCal([3, 2, 6, 5, 0, 3])); //3
 
 // eg11
+// 4
+// 5
 // 4
 // 5
 ```

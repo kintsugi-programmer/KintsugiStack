@@ -27,7 +27,7 @@
     - [Properties of JS](#properties-of-js)
     - [Syntax of Javascript](#syntax-of-javascript)
     - [Complex types](#complex-types)
-  - [3 Asynchronous Javascript, Callbacks and more](#3-asynchronous-javascript-callbacks-and-more)
+  - [3 Asynchronous Javascript, Callbacks and more \[ONSIGHT\]](#3-asynchronous-javascript-callbacks-and-more-onsight)
     - [Intro](#intro)
     - [Normal functions in JS](#normal-functions-in-js)
     - [Synchronous code](#synchronous-code)
@@ -1275,7 +1275,7 @@ and returns the users whose age > 18 and are male
   - = Hashmaps in JAVA
 
 
-## 3 Asynchronous Javascript, Callbacks and more
+## 3 Asynchronous Javascript, Callbacks and more [ONSIGHT]
 
 ### Intro
 - Goal of todays class:
