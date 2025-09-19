@@ -26,6 +26,14 @@
     - [Array Chunk](#array-chunk)
     - [Two Sum ( Ugly Code )](#two-sum--ugly-code-)
   - [Linked List](#linked-list)
+    - [Inside Linked List](#inside-linked-list)
+    - [Constructing Linked List](#constructing-linked-list)
+    - [1. Setup Node \& Linked List](#1-setup-node--linked-list)
+    - [2. Push Method](#2-push-method)
+    - [3. Pop Method](#3-pop-method)
+    - [4. Unshift Method](#4-unshift-method)
+    - [5. Shift Method](#5-shift-method)
+  - [6. Get First Method](#6-get-first-method)
 
 
 ## What is DSA
@@ -798,3 +806,556 @@ console.log(eg13TwoSumLessUgly([2, 7, 11, 15],9));//[ 0, 1 ]
 // [ 0, 1 ]
 ```
 ## Linked List
+- A linked list is a linear data structure where elements, called nodes, are not stored contiguously in memory. Instead, each node contains data and a reference, or link, to the next node in the sequence.
+- A node is a basic building block of a linked list. 
+- node is object that contain 2 things
+  - data(/value)
+  - reference to address to another node in the sequence.
+```
+NODE
+
++-----------+
+|   Data    |
+|-----------|
+| Reference | ->
++-----------+
+```
+### Inside Linked List
+```
+LINKED LIST
+
++------+     +------+     +------+     +------+
+| Data | --> | Data | --> | Data | --> | Data | --> NULL
+| Ref  |     | Ref  |     | Ref  |     | Ref  |
++------+     +------+     +------+     +------+
+  (Head)                                 (Tail)
+```
+- Head= first node
+- Tail= last node, refering to null
+- this example above is also singly linked list
+
+### Constructing Linked List
+```js
+
+```
+
+> Constructing each method gets easier if you under stand previous methods well !!!
+
+> Don't Dare to Lazy shortening of Code when managing nodes(even in of if/else blocks ), else it will leads to circular references, dangling pointers, and debugging nightmares.
+
+### 1. Setup Node & Linked List
+- Define a Node class that holds a value and a pointer to the next node (initially null).
+- Define a LinkedList class that creates a new linked list with one node.
+- The first node is assigned as both the head and the tail.
+- The list length is set to 1.
+- Use it& Enjoy
+```js
+// 1. Setup Linked List
+
+// First Node
+class eg14Node{
+    constructor(value){
+        this.head=value;
+        this.next=null;
+    }
+}
+
+// First LL
+//       Head
+//        |
+//        V
+// +-------------------+
+// |   Value:    1     |
+// |   Next:   NULL    |
+// +-------------------+
+//        ^
+//        |
+//       Tail
+
+class eg14LinkedList{
+    constructor(value){
+        this.head=new eg14Node(value);
+        this.tail=this.head;
+        this.length=1;
+    }
+}
+
+// useage
+const eg14MyNewLinkedList = new eg14LinkedList(1);
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList {
+//   head: eg14Node { head: 1, next: null },
+//   tail: eg14Node { head: 1, next: null },
+//   length: 1
+// }
+```
+
+### 2. Push Method
+- helps to add node at end of LL.
+```
+Before Push:
+Head -> [1 | *] -> [2 | *] -> [3 | NULL]  Tail
+
+```
+- Approach
+  - make new node
+  - remove the next of last node of LL = null 
+  - set next of last node of LL = this new node 
+  - set tail = this new node 
+  - set next of this new node = null
+- edge case
+  - at case of null linkedlist, where head and tail refer to null
+    - attach head to new node
+    - attach tail to new node
+```
+After Push:
+Head -> [1 | *] -> [2 | *] -> [3 | *] -> [4 | NULL]  Tail
+```
+```js
+// 2. Push Method
+push(value){
+    let newNode = new eg14Node(value);
+    if(!this.head){
+        this.head= newNode;
+        this.tail= newNode;
+        this.length++;
+
+    }
+    else{
+        this.tail.next = newNode;
+        this.tail = newNode;
+        this.length++;
+    }
+    // In the empty list case, tail and newNode are the same. Setting tail.next = newNode creates a loop.
+    // By adding the else, we only set tail.next when there’s already a node, preventing the [Circular *1] issue.
+
+}
+```
+```js
+// useage
+const eg14MyNewLinkedList = new eg14LinkedList(1);
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList {
+//   head: eg14Node { head: 1, next: null },
+//   tail: eg14Node { head: 1, next: null },
+//   length: 1
+// }
+eg14MyNewLinkedList.push(2);
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList {
+//   head: eg14Node { head: 1, next: eg14Node { head: 2, next: null } },
+//   tail: eg14Node { head: 2, next: null },
+//   length: 2
+// }
+```
+### 3. Pop Method
+- Analysis
+  - attach tail to previous node 
+    - not simple
+    - need to iterate to 
+    - find last element
+    - find 2nd last element 
+    - attach the tail to 2nd last element
+  - previous node's next refer to null
+- Approach
+  - make 2 vars, temp and var point to 1st element
+  - then temp check if element is last(if element's next is null) , if not so it shift to next element
+  - prev stays at 1st time
+  - then when temp check 2nd element and if not last ,then it will shift to next element and also make prev shift too
+  - then when temp reach to last element and that check pass, then we will attach tail to where prev attaches to (obv 2nd last element)
+  - then next of the element refer to null
+- edge case
+  - if given linkedlist is empty before pop , return null/undefined
+  - if linkedlist is empty after pop, set head and tail to null
+```js
+// 3. Pop Method
+pop(){
+    if(!this.head){
+        return undefined;
+    }
+
+    let temp = this.head;
+    let prev=this.head;
+    while(temp.next){ //not equals to null, it exists
+        prev=temp;
+        temp=prev.next;
+    }
+
+    this.tail = prev;
+    this.tail.next=null;
+    this.length--;
+
+    if(this.length===0){
+        this.head=null;
+        this.tail=null;
+    }
+    return temp;
+}
+```
+```js
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList {
+//   head: eg14Node { head: 1, next: eg14Node { head: 2, next: null } },
+//   tail: eg14Node { head: 2, next: null },
+//   length: 2
+// }
+eg14MyNewLinkedList.pop();
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList {
+//   head: eg14Node { head: 1, next: null },
+//   tail: eg14Node { head: 1, next: null },
+//   length: 1
+// }
+eg14MyNewLinkedList.pop();
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList { head: null, tail: null, length: 0 }
+console.log(eg14MyNewLinkedList.pop());
+// undefined
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList { head: null, tail: null, length: 0 }
+```
+```
+Before pops:
+head → [1] → [2] → [3] → null
+                       ↑
+                      tail
+
+After 1st pop:
+head → [1] → [2] → null
+                 ↑
+                tail
+
+After 2nd pop:
+head → [1] → null
+        ↑
+       tail
+
+After 3rd pop:
+head → null
+tail → null
+
+```
+```
+Start:
+head → [1] → [2] → [3] → null
+                    ↑
+                    tail
+prev → [1]
+temp → [1]
+
+Loop 1:
+prev → [1]
+temp → [2]
+
+Loop 2:
+prev → [2]
+temp → [3]
+
+Loop ends (temp.next = null):
+prev → [2]
+temp → [3]
+
+After re-link:
+tail = prev → [2]
+tail.next = null
+
+Final list:
+head → [1] → [2] → null
+              ↑
+              tail
+(returned [3])
+
+```
+### 4. Unshift Method
+- it helps to add node at the beginning of LL
+- Approach 
+  - make new node's next point to fist element
+  - make head point to new node
+- edge case 
+  - if LL is empty
+    - attach head to new node
+    - attach tail to new node
+```
+Before:
+head → [A] → [B] → ... → tail
+
+unshift(X)
+
+After:
+head → [X] → [A] → [B] → ... → tail
+
+```
+
+```js
+
+// 4. Unshift Method, Best Way
+unshift(value){
+    let newNode = new eg14Node(value);
+    if (this.length===0){ // or if(!this.head)
+        this.head=newNode;
+        this.tail=newNode;
+        // this.length++;  
+    }
+    else{             
+        newNode.next=this.head;
+        this.head=newNode;
+        // this.length++;
+    }
+
+    // i wrote 2 lines below as they both are same in both the if and else block, so why not reduce the code :)
+    this.length++; 
+    // this.head=newNode; // NO, Moving this.head = newNode and this.length++ outside the if/else seems DRY(Don’t Repeat Yourself), but in the empty-list case it can leave .next uninitialized or mislinked, risking a self-referencing node; keeping assignments inside the blocks ensures head and tail are set safely.
+}
+
+```
+```js
+
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList {
+//   head: eg14Node { head: 10, next: eg14Node { head: 20, next: [eg14Node] } },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 3
+// }
+
+// What the heck it this: next: [eg14Node]
+// That next: [eg14Node] you’re seeing is not an error
+// by using console.log(VAR_NAME)
+// it’s just how Node.js (or Chrome DevTools) abbreviates deeply nested objects when printing them with console.log
+// [eg14Node] means : "There’s another eg14Node object here, but I’m not expanding it."
+// Node.js tries to keep console output short.
+// console.dir(VAR_NAME, { depth: null }); forces Node.js to expand all nested objects
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10,
+//     next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 3
+// }
+
+eg14MyNewLinkedList.unshift(10000);
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10000,
+//     next: eg14Node {
+//       head: 10,
+//       next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+//     }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 4
+// }
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10000,
+//     next: eg14Node { head: 10, next: [eg14Node] }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 4
+// }
+eg14MyNewLinkedList.unshift(50000);
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 50000,
+//     next: eg14Node {
+//       head: 10000,
+//       next: eg14Node {
+//         head: 10,
+//         next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+//       }
+//     }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 5
+// }
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 50000,
+//     next: eg14Node { head: 10000, next: [eg14Node] }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 5
+// }
+eg14MyNewLinkedList.pop();
+eg14MyNewLinkedList.pop();
+eg14MyNewLinkedList.pop();
+eg14MyNewLinkedList.pop();
+eg14MyNewLinkedList.pop();
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList { head: null, tail: null, length: 0 }
+eg14MyNewLinkedList.unshift(200000);
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node { head: 200000, next: null },
+//   tail: eg14Node { head: 200000, next: null },
+//   length: 1
+// }
+```
+
+```
+Case 1: Empty list
+
+Before:
+head → null
+tail → null
+
+unshift(200000)
+
+After:
+head → [200000] → null
+tail → [200000]
+
+```
+```
+Case 2: Non-empty list
+
+Before:
+head → [10] → [20] → [30] → null
+tail → [30]
+
+unshift(10000)
+
+Step:
+newNode → [10000]
+newNode.next = head
+
+After:
+head → [10000] → [10] → [20] → [30] → null
+tail → [30]
+```
+
+### 5. Shift Method
+- it just's remove 1st element of LL
+- Approach
+  - let temp var
+  - set temp attach 1st element(through head)
+  - set head attach 1st element's next(i.e. 2nd element)
+  - set 1st element(through temp) attach to null
+- edge cases
+  - if null LL
+    - return undefined
+  - if 1 element
+    - set head to null 
+      - this would be done automatic , as at attaching temp.next ;head is actually attaching to null
+    - set tail to null
+```js
+// 5. Shift Method
+shift(){
+    if (!this.head){return undefined;}
+    let temp = this.head;
+    this.head = temp.next; // or this.head.next
+    temp.next = null;
+    this.length--;
+    if(this.length===0){this.tail=null;
+        // this.head=null; // this would be done automatic , as at attaching temp.next ;head is actually attaching to null
+    }
+    return temp;
+}
+```
+```js
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node { head: 200000, next: eg14Node { head: 10, next: null } },
+//   tail: eg14Node { head: 10, next: null },
+//   length: 2
+// }
+eg14MyNewLinkedList.shift();
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node { head: 10, next: null },
+//   tail: eg14Node { head: 10, next: null },
+//   length: 1
+// }
+eg14MyNewLinkedList.shift();
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList { head: null, tail: null, length: 0 }
+```
+```
+Case 1: More than 1 element
+
+Before:
+ head → A → B → ... → null
+ tail → last
+ length = n
+
+Step 1: temp = head (A)
+Step 2: head = temp.next (B)
+Step 3: temp.next = null (A detached)
+Step 4: length--
+Step 5: tail unchanged
+
+After:
+ head → B → ... → null
+ tail → last
+ length = n-1
+
+```
+```
+Case 2: Only 1 element
+
+Before:
+ head → A → null
+ tail → A
+ length = 1
+
+Step 1: temp = head (A)
+Step 2: head = temp.next → null
+Step 3: temp.next = null (A detached)
+Step 4: length-- → 0
+Step 5: tail = null
+
+After:
+ head → null
+ tail → null
+ length = 0
+```
+```
+Case 3: Empty list
+
+Before:
+ head → null
+ tail → null
+ length = 0
+
+Step 1: if !head → return undefined
+
+After:
+ head → null
+ tail → null
+ length = 0
+```
+## 6. Get First Method
+- it just return 1st element of LL
+- most easiest
+```js
+// 6. Get First Method
+getFirst(){return this.head;}
+```
+```js
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList { head: null, tail: null, length: 0 }
+console.log(eg14MyNewLinkedList.getFirst());
+// null
+
+// just filling LL
+eg14MyNewLinkedList.push(10);
+console.log(eg14MyNewLinkedList.getFirst());
+// eg14Node { head: 10, next: null }
+
+eg14MyNewLinkedList.push(20);
+console.log(eg14MyNewLinkedList.getFirst());
+// eg14Node { head: 10, next: eg14Node { head: 20, next: null } }
+
+eg14MyNewLinkedList.push(110);
+console.log(eg14MyNewLinkedList.getFirst());
+// eg14Node {
+//   head: 10,
+//   next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+// }
+
+```

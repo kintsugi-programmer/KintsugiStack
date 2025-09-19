@@ -40,6 +40,16 @@
 - [SyntaxUI](https://syntaxui.com/): Modern UI components and utilities for developers.
 - [MakerKit](https://makerkit.dev/): SaaS boilerplates and starter kits for rapid development.
 - [Polar](https://polar.sh/): Open-source funding platform for developers and maintainers.
+- [TweakCn / ShadCn](https://tweakcn.com/): Theme editor and components for ShadCN UI.
+- [Motion Primitives](https://motion-primitives.com/): Beautiful, animated motion components for React.
+- [Pattern Craft](https://patterncraft.fun/): Modern background patterns and gradients.
+- [Evil Charts](https://evilcharts.com/): Animated chart components for React apps.
+- [8bitcn](https://www.8bitcn.com/): Retro-style UI component library.
+- [Box Shadows (Aceternity)](https://ui.aceternity.com/tools/box-shadows): Box shadow utility for Tailwind and CSS.
+- [Tabler Icons](https://tabler.io/icons): Free set of SVG icons for web design.
+- [Recipes on Build UI](https://buildui.com/recipes): Practical animation and component recipes for React.
+- [Tympanus (Codrops)](https://tympanus.net/codrops/): Creative UI experiments, tutorials, and resources.
+- [React Scan](https://react-scan.million.dev/): Utility for analyzing React codebase structures.
 - [Radix UI](https://www.radix-ui.com/): Accessible, unstyled primitives for building design systems.
 - [Excalidraw](https://excalidraw.com/): Collaborative whiteboarding tool with a hand-drawn feel.
 - [Magic UI](https://magicui.design/docs/components/marquee): Beautiful animations for modern websites.

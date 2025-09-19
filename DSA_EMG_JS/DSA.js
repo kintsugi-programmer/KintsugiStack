@@ -505,5 +505,274 @@ console.log(eg13TwoSumLessUgly([2, 7, 11, 15],9));//[ 0, 1 ]
 // [ 0, 1 ]
 // [ 0, 1 ]
 
-// eg14
+// eg14 : Linked List 
 console.log("eg14");
+// 1. Setup Linked List
+
+// First Node
+class eg14Node{
+    constructor(value){
+        this.head=value;
+        this.next=null;
+    }
+}
+
+// First LL
+//       Head
+//        |
+//        V
+// +-------------------+
+// |   Value:    1     |
+// |   Next:   NULL    |
+// +-------------------+
+//        ^
+//        |
+//       Tail
+
+class eg14LinkedList{
+    constructor(value){
+        this.head=new eg14Node(value);
+        this.tail=this.head;
+        this.length=1;
+    }
+
+    // 2. Push Method
+    push(value){
+        let newNode = new eg14Node(value);
+        if(!this.head){
+            this.head= newNode;
+            this.tail= newNode;
+            this.length++;
+
+        }
+        else{
+            this.tail.next = newNode;
+            this.tail = newNode;
+            this.length++;
+        }
+
+        // In the empty list case, tail and newNode are the same. Setting tail.next = newNode creates a loop.
+        // By adding the else, we only set tail.next when there’s already a node, preventing the [Circular *1] issue.
+
+
+}
+
+    // 3. Pop Method
+    pop(){
+        if(!this.head){
+            return undefined;
+        }
+
+        let temp = this.head;
+        let prev=this.head;
+        while(temp.next){ //not equals to null, it exists
+            prev=temp;
+            temp=prev.next;
+        }
+
+        this.tail = prev;
+        this.tail.next=null;
+        this.length--;
+
+        if(this.length===0){
+            this.head=null;
+            this.tail=null;
+        }
+        return temp;
+    }
+    
+    // 4. Unshift Method, Best Way
+    unshift(value){
+        let newNode = new eg14Node(value);
+        if (this.length===0){ // or if(!this.head)
+            this.head=newNode;
+            this.tail=newNode;
+            // this.length++;  
+        }
+        else{             
+            newNode.next=this.head;
+            this.head=newNode;
+            // this.length++;
+        }
+
+        // i wrote 2 lines below as they both are same in both the if and else block, so why not reduce the code :)
+        this.length++; 
+        // this.head=newNode; // NO, Moving this.head = newNode and this.length++ outside the if/else seems DRY(Don’t Repeat Yourself), but in the empty-list case it can leave .next uninitialized or mislinked, risking a self-referencing node; keeping assignments inside the blocks ensures head and tail are set safely.
+    }
+
+    // 5. Shift Method
+    shift(){
+        if (!this.head){return undefined;}
+        let temp = this.head;
+        this.head = temp.next; // or this.head.next
+        temp.next = null;
+        this.length--;
+        if(this.length===0){this.tail=null;
+            // this.head=null; // this would be done automatic , as at attaching temp.next ;head is actually attaching to null
+        }
+        return temp;
+    }
+
+    // 6. Get First Method
+    getFirst(){return this.head;}
+}
+
+// useage
+const eg14MyNewLinkedList = new eg14LinkedList(1);
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList {
+//   head: eg14Node { head: 1, next: null },
+//   tail: eg14Node { head: 1, next: null },
+//   length: 1
+// }
+eg14MyNewLinkedList.push(2);
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList {
+//   head: eg14Node { head: 1, next: eg14Node { head: 2, next: null } },
+//   tail: eg14Node { head: 2, next: null },
+//   length: 2
+// }
+eg14MyNewLinkedList.pop();
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList {
+//   head: eg14Node { head: 1, next: null },
+//   tail: eg14Node { head: 1, next: null },
+//   length: 1
+// }
+eg14MyNewLinkedList.pop();
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList { head: null, tail: null, length: 0 }
+console.log(eg14MyNewLinkedList.pop());
+// undefined
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList { head: null, tail: null, length: 0 }
+
+// just filling LL
+eg14MyNewLinkedList.push(10);
+eg14MyNewLinkedList.push(20);
+eg14MyNewLinkedList.push(110);
+
+
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList {
+//   head: eg14Node { head: 10, next: eg14Node { head: 20, next: [eg14Node] } },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 3
+// }
+
+// What the heck it this: next: [eg14Node]
+// That next: [eg14Node] you’re seeing is not an error
+// by using console.log(VAR_NAME)
+// it’s just how Node.js (or Chrome DevTools) abbreviates deeply nested objects when printing them with console.log
+// [eg14Node] means : "There’s another eg14Node object here, but I’m not expanding it."
+// Node.js tries to keep console output short.
+// console.dir(VAR_NAME, { depth: null }); forces Node.js to expand all nested objects
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10,
+//     next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 3
+// }
+
+eg14MyNewLinkedList.unshift(10000);
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10000,
+//     next: eg14Node {
+//       head: 10,
+//       next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+//     }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 4
+// }
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10000,
+//     next: eg14Node { head: 10, next: [eg14Node] }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 4
+// }
+eg14MyNewLinkedList.unshift(50000);
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 50000,
+//     next: eg14Node {
+//       head: 10000,
+//       next: eg14Node {
+//         head: 10,
+//         next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+//       }
+//     }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 5
+// }
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 50000,
+//     next: eg14Node { head: 10000, next: [eg14Node] }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 5
+// }
+eg14MyNewLinkedList.pop();
+eg14MyNewLinkedList.pop();
+eg14MyNewLinkedList.pop();
+eg14MyNewLinkedList.pop();
+eg14MyNewLinkedList.pop();
+console.log(eg14MyNewLinkedList);
+// eg14LinkedList { head: null, tail: null, length: 0 }
+eg14MyNewLinkedList.unshift(200000);
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node { head: 200000, next: null },
+//   tail: eg14Node { head: 200000, next: null },
+//   length: 1
+// }
+
+// just filling LL
+eg14MyNewLinkedList.push(10);
+
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node { head: 200000, next: eg14Node { head: 10, next: null } },
+//   tail: eg14Node { head: 10, next: null },
+//   length: 2
+// }
+eg14MyNewLinkedList.shift();
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node { head: 10, next: null },
+//   tail: eg14Node { head: 10, next: null },
+//   length: 1
+// }
+eg14MyNewLinkedList.shift();
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList { head: null, tail: null, length: 0 }
+console.log(eg14MyNewLinkedList.getFirst());
+// null
+
+// just filling LL
+eg14MyNewLinkedList.push(10);
+console.log(eg14MyNewLinkedList.getFirst());
+// eg14Node { head: 10, next: null }
+
+eg14MyNewLinkedList.push(20);
+console.log(eg14MyNewLinkedList.getFirst());
+// eg14Node { head: 10, next: eg14Node { head: 20, next: null } }
+
+eg14MyNewLinkedList.push(110);
+console.log(eg14MyNewLinkedList.getFirst());
+// eg14Node {
+//   head: 10,
+//   next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+// }
