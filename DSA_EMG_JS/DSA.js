@@ -643,6 +643,73 @@ class eg14LinkedList{
     }
 
     // 9. Set Method
+    set(index,value){
+        if (index >= this.length) return undefined;
+        if (index===0){
+            let temp=this.head;
+            if(value){
+                let newNode = new eg14Node(value);
+                this.head=newNode;
+                newNode.next = temp.next;
+                temp.next=null
+                return newNode;
+            }
+            else{
+                return temp;
+            }
+
+
+        }
+        else {
+            let temp = this.head;
+            let prev = this.head; 
+            for(let i=0; i<index-1; i++){// we did to make prev lagging behind temp by 1 time
+                temp=temp.next;
+                prev=prev.next;
+            }
+            temp=temp.next;// now temp is just after prev
+            if(value){
+                let newNode = new eg14Node(value);
+                prev.next=newNode;
+                newNode.next=temp.next;
+                temp.next=null;
+                if(newNode.next===null){// if element is last element
+                    this.tail= newNode
+                }
+                return newNode;
+            }else{
+                return temp;
+            }
+            
+        }
+
+    }
+        // Wrong approach
+        // set1(index,value){
+        //     let temp = this.get(index);
+        //     if (temp){temp.value=value;return true;}
+        //     else {return false;}
+        // }
+
+    // 10. Insert Method
+    insert(index,value){
+        if (index+1>this.length) {return undefined;}
+
+        else {
+            let newNode = new eg14Node(value);
+            let temp = this.head;
+            let counter =1;
+            while(counter<index){
+                temp=temp.next;
+                counter++;
+            }
+            newNode.next=temp;
+            this.length++;
+
+            return newNode;
+
+        }
+    }
 }
 
 // useage
@@ -840,3 +907,58 @@ console.log(eg14MyNewLinkedList.get(2));
 
 console.log(eg14MyNewLinkedList.get(3));
 // undefined
+
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10,
+//     next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 3
+// }
+
+console.log(eg14MyNewLinkedList.set(1));
+// eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+
+console.log(eg14MyNewLinkedList.set(1,100));
+// eg14Node { head: 100, next: eg14Node { head: 110, next: null } }
+
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10,
+//     next: eg14Node { head: 100, next: eg14Node { head: 110, next: null } }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 3
+// }
+
+console.log(eg14MyNewLinkedList.set(2,10000));
+// eg14Node { head: 10000, next: null }
+
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10,
+//     next: eg14Node { head: 100, next: eg14Node { head: 10000, next: null } }
+//   },
+//   tail: eg14Node { head: 10000, next: null },
+//   length: 3
+// }
+
+
+console.log(eg14MyNewLinkedList.set(0,1));
+// eg14Node {
+//   head: 1,
+//   next: eg14Node { head: 100, next: eg14Node { head: 10000, next: null } }
+// }
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 1,
+//     next: eg14Node { head: 100, next: eg14Node { head: 10000, next: null } }
+//   },
+//   tail: eg14Node { head: 10000, next: null },
+//   length: 3
+// }

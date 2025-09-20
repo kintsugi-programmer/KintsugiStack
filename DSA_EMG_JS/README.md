@@ -37,6 +37,9 @@
     - [7. Get Last Method](#7-get-last-method)
     - [8. Get Method. Get Element By Index](#8-get-method-get-element-by-index)
     - [9. Set Method](#9-set-method)
+    - [10. Insert Method](#10-insert-method)
+      - [10.1. InsertFront Method](#101-insertfront-method)
+      - [10.2. InsertBack Method](#102-insertback-method)
 
 
 ## What is DSA
@@ -838,13 +841,20 @@ LINKED LIST
 - this example above is also singly linked list
 
 ### Constructing Linked List
-```js
-
-```
 
 > Constructing each method gets easier if you under stand previous methods well !!!
 
 > Don't Dare to Lazy shortening of Code when managing nodes(even in of if/else blocks ), else it will leads to circular references, dangling pointers, and debugging nightmares.
+
+> in JS, everything is object
+
+> Don't try to play loop till index-1, as it will fail on index=0, if playing then make seperate case on above the loop
+
+> If using counter & while loop, don't forget to inc./dec./change the counter inside while loop, sometimes forget b/w thinking various complex stuff.
+
+```js
+
+```
 
 ### 1. Setup Node & Linked List
 - Define a Node class that holds a value and a pointer to the next node (initially null).
@@ -1468,3 +1478,160 @@ Index Access:
 
 ```
 ### 9. Set Method
+- if given 
+  - just index, return the node at that index at ll
+  - both index& new value, first replace the value of that node at that index at ll to the new value at arguement, then return the new node
+- Approach
+  - this approach is independent
+  - index is given as parameter, so
+  - if index out of limit, return undefined
+  - if index is 0
+    - make temp
+    - set temp refer to 1st element(this.head)
+    - if value given as parameter
+      - make new node with value
+      - set head of ll = new node
+      - set new node's next = temp's next
+      - set temp's next = null, flush it
+      - return new node
+    - if value doesn't given as parameter
+      - return temp
+  - else, index is valid
+    - make temp, prev attach to 1st element of ll
+    - then traverse the loop till just index-1,
+    - now temp and prev attach to element at index-1
+    - so, just jump temp to next element 1 time
+    - if value doesn't given as parameter
+      - return temp, as we are expected to not modify
+    - if value is given as parameter
+      - then make a new node(value)
+      - then attach previous node's next to new node
+      - then attach new node's next to temp's next
+      - then attach temp's next to null, i.e. flush that node of index, replace it with new node
+      - if index is last index
+        - then set tail = new node
+      - return the new node
+- Wrong Approach 
+  - this approach is dependent to get() method
+  - make temp var attach to that node using get(index)
+  - if temp exist valid
+    - temp's node's value = new value
+    - return true
+  - else 
+    - return false
+  - problem is that here we are not thinking about the head,tail,prev's next, OOPS
+```js
+// 9. Set Method
+set(index,value){
+    if (index >= this.length) return undefined;
+    if (index===0){
+        let temp=this.head;
+        if(value){
+            let newNode = new eg14Node(value);
+            this.head=newNode;
+            newNode.next = temp.next;
+            temp.next=null
+            return newNode;
+        }
+        else{
+            return temp;
+        }
+
+
+    }
+    else {
+        let temp = this.head;
+        let prev = this.head; 
+        for(let i=0; i<index-1; i++){// we did to make prev lagging behind temp by 1 time
+            temp=temp.next;
+            prev=prev.next;
+        }
+        temp=temp.next;// now temp is just after prev
+        if(value){
+            let newNode = new eg14Node(value);
+            prev.next=newNode;
+            newNode.next=temp.next;
+            temp.next=null;
+            if(newNode.next===null){// if element is last element
+                this.tail= newNode
+            }
+            return newNode;
+        }else{
+            return temp;
+        }
+        
+    }
+
+}
+    // Wrong approach
+    // set1(index,value){
+    //     let temp = this.get(index);
+    //     if (temp){temp.value=value;return true;}
+    //     else {return false;}
+    // }
+
+```
+```js
+
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10,
+//     next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 3
+// }
+
+console.log(eg14MyNewLinkedList.set(1));
+// eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+
+console.log(eg14MyNewLinkedList.set(1,100));
+// eg14Node { head: 100, next: eg14Node { head: 110, next: null } }
+
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10,
+//     next: eg14Node { head: 100, next: eg14Node { head: 110, next: null } }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 3
+// }
+
+console.log(eg14MyNewLinkedList.set(2,10000));
+// eg14Node { head: 10000, next: null }
+
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10,
+//     next: eg14Node { head: 100, next: eg14Node { head: 10000, next: null } }
+//   },
+//   tail: eg14Node { head: 10000, next: null },
+//   length: 3
+// }
+
+
+console.log(eg14MyNewLinkedList.set(0,1));
+// eg14Node {
+//   head: 1,
+//   next: eg14Node { head: 100, next: eg14Node { head: 10000, next: null } }
+// }
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 1,
+//     next: eg14Node { head: 100, next: eg14Node { head: 10000, next: null } }
+//   },
+//   tail: eg14Node { head: 10000, next: null },
+//   length: 3
+// }
+```
+
+### 10. Insert Method
+- allow to insert node to anywhere in ll
+- now it's open ended, to insert after the index or before the index
+#### 10.1. InsertFront Method
+- 
+#### 10.2. InsertBack Method
