@@ -33,7 +33,10 @@
     - [3. Pop Method](#3-pop-method)
     - [4. Unshift Method](#4-unshift-method)
     - [5. Shift Method](#5-shift-method)
-  - [6. Get First Method](#6-get-first-method)
+    - [6. Get First Method](#6-get-first-method)
+    - [7. Get Last Method](#7-get-last-method)
+    - [8. Get Method. Get Element By Index](#8-get-method-get-element-by-index)
+    - [9. Set Method](#9-set-method)
 
 
 ## What is DSA
@@ -1329,7 +1332,7 @@ After:
  tail → null
  length = 0
 ```
-## 6. Get First Method
+### 6. Get First Method
 - it just return 1st element of LL
 - most easiest
 ```js
@@ -1359,3 +1362,109 @@ console.log(eg14MyNewLinkedList.getFirst());
 // }
 
 ```
+### 7. Get Last Method
+- Return Last Element
+- Approach 1
+  - just extract what tail's refer to, Power of JavaScript OOPs
+- Approach 2
+  - while loop to check if element's next is null, thus last element
+```js
+// 7. Get Last Method
+getLast(){return this.tail;}
+getLast2(){
+    if(!this.head) return null;
+    let temp = this.head;
+    while(temp){
+        if(!temp.next){
+            return temp
+        }
+        temp=temp.next;
+    }
+}
+```
+```js
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10,
+//     next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 3
+// }
+console.log(eg14MyNewLinkedList.getLast());
+// eg14Node { head: 110, next: null }
+console.log(eg14MyNewLinkedList.getLast2());
+// eg14Node { head: 110, next: null }
+```
+```
+Linked List: Head → 10 → 20 → 110 → null
+
+  Approach 1 (tail ref)        Approach 2 (while loop)
++------------------+         +-----------------------+
+| getLast()        |         | getLast2()            |
+| returns tail ↓   |         | traverse from head ↓ |
+| 110 → null       |         | 10 → 20 → 110 → null |
++------------------+         +-----------------------+
+
+```
+### 8. Get Method. Get Element By Index
+- return element of that index
+- Approach
+  - if index is out of limit, return undefined
+  - else, if index is valid
+    - let temp refference to 1st element(this.head)
+    - counter=0;
+    - for/while loop till counter = index
+      - temp jump forward
+      - counter++
+```js
+// 8. Get Method. Get Element By Index
+get(index){
+    if (index >= this.length) return undefined;
+    else {
+        let temp = this.head;
+        for(let i=0; i<index; i++){
+            temp=temp.next;
+        }
+        return temp;
+    }
+
+}
+```
+```js
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10,
+//     next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 3
+// }
+console.log(eg14MyNewLinkedList.get(0));
+// eg14Node {
+//   head: 10,
+//   next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+// }
+console.log(eg14MyNewLinkedList.get(1));
+// eg14Node { head: 110, next: null }
+
+console.log(eg14MyNewLinkedList.get(2));
+// eg14Node { head: 110, next: null }
+
+console.log(eg14MyNewLinkedList.get(3));
+// undefined
+```
+```
+Linked List: Head → 10 → 20 → 110 → null
+
+Index Access:
+
+ get(0) → 10 → 20 → 110 → null
+ get(1) → 20 → 110 → null
+ get(2) → 110 → null
+ get(3) → undefined
+
+```
+### 9. Set Method

@@ -615,6 +615,34 @@ class eg14LinkedList{
 
     // 6. Get First Method
     getFirst(){return this.head;}
+
+    // 7. Get Last Method
+    getLast(){return this.tail;}
+    getLast2(){
+        if(!this.head) return null;
+        let temp = this.head;
+        while(temp){
+            if(!temp.next){
+                return temp
+            }
+            temp=temp.next;
+        }
+    }
+
+    // 8. Get Method. Get Element By Index
+    get(index){
+        if (index >= this.length) return undefined;
+        else {
+            let temp = this.head;
+            for(let i=0; i<index; i++){
+                temp=temp.next;
+            }
+            return temp;
+        }
+
+    }
+
+    // 9. Set Method
 }
 
 // useage
@@ -776,3 +804,39 @@ console.log(eg14MyNewLinkedList.getFirst());
 //   head: 10,
 //   next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
 // }
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10,
+//     next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 3
+// }
+console.log(eg14MyNewLinkedList.getLast());
+// eg14Node { head: 110, next: null }
+console.log(eg14MyNewLinkedList.getLast2());
+// eg14Node { head: 110, next: null }
+
+console.dir(eg14MyNewLinkedList, { depth: null });
+// eg14LinkedList {
+//   head: eg14Node {
+//     head: 10,
+//     next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+//   },
+//   tail: eg14Node { head: 110, next: null },
+//   length: 3
+// }
+console.log(eg14MyNewLinkedList.get(0));
+// eg14Node {
+//   head: 10,
+//   next: eg14Node { head: 20, next: eg14Node { head: 110, next: null } }
+// }
+console.log(eg14MyNewLinkedList.get(1));
+// eg14Node { head: 110, next: null }
+
+console.log(eg14MyNewLinkedList.get(2));
+// eg14Node { head: 110, next: null }
+
+console.log(eg14MyNewLinkedList.get(3));
+// undefined
