@@ -5,6 +5,20 @@
 - https://www.youtube.com/watch?v=8GK8R77Bd7g Build and Deploy a Full Stack Real Time AI Voice Agent Interview Platform
 - https://www.youtube.com/watch?v=CO4E_9V6li0 Gen AI Project Using Llama3.1 | End to End Gen AI Project
 - https://www.youtube.com/playlist?list=PLaBeGKL1tOU36nVztmb3vKs9qcpC2LTwD
-- https://www.youtube.com/watch?v=Zq5fmkH0T78
-- https://www.youtube.com/watch?v=iYOz165wGkQ
-- https://www.youtube.com/watch?v=4oV65GVVits
+- https://www.youtube.com/watch?v=Zq5fmkH0T78 Next.js 15 Crash Course | Build and Deploy a Production-Ready Full Stack App
+- https://www.youtube.com/watch?v=iYOz165wGkQ Build an Enterprise Ready AI Powered Applicant Tracking System
+- https://www.youtube.com/watch?v=4oV65GVVits Build and Deploy a Fully Responsive Restaurant Website with Modern UI and UX in ReactJS
+- GoLang
+  - https://gobyexample.com/
+  - https://www.youtube.com/watch?v=un6ZyFkqFKo
+  - https://www.youtube.com/watch?v=h3fqD6IprIA
+- Build and Deploy a Biotech AI Tool: Python, Next.js 15, React, Tailwind, Modal, Typescript (2025) https://www.youtube.com/watch?v=3dCZxmd5bvs
+- Next.js 15 AI Web App Project – Build a Full Stack App Using Tailwind, Neon, Clerk, OpenRouter https://www.youtube.com/watch?v=eGlvq4u_i08
+- Full Stack React Project ( AI Photo Editor ) - Next JS, Fabric.js, Tailwind, ImageKit, Shadcn UI 🔥🔥 https://www.youtube.com/watch?v=vr1JL6Fi6K4
+- Build a Full Stack AI Note Taking App with Next.js and Supabase – Tutorial https://www.youtube.com/watch?v=6ChzCaljcaI
+- https://www.youtube.com/watch?v=AjQPRomyd-k LLM Project | End to End Gen AI Project Using LangChain, Google Palm In Ed-Tech Industry
+- NextJS AI SDK Tuts https://www.youtube.com/playlist?list=PLC3y8-rFHvwhZHH2BksCOYAxLmYrQL__H
+- https://www.youtube.com/watch?v=ewxUC_zweBg Build and Deploy a Full Stack AI SaaS with Next.js 15, React, Stripe, Tailwind | Full Course (2025)
+- Rust
+  - https://www.youtube.com/watch?v=qP7LzZqGh30&t Part1
+  - https://www.youtube.com/watch?v=joCFbTJt0o0&t Complete Rust Marathon in 6 hours Part2
