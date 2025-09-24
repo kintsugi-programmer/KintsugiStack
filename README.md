@@ -1,5 +1,26 @@
 # KintsugiStack
 
+## Table of Contents
+- [KintsugiStack](#kintsugistack)
+  - [Table of Contents](#table-of-contents)
+  - [At Progress \[ONSIGHT\]](#at-progress-onsight)
+  - [Nutshell-ed](#nutshell-ed)
+  - [Teach-ed](#teach-ed)
+  - [Practiced](#practiced)
+  - [Highlight-ed](#highlight-ed)
+  - [Fully Completed](#fully-completed)
+  - [Archive](#archive)
+  - [EXTERNAL LINKS@Kintsugi-Programmer](#external-linkskintsugi-programmer)
+      - [Use Cases:](#use-cases)
+      - [Setup:](#setup)
+  - [SSL Certificate](#ssl-certificate)
+  - [REPOS](#repos)
+  - [KintsugiProgrammer's Teaching Intro](#kintsugiprogrammers-teaching-intro)
+    - [Version 1: Professional \& Direct](#version-1-professional--direct)
+    - [Version 2: Slightly More Formal \& Structured](#version-2-slightly-more-formal--structured)
+    - [Version 3: Concise \& Action-Oriented](#version-3-concise--action-oriented)
+
+
 ## At Progress [ONSIGHT]
 
 - [CP31](/CP31/README.md)
@@ -8,7 +29,15 @@
 - [CORE_CS_EMG](/CORE_CS_EMG/README.md)
 - [APTITUDE](/APTITUDE/README.md)
 
-## Fully Complete
+## Nutshell-ed
+
+## Teach-ed
+
+## Practiced
+
+## Highlight-ed
+
+## Fully Completed
 
 - [MERN\_EMG](/MERN_EMG/README.md)
 - [RUBY\_EMG](/RUBY_EMG/README.md)
@@ -24,6 +53,9 @@
 - [INTERVIEW\_QUESTIONS](/INTERVIEW_QUESTIONS/README.md)
 - [REACT\_JS\_EMG](/REACT_JS_EMG/README.md)
 - [TAILWIND\_CSS\_EMG](/TAILWIND_CSS_EMG/README.md)
+- [AI\_GENAI\_EMG](/AI_GENAI_EMG/README.md)
+- [IDEAS](/IDEAS/README.md)
+- [DEPLOYMENT\_ESSENTIALS](/DEPLOYMENT_ESSENTIALS/README.md)
 
 ## EXTERNAL LINKS@Kintsugi-Programmer
 
@@ -66,6 +98,54 @@
 - [Awesome Loaders](https://awesome-loaders.netlify.app/): Collection of loading animations.
 - [Hover Dev](https://www.hover.dev/): Addicting, interactive, animated UI components and templates for  React,  Tailwind CSS, Framer motion logo Framer Motion & more. Copy & paste them into your code with 2 clicks.
 
+Deploy applications from local machines using Cloudflare Tunnels.
+
+#### Use Cases:
+- Development testing
+- Home lab applications
+- CCTV monitoring systems
+- Personal projects
+
+#### Setup:
+```bash
+# Install Cloudflare daemon
+curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb -o cloudflared.deb
+sudo dpkg -i cloudflared.deb
+
+# Create tunnel
+cloudflared tunnel create my-app
+cloudflared tunnel route dns my-app app.example.com
+
+# Start tunnel
+cloudflared tunnel run my-app
+```
+## SSL Certificate
+*   An SSL certificate provides HTTPS (secure) rather than HTTP (insecure).
+*   Free SSL Certificate Provider Links
+    *   https://letsencrypt.org/
+    *   https://www.sslforfree.com/
+    *   https://zerossl.com/
+    *   Vercel automatically generates an **SSL certificate**.
+
+## REPOS
+- https://github.com/kintsugi-programmer
+- https://github.com/kintsugi-programmer/KintsugiStack
+- https://github.com/jlevy/the-art-of-command-line
+- https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list
+
+---
+
+- https://github.com/public-apis/public-apis
+- https://github.com/github/gitignore
+- https://github.com/ripienaar/free-for-dev
+- https://github.com/TheAlgorithms
+- https://github.com/sindresorhus/awesome
+- https://github.com/rasbt/LLMs-from-scratch
+- https://github.com/eriklindernoren/ML-From-Scratch
+- https://github.com/GokuMohandas/Made-With-ML
+- https://github.com/sdmg15/Best-websites-a-programmer-should-visit
+- https://github.com/kamranahmedse/developer-roadmap
+
 ## KintsugiProgrammer's Teaching Intro 
 
 ### Version 1: Professional & Direct
@@ -82,14 +162,3 @@ The content presented here is a curated blend of my personal learning journey, e
 
 Thank you for joining this session! I hope you found the content valuable and insightful. If you have any questions or need further clarification, feel free to reach out. Keep learning, keep growing, and I look forward to seeing you in the next session. Goodbye for now, and take care!
 Brought to you by Kintsugi Dev Studio.
-
-## Rough
-- Aptitude& Reasoning
-  - [Aptitude& Reasoning, Sheriyans Coding School ](https://sheryians.com/courses/courses-details/Aptitude%20&%20Reasoning%20for%20Campus%20Placements)
-  - [Aptitude Questions - GeeksforGeeks](https://www.geeksforgeeks.org/aptitude-gq/)
-  - [Aptitude Questions - IndiaBix](https://www.indiabix.com/)
-  - [Learn Aptitude - PrepInsta](https://prepinsta.com/learn-aptitude/)
-- HR
-  - [HR Interview Questions - IndiaBix](https://www.indiabix.com/hr-interview/questions-and-answers/)
-  - [Mock Interviews and HR Questions - IndiaBix](https://www.indiabix.com/)
-  - [Common HR Interview Questions - First Naukri](https://www.firstnaukri.com/interview-questions-and-answers?utm_source=chpeventbyrg&utm_medium=email&utm_campaign=piqa)

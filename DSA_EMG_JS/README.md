@@ -1,13 +1,4 @@
 # DSA EMG JS
-- ALL IN ONE: Data Structures & Algorithms In JavaScript Complete Course 2024 By HuXnhttps://www.youtube.com/watch?v=wBtPGnVnA9g
-- 70 Leetcode problems in 5+ hours (every data structure) (full tutorial) https://www.youtube.com/watch?v=lvO88XxNAzs
-- The Ultimate DSA Course for 2025 (with 100% less vibe coding) https://www.youtube.com/watch?v=DMeD8trbj6A
-- JavaScript Algorithms and Data Structures
-by Codevolution https://www.youtube.com/playlist?list=PLC3y8-rFHvwjPxNAKvZpdnsr41E0fCMMP
-- DSA roadmap for beginners in Javascript https://www.youtube.com/watch?v=1Xo-Oe4p2lc
-- Leetcode BLIND-75 by NeetCode 
-  - https://www.youtube.com/playlist?list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf
-  - https://neetcode.io/practice?tab=blind75
 
 ### Table of Contents
 - [DSA EMG JS](#dsa-emg-js)
