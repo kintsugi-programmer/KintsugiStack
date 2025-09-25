@@ -1,8 +1,12 @@
-# RUBY EMG
+# RUBY_ESSENTIALS
 > Ruby, A Programmer's Best Friend
 
+- Author: [Kintsugi-Programmer](https://github.com/kintsugi-programmer)
+
+> Disclaimer: The content presented here is a curated blend of my personal learning journey, experiences, open-source documentation, and invaluable knowledge gained from diverse sources. I do not claim sole ownership over all the material; this is a community-driven effort to learn, share, and grow together.
+
 ## Table Of Contents
-- [RUBY EMG](#ruby-emg)
+- [RUBY\_ESSENTIALS](#ruby_essentials)
   - [Table Of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Rise in Popularity](#rise-in-popularity)
@@ -31,8 +35,8 @@
     - [12. Symbols](#12-symbols)
     - [13. Keyword Arguments in Methods](#13-keyword-arguments-in-methods)
     - [14. Classes and Objects](#14-classes-and-objects)
-    - [15. Modules in Ruby](#15-modules-in-ruby)
-    - [16. Inheritance in Ruby](#16-inheritance-in-ruby)
+    - [15. Inheritance in Ruby](#15-inheritance-in-ruby)
+    - [16. Modules in Ruby](#16-modules-in-ruby)
 
 
 ## Overview
@@ -135,7 +139,7 @@ puts "2+2=#{2+2}"
 print " ,okay :)\n"
 
 # print, print without \n
-# puts , print + \n
+# puts , print + \n, puts (short for "put string")
 # return, return obj
 
 dt1=-14 #int
@@ -163,6 +167,8 @@ puts dt8.class
 # Array
 # Hash
 # Symbol
+
+# Everything is a String. A single character, such as 'A', is simply a String object that happens to have a length of one. Ruby does not have a separate, distinct character data type like the char type found in languages like C or Java.
 
 #string methods
 name = "Ruby"
@@ -231,6 +237,7 @@ end
 # .between?()
 # if shortcut
 puts "TEen" if age.between?(13,19)
+# in Ruby, the .between?() method includes both the lower limit and the upper limit in its check.
 
 # comparison operators
 # == != > < <= >=
@@ -356,6 +363,10 @@ end
 :username
 :token
 
+# Symbols are designed as immutable, unique, internal identifiers.
+
+# Strings are designed as mutable sequences of characters for storing and manipulating text.
+
 # symbols are memory effient than strings when reused
 puts :admin == :admin #true
 puts "admin" == "admin" #true
@@ -401,7 +412,7 @@ class User
     @email =email
   end
 
-  # instance is a single object created form class
+  # instance is a single object created from class
   # class = blueprint = recipe
   # instance = actual object made from it = cake
   # instance method
@@ -441,8 +452,8 @@ module Printer
 end
 
 # Inheritance 
-# classes can inherit form others classes using '<'
-# inheriting allows to reuse code logic defined in prent class
+# classes can inherit from others classes using '<'
+# inheriting allows to reuse code logic defined in parent class
 
 # parent class
 class Employee
@@ -489,6 +500,12 @@ $age = 25      # Global variable
 ```
 
 * Global Variables: `$age` is a global variable, meaning it is accessible throughout the program.
+
+```ruby
+# print, print without \n
+# puts , print + \n, puts (short for "put string")
+# return, return obj
+```
 
 ---
 
@@ -555,6 +572,7 @@ puts name.include?("B") # false
   * `reverse`: Reverses the string.
   * `include?`: Checks if a substring exists in the string.
 
+> Everything is a String. A single character, such as 'A', is simply a String object that happens to have a length of one. Ruby does not have a separate, distinct character data type like the char type found in languages like C or Java.
 ---
 
 ### 5. Numbers in Ruby
@@ -635,6 +653,8 @@ end
 # If shortcut
 puts "Teen" if age.between?(13, 19)  # Output: Teen
 ```
+
+> in Ruby, the .between?() method includes both the lower limit and the upper limit in its check.
 
 ---
 
@@ -721,6 +741,11 @@ puts "admin" == "admin" # true
 
 * Symbols are memory efficient and point to the same internal object.
 
+
+> Symbols are designed as immutable, unique, internal identifiers.
+
+> Strings are designed as mutable sequences of characters for storing and manipulating text.
+
 ---
 
 ### 13. Keyword Arguments in Methods
@@ -769,30 +794,7 @@ puts user1.name      # Siddhant Bali
 
 ---
 
-### 15. Modules in Ruby
-
-* Modules provide reusable methods that can be mixed into classes.
-
-```ruby
-# Defining a module
-module Printer
-  def print_name
-    puts "Name #{@name}"
-  end
-end
-
-# Including a module
-class Admin
-  include Printer
-end
-
-admin = Admin.new("Bali", 2022496)
-admin.print_name  # Name Bali
-```
-
----
-
-### 16. Inheritance in Ruby
+### 15. Inheritance in Ruby
 
 * Ruby allows classes to inherit from other classes, enabling reuse of code.
 
@@ -822,3 +824,30 @@ admin1.print_name   # Name Bali
 ```
 
 * Inheritance: `Admin` class inherits from `Employee`, reusing `greet` and adding `print_name` functionality through `Printer` module.
+
+---
+
+### 16. Modules in Ruby
+
+* Modules provide reusable methods that can be mixed into classes.
+
+```ruby
+# Defining a module
+module Printer
+  def print_name
+    puts "Name #{@name}"
+  end
+end
+
+# Including a module
+class Admin
+  include Printer
+end
+
+admin = Admin.new("Bali", 2022496)
+admin.print_name  # Name Bali
+```
+---
+End-of-File
+
+> Made with 💚[Kintsugi-Programmer](https://github.com/kintsugi-programmer)

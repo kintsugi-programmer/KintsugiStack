@@ -1,5 +1,3 @@
-# Ruby
-# A Programmer's Best Friend
 # extension: file.rb
 # run:ruby file.rb
 # comment
@@ -38,7 +36,7 @@ puts "2+2=#{2+2}"
 print " ,okay :)\n"
 
 # print, print without \n
-# puts , print + \n
+# puts , print + \n, puts (short for "put string")
 # return, return obj
 
 dt1=-14 #int
@@ -66,6 +64,8 @@ puts dt8.class
 # Array
 # Hash
 # Symbol
+
+# Everything is a String. A single character, such as 'A', is simply a String object that happens to have a length of one. Ruby does not have a separate, distinct character data type like the char type found in languages like C or Java.
 
 #string methods
 name = "Ruby"
@@ -107,7 +107,7 @@ puts fruits
 puts fruits[0] # apple
 fruits.each {|n| puts n.upcase() }
 # APPLE
-# BANANAhe
+# BANANA
 # MANGO
 
 # Hashes
@@ -134,6 +134,7 @@ end
 # .between?()
 # if shortcut
 puts "TEen" if age.between?(13,19)
+# in Ruby, the .between?() method includes both the lower limit and the upper limit in its check.
 
 # comparison operators
 # == != > < <= >=
@@ -259,6 +260,10 @@ end
 :username
 :token
 
+# Symbols are designed as immutable, unique, internal identifiers.
+
+# Strings are designed as mutable sequences of characters for storing and manipulating text.
+
 # symbols are memory effient than strings when reused
 puts :admin == :admin #true
 puts "admin" == "admin" #true
@@ -304,7 +309,7 @@ class User
     @email =email
   end
 
-  # instance is a single object created form class
+  # instance is a single object created from class
   # class = blueprint = recipe
   # instance = actual object made from it = cake
   # instance method
@@ -344,8 +349,8 @@ module Printer
 end
 
 # Inheritance 
-# classes can inherit form others classes using '<'
-# inheriting allows to reuse code logic defined in prent class
+# classes can inherit from others classes using '<'
+# inheriting allows to reuse code logic defined in parent class
 
 # parent class
 class Employee
