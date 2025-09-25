@@ -1,21 +1,28 @@
 # KintsugiStack
+> Coding, is Meditation
+
 - Author: [Kintsugi-Programmer](https://github.com/kintsugi-programmer)
 
 > Disclaimer: The content presented here is a curated blend of my personal learning journey, experiences, open-source documentation, and invaluable knowledge gained from diverse sources. I do not claim sole ownership over all the material; this is a community-driven effort to learn, share, and grow together.
 
+## Technology Ledger
+| Techology | Overview | Walkthrough | Documentation |
+| :--- | :--- | :--- | :--- |
+|[RUBY\_ESSENTIALS](/RUBY_ESSENTIALS/README.md)|[Overview](/RUBY_ESSENTIALS/README.md)|[Walkthrough](/RUBY_ESSENTIALS/README.md)|[Documentation](/RUBY_ESSENTIALS/RUBY_ESSENTIALS.pdf)|
+
 ## Table of Contents
 - [KintsugiStack](#kintsugistack)
+  - [Technology Ledger](#technology-ledger)
   - [Table of Contents](#table-of-contents)
-  - [At Progress \[ONSIGHT\]](#at-progress-onsight)
-  - [Nutshell-ed](#nutshell-ed)
-  - [Teach-ed](#teach-ed)
-  - [Practiced](#practiced)
-  - [Highlight-ed](#highlight-ed)
-  - [Fully Completed](#fully-completed)
-  - [Archive](#archive)
+  - [Technology Research Log](#technology-research-log)
+    - [5 Walkthrough-ed \& Practiced](#5-walkthrough-ed--practiced)
+    - [4 Highlight-ed](#4-highlight-ed)
+    - [3 Overview-ed](#3-overview-ed)
+    - [2 Fully Completed \& Practiced](#2-fully-completed--practiced)
+    - [1 At Progress \[ONSIGHT\]](#1-at-progress-onsight)
+    - [0 Archive](#0-archive)
   - [EXTERNAL LINKS@Kintsugi-Programmer](#external-linkskintsugi-programmer)
-      - [Use Cases:](#use-cases)
-      - [Setup:](#setup)
+  - [Cloudflare Tunnels](#cloudflare-tunnels)
   - [SSL Certificate](#ssl-certificate)
   - [REPOS](#repos)
   - [KintsugiProgrammer's Teaching Intro](#kintsugiprogrammers-teaching-intro)
@@ -24,8 +31,22 @@
     - [Version 2: Slightly More Formal \& Structured](#version-2-slightly-more-formal--structured)
     - [Version 3: Concise \& Action-Oriented](#version-3-concise--action-oriented)
 
+## Technology Research Log
 
-## At Progress [ONSIGHT]
+### 5 Walkthrough-ed & Practiced
+
+### 4 Highlight-ed
+
+### 3 Overview-ed
+- [RUBY\_ESSENTIALS](/RUBY_ESSENTIALS/README.md)
+
+### 2 Fully Completed & Practiced
+- [MERN\_EMG](/MERN_EMG/README.md)
+- [HTML\_EMG](/HTML_EMG/README.md)
+- [CSS\_EMG](/CSS_EMG/README.md)
+- [JS\_EMG](/JS_EMG/README.md)
+
+### 1 At Progress [ONSIGHT]
 
 - [CP31](/CP31/README.md)
 - [DSA](/DSA/README.md)
@@ -33,23 +54,7 @@
 - [CORE_CS_EMG](/CORE_CS_EMG/README.md)
 - [APTITUDE](/APTITUDE/README.md)
 
-## Nutshell-ed
-
-## Teach-ed
-
-## Practiced
-
-## Highlight-ed
-
-## Fully Completed
-
-- [MERN\_EMG](/MERN_EMG/README.md)
-- [RUBY\_EMG](/RUBY_EMG/README.md)
-- [HTML\_EMG](/HTML_EMG/README.md)
-- [CSS\_EMG](/CSS_EMG/README.md)
-- [JS\_EMG](/JS_EMG/README.md)
-
-## Archive
+### 0 Archive
 
 - [NEXT\_JS\_EMG](/NEXT_JS_EMG/README.md)
 - [RUBY\_ON\_RAILS\_EMG](/RUBY_ON_RAILS_EMG/README.md)
@@ -102,15 +107,14 @@
 - [Awesome Loaders](https://awesome-loaders.netlify.app/): Collection of loading animations.
 - [Hover Dev](https://www.hover.dev/): Addicting, interactive, animated UI components and templates for  React,  Tailwind CSS, Framer motion logo Framer Motion & more. Copy & paste them into your code with 2 clicks.
 
+## Cloudflare Tunnels
 Deploy applications from local machines using Cloudflare Tunnels.
 
-#### Use Cases:
 - Development testing
 - Home lab applications
 - CCTV monitoring systems
 - Personal projects
 
-#### Setup:
 ```bash
 # Install Cloudflare daemon
 curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb -o cloudflared.deb
@@ -171,5 +175,7 @@ Brought to you by Kintsugi Dev Studio.
 
 ---
 End-of-File
+
+The [KintsugiStack](https://github.com/kintsugi-programmer/KintsugiStack) repository, authored by Kintsugi-Programmer, is less a comprehensive resource and more an Artifact of Continuous Research and Deep Inquiry into Computer Science and Software Engineering. It serves as a transparent ledger of the author's relentless pursuit of mastery, from the foundational algorithms to modern full-stack implementation.
 
 > Made with 💚 [Kintsugi-Programmer](https://github.com/kintsugi-programmer)
