@@ -172,4 +172,4 @@ Brought to you by Kintsugi Dev Studio.
 ---
 End-of-File
 
-> Made with 💚[Kintsugi-Programmer](https://github.com/kintsugi-programmer)
+> Made with 💚 [Kintsugi-Programmer](https://github.com/kintsugi-programmer)

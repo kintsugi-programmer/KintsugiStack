@@ -850,4 +850,4 @@ admin.print_name  # Name Bali
 ---
 End-of-File
 
-> Made with 💚[Kintsugi-Programmer](https://github.com/kintsugi-programmer)
+> Made with 💚 [Kintsugi-Programmer](https://github.com/kintsugi-programmer)
