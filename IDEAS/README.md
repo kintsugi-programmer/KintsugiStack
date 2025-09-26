@@ -5,6 +5,20 @@
 ## Fully Complete
 
 ## Archive
+- JS Games
+  - https://www.youtube.com/watch?v=eue3UdFvwPo Code a Stick Hero game with JavaScript and HTML Canvas
+  - https://www.youtube.com/watch?v=CKB6MT5tO60 ASMR Programming - Stick Hero Game Coding - No Talking
+  - https://www.youtube.com/watch?v=-XrCaWBwLW4 Making a Snake Game using javascript in 10 minutes!!
+  - Crossy Road
+    - https://www.youtube.com/watch?v=ccYrSACDNsw
+    - https://www.youtube.com/watch?v=vNr3_hQ3Bws
+  - https://www.youtube.com/watch?v=DPl34H2ISsk I wish I knew this before using React Three Fiber
+  - https://youtu.be/JhgBwJn1bQw?feature=shared Three.js Game Tutorial: Learn Three.js while building a traffic run game
+- https://www.youtube.com/watch?v=AsTagX5tG4E How to start a coding YouTube channel (with tips from a bunch of successful creators!)
+- 3JS Full Portfolio https://www.youtube.com/watch?v=X3pPAdQBKHo Intro to Creative Web Development with Three.js and Blender | Create a 3D Portfolio for Beginners
+- Unity XR Dev
+  - https://www.youtube.com/watch?v=FJAO6jDYljs Project-Based Augmented Reality Course with Unity Engine and AR Foundation
+  - https://www.youtube.com/watch?v=WzfDo2Wpxks Augmented Reality for Everyone - Full Course
 - Simplest MCP Explanation | Need for Tools, MCP | Multi-Agent Stock Recommendation Project with Code https://www.youtube.com/watch?v=NF2aRqIlYNE
 - ALL IN ONE: Data Structures & Algorithms In JavaScript Complete Course 2024 By HuXn https://www.youtube.com/watch?v=wBtPGnVnA9g
 - 70 Leetcode problems in 5+ hours (every data structure) (full tutorial) https://www.youtube.com/watch?v=lvO88XxNAzs
@@ -19,7 +33,7 @@ by Codevolution https://www.youtube.com/playlist?list=PLC3y8-rFHvwjPxNAKvZpdnsr4
 - https://www.youtube.com/watch?v=d4yCWBGFCEs Gen AI Course | Gen AI Tutorial For Beginners
 - https://www.youtube.com/watch?v=8GK8R77Bd7g Build and Deploy a Full Stack Real Time AI Voice Agent Interview Platform
 - https://www.youtube.com/watch?v=CO4E_9V6li0 Gen AI Project Using Llama3.1 | End to End Gen AI Project
-- https://www.youtube.com/playlist?list=PLaBeGKL1tOU36nVztmb3vKs9qcpC2LTwD
+- https://www.youtube.com/playlist?list=PLaBeGKL1tOU36nVztmb3vKs9qcpC2LTwD Full Stack AI NextJs Project
 - https://www.youtube.com/watch?v=Zq5fmkH0T78 Next.js 15 Crash Course | Build and Deploy a Production-Ready Full Stack App
 - https://www.youtube.com/watch?v=iYOz165wGkQ Build an Enterprise Ready AI Powered Applicant Tracking System
 - https://www.youtube.com/watch?v=4oV65GVVits Build and Deploy a Fully Responsive Restaurant Website with Modern UI and UX in ReactJS
@@ -27,6 +41,7 @@ by Codevolution https://www.youtube.com/playlist?list=PLC3y8-rFHvwjPxNAKvZpdnsr4
   - https://gobyexample.com/
   - https://www.youtube.com/watch?v=un6ZyFkqFKo
   - https://www.youtube.com/watch?v=h3fqD6IprIA
+- https://www.youtube.com/watch?v=GuTcle5edjk you need to learn MCP RIGHT NOW!! (Model Context Protocol)
 - Build and Deploy a Biotech AI Tool: Python, Next.js 15, React, Tailwind, Modal, Typescript (2025) https://www.youtube.com/watch?v=3dCZxmd5bvs
 - Next.js 15 AI Web App Project – Build a Full Stack App Using Tailwind, Neon, Clerk, OpenRouter https://www.youtube.com/watch?v=eGlvq4u_i08
 - Full Stack React Project ( AI Photo Editor ) - Next JS, Fabric.js, Tailwind, ImageKit, Shadcn UI 🔥🔥 https://www.youtube.com/watch?v=vr1JL6Fi6K4
