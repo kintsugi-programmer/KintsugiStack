@@ -10,9 +10,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- |
 |[RUBY\_ESSENTIALS](/RUBY_ESSENTIALS/README.md)|[Overview](/RUBY_ESSENTIALS/README.md)|[Walkthrough](/RUBY_ESSENTIALS/README.md)|[Interview](/RUBY_ESSENTIALS/RUBY_ESSENTIALS.pdf)|[InterviewQuestions](/RUBY_ESSENTIALS/INTERVIEW_QUESTIONS.pdf)|[Documentation](/RUBY_ESSENTIALS/RUBY_ESSENTIALS.pdf)|
 
+## Code Momos 🥟 Ledger
+
+| Techology | Nutshell | IN-DEPTH | Interview |
+| :--- | :--- | :--- | :--- |
+|[RUBY\_ESSENTIALS](/RUBY_ESSENTIALS/README.md)|[Nutshell](/RUBY_ESSENTIALS/README.md)|[IN-DEPTH](/RUBY_ESSENTIALS/README.md)|[Interview](/RUBY_ESSENTIALS/README.md)|
+
 ## Table of Contents
 - [KintsugiStack](#kintsugistack)
   - [Technology Ledger](#technology-ledger)
+  - [Code Momos 🥟 Ledger](#code-momos--ledger)
   - [Table of Contents](#table-of-contents)
   - [Technology Research Log](#technology-research-log)
     - [5 Walkthrough-ed \& Practiced](#5-walkthrough-ed--practiced)
@@ -192,10 +199,6 @@ The KintsugiStack https://github.com/kintsugi-programmer/KintsugiStack repositor
 
 Made with 💚 Kintsugi-Programmer https://github.com/kintsugi-programmer
 ```
-
-| Techology | Nutshell | IN-DEPTH | Interview |
-| :--- | :--- | :--- | :--- |
-|[RUBY\_ESSENTIALS](/RUBY_ESSENTIALS/README.md)|[Nutshell](/RUBY_ESSENTIALS/README.md)|[IN-DEPTH](/RUBY_ESSENTIALS/README.md)|[Interview](/RUBY_ESSENTIALS/README.md)|
 
 - PLAYLISTS
   - [Tech_Name] ESSENTIALS | Nutshell Series | Code Momos 🥟
