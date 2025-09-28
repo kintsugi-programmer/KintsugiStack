@@ -8,7 +8,7 @@
 ## Technology Ledger
 | Techology | Overview | Walkthrough | Interview | InterviewQuestions | Documentation |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-|[RUBY\_ESSENTIALS](/RUBY_ESSENTIALS/README.md)|[Overview](/RUBY_ESSENTIALS/README.md)|[Walkthrough](/RUBY_ESSENTIALS/README.md)|[Interview](/RUBY_ESSENTIALS/RUBY_ESSENTIALS.pdf)|[InterviewQuestions](/RUBY_ESSENTIALS/RUBY_INTERVIEW_QUESTIONS.pdf)|[Documentation](/RUBY_ESSENTIALS/RUBY_ESSENTIALS.pdf)|
+|[RUBY\_ESSENTIALS](/RUBY_ESSENTIALS/README.md)|[Overview](/RUBY_ESSENTIALS/README.md)|[Walkthrough](/RUBY_ESSENTIALS/README.md)|[Interview](/RUBY_ESSENTIALS/RUBY_ESSENTIALS.pdf)|[InterviewQuestions](/RUBY_ESSENTIALS/INTERVIEW_QUESTIONS.pdf)|[Documentation](/RUBY_ESSENTIALS/RUBY_ESSENTIALS.pdf)|
 
 ## Table of Contents
 - [KintsugiStack](#kintsugistack)
@@ -30,6 +30,8 @@
     - [Version 1: Professional \& Direct](#version-1-professional--direct)
     - [Version 2: Slightly More Formal \& Structured](#version-2-slightly-more-formal--structured)
     - [Version 3: Concise \& Action-Oriented](#version-3-concise--action-oriented)
+    - [Outro](#outro)
+  - [Code Momos 🥟](#code-momos-)
 
 ## Technology Research Log
 
@@ -174,9 +176,48 @@ Welcome to this deep-dive into [SUBJECT] by KintsugiDevStudio. This is a special
 > Disclaimer:
 The content presented here is a curated blend of my personal learning journey, experiences, open-source documentation, and invaluable knowledge gained from diverse sources. I do not claim sole ownership over all the material; this is a community-driven effort to learn, share, and grow together. 
 
+### Outro
 Thank you for joining this session! I hope you found the content valuable and insightful. If you have any questions or need further clarification, feel free to reach out. Keep learning, keep growing, and I look forward to seeing you in the next session. Goodbye for now, and take care!
 Brought to you by Kintsugi Dev Studio.
 
+
+## Code Momos 🥟
+```
+Welcome to Code Momos! 🥟 Your daily serving of bite-sized backend engineering concepts. I'm a seasoned engineer turning years of personal notes and experience into fun, simple , AI-powered & digestible videos. Subscribe to level up your skills, one momo at a time!
+```
+```
+For any inquiries, requests, or further information regarding the content, please do not hesitate to reach out via email at kintsugidevstudio@gmail.com . I welcome your correspondence and will endeavor to respond at the earliest opportunity.
+
+The KintsugiStack https://github.com/kintsugi-programmer/KintsugiStack repository, authored by Kintsugi-Programmer, is less a comprehensive resource and more an Artifact of Continuous Research and Deep Inquiry into Computer Science and Software Engineering. It serves as a transparent ledger of the author's relentless pursuit of mastery, from the foundational algorithms to modern full-stack implementation.
+
+Made with 💚 Kintsugi-Programmer https://github.com/kintsugi-programmer
+```
+- PLAYLISTS
+  - [Tech_Name] ESSENTIALS | Nutshell Series | Code Momos 🥟
+  - [Tech_Name] | Nutshell Series | Code Momos 🥟
+  - [Tech_Name] | IN-DEPTH Series | Code Momos 🥟
+- VIDEOS
+  - [Tech_Name] ESSENTIALS | Nutshell Series | Code Momos 🥟
+  - [Tech_Name] | Nutshell Series | Code Momos 🥟
+  - #[NOS] | [Tech_Name] | IN-DEPTH Series | Code Momos 🥟
+```
+Welcome to Code Momos! 🥟 Your daily serving of bite-sized backend engineering concepts. I'm a seasoned engineer turning years of personal notes and experience into fun, simple , AI-powered & digestible videos. Subscribe to level up your skills, one momo at a time!
+
+Disclaimer :
+This video is for informational and entertainment purposes only. The views and opinions expressed here are those of the creator and do not constitute legal, financial, or professional advice. Viewers are responsible for their own actions. Any copyrighted material in this video is used for purposes of education, comment, criticism, or news reporting, and is believed to qualify as fair use under Section 107 of the U.S. Copyright Act of 1976. All rights to original materials belong to their respective owners. If you are the copyright owner and have concerns, please contact us directly. No copyright infringement is intended.
+
+The content presented here is a curated blend of my personal learning journey, experiences, open-source documentation, and invaluable knowledge gained from diverse sources. I do not claim sole ownership over all the material; this is a community-driven effort to learn, share, and grow together.
+
+This video utilizes NotebookLM, an AI tool to organize and present information from uploaded sources.
+
+For any inquiries, requests, or further information regarding the content, please do not hesitate to reach out via email at kintsugidevstudio@gmail.com . I welcome your correspondence and will endeavor to respond at the earliest opportunity.
+---
+End-of-File
+
+The KintsugiStack https://github.com/kintsugi-programmer/KintsugiStack repository, authored by Kintsugi-Programmer, is less a comprehensive resource and more an Artifact of Continuous Research and Deep Inquiry into Computer Science and Software Engineering. It serves as a transparent ledger of the author's relentless pursuit of mastery, from the foundational algorithms to modern full-stack implementation.
+
+Made with 💚 Kintsugi-Programmer https://github.com/kintsugi-programmer
+```
 ---
 End-of-File
 

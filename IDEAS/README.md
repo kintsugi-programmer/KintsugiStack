@@ -5,6 +5,8 @@
 ## Fully Complete
 
 ## Archive
+- AI Foundations Course – Python, Machine Learning, Deep Learning, Data Science https://youtu.be/0oyDqO8PjIg?feature=shared
+- Learn Machine Learning Like a GENIUS and Not Waste Time https://www.youtube.com/watch?v=qNxrPri1V0I
 - JS Games
   - https://www.youtube.com/watch?v=eue3UdFvwPo Code a Stick Hero game with JavaScript and HTML Canvas
   - https://www.youtube.com/watch?v=CKB6MT5tO60 ASMR Programming - Stick Hero Game Coding - No Talking
