@@ -6,9 +6,9 @@
 > Disclaimer: The content presented here is a curated blend of my personal learning journey, experiences, open-source documentation, and invaluable knowledge gained from diverse sources. I do not claim sole ownership over all the material; this is a community-driven effort to learn, share, and grow together.
 
 ## Technology Ledger
-| Techology | Overview | Walkthrough | Interview | InterviewQuestions | Documentation |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-|[RUBY\_ESSENTIALS](/RUBY_ESSENTIALS/README.md)|[Overview](/RUBY_ESSENTIALS/README.md)|[Walkthrough](/RUBY_ESSENTIALS/README.md)|[Interview](/RUBY_ESSENTIALS/RUBY_ESSENTIALS.pdf)|[InterviewQuestions](/RUBY_ESSENTIALS/INTERVIEW_QUESTIONS.pdf)|[Documentation](/RUBY_ESSENTIALS/RUBY_ESSENTIALS.pdf)|
+| Techology | Overview | Walkthrough | Interview | InterviewQuestions | Documentation | Nutshell | IN-DEPTH | Interview |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+|[RUBY\_ESSENTIALS](/RUBY_ESSENTIALS/README.md)|[Overview](/RUBY_ESSENTIALS/README.md)|[Walkthrough](/RUBY_ESSENTIALS/README.md)|[Interview](/RUBY_ESSENTIALS/RUBY_ESSENTIALS.pdf)|[InterviewQuestions](/RUBY_ESSENTIALS/INTERVIEW_QUESTIONS.pdf)|[Documentation](/RUBY_ESSENTIALS/RUBY_ESSENTIALS.pdf)|[Nutshell](/RUBY_ESSENTIALS/README.md)|[IN-DEPTH](/RUBY_ESSENTIALS/README.md)|[Interview](/RUBY_ESSENTIALS/README.md)|
 
 ## Table of Contents
 - [KintsugiStack](#kintsugistack)
@@ -196,10 +196,11 @@ Made with 💚 Kintsugi-Programmer https://github.com/kintsugi-programmer
   - [Tech_Name] ESSENTIALS | Nutshell Series | Code Momos 🥟
   - [Tech_Name] | Nutshell Series | Code Momos 🥟
   - [Tech_Name] | IN-DEPTH Series | Code Momos 🥟
+  - [Tech_Name] | Interview Series | Code Momos 🥟
 - VIDEOS
   - [Tech_Name] ESSENTIALS | Nutshell Series | Code Momos 🥟
   - [Tech_Name] | Nutshell Series | Code Momos 🥟
-  - #[NOS] | [Tech_Name] | IN-DEPTH Series | Code Momos 🥟
+  - #[NOS] | [Tech_Name] | Interview Series | Code Momos 🥟
 ```
 Welcome to Code Momos! 🥟 Your daily serving of bite-sized backend engineering concepts. I'm a seasoned engineer turning years of personal notes and experience into fun, simple , AI-powered & digestible videos. Subscribe to level up your skills, one momo at a time!
 
