@@ -5,6 +5,22 @@
 ## Fully Complete
 
 ## Archive
+- JS DSA
+  - https://www.youtube.com/playlist?list=PLC3y8-rFHvwjPxNAKvZpdnsr41E0fCMMP
+- JAVA FullStack
+  - https://www.youtube.com/playlist?list=PL7CBVLpg0zqf_ggig9cOr72oZNGf9RZmZ
+- Design Patterns https://youtu.be/vap9ACtc_tU?si=2iFiyspX8gR3wX9k
+- System Design
+  - https://www.youtube.com/watch?v=m8Icp_Cid5o
+  - https://www.youtube.com/playlist?list=PLA3GkZPtsafZdyC5iucNM_uhqGJ5yFNUM
+  - https://www.youtube.com/playlist?list=PLuxGtPg_FYDcaaopVvaX_h6fcpzf_aTUE
+- Ruby on Rails
+  - Pending Proj
+    - https://github.com/kintsugi-programmer/soralink
+    - https://youtu.be/Ei4Aa6RJTyo?si=HbQ8AkFwtDilhl4J 
+  - https://www.youtube.com/playlist?list=PLR8BLHNyVZDVkZHDbm2mSL4RMISIBuBqs
+  - https://www.youtube.com/watch?v=fmyvWz5TUWg
+  - https://www.youtube.com/playlist?list=PLm8ctt9NhMNV75T9WYIrA6m9I_uw7vS56
 - AI Foundations Course – Python, Machine Learning, Deep Learning, Data Science https://youtu.be/0oyDqO8PjIg?feature=shared
 - Learn Machine Learning Like a GENIUS and Not Waste Time https://www.youtube.com/watch?v=qNxrPri1V0I
 - JS Games

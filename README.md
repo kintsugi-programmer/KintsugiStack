@@ -6,16 +6,24 @@
 > Disclaimer: The content presented here is a curated blend of my personal learning journey, experiences, open-source documentation, and invaluable knowledge gained from diverse sources. I do not claim sole ownership over all the material; this is a community-driven effort to learn, share, and grow together.
 
 ## Technology Ledger
-| Techology | Overview | Walkthrough | Interview | InterviewQuestions | Documentation | 
-| :--- | :--- | :--- | :--- | :--- | :--- |
-|[RUBY\_ESSENTIALS](/RUBY_ESSENTIALS/README.md)|[Overview](/RUBY_ESSENTIALS/README.md)|[Walkthrough](/RUBY_ESSENTIALS/README.md)|[Interview](/RUBY_ESSENTIALS/RUBY_ESSENTIALS.pdf)|[InterviewQuestions](/RUBY_ESSENTIALS/INTERVIEW_QUESTIONS.pdf)|[Documentation](/RUBY_ESSENTIALS/RUBY_ESSENTIALS.pdf)|
+| Techology | Overview  | Documentation | 
+| :--- | :--- | :--- |
 
+```
+LATER
+| Walkthrough | Interview | InterviewQuestions |
+| :--- | :--- | :--- |
+```
 ## Code Momos 🥟 Ledger
 
-| Techology | Nutshell | IN-DEPTH | Interview |
-| :--- | :--- | :--- | :--- |
-|[RUBY\_ESSENTIALS](/RUBY_ESSENTIALS/README.md)|[Nutshell](/RUBY_ESSENTIALS/README.md)|[IN-DEPTH](/RUBY_ESSENTIALS/README.md)|[Interview](/RUBY_ESSENTIALS/README.md)|
+| Techology | Nutshell |
+| :--- | :--- |
 
+```
+LATER
+| IN-DEPTH | Interview |
+| :--- | :--- |
+```
 ## Table of Contents
 - [KintsugiStack](#kintsugistack)
   - [Technology Ledger](#technology-ledger)
