@@ -18,6 +18,9 @@ LATER
 
 | Techology | Nutshell |
 | :--- | :--- |
+| [RUBY\_ESSENTIALS](/RUBY_ESSENTIALS/README.md) | [Nutshell](https://www.youtube.com/watch?v=BuZOp3KzwT0) |
+| [JAVA\_ESSENTIALS](/JAVA_ESSENTIALS/README.md) | [Nutshell](https://www.youtube.com/watch?v=zcc-nF5HdJM) |
+| [DEPLOYMENT\_ESSENTIALS](/DEPLOYMENT_ESSENTIALS/README.md) | [Nutshell](https://www.youtube.com/watch?v=V4kkMALE_vM) |
 
 ```
 LATER
@@ -55,10 +58,10 @@ LATER
 ### 4 Highlight-ed
 
 ### 3 Overview-ed
-- [RUBY\_ESSENTIALS](/RUBY_ESSENTIALS/README.md)
 
 ### 2 Fully Completed & Practiced
 
+- [RUBY\_ESSENTIALS](/RUBY_ESSENTIALS/README.md)
 - [MERN\_EMG](/MERN_EMG/README.md)
 - [HTML\_EMG](/HTML_EMG/README.md)
 - [CSS\_EMG](/CSS_EMG/README.md)
