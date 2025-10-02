@@ -38,6 +38,8 @@
     - [Functional arguments](#functional-arguments)
     - [Asynchronous code, callbacks](#asynchronous-code-callbacks)
     - [Which will Executed First - Node.js Synchronous vs Asynchronous Execution Order](#which-will-executed-first---nodejs-synchronous-vs-asynchronous-execution-order)
+    - [error-first callback](#error-first-callback)
+  - [This convention is widely used in Node.js, especially with APIs like `fs.readFile`.](#this-convention-is-widely-used-in-nodejs-especially-with-apis-like-fsreadfile)
     - [JS Architecture for async code](#js-architecture-for-async-code)
   - [4 Promises and async, await](#4-promises-and-async-await)
     - [Classes in JS](#classes-in-js)
@@ -1966,6 +1968,32 @@ In this Node.js code, `console.log("Done!")` will be executed first, before any 
 
 So, the first thing printed is `"Done!"`, then `"hello"`, then content from `a.txt` and `b.txt` (order of files not guaranteed).
 
+---
+### error-first callback
+The "error-first" callback pattern is a convention in Node.js where the first argument of a callback function is always reserved for an error object. This pattern helps developers handle errors efficiently in asynchronous code.
+
+- Concept of Error-First Arguments/Functions
+  - The first parameter of the callback is always the potential error. If an error occurred during the asynchronous operation, it will be passed as this argument; otherwise, it will be `null` or `undefined`.
+  - The second parameter is the result or data from the operation. If there was no error, this parameter contains the successful result.
+  - This approach allows the programmer to check if `err` is present and respond accordingly before using the data.
+- Example
+  ```js
+  function callback(err, data) {
+    if (err) {
+      // Handle the error (e.g., log it, stop execution)
+      console.log("Error:", err);
+      return;
+    }
+    // Use the data if no error occurred
+    console.log("Data:", data);
+  }
+  ```
+- Advantages
+  - Simplifies error management in asynchronous workflows.
+  - Makes the order of arguments predictable for all Node.js core modules and custom code.
+  - Encourages defensive programming by preventing errors from being missed.
+
+This convention is widely used in Node.js, especially with APIs like `fs.readFile`.
 ---
 ### JS Architecture for async code
 - How JS executes asynchronous code - http://latentflip.com/loupe/
