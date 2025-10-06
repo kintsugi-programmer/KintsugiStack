@@ -5,6 +5,8 @@
 
 > Disclaimer: The content presented here is a curated blend of my personal learning journey, experiences, open-source documentation, and invaluable knowledge gained from diverse sources. I do not claim sole ownership over all the material; this is a community-driven effort to learn, share, and grow together.
 
+- https://digitaldefynd.com/IQ/technology-jokes/
+
 ---
 End-of-File
 
