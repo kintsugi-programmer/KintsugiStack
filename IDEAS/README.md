@@ -1,0 +1,181 @@
+# CODING_HOBBY
+
+## At Progress [ONSIGHT]
+
+## Fully Complete
+
+## Archive
+- JS DSA
+  - https://www.youtube.com/playlist?list=PLC3y8-rFHvwjPxNAKvZpdnsr41E0fCMMP
+- JAVA FullStack
+  - https://www.youtube.com/playlist?list=PL7CBVLpg0zqf_ggig9cOr72oZNGf9RZmZ
+- Design Patterns https://youtu.be/vap9ACtc_tU?si=2iFiyspX8gR3wX9k
+- System Design
+  - https://www.youtube.com/watch?v=m8Icp_Cid5o
+  - https://www.youtube.com/playlist?list=PLA3GkZPtsafZdyC5iucNM_uhqGJ5yFNUM
+  - https://www.youtube.com/playlist?list=PLuxGtPg_FYDcaaopVvaX_h6fcpzf_aTUE
+- Ruby on Rails
+  - Pending Proj
+    - https://github.com/kintsugi-programmer/soralink
+    - https://youtu.be/Ei4Aa6RJTyo?si=HbQ8AkFwtDilhl4J 
+  - https://www.youtube.com/playlist?list=PLR8BLHNyVZDVkZHDbm2mSL4RMISIBuBqs
+  - https://www.youtube.com/watch?v=fmyvWz5TUWg
+  - https://www.youtube.com/playlist?list=PLm8ctt9NhMNV75T9WYIrA6m9I_uw7vS56
+- AI Foundations Course – Python, Machine Learning, Deep Learning, Data Science https://youtu.be/0oyDqO8PjIg?feature=shared
+- Learn Machine Learning Like a GENIUS and Not Waste Time https://www.youtube.com/watch?v=qNxrPri1V0I
+- JS Games
+  - https://www.youtube.com/watch?v=eue3UdFvwPo Code a Stick Hero game with JavaScript and HTML Canvas
+  - https://www.youtube.com/watch?v=CKB6MT5tO60 ASMR Programming - Stick Hero Game Coding - No Talking
+  - https://www.youtube.com/watch?v=-XrCaWBwLW4 Making a Snake Game using javascript in 10 minutes!!
+  - Crossy Road
+    - https://www.youtube.com/watch?v=ccYrSACDNsw
+    - https://www.youtube.com/watch?v=vNr3_hQ3Bws
+  - https://www.youtube.com/watch?v=DPl34H2ISsk I wish I knew this before using React Three Fiber
+  - https://youtu.be/JhgBwJn1bQw?feature=shared Three.js Game Tutorial: Learn Three.js while building a traffic run game
+- https://www.youtube.com/watch?v=AsTagX5tG4E How to start a coding YouTube channel (with tips from a bunch of successful creators!)
+- 3JS Full Portfolio https://www.youtube.com/watch?v=X3pPAdQBKHo Intro to Creative Web Development with Three.js and Blender | Create a 3D Portfolio for Beginners
+- Unity XR Dev
+  - https://www.youtube.com/watch?v=FJAO6jDYljs Project-Based Augmented Reality Course with Unity Engine and AR Foundation
+  - https://www.youtube.com/watch?v=WzfDo2Wpxks Augmented Reality for Everyone - Full Course
+- Simplest MCP Explanation | Need for Tools, MCP | Multi-Agent Stock Recommendation Project with Code https://www.youtube.com/watch?v=NF2aRqIlYNE
+- ALL IN ONE: Data Structures & Algorithms In JavaScript Complete Course 2024 By HuXn https://www.youtube.com/watch?v=wBtPGnVnA9g
+- 70 Leetcode problems in 5+ hours (every data structure) (full tutorial) https://www.youtube.com/watch?v=lvO88XxNAzs
+- The Ultimate DSA Course for 2025 (with 100% less vibe coding) https://www.youtube.com/watch?v=DMeD8trbj6A
+- JavaScript Algorithms and Data Structures
+by Codevolution https://www.youtube.com/playlist?list=PLC3y8-rFHvwjPxNAKvZpdnsr41E0fCMMP
+- DSA roadmap for beginners in Javascript https://www.youtube.com/watch?v=1Xo-Oe4p2lc
+- Leetcode BLIND-75 by NeetCode 
+  - https://www.youtube.com/playlist?list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf
+  - https://neetcode.io/practice?tab=blind75
+- https://www.youtube.com/watch?v=f7ndZ-t9NPg 6 RESUME PROJECTS That Will Actually Get You HIRED In 2025.
+- https://www.youtube.com/watch?v=d4yCWBGFCEs Gen AI Course | Gen AI Tutorial For Beginners
+- https://www.youtube.com/watch?v=8GK8R77Bd7g Build and Deploy a Full Stack Real Time AI Voice Agent Interview Platform
+- https://www.youtube.com/watch?v=CO4E_9V6li0 Gen AI Project Using Llama3.1 | End to End Gen AI Project
+- https://www.youtube.com/playlist?list=PLaBeGKL1tOU36nVztmb3vKs9qcpC2LTwD Full Stack AI NextJs Project
+- https://www.youtube.com/watch?v=Zq5fmkH0T78 Next.js 15 Crash Course | Build and Deploy a Production-Ready Full Stack App
+- https://www.youtube.com/watch?v=iYOz165wGkQ Build an Enterprise Ready AI Powered Applicant Tracking System
+- https://www.youtube.com/watch?v=4oV65GVVits Build and Deploy a Fully Responsive Restaurant Website with Modern UI and UX in ReactJS
+- GoLang
+  - https://gobyexample.com/
+  - https://www.youtube.com/watch?v=un6ZyFkqFKo
+  - https://www.youtube.com/watch?v=h3fqD6IprIA
+- https://www.youtube.com/watch?v=GuTcle5edjk you need to learn MCP RIGHT NOW!! (Model Context Protocol)
+- Build and Deploy a Biotech AI Tool: Python, Next.js 15, React, Tailwind, Modal, Typescript (2025) https://www.youtube.com/watch?v=3dCZxmd5bvs
+- Next.js 15 AI Web App Project – Build a Full Stack App Using Tailwind, Neon, Clerk, OpenRouter https://www.youtube.com/watch?v=eGlvq4u_i08
+- Full Stack React Project ( AI Photo Editor ) - Next JS, Fabric.js, Tailwind, ImageKit, Shadcn UI 🔥🔥 https://www.youtube.com/watch?v=vr1JL6Fi6K4
+- Build a Full Stack AI Note Taking App with Next.js and Supabase – Tutorial https://www.youtube.com/watch?v=6ChzCaljcaI
+- https://www.youtube.com/watch?v=AjQPRomyd-k LLM Project | End to End Gen AI Project Using LangChain, Google Palm In Ed-Tech Industry
+- NextJS AI SDK Tuts https://www.youtube.com/playlist?list=PLC3y8-rFHvwhZHH2BksCOYAxLmYrQL__H
+- https://www.youtube.com/watch?v=ewxUC_zweBg Build and Deploy a Full Stack AI SaaS with Next.js 15, React, Stripe, Tailwind | Full Course (2025)
+- Rust
+  - https://www.youtube.com/watch?v=qP7LzZqGh30&t Part1
+  - https://www.youtube.com/watch?v=joCFbTJt0o0&t Complete Rust Marathon in 6 hours Part2
+- https://www.youtube.com/watch?v=9kQ1JUDleWg Intro Learn Data Structures and Algorithms as Absolute Beginner to Advanced! 
+- https://gobyexample.com/ GO MASTERY
+  - for we would need multiple worker processes and browser pools for our backend
+- https://leetcode.com/u/kintsugi-programmer/ Daily
+  - For Programmer Flex
+  - For Fun 
+  - Be always ready to crack any interview
+- Good talk - Concurrency is not parallelism  - https://www.youtube.com/watch?v=oV9rvDllKEg
+- How JS executes asynchronous code - http://latentflip.com/loupe/
+- Get into research work in FAANG Company ;)
+- Art of Code
+- make a template of learning any lang
+- NASA Coding Standards https://spinroot.com/gerard/pdf/P10.pdf The Power of Ten –
+Rules for Developing Safety Critical Code
+- Clean Code
+- System Design
+  - https://arpitbhayani.me/system-design-for-beginners/
+  - https://www.educosys.com/course/lld
+  - https://www.educosys.com/course/hld
+- Pragmatic Programmer
+- The Missing Semester of Your CS Education MIT
+  - https://missing.csail.mit.edu/ 
+- What Every Programmer Should Know About Memory 
+  - Ulrich Drepper Red Hat, Inc. drepper@redhat.com 
+  - https://people.freebsd.org/~lstewart/articles/cpumemory.pdf 
+  - cpumemory.pdf 
+  - https://docs.google.com/spreadsheets/d/145RvpkXPHngCk-VL-F5otTAlWMJ04OhPl2zks7_HwRI/edit?gid=0#gid=0 
+  - https://youtu.be/SQpS3NuOFT8
+  - https://youtu.be/IeaD0ZaUJ3Y
+- SoraLink
+  - https://youtu.be/Ei4Aa6RJTyo
+- From TCP to HTTP 
+  - Full Course by @ThePrimeagen 
+  - https://www.youtube.com/watch?v=FknTw9bJsXM
+- Vercel 
+  - https://youtube.com/playlist?list=PL8TpfJ9Pzp4AEvAa8hy3mPZf7_BA9UJ1Q&feature=shared
+- SelfDriveCarsJS 
+  - https://youtube.com/playlist?list=PLB0Tybl0UNfYoJE7ZwsBQoDIG4YN9ptyY&si=hNjoGUSg26vfFPK5
+- LifeLore
+  - https://youtu.be/wm5gMKuwSYk
+- CV Cars 
+  - https://www.youtube.com/watch?v=cPOtULagNnI
+- Sorting Visualizer
+  - https://www.youtube.com/playlist?list=PLPolqn73QTKo7mpke0nY2p2uxF0JzCGcC
+  - https://www.youtube.com/watch?v=Ci-6NYmaimw
+  - https://www.youtube.com/playlist?list=PLB0Tybl0UNfbMgV6SNJxPrPC5wuAzh-Jk
+  - https://www.youtube.com/playlist?list=PL3lfepputJuGAaI3S7FvcBIutzHNtZ_pb
+- 30 [Software Engineering] research papers you should read
+  - https://www.youtube.com/watch?v=kVP1qM9zgaA
+- SNM Webisite
+- GameDev
+- https://www.youtube.com/watch?v=RTuOrjzI8ss&list=PLA-xaldQ72ry4boMCIL_d0HnliT3FRsSk&index=74
+- https://www.youtube.com/watch?v=nGKd4yTP3M8
+- https://www.youtube.com/watch?v=84x_7PZ933w
+- RaceAssist
+- CSBhatiya
+- 1Px IIITD
+- HCD IIITD
+- DSS IIITD
+- Mi IIITD
+- Persisst IIITD
+- ECell IIITD
+- https://www.udemy.com/course/parser-from-scratch/?referralCode=E3BF78C54F214B02775E#instructor-1
+- Dev journey
+- AppDev iOS
+- JalotePythonSeries
+- Cyber Self Defence
+- otherProj
+- CPhandbook
+- BTFM
+- RTFM
+- IIITD Teach
+- OTW
+- HackingBook
+- https://www.youtube.com/watch?v=nfIX0Z9K3Q4
+- DigitalDrz
+- DecoyNet
+- KintsugiAI
+- IBDCar
+- RaceAssistPaper
+- EAIPaper
+- FallDetectApp
+- FallDetectPaper
+- NeoVim
+- PlagMindsetPaper
+- ChatbotStandAlone
+- ChatbotAPI
+- SoraOps
+- SarkariSahyogAI
+- LifeLore
+- KarmOS Global
+- KintsugiProgrammer
+- KintsugiDevStudio
+- Finance Related Prod
+- LinkTree Rails
+- MBA Related Prod
+- HackingLab
+- SNM Web
+
+## WAYS
+- https://www.youtube.com/shorts/zjRSWNgHLPY
+- Tuts
+- Plan
+- Done
+- Test Debug
+- Deployed
+- Video
+- Launch
+- ProbAddress Notes

@@ -1,1017 +1,2897 @@
 # FULLSTACK_WEBDEV
-> “Measuring programming progress by lines of code is like measuring aircraft building progress by weight.” — Bill Gates
+- https://github.com/Bharat2044/100xDevs-Cohort3-WebDev-and-Devops/blob/main/Lecture%20Slides.md
+- https://app.100xdevs.com/courses/14
+- 2-3 Years Work => Muscle Memory forever
+- DevOps+ MERN => SDE2/ TECH LEAD/ STAFF ENGINEER LEVEL
 
-- Author: [Kintsugi-Programmer](https://github.com/kintsugi-programmer)
-
-> Disclaimer: The content presented here is a curated blend of my personal learning journey, experiences, open-source documentation, and invaluable knowledge gained from diverse sources. I do not claim sole ownership over all the material; this is a community-driven effort to learn, share, and grow together.
-
-# Chapters
-- [Chapter 1: Before Web Dev Journey](#chapter-1-before-web-dev-journey)
-
-
-# Table of Contents
+## Table of Contents
 - [FULLSTACK\_WEBDEV](#fullstack_webdev)
-- [Chapters](#chapters)
-- [Table of Contents](#table-of-contents)
-- [Chapter 1: Before Web Dev Journey](#chapter-1-before-web-dev-journey)
-  - [Chapter 1.1.: Course Roadmap Overview](#chapter-11-course-roadmap-overview)
-    - [1. Introduction](#1-introduction)
-    - [2. Phase 1: 2024 Roadmap](#2-phase-1-2024-roadmap)
-      - [2.1 Beginner Track](#21-beginner-track)
-      - [2.2 JavaScript Path](#22-javascript-path)
-      - [2.3 Back-End Foundation](#23-back-end-foundation)
-      - [2.4 Full-Stack Projects](#24-full-stack-projects)
-    - [3. Phase 2: 2025 Preview](#3-phase-2-2025-preview)
-    - [4. Phase 3: Late 2025 Preview](#4-phase-3-late-2025-preview)
-    - [5. How to Use This Roadmap](#5-how-to-use-this-roadmap)
-  - [Chapter 1.2.: Course Introduction: Instructor Overview and Key Highlights](#chapter-12-course-introduction-instructor-overview-and-key-highlights)
-    - [1. Instructor Background](#1-instructor-background)
-    - [2. Professional Journey](#2-professional-journey)
-    - [3. Course Vision and Scope](#3-course-vision-and-scope)
-    - [4. Teaching Philosophy](#4-teaching-philosophy)
-    - [5. Student Outcomes](#5-student-outcomes)
-  - [Chapter 1.3.: AI in Web Development: Addressing Anxiety and Embracing the Future](#chapter-13-ai-in-web-development-addressing-anxiety-and-embracing-the-future)
-    - [1. Understanding AI Anxiety](#1-understanding-ai-anxiety)
-    - [2. Historical Parallel: Automating Boilerplate](#2-historical-parallel-automating-boilerplate)
-    - [3. AI as a Developer’s Assistant](#3-ai-as-a-developers-assistant)
-    - [4. Realistic Impact on Workflow](#4-realistic-impact-on-workflow)
-    - [5. The Enduring Importance of Foundations](#5-the-enduring-importance-of-foundations)
-    - [6. Navigating the Hype](#6-navigating-the-hype)
-    - [7. Looking Ahead: AI in This Course](#7-looking-ahead-ai-in-this-course)
-  - [Chaptet 1.4.: Web Development Career Pathways](#chaptet-14-web-development-career-pathways)
-    - [1. Scope of Web Development](#1-scope-of-web-development)
-    - [2. Core Components](#2-core-components)
-    - [3. Learning Pathways \& Specializations](#3-learning-pathways--specializations)
-    - [4. Career Routes](#4-career-routes)
-      - [4.1 Freelancing](#41-freelancing)
-      - [4.2 Product Development (SaaS)](#42-product-development-saas)
-      - [4.3 Salaried Employment](#43-salaried-employment)
-    - [5. Salary Expectations](#5-salary-expectations)
-    - [6. Realistic Outlook](#6-realistic-outlook)
-  - [Chapter 1.5.: Essential Web Development Tools](#chapter-15-essential-web-development-tools)
-    - [1. Core Toolset](#1-core-toolset)
-      - [1.1 Code Editor](#11-code-editor)
-      - [1.2 Web Browser](#12-web-browser)
-    - [2. Supporting Utilities](#2-supporting-utilities)
-      - [2.1 Terminal (Command Line Interface)](#21-terminal-command-line-interface)
-      - [2.2 Package Managers \& Runtimes](#22-package-managers--runtimes)
-    - [3. Online Development Environments](#3-online-development-environments)
-    - [4. Workflow Recommendations](#4-workflow-recommendations)
-    - [5. Next Steps](#5-next-steps)
-  - [Chapter 1.6.: Complete Guide to Web Development Tools and Setup](#chapter-16-complete-guide-to-web-development-tools-and-setup)
-    - [Essential Requirements for Web Development](#essential-requirements-for-web-development)
-      - [Minimum Hardware Requirements](#minimum-hardware-requirements)
-    - [The Two Essential Tools](#the-two-essential-tools)
-      - [1. Code Editor: Visual Studio Code](#1-code-editor-visual-studio-code)
-      - [Alternative Code Editors](#alternative-code-editors)
-      - [2. Browser: Google Chrome](#2-browser-google-chrome)
-        - [Chrome Developer Tools Features](#chrome-developer-tools-features)
-        - [Browser Alternatives](#browser-alternatives)
-    - [Additional Development Tools](#additional-development-tools)
-      - [Terminal Applications](#terminal-applications)
-      - [Online Development Environments](#online-development-environments)
-    - [The Three Pillars of Web Development](#the-three-pillars-of-web-development)
-      - [HTML (HyperText Markup Language)](#html-hypertext-markup-language)
-      - [CSS (Cascading Style Sheets)](#css-cascading-style-sheets)
-      - [JavaScript](#javascript)
-    - [Getting Started: Setup Process](#getting-started-setup-process)
-      - [Step 1: Download and Install VS Code](#step-1-download-and-install-vs-code)
-      - [Step 2: Set Up Chrome](#step-2-set-up-chrome)
-      - [Step 3: Create Your First Project](#step-3-create-your-first-project)
-    - [Professional Development Practices](#professional-development-practices)
-  - [Chapter 1.7.: VS Code Complete Setup Guide: From Installation to Pro Productivity](#chapter-17-vs-code-complete-setup-guide-from-installation-to-pro-productivity)
-    - [Installation and Initial Setup](#installation-and-initial-setup)
-      - [Download and Installation](#download-and-installation)
-      - [First Launch Configuration](#first-launch-configuration)
-    - [Theme Customization and Appearance](#theme-customization-and-appearance)
-      - [Installing Custom Themes](#installing-custom-themes)
-      - [Font Configuration](#font-configuration)
-    - [Essential Extensions](#essential-extensions)
-      - [Live Preview/Live Server](#live-previewlive-server)
-      - [Productivity Extensions](#productivity-extensions)
-    - [Keyboard Shortcuts and Navigation](#keyboard-shortcuts-and-navigation)
-      - [Essential Shortcuts](#essential-shortcuts)
-      - [Terminal Integration](#terminal-integration)
-    - [Settings Configuration](#settings-configuration)
-      - [settings.json Customization](#settingsjson-customization)
-      - [Accessing Settings](#accessing-settings)
-    - [Advanced Productivity Features](#advanced-productivity-features)
-      - [Code Navigation and Editing](#code-navigation-and-editing)
-      - [Workspace Management](#workspace-management)
-      - [Code Snippets](#code-snippets)
-    - [HTML Development Features](#html-development-features)
-      - [Emmet Integration](#emmet-integration)
-      - [HTML Shortcuts](#html-shortcuts)
-    - [Best Practices for Setup](#best-practices-for-setup)
-      - [Performance Optimization](#performance-optimization)
-      - [Settings Sync](#settings-sync)
-    - [Troubleshooting Common Issues](#troubleshooting-common-issues)
-      - [Extension Conflicts](#extension-conflicts)
-      - [Performance Issues](#performance-issues)
-    - [VSC Shortcuts CheatSheet](#vsc-shortcuts-cheatsheet)
+  - [Table of Contents](#table-of-contents)
+  - [1 Orientation](#1-orientation)
+    - [Course Overview](#course-overview)
+    - [Student Level Classifications](#student-level-classifications)
+    - [Development Environment](#development-environment)
+    - [HTML Fundamentals](#html-fundamentals)
+    - [CSS Fundamentals](#css-fundamentals)
+    - [Flexbox Layout System](#flexbox-layout-system)
+    - [CSS Classes and IDs](#css-classes-and-ids)
+    - [Color Systems and RGB Values](#color-systems-and-rgb-values)
+    - [CSS Margin and Padding Values](#css-margin-and-padding-values)
+    - [Border Properties](#border-properties)
+    - [Advanced CSS Concepts](#advanced-css-concepts)
+    - [Browser Tools and Development](#browser-tools-and-development)
+    - [Key Concepts Summary](#key-concepts-summary)
+    - [Next Steps and Advanced Topics](#next-steps-and-advanced-topics)
+  - [2 Javascript Basics](#2-javascript-basics)
+    - [Javascript - The basics](#javascript---the-basics)
+    - [Properties of JS](#properties-of-js)
+    - [Syntax of Javascript](#syntax-of-javascript)
+    - [Complex types](#complex-types)
+  - [3 Asynchronous Javascript, Callbacks and more \[ONSIGHT\]](#3-asynchronous-javascript-callbacks-and-more-onsight)
+    - [Intro](#intro)
+    - [Normal functions in JS](#normal-functions-in-js)
+    - [Synchronous code](#synchronous-code)
+    - [I/O heavy operations](#io-heavy-operations)
+    - [I/O bound tasks vs CPU bound tasks](#io-bound-tasks-vs-cpu-bound-tasks)
+    - [Doing I/O bound tasks in the real world](#doing-io-bound-tasks-in-the-real-world)
+    - [Concurrency vs Parallelism - Key Points from Rob Pike's Talk](#concurrency-vs-parallelism---key-points-from-rob-pikes-talk)
+    - [Functional arguments](#functional-arguments)
+    - [Asynchronous code, callbacks](#asynchronous-code-callbacks)
+    - [Which will Executed First - Node.js Synchronous vs Asynchronous Execution Order](#which-will-executed-first---nodejs-synchronous-vs-asynchronous-execution-order)
+    - [error-first callback](#error-first-callback)
+    - [JS Architecture for async code](#js-architecture-for-async-code)
+  - [4 Promises and async, await](#4-promises-and-async-await)
+    - [Classes in JS](#classes-in-js)
+    - [Inheritance in classes](#inheritance-in-classes)
+    - [Some more classes](#some-more-classes)
+    - [Promise class](#promise-class)
+    - [Callback hell](#callback-hell)
+    - [Async await syntax](#async-await-syntax)
+    - [Defining your own async function](#defining-your-own-async-function)
+    - [err first callback vs rejects in promises](#err-first-callback-vs-rejects-in-promises)
+    - [Assignment](#assignment)
+  - [5 Bash\& Terminal](#5-bash-terminal)
 
-# Chapter 1: Before Web Dev Journey
-
-## Chapter 1.1.: Course Roadmap Overview
-
-- Resource: https://www.udemy.com/course/web-dev-master/
-
-**Main Takeaway:** This course offers a structured, project-based journey from beginner to advanced, covering web fundamentals, front-end and back-end development, full-stack projects, and future topics—empowering you to build production-ready applications and stay current with evolving technologies.
-
-***
-
-### 1. Introduction  
-Welcome! This video walks through:
-- How **beginners**, **intermediates**, and **advanced** learners can navigate the course  
-- The **current roadmap** (Phase 1: 2024) and upcoming **Phase 2** (2025) and **Phase 3** (late 2025)  
-- Where to find updates: downloadable attachments, website, Discord  
-
-### 2. Phase 1: 2024 Roadmap  
-#### 2.1 Beginner Track  
-1. **Web Development Fundamentals**  
-   - Learn without any programming prerequisites  
-   - Understand client-server architecture, impact of AI, and trending frameworks  
-2. **HTML Basics**  
-   - Hands-on coding challenges with instant feedback  
-3. **CSS Mastery**  
-   - Selectors, Flexbox, Grid, production-ready projects, coding challenges  
-4. **Utility Frameworks**  
-   - Bootstrap vs. Tailwind: differences, hands-on projects, and challenges  
-
-#### 2.2 JavaScript Path  
-1. **Core JavaScript**  
-   - Foundation, OOP patterns, DOM & BOM concepts  
-2. **Advanced JavaScript & Updates**  
-   - Regularly updated advanced topics based on feedback  
-3. **Front-End Projects**  
-   - Fun, challenging, and essential demos to solidify skills  
-
-#### 2.3 Back-End Foundation  
-1. **Node.js Essentials**  
-   - V8 engine, building web servers, event emitters  
-2. **Databases**  
-   - MongoDB design, Express integration—mega full-stack project  
-3. **Advanced Database Topics**  
-   - Aggregation pipelines, advanced queries  
-4. **Deployment**  
-   - VPS deployment on AWS/DigitalOcean without one-click tools  
-
-#### 2.4 Full-Stack Projects  
-- Q&A system with Next.js, Prisma, Neon (SQL)  
-- Additional production-grade applications  
-
-> **Navigation Tip:** After completing JavaScript and back-end fundamentals, you may choose to pivot to front-end (React) before diving deeper into back-end. The recommended path is back-end first for stronger logic control.
-
-### 3. Phase 2: 2025 Preview  
-- **Microservices Architecture**: Message queues (RabbitMQ), WebSockets, WebRTC  
-- **Containerization & Deployment**: Dockerizing Node.js/React, advanced VPS workflows  
-- **New Projects**: Two major applications recorded in early 2025  
-
-### 4. Phase 3: Late 2025 Preview  
-- **AI-Centric Development**: TensorFlow.js, machine-learning demos  
-- **Additional Frameworks**: Angular (latest version) based on community demand  
-- **Ongoing Updates**: Driven by learner feedback  
-
-### 5. How to Use This Roadmap  
-- **Beginners:** Follow the roadmap sequentially from web fundamentals to full-stack projects.  
-- **Intermediates:** Jump to sections of interest—Node.js, databases, or front-end frameworks.  
-- **Advanced Users:** Dive directly into advanced topics and full-stack projects.  
-- **Stay Updated:** Check the roadmap video and pinned attachments for label changes and new releases.  
-
-***
-
-Thank you for joining this journey. Your feedback on Discord and course reviews drives continuous improvement. Let’s build the world’s most comprehensive web development course—together!
-
-## Chapter 1.2.: Course Introduction: Instructor Overview and Key Highlights
-
-**Main Takeaway:** Instructor Hitesh brings 15 years of software engineering and teaching experience—spanning cybersecurity, mobile and web development, leadership roles, and entrepreneurship—to deliver a single, comprehensive software engineering course that emphasizes best practices, scalability, and real-world projects.
-
-### 1. Instructor Background
-- **Name Pronunciation:** “Hitesh” (feel free to call him *Mister H*)
-- **Teaching Experience:** 15 years of writing and teaching code
-- **Student Impact:** Millions of learners coached; many have advanced from their first developer role up to senior levels ,SDE1 => SDE2 => SDE3 => Further...
-
-### 2. Professional Journey
-- **Cybersecurity Professional:** Launched career ensuring systems' security
-- **Python Programmer → Mobile App Developer:** Transitioned into software development
-- **Web Developer:** Over a decade building web applications
-- **Software Engineer & Consultant:** Worked at top companies as an engineer, then adviser
-- **Startup Founder & CTO:** Built and scaled a startup to acquisition; led 200-person technical team
-- **Senior Director at PW (India’s EdTech Unicorn):** Oversaw large-scale educational technology initiatives
-- **YouTube Content Creator:**  
-  - Channel 1: ~1 million subscribers  
-  - Channel 2: ~300 thousand subscribers (growing)
-
-### 3. Course Vision and Scope
-- **Beyond “Web Dev”:** Framed as a *software engineering* course, not just HTML/CSS/JavaScript
-- **Comprehensive Curriculum:**  
-  - Each module acts as a standalone mini-course  
-  - Covers coding best practices, architecture, scalability, and real-world workflows
-- **High-Quality Production:**  
-  - Custom subtitles for accessibility  
-  - Professional audio/video standards  
-  - Engaging narratives and storytelling
-
-### 4. Teaching Philosophy
-- **Simplify Complexity:** Transforms the toughest topics into easy-to-understand lessons
-- **Hands-On Projects:** Real code exercises that reflect industry standards
-- **Scalability Focus:**  
-  - All concepts and codebases built to support millions of users  
-  - Emphasis on performance, maintainability, and growth
-
-### 5. Student Outcomes
-- **Skill Mastery:** From foundational HTML/CSS to advanced software engineering principles
-- **Career Advancement:**  
-  - Ready for junior to senior developer roles  
-  - Equipped for real-world technical challenges
-- **One-Stop Resource:** Aims to be the single best global destination for aspiring web and software engineers
-
-***
-
-Welcome aboard this journey to master software engineering and web development under the guidance of an industry veteran who has done it all—and continues to innovate and teach at scale. Let’s get started!
-## Chapter 1.3.: AI in Web Development: Addressing Anxiety and Embracing the Future
-
-**Key Takeaway:** AI is a powerful assistant for web developers but will **not** replace the need for strong foundational skills. Embrace AI tools to accelerate routine tasks while investing in solid fundamentals to navigate complexity, collaborate effectively, and architect robust solutions.
-
-### 1. Understanding AI Anxiety  
-Many learners worry that AI advances will render developer roles obsolete. This fear is fueled by sensational headlines, venture-capital–backed hype, and clickbait content. However, practical experience over 15+ years shows that each wave of tooling ultimately augments human capability rather than replaces it.
-
-### 2. Historical Parallel: Automating Boilerplate  
-- **Then:** Manually writing every HTML tag and boilerplate by hand.  
-- **Now:** IDEs and snippet-based tools generate boilerplate instantly, freeing developers to focus on business logic.  
-- **Lesson:** Just as snippet tools became indispensable yet didn’t replace developers, AI-powered coding assistants offer similar gains without eliminating essential human roles.
-
-### 3. AI as a Developer’s Assistant  
-AI tools excel at:  
-- Generating repetitive or boilerplate code  
-- Prototyping components and UI layouts  
-- Suggesting syntax corrections and refactorings  
-- Surface-level debugging hints  
-
-These capabilities translate to faster shipping of features and more time for high-value work.
-
-### 4. Realistic Impact on Workflow  
-Empirical breakdown of a typical software engineer’s time allocation:  
-- **20% Writing code**  
-- **30% Debugging and bugfixing**  
-- **50% Non-coding activities** (meetings, requirements gathering, architecture discussions)  
-
-AI primarily accelerates the 20% and partially assists with debugging, but **cannot** replace human-driven decision-making, client interaction, or strategic design.
-
-### 5. The Enduring Importance of Foundations  
-Regardless of tooling trends—jQuery → React → tomorrow’s frameworks—the core skills remain crucial:  
-- **HTML/CSS fundamentals**  
-- **JavaScript language mastery**  
-- **Problem-solving and algorithmic thinking**  
-- **Debugging methodologies**  
-- **Architectural design and technology evaluation**  
-
-Strong foundations enable developers to troubleshoot AI-generated code, choose appropriate technologies, and design scalable, maintainable systems.
-
-> At the end of day; "Solid Foundations" helps; rest are just tools to do work faster - Hitesh
-### 6. Navigating the Hype  
-AI hype often serves marketing and funding agendas. When evaluating AI tools:  
-- Focus on **productivity gains** for concrete tasks.  
-- Verify the **accuracy** and **security** of generated code.  
-- Maintain **critical thinking**—always review and test AI suggestions.  
-- Avoid over-reliance; use AI as a complement, not a crutch.
-
-### 7. Looking Ahead: AI in This Course  
-Later in the curriculum, you will:  
-- Explore specific AI-powered plugins and IDE integrations.  
-- Learn workflows that incorporate AI for templating, linting, and prototyping.  
-- Develop strategies for validating and debugging AI-assisted code.  
-
-However, the immediate focus remains on building robust, tool-agnostic skills that underlie all web development.
-
-***
-
-*Embrace AI to enhance your efficiency, but anchor your growth in the fundamentals—these skills will remain valuable regardless of how AI evolves.*
-
-## Chaptet 1.4.: Web Development Career Pathways
-
-**Key Takeaway:** Web development underpins virtually all modern software products—mobile apps like Uber, AI services like ChatGPT, SaaS platforms, and more. Mastery of front-end, back-end, databases, and DevOps opens diverse career opportunities: freelancing, product building, salaried roles, and leadership positions, with salary potential from \$100K to \$500K+.
-
+## 1 Orientation
+```html
+<html>
+    <head>
+        <title>Orientation</title>
+        <link href="index.css" rel="stylesheet">
+        <style>
+            .toplink{
+                text-align: center ;
+            }
+        </style>
+    </head>
+    <body style="background-color: aqua; ">
+        <div>hi there</div>
+        <span ><h2>Macbeth</h2> <h1> Introduction</h1> <a href="/">hi</a><a href="/">bye</a></span>
+        <a href="/">hi</a><a href="/">bye</a>
+        <span>-shakespear</span>
+        <div style="display:flex ;justify-content:space-evenly; background-color:red ;cursor: pointer; padding: 200px; margin: 200px;" >
+        
+        <a href="/">hi</a><a href="/">bye</a>
+        <div class="toplink">LLL</div>
+        </div>
+        <button>Download</button>
+        <input type="text" placeholder="Search">
+        <img src="https://code.visualstudio.com/favicon.ico" width="200px" height="200px"/>
+    </body>
+</html>
 ```
-            +-------------------------+
-            |         web dev         |
-            +-------------------------+
-               /      |         \
-              /       |          \
-     +--------+   +--------+   +---------+
-     | product|   | SDE/SWE|   |freelance|
-     +--------+   +--------+   +---------+
-                     |
-              +-------------+
-              |             |
-       +------------+   +-----------+
-       | front end  |   |  backend  |
-       +------------+   +-----------+
-           |  JR/SR      |  JR/SR
-                 \       /
-                +---------------+
-                |   full stack  |
-                +---------------+
-                   JR / SR
-
-```
-
-### 1. Scope of Web Development
-> Web Dev is just big umbrella; where all engineering branches comes - Hitesh
-Web development is not limited to websites—it’s the backbone of nearly every digital service.
-- **Mobile App Back-Ends:**  
-  -  Account creation, OTP authentication, payment processing, and data storage for apps like Uber.  
-  -  APIs and server logic manage data flow between client apps and databases.  
-- **AI Interfaces:**  
-  -  ChatGPT’s login, session management, conversation history retrieval, and UI design rely on web-development skills.  
-  -  Advanced data handling with vector databases, embedding storage, and search functionality.
-
-### 2. Core Components
-1. **Front End:**  
-   Design and implementation of user interfaces, interactive elements, and responsive layouts.  
-2. **Back End:**  
-   Business logic, server-side code, API development, authentication, and integration with databases.  
-3. **Databases:**  
-   - SQL (relational): structured schemas, complex queries  
-   - NoSQL (document/graph): flexible schemas, high-scale reads/writes  
-4. **DevOps & Hosting:**  
-   Deployment pipelines, containerization, cloud services (AWS, Azure, Google Cloud), monitoring, and scaling.
-
-### 3. Learning Pathways & Specializations
-- **Focused Mastery:** Deep expertise in one area (e.g., front end with React/Vue, back end with Node.js/Express or Django).  
-- **Full Stack:** Proficiency across front end and back end to deliver end-to-end solutions and manage small teams or startups.
-
-### 4. Career Routes
-
-#### 4.1 Freelancing
-- Build custom solutions for clients (e.g., gym membership systems, salon appointment apps).  
-- Flexible projects, direct client interaction, variable income based on project scope and rates.
-
-#### 4.2 Product Development (SaaS)
-- Create software products (e.g., background-removal tools, niche B2B platforms).  
-- Scale user base; potential for recurring revenue and high growth (example: serving 12 million users).
-
-#### 4.3 Salaried Employment
-- **Roles & Titles:**  
-  -  Junior Developer (SDE I): entry-level, basic project contributions  
-  -  Senior Developer (SDE II+ / SWE): code ownership, mentorship, architecture decisions  
-- **Specialized Tracks:** Front End Engineer, Back End Engineer, Full Stack Engineer, DevOps Engineer.
-- **Advancement:** Team Lead → Project Manager → Solutions Architect → CTO.
-
-### 5. Salary Expectations
-- **Range:** Approximately \$100,000 to \$200,000 median in high–purchasing-power regions; top earners up to \$500,000+.  
-- **Factors Influencing Salary:**  
-  -  Geographic location and cost of living
-     -  High Salary Regions Mostly also have High Cost of Living  
-  -  Company size and industry  
-  -  Individual skill set, experience level, and niche expertise  
-  -  Remote vs. on-site roles  
-- **Global Dynamics:** Remote work enables high-quality engineers in lower-cost regions to earn international market rates.
-
-### 6. Realistic Outlook
-
-> IT Field is not that easy as it's looks like, lots of people left prog. just after HTML/CSS.
-
-> Real Programming starts after JS
-
-> Harder Efforts => Higher You are gonna paid, That's a Fact, Nobody can change it at all !!!
-
-- **Entry Difficulty:** Basic HTML/CSS is foundational but not true programming; JavaScript and back-end logic mark the start of substantive development.  
-- **Effort vs. Reward:** Higher technical complexity and proficiency command higher compensation.  
-- **Continuous Learning:** Evolving technologies (e.g., vector search, cloud-native architectures) require ongoing skill development.
-
-***
-
-These notes outline the vast landscape of web development, practical real-world applications, and the multifaceted career opportunities it offers. Continuous skill enhancement and hands-on project experience are essential to unlocking higher roles and salaries.
-
-## Chapter 1.5.: Essential Web Development Tools
-
-**Key Takeaway:**  
-A minimal setup—consisting of a modern code editor and a web browser—empowers you to start web development on any Windows, macOS, or Linux machine. Mastering one editor and one browser’s developer tools dramatically accelerates your workflow.
-
-***
-
-### 1. Core Toolset
-
-#### 1.1 Code Editor  
-- Purpose: Plain‐text editing with syntax highlighting, code completion, and project/file navigation.  
-- Recommended Choice: **Visual Studio Code** (free, open source, cross-platform)  
-  - Highly customizable via extensions (linters, formatters, language support)  
-  - Integrated terminal, file explorer, debugger, Git integration  
-- Alternatives (equally valid): Sublime Text, Vim, Zed, Atom
-  - Each offers unique performance or UX benefits  
-  - Professionals choose one and master its shortcuts and plugins  
-
-#### 1.2 Web Browser  
-- Purpose: Render and debug HTML/CSS/JavaScript in real time  
-- Recommended Choice: **Google Chrome**  
-  - Rich DevTools: DOM/CSS inspector, JavaScript console, network/throttling, performance, security audits  
-  - Device emulation (mobile viewport, touch simulation)  
-  - Extensions for Redux, Lighthouse, accessibility checks  
-- Alternatives: Firefox, Safari, Arc Browser  
-  - Core debugging features largely comparable  
-
-***
-
-### 2. Supporting Utilities
-
-#### 2.1 Terminal (Command Line Interface)  
-- Purpose: Run package managers, build tools, version control, local servers  
-- Built-in Options:  
-  - Windows Terminal, macOS Terminal, Linux shells (bash, zsh)  
-- Enhanced Options:  
-  - **Warp**, iTerm2, Hyper  
-  - Offer multi-pane support, fuzzy search, workflow acceleration  
-
-#### 2.2 Package Managers & Runtimes  
-- Node.js & npm or Yarn: Essential for modern JavaScript frameworks and tooling  
-- Language-specific managers (pip for Python, gem for Ruby) as needed  
-
-***
-
-### 3. Online Development Environments
-
-- Zero-install, browser-based editors facilitate quick prototyping and tutorials  
-  - **CodePen**: Split view for HTML, CSS, JS; instant live preview  
-  - **StackBlitz**, **Replit**, **Blitz**: Full-stack sandbox, GitHub integration, cloud hosting  
-- Use cases: Learning snippets, sharing demos, collaborative coding  
-
-***
-
-### 4. Workflow Recommendations
-
-1. **Pick One Editor & One Browser**  
-   - Avoid tool fatigue; invest time mastering shortcuts, plugins, and workflows  
-2. **Set Up Your Environment Early**  
-   - Install VS Code (or your chosen editor) and Chrome (or chosen browser) first  
-   - Configure key extensions: Prettier, ESLint, Live Server, GitLens  
-3. **Learn Developer Tools Thoroughly**  
-   - Inspect elements, modify CSS in real time, debug JavaScript in the console  
-   - Simulate network conditions, device viewports, offline mode  
-4. **Leverage Terminals for Efficiency**  
-   - Run local servers, interact with Git, automate tasks via npm scripts or Makefiles  
-5. **Experiment with Online Editors**  
-   - Use CodePen for isolated UI experiments  
-   - Use StackBlitz or Replit for full-stack demos without local setup  
-
-***
-
-### 5. Next Steps
-
-- **Video Tutorial**: Guided installation and configuration of VS Code  
-  - Cover extension recommendations, key keyboard shortcuts, integrated terminal usage  
-- **Deep Dive**: Chrome DevTools walkthrough  
-  - DOM/CSS inspection, JavaScript debugging, performance profiling, accessibility audits  
-
-By establishing this streamlined toolset and workflow foundation, you’ll maximize productivity and focus on learning web development fundamentals rather than wrestling with setup or configuration.
-
-## Chapter 1.6.: Complete Guide to Web Development Tools and Setup
-
-### Essential Requirements for Web Development
-
-Web development has remarkably low hardware requirements compared to other forms of programming. As the instructor mentioned, web development tools are **cross-platform compatible**, working seamlessly across Windows, Mac, and Linux systems. The beauty of web development lies in its accessibility - you can get started with almost any computer you have.[1]
-
-#### Minimum Hardware Requirements
-
-For effective web development, your system should meet these specifications:
-
-**Processor**: Intel Core i3 or AMD Ryzen 3 (minimum), Intel Core i5 or AMD Ryzen 5 (recommended)[2]
-**RAM**: 8GB minimum, 16GB recommended for running multiple applications simultaneously[3][2]
-**Storage**: 256GB SSD minimum, 512GB SSD recommended for faster performance[2]
-**Display**: 1920x1080 (Full HD) minimum resolution for better workspace visibility[2]
-
-The good news is that **integrated graphics are sufficient** for web development - dedicated graphics cards are only necessary for graphic design work.[4][2]
-
-### The Two Essential Tools
-
-#### 1. Code Editor: Visual Studio Code
-
-Visual Studio Code stands as the **most popular code editor among developers in 2025**. It's Microsoft's open-source, cross-platform editor that has become the industry standard for several compelling reasons:[5][6]
-
-**Key Features of VS Code**:
-- **Extensive Extension Marketplace**: Access to thousands of plugins for enhanced functionality[7][5]
-- **Integrated Git Support**: Built-in version control for seamless code management[7][5]
-- **IntelliSense**: Advanced code completion and syntax highlighting[5][7]
-- **Integrated Terminal**: Run commands directly within the editor[8][7]
-- **Cross-platform Support**: Available for Windows, macOS, and Linux[7][5]
-- **Live Server Extension**: Preview web pages locally during development[9]
-
-**Essential VS Code Extensions for Web Development**:
-- **Prettier**: Code formatting for consistent style across teams[10][9]
-- **Path Intellisense**: Auto-completion for file paths[10]
-- **Live Server**: Local development server for testing[9]
-- **GitLens**: Enhanced Git capabilities[11]
-- **Auto Close/Rename Tag**: Automatic HTML tag management[12]
-
-#### Alternative Code Editors
-
-While VS Code dominates the market, other excellent options include:
-
-**Sublime Text**: Known for **exceptional speed and lightweight performance**, perfect for handling large files. It features multi-caret editing and a clean interface, though it requires a paid license for full functionality.[6][5]
-
-**Vim/Neovim**: **Highly configurable and lightning-fast** editors preferred by power users who favor keyboard shortcuts over mouse navigation. However, they have a steep learning curve for beginners.[6][5]
-
-> Zed(backed by AtomDevs), Cursor etc.
-
-#### 2. Browser: Google Chrome
-
-Chrome remains the **preferred browser for web development** due to its comprehensive developer tools and widespread usage among end-users.[13][14]
-
-##### Chrome Developer Tools Features
-
-**Elements Panel**: 
-- Inspect and modify HTML/CSS in real-time[15][13]
-- View box model diagrams for layout debugging[15]
-- Toggle element states like :hover and :active[15]
-
-**Console**:
-- Interactive JavaScript execution environment[16][13]
-- Advanced logging with `console.table()` for structured data[16]
-- Error tracking and debugging capabilities[13][16]
-
-**Network Panel**:
-- Monitor request/response cycles[13]
-- Simulate different connection speeds (3G, 4G, offline mode)[13]
-- Analyze loading performance and optimize resource delivery[13]
-
-**Device Simulation**:
-- **Responsive design testing** across multiple device sizes[13]
-- Touch simulation for mobile development[13]
-- Viewport adjustment for various screen resolutions[13]
-
-##### Browser Alternatives
-
-**Firefox Developer Edition**: Specifically designed for developers with enhanced tools for CSS Grid, Flexbox layouts, and accessibility evaluation. It offers **strong privacy features** and open-source transparency.[17][14]
-
-**Microsoft Edge**: Features **AI-powered error assistance** in the console and excellent DOM visualization. It provides comparable performance to Chrome with additional privacy features.[18]
-
-### Additional Development Tools
-
-#### Terminal Applications
-
-Modern terminals enhance the development workflow:
-- **Warp**: A modern terminal with enhanced features and better user experience
-- **Built-in Terminal**: Each operating system provides adequate terminal functionality for basic needs
-- **Integrated Terminal in VS Code**: Eliminates the need for separate terminal applications[7]
-
-#### Online Development Environments
-
-For those who prefer browser-based development:
-
-**CodePen**: Excellent for **rapid prototyping and learning**. It provides separate panels for HTML, CSS, and JavaScript with real-time preview capabilities.[19]
-
-**StackBlitz**: **Browser-based IDE** with full project support and npm package management.[19]
-
-**Replit**: **Collaborative coding platform** perfect for team projects and educational purposes.[19]
-
-### The Three Pillars of Web Development
-
-#### HTML (HyperText Markup Language)
-HTML provides the **structural foundation** of web pages, defining elements like headings, paragraphs, lists, and buttons. It creates the skeleton that browsers interpret and display.[20]
-
-#### CSS (Cascading Style Sheets)
-CSS handles the **visual presentation** of web content, controlling colors, fonts, layouts, and responsive design across different devices. Modern frameworks like **Tailwind CSS** and **Bootstrap** streamline this process.[21][20]
-
-#### JavaScript
-JavaScript adds **interactivity and dynamic behavior** to websites, enabling user interactions, form validation, and content manipulation. It's the programming language that brings web pages to life.[22][20]
-
-### Getting Started: Setup Process
-
-#### Step 1: Download and Install VS Code
-1. Visit the official Visual Studio Code website
-2. Download the appropriate version for your operating system
-3. Follow the installation prompts
-4. Install essential extensions for web development
-
-#### Step 2: Set Up Chrome
-1. Download Google Chrome if not already installed
-2. Familiarize yourself with Developer Tools (F12 or Ctrl+Shift+I)
-3. Explore the Elements, Console, and Network panels
-
-#### Step 3: Create Your First Project
-1. Create a new folder in VS Code (File > Open Folder)
-2. Create HTML, CSS, and JavaScript files
-3. Use the Live Server extension to preview your work locally
-4. Utilize Chrome DevTools for debugging and testing
-
-### Professional Development Practices
-
-**Master Your Tools**: As emphasized in the content, **knowing your code editor thoroughly makes you a faster developer**. Focus on learning keyboard shortcuts and customizing your environment for maximum efficiency.[5]
-
-**Stick with One Setup**: Professional developers typically **choose one set of tools and master them** rather than constantly switching between different options. This approach allows for deeper expertise and improved workflow efficiency.
-
-**Cross-Browser Testing**: While Chrome is excellent for development, always **test your projects across multiple browsers** to ensure compatibility for all users.[18]
-
-The web development landscape offers numerous tool choices, but starting with VS Code and Chrome provides a solid foundation that scales from beginner projects to professional applications. These tools' combination of power, accessibility, and community support makes them ideal for anyone beginning their web development journey.
-
-[1](https://www.reddit.com/r/learnprogramming/comments/qie409/where_do_i_write_my_code/)
-[2](https://www.linkedin.com/pulse/minimum-device-requirements-web-development-fazlay-rabbi-3blwc)
-[3](https://training.certstaff.com/News/108/System-Requirements-for-Web-Development)
-[4](https://www.weetechsolution.com/blog/how-to-choose-a-laptop-for-web-development)
-[5](https://www.devopsschool.com/blog/top-10-code-editors-tools-in-2025-features-pros-cons-comparison/)
-[6](https://dualite.dev/blog/best-code-editors)
-[7](https://code.visualstudio.com/docs/introvideos/basics)
-[8](https://code.visualstudio.com/docs/getstarted/getting-started)
-[9](https://www.browserstack.com/guide/best-vs-code-extensions)
-[10](https://www.syncfusion.com/blogs/post/top-vs-code-extensions)
-[11](https://www.jit.io/blog/vscode-extensions-for-2023)
-[12](https://www.youtube.com/watch?v=NpYiXVu1KCc)
-[13](https://www.indeed.com/career-advice/career-development/how-to-use-chrome-developer-tools)
-[14](https://www.browserstack.com/guide/best-browsers-for-web-development)
-[15](https://www.browserstack.com/guide/chrome-developer-tools)
-[16](https://dev.to/arjun98k/top-10-chrome-devtools-features-every-developer-should-know-in-2025-40kp)
-[17](https://www.geeksforgeeks.org/techtips/which-browser-has-the-best-developer-tools/)
-[18](https://www.reddit.com/r/webdev/comments/1et7doa/which_browser_has_the_best_devtools/)
-[19](https://www.pluralsight.com/resources/blog/upskilling/how-to-get-started-writing-code)
-[20](https://www.freecodecamp.org/news/html-css-and-javascript-explained-for-beginners/)
-[21](https://www.browserstack.com/guide/web-development-tools)
-[22](https://www.w3schools.com/html/html_scripts.asp)
-[23](https://learn.shayhowe.com/html-css/writing-your-best-code/)
-[24](https://www.youtube.com/watch?v=SeybVD0NMQI)
-[25](https://froala.com/blog/general/10-best-front-end-development-tools/)
-[26](https://automatonarmy.com/best-ai-for-coding/)
-[27](https://www.freecodecamp.org/news/learn-to-code-book/)
-[28](https://www.monocubed.com/blog/web-development-tools/)
-[29](https://developer.chrome.com/docs/devtools)
-[30](https://budibase.com/blog/how-to-make-a-web-app/)
-[31](https://spacelift.io/blog/software-development-tools)
-[32](https://towardsthecloud.com/blog/best-vscode-extensions-python)
-[33](https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm)
-[34](https://dev.to/umeshtharukaofficial/getting-started-with-vscode-a-beginners-guide-2mic)
-[35](https://webbylab.com/blog/chrome-devtools-feature-guide/)
-[36](https://dev.to/aneeqakhan/top-5-ai-based-code-editors-for-coding-in-2025-obm)
-[37](https://code.visualstudio.com/docs/python/python-tutorial)
-[38](https://www.syncfusion.com/blogs/post/chrome-devtools-2024-top-5-features)
-[39](https://maxwellj.vivaldi.net/2025/04/03/code-editors-my-top-7-picks/)
-[40](https://www.easyproject.com/documentation/article/hardware-and-software-requirements-for-the-server-solution)
-[41](https://www.w3schools.com/html/)
-[42](https://www.geeksforgeeks.org/javascript/learn-web-development-basics-with-html-css-and-javascript/)
-[43](https://dev.to/snehasishkonger/firefox-vs-chrome-developer-tools-a-comparative-analysis-3lkc)
-
-## Chapter 1.7.: VS Code Complete Setup Guide: From Installation to Pro Productivity
-
-Visual Studio Code has become the go-to code editor for millions of developers worldwide, and for good reason. This comprehensive guide will walk you through setting up VS Code from scratch, covering everything from basic installation to advanced productivity features that will transform your coding workflow.
-
-> Hitesh actually did session offical session in Microsoft about how to Setup VSC and keep it light !!!
-
-### Installation and Initial Setup
-
-#### Download and Installation
-
-Getting VS Code up and running is straightforward across all platforms. Visit the official website and download the appropriate version for your operating system. The installation process is simple:[1][2][3]
-
-**Windows**: Double-click the installer and follow the setup wizard. Accept the license agreement, choose installation location, and optionally create a desktop shortcut.[2][3]
-
-**Mac**: Download the zip file, extract it, and drag the VS Code app to your Applications folder. You can then launch it from Spotlight search or the Applications folder.[3]
-
-**Linux**: VS Code provides packages for various Linux distributions, making installation seamless across Ubuntu, Debian, Red Hat, and other systems.[1]
-
-#### First Launch Configuration
-
-When you first launch VS Code, you'll be greeted with a welcome screen offering theme selection and basic setup options. The default theme is "Dark Modern," but you can explore various options including light themes and high contrast versions.[2][3]
-
-### Theme Customization and Appearance
-
-#### Installing Custom Themes
-
-The VS Code marketplace offers thousands of themes to personalize your coding environment. Some popular themes include:[4][5][6]
-
-- **One Dark Pro**: A refined version of Atom's One Dark theme[6]
-- **Dracula Official**: Known for its vibrant purple and pink color scheme[6]
-- **Night Owl**: Designed specifically for night owls who code late[6]
-- **Monokai Pro**: A professional version of the classic Monokai theme[6]
-
-To install themes, use the keyboard shortcut **Ctrl+K Ctrl+T** (Windows/Linux) or **Cmd+K Cmd+T** (Mac) to open the theme picker. You can also browse additional themes directly from the marketplace.[5]
-
-#### Font Configuration
-
-Customizing your editor font can significantly improve readability and coding comfort. Here's how to configure fonts:[7][8][9]
-
-1. Open Settings with **Ctrl+,** (Windows/Linux) or **Cmd+,** (Mac)[7]
-2. Navigate to **Text Editor > Font** settings[7]
-3. Modify the **Font Family** field
-
-Popular coding fonts include:
-- **Fira Code**: Free font with programming ligatures[9]
-- **Consolas**: Default Windows font with excellent readability[10]
-- **Operator**: Premium font ($200) designed specifically for coding[9]
-
-Example font configuration in settings.json:[11]
-```json
-{
-  "editor.fontFamily": "Fira Code, Consolas, monospace",
-  "editor.fontSize": 16,
-  "editor.fontLigatures": true
+```css
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 ```
 
-### Essential Extensions
+### Course Overview
 
-#### Live Preview/Live Server
+- Goal
 
-For web development, the Live Preview extension by Microsoft is essential. It provides real-time preview of your HTML, CSS, and JavaScript changes:[12][13][14]
+Make you incredibly solid at building and deploying Web apps.
 
-**Installation**: Search for "Live Preview" in the Extensions panel (**Ctrl+Shift+X**) and install the Microsoft version.[14][12]
+---
+- Cohort Projects
 
-**Usage**: Click the "Show Preview" button in the top-right corner of your HTML file, or use the Command Palette to start the preview server.[13][14]
+1. https://github.com/code100x/cms/ - Led by hsingh
+2. https://github.com/code100x/daily-code/ - Led by Sargam
+3. https://github.com/code100x/job-board - Led by Vineet
+4. https://github.com/code100x/algorithmic-arena/pull/10 - Led by Nimit
+5. Framer like app - Up for grabs
 
-#### Productivity Extensions
+---
 
-The VS Code ecosystem offers over 30,000 extensions. Here are must-have productivity boosters:[15][16][17]
+- Avoid the Spikes Strategy
 
-- **Prettier**: Code formatter supporting JavaScript, TypeScript, CSS, and more[15]
-- **ESLint**: JavaScript linter for error detection and code quality[17]
-- **Path Intellisense**: Auto-completion for file paths[15]
-- **Live Share**: Real-time collaborative editing[17]
-- **GitLens**: Enhanced Git integration with blame annotations and history[16]
+1. We will go slow, today only focussing on HTML/CSS/JS
+2. Any topic that you feel is missing / you want we will do polls from time to time we can add
+3. Go slow but stay consistent, avoid the spikes
 
-### Keyboard Shortcuts and Navigation
+---
+- What would I do if I was you?
 
-#### Essential Shortcuts
+1. Get to know people in discord, try to find a group of 3-4 motivated people
+2. Look at all the success stories here and how they got a job - https://www.youtube.com/@100xDevs-n1w
+3. Repeated advice - GSoC is the best internship you can do. Already start prepping for it competition is high. Tell me how can I help here we're hoping for ~50 GSoC selections from the cohort this year. Good video to watch - https://www.youtube.com/watch?v=OmzCvb-QBak
 
-Mastering keyboard shortcuts is crucial for productivity. Here are the most important ones:[18][19][20]
+---
+- Sprint Options
 
-**File Navigation**:
-- **Ctrl+P** (Windows/Linux) or **Cmd+P** (Mac): Quick file opener[19][20]
-- **Ctrl+Shift+P** (Windows/Linux) or **Cmd+Shift+P** (Mac): Command Palette[20][19]
+If things are going too slow you can:
+1. Participate in projects/hackathons
+2. Sprint through Cohort 2.0
 
-**Editing**:
-- **Ctrl+D** (Windows/Linux) or **Cmd+D** (Mac): Select next occurrence of current word[19]
-- **Alt+Up/Down** (Windows/Linux) or **Option+Up/Down** (Mac): Move lines up/down[19]
-- **Ctrl+/** (Windows/Linux) or **Cmd+/** (Mac): Toggle line comment[18]
+### Student Level Classifications
 
-**Multi-cursor Editing**:
-- **Ctrl+Alt+Up/Down** (Windows/Linux) or **Cmd+Option+Up/Down** (Mac): Add cursor above/below[19]
-- **Alt+Click**: Add cursor at clicked position[19]
+- Complete Beginner (very basic/no coding before)
+  - Things will be hard. You should spend ~20 hours/week at least on Cohort material, assignments, other content covering what we're doing in the Cohort. Don't slack off
 
-#### Terminal Integration
+---
 
-VS Code's integrated terminal is a powerful feature:[20][17]
-- **Ctrl+`** (all platforms): Toggle terminal visibility[21][36]
-- Supports multiple terminal instances and can be dragged into the editor area[20]
+- Intermediate (Done basic JS, HTML and some DSA)
+  - You should be for the first ~10 weeks or so. We see major drop off after the first major project
+  - Try chewing some glass after week 10, that is where you will actually learn things that differentiate you from a typical MERN developer
 
-### Settings Configuration
+---
 
-#### settings.json Customization
+- Advanced (Know MERN decent/well)
+  - Feel free to drop off for the first few weeks. I'll see you on Github. Participate in the Superteam hackathon, aim for GSoC this year. Already start looking at orgs
 
-VS Code's settings.json file is where the real customization magic happens. Here's a sample configuration for optimal productivity:[21][11]
+### Development Environment
 
-```json
-{
-  "editor.fontSize": 16,
-  "editor.fontFamily": "Fira Code, Consolas, monospace",
-  "editor.tabSize": 2,
-  "editor.wordWrap": "on",
-  "editor.minimap.enabled": false,
-  "editor.formatOnSave": true,
-  "files.autoSave": "afterDelay",
-  "workbench.colorTheme": "One Dark Pro",
-  "terminal.integrated.fontSize": 14
+- VSCode Installation
+  - Download from here - https://code.visualstudio.com/
+
+- Good Things to Hash Out
+  1. Installing VSCode locally
+  2. HTML/CSS
+  3. Cloning the landing page of a simple website
+
+- Step 1: Creating a Simple HTML File Locally
+  1. Create a folder on your machine called `website`
+  2. Add a `index.html` file inside it
+  3. Write the following code in it
+
+  ```html
+  <html>
+      <title>
+          Visual Studio Code - Code Editor
+      </title>
+  </html>
+  ```
+
+  Now open this in your browser
+
+### HTML Fundamentals
+
+HTML stands for HyperText Markup Language. It is the foundation of building `unstyled` websites.
+
+---
+
+- not case sensitive
+- sandwich code language
+- `/` : root directory of website
+- `<br/>` : eg of autoclosing tag
+
+---
+
+- Step 2: Tags
+
+1. div, span
+2. head
+3. body
+4. h1, h2, h3, h4, h5, h6
+5. b, i, u
+6. a
+7. img
+8. input
+9. button
+10. br
+
+---
+
+- HTML Tag Structure
+
+```rust
+html - root element
+├── head - metadata container
+│   ├── title - page title
+│   └── style - internal styles
+└── body - main content container
+    ├── div - block-level container
+    ├── span - inline container  
+    ├── h1-h6 - headings (largest to smallest)
+    ├── b, i, u - bold, italic, underline
+    ├── a href - links to navigate
+    ├── img src - embed images
+    ├── input type - user input fields
+    ├── button - clickable buttons
+    └── br - line breaks
+```
+
+---
+
+- Step 3: Building a Basic HTML Page
+
+```html
+<html>
+    <title>
+        Visual Studio Code - Code Editor
+    </title>
+</html>
+<body>
+    <div>
+        <span>Visual Studio Code</span>
+        <a href="/">Docs</a> 
+        <a href="/">Updates</a> 
+        <a href="/">Blog</a> 
+        <a href="/">API</a> 
+        <a href="/">Extensions</a> 
+        <a href="/">FAQs</a>
+        <a href="/">Learn</a>
+        
+        <input type="text" placeholder="Search Docs">
+        <button>Download</button>
+    </div>
+    <br/>
+
+    <div>
+        <a href="/">Version 1.82</a> is now available! Read about the new features and fixes from July.
+    </div>
+
+    <br/>
+</body>
+```
+
+### CSS Fundamentals
+
+CSS stands for Cascading Style Sheets. It is used to style our applications.
+
+---
+
+- CSS Integration Methods
+
+You can add CSS to your HTML app by using:
+1. The `style` attribute (inline styles)
+2. In an external css file
+
+---
+
+- Approach 1: Inline Styles
+
+Try updating the `body` tag in the last style as follows:
+
+```html
+<body style="background-color: black;">
+... rest of the code
+</body>
+```
+
+---
+
+- Approach 2: External Styles
+
+1. Add a new file called index.css
+2. Add the following code in it
+
+```css
+body {
+    background-color: black;
 }
 ```
 
-#### Accessing Settings
-
-Multiple ways to access your settings:[11][21]
-- **Ctrl+,** (Windows/Linux) or **Cmd+,** (Mac) to open Settings UI[11]
-- Click the "Open Settings (JSON)" icon in the top-right corner of Settings[21]
-- Use Command Palette: **Preferences: Open Settings (JSON)**[11]
-
-### Advanced Productivity Features
-
-#### Code Navigation and Editing
-
-VS Code offers sophisticated code navigation features:[18][20]
-
-**Go to Definition**: **F12** to navigate to function/variable definitions[18]
-**Peek Definition**: **Alt+F12** to preview definitions inline[18]
-**Find All References**: **Shift+F12** to see all usages[18]
-
-#### Workspace Management
-
-Effective workspace organization boosts productivity:[17]
-- Use multi-root workspaces for related projects
-- Set up project-specific settings
-- Leverage workspace-specific extensions
-
-#### Code Snippets
-
-Create custom snippets for frequently used code patterns:[17]
-1. Go to **Preferences > User Snippets**
-2. Choose the language or create global snippets
-3. Define your snippet with prefix, body, and description
-
-### HTML Development Features
-
-#### Emmet Integration
-
-VS Code includes built-in Emmet support for rapid HTML development. Type abbreviations and press **Tab** to expand:
-- `!` + **Tab**: Creates HTML5 boilerplate
-- `h1` + **Tab**: Creates `<h1></h1>` tags
-- `div.container` + **Tab**: Creates `<div class="container"></div>`
-
-#### HTML Shortcuts
-
-Essential HTML shortcuts for faster development:
-- **Ctrl+Shift+K** (Windows/Linux) or **Cmd+Shift+K** (Mac): Delete entire line
-- **Alt+Shift+Up/Down**: Duplicate lines
-- **Ctrl+L** (Windows/Linux) or **Cmd+L** (Mac): Select entire line
-
-### Best Practices for Setup
-
-#### Performance Optimization
-
-Keep VS Code running smoothly:[22][1]
-- Disable unnecessary extensions
-- Use workspace-specific extensions when possible
-- Regular cleanup of unused extensions
-- Monitor memory usage through built-in performance tools
-
-#### Settings Sync
-
-Use VS Code's built-in Settings Sync to maintain consistency across devices:[17]
-- Sign in with Microsoft or GitHub account
-- Sync settings, extensions, and keyboard shortcuts
-- Access your setup from any VS Code installation
-
-### Troubleshooting Common Issues
-
-#### Extension Conflicts
-
-If VS Code behaves unexpectedly:
-- Disable extensions one by one to identify conflicts
-- Use VS Code's safe mode for debugging
-- Check the Output panel for error messages
-
-#### Performance Issues
-
-For slow performance:
-- Disable minimap if not needed: `"editor.minimap.enabled": false`[11]
-- Reduce file watching: `"files.watcherExclude"`
-- Limit extension auto-updates during work hours
-
-This comprehensive setup guide provides the foundation for a professional VS Code environment. Remember that the best setup is one that matches your specific workflow and preferences. Start with these basics and gradually customize as you discover what works best for your coding style and projects. The time invested in properly configuring VS Code will pay dividends in improved productivity and coding enjoyment.
-
-[1](https://code.visualstudio.com/docs/setup/setup-overview)
-[2](https://www.youtube.com/watch?v=cu_ykIfBprI)
-[3](https://www.youtube.com/watch?v=bN6DE-4uFNo)
-[4](https://junocollege.com/blog/cool-vs-code-themes-for-developers/)
-[5](https://code.visualstudio.com/docs/configure/themes)
-[6](https://dev.to/ikoichi/23-best-vs-code-themes-in-2024-45g1)
-[7](https://www.alphr.com/vs-code-how-to-change-font/)
-[8](https://learn.microsoft.com/en-us/visualstudio/extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio?view=vs-2022)
-[9](https://www.youtube.com/watch?v=04czwin8qRA)
-[10](https://stackoverflow.com/questions/29960057/which-font-is-used-in-visual-studio-code-editor-and-how-to-change-fonts)
-[11](https://peerlist.io/blog/engineering/vscode-settingsjson-a-complete-guide)
-[12](https://www.geeksforgeeks.org/installation-guide/how-to-enable-live-server-on-visual-studio-code/)
-[13](https://www.youtube.com/watch?v=3f8a0EtXz0c)
-[14](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
-[15](https://www.syncfusion.com/blogs/post/top-vs-code-extensions)
-[16](https://www.freecodecamp.org/news/best-vscode-extensions/)
-[17](https://www.nearsure.com/blog/visual-studio-code-tips-and-tricks-to-boost-your-productivity)
-[18](https://code.visualstudio.com/docs/configure/keybindings)
-[19](https://www.wearedevelopers.com/en/magazine/200/vs-code-shortcuts)
-[20](https://code.visualstudio.com/docs/introvideos/productivity)
-[21](https://stackoverflow.com/questions/65908987/how-to-open-visual-studio-codes-settings-json-file)
-[22](https://code.visualstudio.com/docs/configure/settings)
-[23](https://www.youtube.com/watch?v=lxRAj1Gijic)
-[24](https://stackoverflow.com/questions/36506539/how-do-i-get-visual-studio-code-to-trust-our-self-signed-proxy-certificate)
-[25](https://code.visualstudio.com/docs/getstarted/getting-started)
-[26](https://learn.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2022)
-[27](https://dev.to/pas8/best-vs-code-setup-20fe)
-[28](https://www.youtube.com/watch?v=mpk4Q5feWaw)
-[29](https://dev.to/best_codes/7-best-vs-code-extensions-for-faster-development-2024-edition-3j56)
-[30](https://www.youtube.com/watch?v=nhEHXQGVmaQ)
-[31](https://betterprogramming.pub/my-7-recommended-settings-for-visual-studio-code-96fbd9f5e21a)
-[32](https://stackoverflow.com/questions/66869413/visual-studio-code-does-not-detect-virtual-environments)
-[33](https://www.jit.io/blog/vscode-extensions-for-2023)
-[34](https://code.visualstudio.com/docs/reference/default-keybindings)
-[35](https://www.codemag.com/Article/2408031/VS-Code-Tips)
-[36](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
-[37](https://www.reddit.com/r/vscode/comments/1b4x3sk/best_theme_2024/)
-[38](https://www.youtube.com/watch?v=ZVGutgqBMUM)
-[39](https://gist.github.com/mrmartineau/ea3b428124bc1e31cd46dfa55469d781)
-[40](https://code.visualstudio.com/docs/getstarted/tips-and-tricks)
-[41](https://www.youtube.com/watch?v=QmQFVghf0H4)
-[42](https://www.youtube.com/watch?v=ifTF3ags0XI)
-
-### VSC Shortcuts CheatSheet
-
-These are some of the most common shortcuts of VSCode. You don't need to memorize them initially—as you learn to code, they will eventually come to you.
-
-**Official List of all commands**
-
-| Category               | Action                                | Mac Shortcut            | Windows/Linux Shortcut  |
-|------------------------|---------------------------------------|-------------------------|-------------------------|
-| **Open/View**          | Open Command Palette                 | Shift+Cmd+P             | Shift+Ctrl+P            |
-|                        | Access Settings                      | Cmd+,                   | Ctrl+,                  |
-|                        | Toggle Terminal                      | Ctrl+\`                  | Ctrl+\`                  |
-|                        | Create New Terminal                  | Shift+Ctrl+\`            | Shift+Ctrl+\`            |
-|                        | Toggle Sidebar                       | Cmd+B                   | Ctrl+B                  |
-|                        | Open New Window/Instance             | Shift+Cmd+N             | Shift+Ctrl+N            |
-|                        | Close Window                         | Cmd+W                   | Ctrl+W                  |
-| **Working With Files** | Sidebar Focus                        | Shift+Cmd+E             | Shift+Ctrl+E            |
-|                        | Open File/Folder From Sidebar        | Cmd+Down                | Ctrl+Down               |
-|                        | Change File Tabs                     | Cmd+Tab                 | Ctrl+PageUp             |
-|                        | Quick File Open                      | Cmd+P                   | Ctrl+P                  |
-|                        | Open File From Explorer              | Cmd+O                   | Ctrl+O                  |
-|                        | New File                             | Cmd+N                   | Ctrl+N                  |
-|                        | Save                                 | Cmd+S                   | Ctrl+S                  |
-|                        | Save As                              | Shift+Cmd+S             | Shift+Ctrl+S            |
-|                        | Close File                           | Cmd+W                   | Ctrl+W                  |
-|                        | Delete File                          | Cmd+Delete              | Ctrl+Delete             |
-|                        | Reopen Files                         | Shift+Cmd+T             | Shift+Ctrl+T            |
-|                        | Zoom In                              | Cmd++                   | Ctrl++                  |
-|                        | Zoom Out                             | Cmd+-                   | Ctrl+-                  |
-|                        | Split Editor                         | Cmd+\\                  | Ctrl+\\                 |
-| **Code Editing**       | Go To Start Of Line                  | Cmd+Left                | Home                    |
-|                        | Go To End Of Line                    | Cmd+Right               | End                     |
-|                        | Move By Word                         | Option+Left/Right       | Alt+Left/Right          |
-|                        | Go To Start Of File                  | Cmd+Up                  | Ctrl+Home               |
-|                        | Go To End Of File                    | Cmd+Down                | Ctrl+End                |
-|                        | Cut Line                             | Cmd+X                   | Ctrl+X                  |
-|                        | Copy Line                            | Cmd+C                   | Ctrl+C                  |
-|                        | Paste                                | Cmd+V                   | Ctrl+V                  |
-|                        | Move Line Up                         | Option+Up               | Alt+Up                  |
-|                        | Move Line Down                       | Option+Down             | Alt+Down                |
-|                        | Copy Line Up                         | Shift+Option+Up         | Shift+Alt+Up            |
-|                        | Copy Line Down                       | Shift+Option+Down       | Shift+Alt+Down          |
-|                        | Remove Line                          | Shift+Cmd+K             | Shift+Ctrl+K            |
-|                        | Insert Line Below                    | Cmd+Enter               | Ctrl+Enter              |
-|                        | Insert Line Above                    | Shift+Cmd+Enter         | Shift+Ctrl+Enter        |
-|                        | Jump To Matching Bracket             | Shift+Cmd+\\            | Shift+Ctrl+\\           |
-|                        | Add Line Comment                     | Cmd+/                   | Ctrl+/                  |
-|                        | Add Block Comment                    | Shift+Option+A          | Shift+Alt+A             |
-|                        | Highlight Code (Expand Selection)    | Shift+Any Direction     | Shift+Any Direction     |
-|                        | Select Next Match                    | Cmd+D                   | Ctrl+D                  |
-|                        | De-select Match                      | Cmd+U                   | Ctrl+U                  |
-|                        | Add Cursor                           | Option+Click            | Alt+Click               |
-|                        | Go to Symbol (Functions, vars, etc.) | Cmd+Shift+O             | Ctrl+Shift+O            |
-
-*End of VSCode Shortcuts*
-
-[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/66276055/f1691960-0fde-4b15-a7c9-7f3d9f9b69fb/VSCode-shortcuts.pdf)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
+
+> Priority: Inline styles >> External style
+
+---
+
+Update index.html:
+```html
+<html>
+    <title>
+        Visual Studio Code - Code Editor
+    </title>
+    <link rel="stylesheet" href="index.css">
+</html>
+<body>
+... rest of the code
+</body>
+```
+
+---
+
+- Common Style Attributes
+  - `color`: Sets the text color
+  - `background-color`: Sets the background color  
+  - `font-size`: Sets the size of the text
+  - `margin`: Sets the outer space around an element
+  - `padding`: Sets the inner space within an element
+  - `border`: Sets the border around an element
+
+### Flexbox Layout System
+
+Flexbox is a CSS layout model designed to help with the arrangement of items within a container.
+
+---
+
+- Basic Flexbox Implementation
+
+Update the website to the following:
+
+```html
+<html>
+    <title>
+        Visual Studio Code - Code Editor
+    </title>
+</html>
+<body>
+    <div style="display: flex;">
+        <div>Visual Studio Code</div>
+        <a href="/">Docs</a> 
+        <a href="/">Updates</a> 
+        <a href="/">Blog</a> 
+        <a href="/">API</a> 
+        <a href="/">Extensions</a> 
+        <a href="/">FAQs</a>
+        <a href="/">Learn</a>
+    </div>
+    <div>
+        <input type="text" placeholder="Search Docs">
+        <button>Download</button>
+    </div>
+    <br/>
+
+    <div>
+        <a href="/">Version 1.82</a> is now available! Read about the new features and fixes from July.
+    </div>
+
+    <br/>
+</body>
+```
+
+Notice that the elements are positioned right next to each other even though `Visual Studio code` is inside a `div`.
+
+---
+
+- Justify Content Property
+
+Try experimenting with the `justify-content` property:
+
+```html
+<html>
+    <title>
+        Visual Studio Code - Code Editor
+    </title>
+</html>
+<body>
+    <div style="display: flex; justify-content: space-between;">
+        <div>Visual Studio Code</div>
+        <a href="/">Docs</a> 
+        <a href="/">Updates</a> 
+        <a href="/">Blog</a> 
+        <a href="/">API</a> 
+        <a href="/">Extensions</a> 
+        <a href="/">FAQs</a>
+        <a href="/">Learn</a>
+    </div>
+    <div>
+        <input type="text" placeholder="Search Docs">
+        <button>Download</button>
+    </div>
+    <br/>
+
+    <div>
+        <a href="/">Version 1.82</a> is now available! Read about the new features and fixes from July.
+    </div>
+
+    <br/>
+</body>
+```
+
+---
+
+- Flexbox Properties from Note
+
+- Display and Justify Content
+
+```css
+display: flex;                    /* Enable flexbox layout */
+justify-content: flex-start;      /* Align items to start */
+justify-content: flex-end;        /* Align items to end */
+justify-content: center;          /* Center items */
+justify-content: space-between;   /* Space items with gaps between */
+justify-content: space-around;    /* Space items with equal space around */
+justify-content: space-evenly;    /* Space items with even distribution */
+```
+```css
+display: flex;                    /* Enable flexbox layout */
+
+/* justify-content property controls main axis alignment */
+
+justify-content: flex-start;      /* Align items to start */
+/*
+┌─────────────────────────────────┐
+│ [A] [B] [C]                     │
+└─────────────────────────────────┘
+*/
+
+justify-content: flex-end;        /* Align items to end */
+/*
+┌─────────────────────────────────┐
+│                     [A] [B] [C] │
+└─────────────────────────────────┘
+*/
+
+justify-content: center;          /* Center items */
+/*
+┌─────────────────────────────────┐
+│          [A] [B] [C]            │
+└─────────────────────────────────┘
+*/
+
+justify-content: space-between;   /* Space items with gaps between */
+/*
+┌─────────────────────────────────┐
+│ [A]        [B]        [C]       │
+└─────────────────────────────────┘
+*/
+
+justify-content: space-around;    /* Space items with equal space around */
+/*
+┌─────────────────────────────────┐
+│[A]            [B]            [C]│
+└─────────────────────────────────┘
+*/
+
+justify-content: space-evenly;    /* Space items with even distribution */
+/*
+┌─────────────────────────────────┐
+│      [A]     [B]     [C]        │
+└─────────────────────────────────┘
+*/
+```
+- Advanced Flexbox Example
+
+```html
+<html>
+</html>
+<body>
+    <header>
+    </header>
+    <section>
+        <div style="border-width: thick; border-style: solid; display: flex; justify-content: space-between; margin-left: 200px; margin-right: 200px;">
+            <div style="background: red;"> 
+                <h1>Code with GitHub Copilot</h1>
+                <h6>Write code faster and smarter with GitHub Copilot, your AI pair programmer.</h6>            
+                Try GitHub Copilot free for 30 days
+                Completions present suggestions automatically to help you code more efficiently.
+                
+                Copilot Chat understands the context of your code, workspace, extensions, settings, and more.
+                
+                Inline Chat enables you to iteratively generate edits and get answers to quick questions, directly on your code.
+            </div>
+            <div style="background: green;">
+                <img src="https://code.visualstudio.com/assets/home/swimlane-copilot.png" width="800px" />
+            </div>
+        </div>
+    </section>
+    <footer>
+    </footer>
+</body>
+```
+
+### CSS Classes and IDs
+
+In CSS, classes and IDs are used as selectors to apply styles to HTML elements. They help in targeting specific elements for styling and can be used to enhance the modularity and reusability of CSS code.
+
+---
+
+- Classes vs IDs Usage
+
+---
+
+- Classes (.) - Reusable Styles
+
+```html
+<span class="toplink">Docs</span>
+<span class="toplink">Updates</span>
+```
+
+```css
+.toplink {
+    color: gray;
+}
+```
+
+---
+
+
+- IDs (#) - Unique Elements
+
+```html
+<div id="header">Content</div>
+```
+
+```css
+#header {
+    background-color: blue;
+}
+```
+### Color Systems and RGB Values
+- You can create any color with combination of Red, Blue, Green
+- RGB is a color model used to represent colors in digital displays
+- r (0 - 255), g (0 - 255), b (0 - 255) [min- max values]
+
+---
+
+- RGB Color Model
+
+```css
+rgb(255, 0, 0)     /* Red */
+rgb(0, 255, 0)     /* Green */  
+rgb(0, 0, 255)     /* Blue */
+rgb(255, 255, 0)   /* Yellow */
+rgb(255, 0, 255)   /* Purple */
+rgb(0, 255, 255)   /* Cyan */
+```
+
+---
+
+- RGBA with Transparency
+
+```css
+rgba(255, 0, 0, 0.5)   /* Semi-transparent red */
+rgba(0, 0, 0, 0.3)     /* Semi-transparent black */
+```
+
+---
+
+- Hex Color Codes
+
+```css
+#FF0000   /* Red */
+#00FF00   /* Green */
+#0000FF   /* Blue */
+#FFFF00   /* Yellow */
+```
+
+### CSS Margin and Padding Values
+
+```css
+margin: 10px;           /* All sides 10px */
+margin: 10px 20px;      /* Top/bottom 10px, left/right 20px */
+margin: 10px 20px 30px; /* Top 10px, left/right 20px, bottom 30px */
+margin: 10px 20px 30px 40px; /* Top, right, bottom, left */
+
+padding: 15px;          /* All sides 15px */
+padding: 10px 20px;     /* Top/bottom 10px, left/right 20px */
+```
+
+### Border Properties
+
+```css
+border: 1px solid black;        /* Width style color */
+border-width: thick;            /* Border thickness */
+border-style: solid;            /* Border style */
+border-color: red;              /* Border color */
+```
+
+### Advanced CSS Concepts
+
+- Font and Text Properties
+
+```css
+font-size: 16px;               /* Text size */
+font-weight: bold;             /* Text weight */
+text-align: center;            /* Text alignment */
+text-decoration: underline;    /* Text decoration */
+```
+
+---
+
+- Background Properties
+
+```css
+background-color: black;       /* Background color */
+background: red;               /* Shorthand background */
+```
+
+---
+
+- Element Positioning and Layout
+
+```css
+margin-left: 200px;           /* Left margin */
+margin-right: 200px;          /* Right margin */
+width: 800px;                 /* Element width */
+```
+
+---
+
+- CSS Selectors Hierarchy
+
+```
+Element Selectors:
+├── Tag selectors: div, span, body
+├── Class selectors: .classname
+├── ID selectors: #idname
+└── Attribute selectors: [type="text"]
+```
+
+### Browser Tools and Development
+
+---
+
+- Google Chrome Developer Tools
+
+---
+
+- Right-click → Inspect Element
+- F12 or Ctrl+Shift+I
+- Elements tab for HTML structure
+- Styles tab for CSS properties
+
+---
+
+- File Structure Organization
+
+```
+website/
+├── index.html
+├── index.css
+├── images/
+└── js/ (for future JavaScript)
+```
+
+---
+
+- HTML Document Structure Best Practices
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <style>
+        /* Internal styles */
+    </style>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Page content -->
+</body>
+</html>
+```
+
+### Key Concepts Summary
+
+---
+
+- HTML Core Concepts
+  - HyperText Markup Language foundation
+  - Tag-based structure with opening/closing tags
+  - Semantic elements for content organization
+  - Attributes provide additional information
+
+---
+
+- CSS Core Concepts  
+  - Cascading Style Sheets for presentation
+  - Selectors target HTML elements
+  - Properties define visual characteristics
+  - Values specify property settings
+
+---
+
+- Flexbox Layout Model
+  - Modern CSS layout system
+  - Container and item relationship
+  - Main axis and cross axis alignment
+  - Flexible item sizing and positioning
+
+---
+
+- Development Workflow
+  1. Create HTML structure
+  2. Add CSS styling
+  3. Test in browser
+  4. Iterate and refine
+  5. Validate code quality
+
+### Next Steps and Advanced Topics
+
+- Upcoming Technologies
+  - JavaScript for interactivity
+  - Responsive design principles
+  - CSS Grid layout system
+  - Modern development tools
+
+- Project Milestones
+  - Clone simple website landing pages
+  - Build responsive layouts
+  - Implement interactive features
+  - Deploy to web hosting platforms
+
+- Learning Resources
+  - 100xDevs community Discord
+  - YouTube success stories and tutorials
+  - GitHub project repositories
+  - GSoC preparation materials
+
+## 2 Javascript Basics
+```js
+// variable
+// let
+// can be reassigned
+let name = "Bali";
+name ="Siddhant ";
+
+// constants
+// cannot be reassigned
+// make code more stricter
+const name2 = "Bhati";
+const age=21 ;
+// age=22; //TypeError: Assignment to constant variable.
+
+// console.log() //print method
+// it has default newline/linebreak
+console.log(age); //21
+console.log("age") //age
+
+// var
+// older way to define variables
+// function scoped 
+// please don't use it
+// forget it
+var name3 = "Bhaskar";
+
+var isStudent=true;
+console.log(isStudent); //true
+
+// keyword = reserved words in lang to do somestuff
+// deprecated = used here to support already existing code, but is not advised to use 
+
+// js is line-to-line interpreated lang
+// it will run till crash occour ,then stop
+// but it will execute till crash error come
+
+// comment
+// ; means statement end
+
+// DataTypes
+let no=42; //number
+let str="String";// String
+let boo=true;// boolean
+let arr3=[1,2,3];//array
+console.log(arr3[3]); //undefined
+
+// Operators
+let sum = 1+5; //arithmatic
+let isEqual= (1===10); //comparison operator
+let isTrue = (true&&false) //logical operator
+
+// == ,!= , Loose equality , typecasting , return true even type is different
+console.log('5'==5, null==undefined, false==0); //true true true
+// === ,!== , Strict equality , compare both value and type without any type conversion , return true only both value and type are EXACT
+console.log('5'===5, null===undefined, false===0, 5===5); //false false false true
+
+// Function, workers/helpers, that can be use any number of times
+// only executed when called :)
+function greet0(name) {console.log("Hi, ",name,"!!")}
+let name4 = "Bali"
+greet0(name4); //Hi,  Bali !!
+
+function sum1(n1,n2){return n1+n2;}
+console.log(sum1(1,5)); //6
+console.log(sum1(1,"o1")); //1o1 
+// this is called string concatnation
+
+function sum11(n1,n2){return parseInt(n1)+parseInt(n2);}
+// if args ,then it will parseInt
+// parseInt : is a function that converts a string into an integer number
+// "42" => 42, "42sfsdfs" => 42, "meow" => NaN 
+console.log(sum11(1,5)); //6
+console.log(sum11(1,"o1")); //NaN
+
+function isEven ( n1){
+    // If Else
+    if (n1%2===0){return true;} // % mod operator,gives remainder
+    if (n1%2!==0){return false;}
+}
+
+console.log(isEven(10),isEven(11)); //true false
+
+// for loop 
+for (var i =0; i<5; i++){
+    console.log(i);
+}
+
+// while loop
+var i1=5;
+while(i1--){
+    console.log(i1)
+}
+
+
+// complex data types
+// objects, key value pairs {stingKey:valueAnyDatatype}
+let user = {userName:"Rijusmit",userAge:20};
+console.log("Hi "+user["userName"]+" Brother,you have age:"+user.userAge); // user["userName"] = user.userName, you can use any
+
+function greet(user)// accepting not primitive but complex datatype
+{
+    console.log("Hi "+user.userName+" Brother,you have age:"+user.userAge);
+}
+
+let user1 = {userName:"Bhati",userAge:21};
+greet(user1);
+
+// Array, help to grp data together
+let arr= [1,2,3];
+const lenArr= arr.length;
+console.log(arr,lenArr); //[ 1, 2, 3 ] 3
+
+// Array of Objects, more complex :)
+const user2= [{userName:"Bhaskar",userAge:20},{userName:"Kintsugi",userAge:21}];
+let user3 = user2[0].userName;
+let user3all = user2[0];
+console.log(user3,user3all); //Bhaskar { userName: 'Bhaskar', userAge: 20 }
+
+let arr2= ["Bali",21,{userName:"Bhaskar",userAge:20}];
+let let1 = arr2[2];
+let let2 =  {userName:"Bhaskar",userAge:20} ;
+console.log(let1,let2); // { userName: 'Bhaskar', userAge: 20 } { userName: 'Bhaskar', userAge: 20 } // litrally same thing
+
+
+// Object of Objects
+let user4 = {userName:"Bhaskar",userAge:20,userAddress:{city:"Delhi", country: "India", pin:110091}};
+const city= user4.userAddress.city;
+const city2= user4["userAddress"]["city"];
+console.log(city,city2); // Delhi Delhi //Same :)
+
+// create a function that takes an arr of a obj as input and return the users who age>18 and are male
+const users1 =[
+    // {userName:"Bhaskar",userAge:20,userGender:"Male"},
+    {userName:"DoggoBhai",userAge:2,userGender:"Male"},
+    {userName:"IIITDBilli",userAge:5,userGender:"Female"},
+];
+
+function maleAdultChecker(users1){
+    return users1.filter( // return array
+        users1=>
+        users1.userAge>=18 && users1.userGender==="Male"); //[ { userName: 'Bhaskar', userAge: 20, userGender: 'Male' } ]
+}
+function maleAdultChecker2(users1){
+    for (let i=0; i<users1.length; i++){ //return object
+        if (
+            users1[i]["userAge"] >= 18
+            &&
+            users1[i]["userGender"] === "Male"
+        )
+            return users1[i]; //{ userName: 'Bhaskar', userAge: 20, userGender: 'Male' }
+    } 
+    return 0;
+}
+
+console.log(maleAdultChecker(users1),maleAdultChecker2(users1)); // [ { userName: 'Bhaskar', userAge: 20, userGender: 'Male' } ] { userName: 'Bhaskar', userAge: 20, userGender: 'Male' } //NOTsame
+// [] 0 // in case no Bhaskar entry 
+
+```
+### Javascript - The basics
+
+---
+
+- Web development
+
+Web development involves writing a lot of HTML, CSS and JS code. 
+Historically (and even today to some extend), browsers could only understand HTML, CSS and JS
+Any website that you see, is a bunch of HTML, CSS and JS files along with some assets (images, videos etc)
+ 
+```
+                    ┌─────────────────────────────────────────────┐
+                    │                                             │
+                    │           G O O G L E                       │
+     ┌─────────┐    │                                             │
+     │         │    │    ┌───────────────────────────────────┐    │
+     │  HTML   │────┼───▶│                                   │    │
+     │  CSS    │    │    │         [Search Box]              │    │
+     │  JS     │    │    │                                   │    │
+     │ Images  │    │    │    ┌─────────────────────────┐    │    │
+     │         │    │    │    │     Special Doodle      │    │    │
+     └─────────┘    │    │    │    (Holiday/Event)      │    │    │
+                    │    │    └─────────────────────────┘    │    │
+                    │    │                                   │    │
+                    │    │[Google Search][I'm Feeling Lucky] │    │
+                    │    │                                   │    │
+                    │    └───────────────────────────────────┘    │
+                    │                                             │
+                    │  India                                      │
+                    │                                             │
+                    │  Advertising  Business  How Search works    │
+                    │                          Privacy  Terms     │
+                    └─────────────────────────────────────────────┘
+```
+
+---
+
+- Facts/Callouts
+
+React, NextJS are frameworks . They compile down to HTML, CSS, JS in the end. That is what your browser understands.
+When you run your C++ code on leetcode , it does not run on your browser/machine. It runs somewhere else. Your browser can’t (almost) compile and run C++ code.
+If someone asks — What all languages can your browser interpret, the answer is HTML, CSS, JS and WebAssembly. It can, technically, run C++/Rust code that is compiled down to Wasm
+
+---
+
+- Before we proceed, do one of the following  
+
+Create an account on replit
+Install Node.js locally
+Keep your browser console open for testing locally
+
+### Properties of JS
+Every language comes with it’s unique set of features. 
+- Javascript has the following -
+
+---
+
+- 1. Interpreted
+ JavaScript is an interpreted language, meaning it's executed line-by-line at runtime by the JavaScript engine in the browser or server environment, rather than being compiled into machine code beforehand.
+```
+C++ Code
+┌─────────────────┐         ┌─────────┐                    Runs on
+│                 │────────▶│         │───────────────────▶your machine
+│                 │         │ Binary  │
+│                 │         │         │
+│                 │         └─────────┘
+└─────────────────┘
+
+
+JS Code
+┌─────────────────┐
+│                 │───────────────────────────────────────▶Runs on
+│                 │                                        your machine
+│                 │
+└─────────────────┘
+```
+ 
+- Upsides - There is one less step to do before running your code
+- Downsides - Performance Overhead:More prone to runtime errors
+
+---
+
+- 2. Dynamically Typed
+ Variables in JavaScript are not bound to a specific data type. Types are determined at runtime and can change as the program executes
+C++ Code (won’t compile)
+```cpp
+#include <iostream>
+
+int main() { 
+  int a = 1;
+  a = "hello";
+  a = true;
+}
+```
+
+JS Code (will compile)
+```js
+
+var a = 1;
+a = "Doraemon";
+a = true;
+
+console.log(a)
+```
+- cpp code is statically typed
+- js code is dynamically typed
+- Rust
+  - do ownership checks
+  - compiler very strict
+  - extreme memory safe
+  - extreme slow compile
+ 
+---
+
+- 3. Single threaded
+JavaScript executes code in a single-threaded environment, meaning it processes one task at a time. We will dive deeper into this next week.
+```
++-------------------------+    +-------------------------+
+|     ( Rust / C++ )      |    |     ( index.js )        |
+|                         |    |                         |
+|   [CPU1*][CPU2*][CPU3*] |    |   [CPU1*][cpu2] [cpu3]  |
+|   [CPU4*][CPU5*][CPU6*] |    |   [cpu4] [cpu5] [cpu6]  |
+|   [CPU7*][CPU8*][CPU9*] |    |   [cpu7] [cpu8] [cpu9]  |
+|                         |    |                         |
+|  * All CPUs in use      |    |  * Only one CPU in use  |
++-------------------------+    +-------------------------+
+
+```
+
+- even JS infinite loop(most expensive operation :0 ) can utilize max only 1CPU !!! 
+- (do htop ;0 )
+  - at htop, nodejs process => 98% CPU
+  - it uses ~100%CPU out of `100% * number of CPUs total`
+  - eg: i have 20 CPU Cores, uses 98% nodejs app, from 20*100 % total= 2000% total CPU space
+  - `Rust/ C++`(Multithreaded) can go to 200%, 300% etc.
+  - `ffmpeg`(c++ ) go upto 300% / even use full CPUs
+- to reduce JS Runtime errors, TS was introduced
+  - TS(Like C++) =(compile)> JS => Run
+  - it reduces disadvantages 
+- companies go from JS to Rust, Golang for
+  - faster Run
+  - Max. Safety
+
+---
+
+- 4. Garbage collected
+```
++---------------------------------------------------------------+
+|                       Memory Management                       |
++-------------------+-------------------+-----------------------+
+| Garbage Collector | Manual            | The Rust Way          |
+|-------------------|-------------------|-----------------------|
+| 1. Written by     | 1. You allocate   | 1. Rust has its own   |
+|    smart people   |    and deallocate |    ownership model    |
+| 2. No dangling    |    memory yourself|    for memory mgmt    |
+|    pointers issue | 2. Can lead to    | 2. Extremely safe     |
+| 3. No manual      |    dangling ptrs  |    from memory errors |
+|    memory mgmt    |    / memory issues|                       |
+| 4. Ex: Java, JS   | 3. Hard learning  |                       |
+|                   |    curve          |                       |
+|                   | 4. Ex: C          |                       |
++-------------------+-------------------+-----------------------+
+
+```
+JavaScript automatically manages memory allocation and deallocation through garbage collection, which helps prevent memory leaks by automatically reclaiming memory used by objects no longer in use.
+ 
+- garbage collection does
+  - stores data
+  - change data
+  - removing data
+- code runs in RAM
+
+ 
+---
+
+- Conclusion
+Is JS a good language?
+Yes and no. It is beginner friendly, but has a lot of performance overhead. Bun is trying to solve for a lot of this, but there’s a long way to go before JS can compete with languages like C++/Rust
+
+
+### Syntax of Javascript
+
+---
+
+- 1. Variables
+Variables are used to store data. In JavaScript, you declare variables using var, let, or const.
+```ja
+let name = "John";     // Variable that can be reassigned
+const age = 30;        // Constant variable that cannot be reassigned
+var isStudent = true;  // Older way to declare variables, function-scoped
+```
+- let, const helps to make code more stricter, when used logically correctly
+- deprecated
+  - disapproved / "don't use it"
+  - Something that's still tolerated or accepted to support already written code , but it's not recommended or highly discouraged
+- keywords
+  - reserved words in JS not to use as var name
+---
+
+- Assignment
+Create a variable for each of the following: your favorite color, your height in centimeters, and whether you like pizza. Use appropriate variable declarations (let, const, or var). Try logging it using console.log
+
+---
+
+- 2. Data types
+```js
+let number = 42;             // Number
+let string = "Hello World";  // String
+let isActive = false;        // Boolean
+let numbers = [1, 2, 3];     // Array
+```
+
+---
+
+- 3. Operators
+```js
+let sum = 10 + 5;          // Arithmetic operator
+let isEqual = (10 === 10); // Comparison operator
+let isTrue = (true && false); // Logical operator
+```
+
+---
+
+- 4. Functions
+```js
+// Function declaration
+function greet(name) {
+    return "Hello, " + name;
+}
+
+// Function call
+let message = greet("John"); // "Hello, John"
+```
+- js will not run/read function at 1st
+- only run/read when called
+- i.e. if written wrong function, it won't show error until called
+---
+- Assignment #1
+Write a function sum that finds the sum of two numbers. 
+Side quest - Try passing in a string instead of a number and see what happens?
+Assignment #2
+Write a function called canVote that returns true or false if the age of a user is > 18
+
+---
+
+- 5. If/Else
+```js
+if (age >= 18) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are a minor.");
+}
+```
+
+---
+
+- Assignment
+Write an if/else statement that checks if a number is even or odd. If it's even, print "The number is even." Otherwise, print "The number is odd."
 
 
 ---
-End-of-File
 
-The [KintsugiStack](https://github.com/kintsugi-programmer/KintsugiStack) repository, authored by Kintsugi-Programmer, is less a comprehensive resource and more an Artifact of Continuous Research and Deep Inquiry into Computer Science and Software Engineering. It serves as a transparent ledger of the author's relentless pursuit of mastery, from the foundational algorithms to modern full-stack implementation.
+- 6. Loops
+```js
+// For loop
+for (let i = 0; i < 5; i++) {
+    console.log(i); // Outputs 0 to 4
+}
 
-> Made with 💚 [Kintsugi-Programmer](https://github.com/kintsugi-programmer)
+// While loop
+let j = 0;
+while (j < 5) {
+    console.log(j); // Outputs 0 to 4
+    j++;
+}
+```
+ 
+---
+
+- Assignment
+Write a function called sum that finds the sum from 1 to a number
+
+### Complex types
+- Objects
+An object in JavaScript is a collection of key-value pairs, where each key is a string and each value can be any valid JavaScript data type, including another object.
+ 
+```
++-------------------------------------------+
+|                                           |
+|   let user = {                            |
+|       name: "Doraemon",   <--- key:value  |
+|       age: 19                             |
+|   }                                       |
+|                                           |
+|   key  --->  "name"                       |
+|   value --->  "Doraemon"                  |
++-------------------------------------------+
+
+```
+```js
+let user = {
+	name: "Doraemon",
+	age: 19
+}
+
+console.log("Doraemons age is " + user.age);
+```
+
+---
+
+- Assignment #1
+Write a function that takes a user as an input and greets them with their name and age
+
+---
+
+- Assignment #2
+Write a function that takes a new object as input which has name , age  and gender and greets the user with their gender (Hi Mr/Mrs/Others Doraemon, your age is 21)
+
+---
+
+- Assignment #3
+Also tell the user if they are legal to vote or not
+
+---
+
+- Arrays
+Arrays let you group data together
+```js
+const users = ["Doraemon", "raman", "diljeet"];
+const tatalUsers = users.length;
+const firstUser = users[0];
+```
+
+---
+
+- Assignment
+Write a function that takes an array of numbers as input, and returns a new array with only even values. Read about filter in JS
+
+---
+
+- Array of Objects
+We can have more complex objects, for example an array of objects
+```js
+const users = [{
+		name: "Doraemon",
+		age: 21
+	}, {
+		name: "raman",
+		age: 22
+	}
+}
+
+const user1 = users[0] 
+const user1Age = users[0].age
+```
+- `user1.name` , `user1[name]` both works in JS
+
+---
+
+- Assignment
+Write a function that takes an array of users as inputs and returns only the users who are more than 18 years old
+
+---
+
+- Object of Objects
+We can have an even more complex object (object of objects)
+```js
+const user1 = {
+	name: "Doraemon",
+	age: 19,
+	address: {
+		city: "Delhi",
+		country: "India",
+		address: "1122 DLF"
+	}
+}
+
+const city = user1.address.city;
+```
+
+---
+
+- Assignment
+Create a function that takes an array of objects as input,
+and returns the users whose age > 18 and are male
+
+---
+
+- Arrays in js
+  - = arr/vector in C++
+  - = vectors in rust
+  - = arraylist in java
+- Objects in js
+  - = Map in C++
+  - = Hashmaps in Rust
+  - = Hashmaps in JAVA
+
+
+## 3 Asynchronous Javascript, Callbacks and more [ONSIGHT]
+
+### Intro
+- Goal of todays class:
+  - I/O tasks
+  - Callbacks
+  - Functional arguments
+  - Async vs Sync codeEvent loops, callback queues, JS
+  - Goal of tomorrows class
+  - Async await, Promises
+  - Practising async JS
+ 
+Hopefully, by the end of the class, you are able to understand the following code:
+
+---
+
+- Functional arguments
+
+```js
+function sum(a, b) {
+  return a + b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+function divide(a, b) {
+  return a / b;
+}
+
+function doOperation(a, b, op) {
+  return op(a, b)
+}
+
+console.log(doOperation(1, 2, sum))
+```
+
+---
+
+- Callbacks
+```js
+const fs = require("fs");
+
+fs.readFile("a.txt", "utf-8", function (err, contents) {
+  console.log(contents);
+});
+```
+
+### Normal functions in JS
+The way to write functions in JS is as follows - 
+Find sum of two numbers
+```js
+function sum(a, b) {
+	return a + b;
+}
+
+let ans = sum(2, 3)
+console.log(sum);
+```
+ 
+> In JavaScript, just writing a function doesn’t do anything immediately; it only defines the function. The function’s code will not run until the function is actually called (or invoked).
+
+```js
+function sum1(n1,n2){return n1+n2;}
+console.log(sum1(1,5)); //6
+console.log(sum1(1,"o1")); //1o1 
+// this is called string concatnation
+
+function sum11(n1,n2){return parseInt(n1)+parseInt(n2);}
+// if args ,then it will parseInt
+// parseInt : is a function that converts a string into an integer number
+// "42" => 42, "42sfsdfs" => 42, "meow" => NaN 
+console.log(sum11(1,5)); //6
+console.log(sum11(1,"o1")); //NaN
+
+```
+---
+
+Find sum from 1 to a number
+```js
+function sum(n) {
+	let ans = 0;
+	for (let i = 1; i <= n; i++) {
+		ans = ans + i
+	}
+	return ans;
+}
+
+function sum1(n){
+  return n*(n+1);
+}
+
+
+const ans = sum(100);
+console.log(ans);
+```
+
+### Synchronous code
+- Synchronous code is executed line by line, in the order it's written. 
+- Each operation waits for the previous one to complete before moving on to the next one.
+
+---
+
+For example
+```js
+function sum(n) {
+	let ans = 0;
+	for (let i = 1; i <= n; i++) {
+		ans = ans + i
+	}
+	return ans;
+}
+
+const ans1 = sum(100);
+console.log(ans1);
+const ans2 = sum(1000);
+console.log(ans2);
+const ans3 = sum(10000);
+console.log(ans3);
+```
+
+### I/O heavy operations
+> sync i-o tasks => performance downside
+
+- I/O (Input/Output) heavy operations refer to tasks in a computer program that involve a lot of data transfer between the program and external systems or devices.
+- These operations usually require waiting for data to be read from or written to sources like disks, networks, databases, or other external devices, which can be time-consuming compared to in-memory computations.
+
+- Examples of I/O Heavy Operations:
+  - Reading a file
+  - Starting a clock
+  - HTTP Requests 
+ 
+> HTTP Requests can be seen from Networks Tab in Dev Console
+
+> 💡 We’re going to introduce imports/requires next. A require statement lets you import code/functions export from another file/module.
+ 
+---
+
+Let’s try to write code to do an I/O heavy operation - 
+- Open repl.it
+- Create a file in there (a.txt) with some text inside
+- Write the code to read a file synchronously
+```js
+// filesystem nodejs library, external library, need to import
+const fs = require("fs");// import it 
+// 35
+const contents = fs.readFileSync("a.txt", "utf-8"); // fs is object here, having key readFileSync leads to a func.
+// an I/O heavy operation
+// outside js code context
+// comm. with os
+// utf-8 encoding
+
+// in-memory computations; is typical js code var ops like; var a = "joe";
+console.log(contents);
+```
+
+> The "utf-8" argument in fs.readFileSync tells Node.js to decode the raw buffer (bytes) into a human-readable string instead of returning the binary buffer.
+
+```
+case 1: fs.readFileSync("a.txt", "utf-8")
+     +--------------------+
+     | File: a.txt        |
+     | Content: hi there  |
+     +--------------------+
+                |
+                v
+      fs.readFileSync("a.txt", "utf-8")
+                |
+                v
+        "hi there"   <-- String (decoded text)
+
+case 2: fs.readFileSync("a.txt")
+     +--------------------+
+     | File: a.txt        |
+     | Content: hi there  |
+     +--------------------+
+                |
+                v
+        fs.readFileSync("a.txt")
+                |
+                v
+    <Buffer 68 69 20 74 68 65 72 65>
+         (hex representation)
+                |
+                +--> 68 = 'h'
+                +--> 69 = 'i'
+                +--> 20 = ' ' (space)
+                +--> 74 = 't'
+                +--> 68 = 'h'
+                +--> 65 = 'e'
+                +--> 72 = 'r'
+                +--> 65 = 'e'
+
+- With "utf-8" → you directly get a string ("hi there")
+- Without "utf-8" → you get a Buffer object (raw binary data, stored in hex)
+```
+---
+
+- Create another file (b.txt)
+- Write the code to read the other file synchronously
+```js
+const fs = require("fs");
+
+const contents = fs.readFileSync("a.txt", "utf-8");
+console.log(contents);
+// may take 10sec if big data,slow machine
+// performance downside
+
+const contents2 = fs.readFileSync("b.txt", "utf-8");
+console.log(contents2);
+```
+
+---
+
+> 💡What is wrong in this code above?
+
+### I/O bound tasks vs CPU bound tasks
+
+---
+
+- CPU bound tasks
+
+CPU-bound tasks are operations that are limited by the speed and power of the CPU. These tasks require significant computation and processing power, meaning that the performance bottleneck is the CPU itself.
+```js
+let ans = 0;
+for (let i = 1; i <= 1000000; i++) {
+	ans = ans + i
+}
+console.log(ans);	
+```
+> 💡A real world example of a CPU intensive task is running for 3 miles. Your legs/brain have to constantly be engaged for 3 miles while you run.
+
+---
+
+- I/O bound tasks
+
+I/O-bound tasks are operations that are limited by the system’s input/output capabilities, such as disk I/O, network I/O, or any other form of data transfer. These tasks spend most of their time waiting for I/O operations to complete.
+```js
+const fs = require("fs");
+
+const contents = fs.readFileSync("a.txt", "utf-8");
+console.log(contents);
+```
+> 💡 A real world example of an I/O bound task would be Boiling water. I don’t have to do much, I just have to put the water on the kettle, and my brain can be occupied elsewhere.
+
+### Doing I/O bound tasks in the real world
+What if you were tasked with doing 3 things
+- Boil some water.
+- Do some laundry
+- Send a package via mail
+
+---
+
+Would you do these 
+- One by one (synchronously)
+- Context switch between them (Concurrently)
+- Start all 3 tasks together, and wait for them to finish. The first one that finishes gets catered to first.
+ 
+> 💡Good talk - Concurrency is not parallelism  - https://www.youtube.com/watch?v=oV9rvDllKEg
+
+### Concurrency vs Parallelism - Key Points from Rob Pike's Talk
+
+```
+Core Concepts
+-------------
+Concurrency vs Parallelism - The Fundamental Difference
+- Concurrency: A way to structure/build things - composition of independently executing processes
+- Parallelism: Simultaneous execution of multiple things (possibly related, possibly not)
+- Key insight: Concurrency is about dealing with lots of things at once; Parallelism is about doing lots of things at once
+- Concurrency is about structure; Parallelism is about execution
+- Concurrency enables parallelism but parallelism is NOT the goal of concurrency
+
+Why This Matters
+- The world is inherently concurrent/parallel (multicore machines, networking, planets, universe)
+- Current programming tools don't express this worldview well
+- Common misconception: programmers think concurrency = parallelism and get disappointed when adding processors makes programs slower
+
+Real-World Analogies
+--------------------
+Operating System Example
+- Mouse driver, keyboard driver, display driver, network drivers
+- All managed as independent concurrent things by OS kernel
+- Not necessarily parallel (on single processor, only one runs at a time)
+- Concurrent model doesn't require parallelism
+
+Vector Dot Product Example
+- Can be broken into microscopic parallel operations
+- Executed simultaneously on specialized hardware
+- Pure parallelism, not concurrency
+
+The Gopher Book-Moving Analogy
+------------------------------
+Single Gopher Problem
+- One gopher moving books from pile to incinerator
+- Slow process, needs tools (cart)
+
+Two Gophers with Carts
+- Faster execution but need synchronization
+- Coordination required to avoid conflicts
+- Shows basic concurrent composition
+
+Three-Gopher Pipeline
+- Loader gopher → Carrier gopher → Unloader gopher
+- Different concurrent design, potentially more efficient
+- Pipeline approach with specialized roles
+
+Four-Gopher Optimized Pipeline
+- Added return-cart gopher
+- Key insight: Adding more work (another gopher) can make system faster
+- Better concurrent composition leads to improved performance
+- Parallelism emerges from better concurrent expression
+
+Scaling Patterns
+- Can scale by duplicating entire systems (8 gophers)
+- Can add staging areas for different concurrent designs
+- Multiple dimensions of parallelization possible (up to 16 gophers)
+- Many valid concurrent designs for same problem
+
+Programming Language Context - Go
+--------------------------------
+Go Routines
+- Like threads but much cheaper and lighter weight
+- Multiplexed dynamically onto OS threads
+- Easy to create thousands (debugging session had 1.3 million go routines)
+- Launched with 'go' keyword before function call
+
+Channels
+- Communication mechanism between go routines
+- Typed, like pipes but with additional properties
+- First-class values that can be passed around
+- Enable coordination without explicit locking
+
+Select Statement
+- Multi-way concurrent control switch
+- Listen to multiple channels simultaneously
+- Choose based on which channel is ready
+- Includes default clause for non-blocking behavior
+
+Practical Examples
+------------------
+Simple Load Balancer
+- Workers read from input channel, write to output channel
+- Arbitrary number of concurrent workers
+- No explicit synchronization needed
+- Scales from 1 to 1000+ processors automatically
+
+Advanced Load Balancer
+- Requesters generate work with embedded return channels
+- Workers handle requests and return results directly
+- Balancer uses heap to track worker loads
+- Direct communication bypasses balancer after initial routing
+- No explicit locking required
+
+Replicated Database Query
+- Send query to multiple database replicas simultaneously
+- Return first response received
+- Handles failures automatically (other replicas continue)
+- Complete implementation in just a few lines
+
+Key Principles
+--------------
+Communication and Coordination
+- Concurrency requires communication between independent pieces
+- Tony Hoare's 1978 paper "Communicating Sequential Processes" is foundational
+- Languages like Erlang and Go implement these ideas
+
+Design Benefits
+- Multiple valid concurrent designs for any problem
+- Designs can be refactored and scaled in different dimensions
+- Correctness is maintained regardless of parallelization level
+- Parallelism becomes a "free variable" once concurrency is right
+
+Performance Insights
+- Adding concurrent procedures can improve performance even with more total work
+- Better concurrent decomposition enables more effective parallelization
+- No need to think about parallelism when designing concurrent solutions
+
+Programming Best Practices
+--------------------------
+What Concurrency Enables
+- Scalable architectures without explicit locking
+- Natural expression of inherently concurrent problems
+- Automatic load balancing and resource utilization
+- Graceful handling of failures and varying loads
+
+Real-World Applications
+- Web serving architectures (substitute gophers→CPUs, books→web content, carts→networking)
+- Distributed systems and microservices
+- Pipeline processing and data streaming
+- Fault-tolerant system design
+
+Conclusion Points
+-----------------
+- Concurrency is powerful but it's not parallelism
+- Concurrency enables parallelism and makes parallelism easy
+- Focus on correct concurrent structure first, parallelism follows naturally
+- Tools and language support (like Go) make concurrent programming accessible
+
+Recommended Reading
+-------------------
+- Tony Hoare's "Communicating Sequential Processes" (1978) - foundational paper
+- golang.org for Go language resources
+- Bob Harper's blog post "Parallelism is not Concurrency"
+- Doug McIlroy's concurrent power series work
+- Sawzall language (parallel without concurrency)
+
+```
+---
+
+- Synchronously (One by one)
+```js
+const fs = require("fs");
+
+const contents = fs.readFileSync("a.txt", "utf-8");
+console.log(contents);
+
+const contents2 = fs.readFileSync("b.txt", "utf-8");
+console.log(contents2);
+
+const contents3 = fs.readFileSync("b.txt", "utf-8");
+console.log(contents3);
+```
+```
+SYNC
+----
+ Start
+   |
+Read a.txt
+   |
+ print
+   |
+Read b.txt
+   |
+ print
+   |
+Read a.txt
+   |
+ print
+   |
+  End
+
+- Tasks happen one after another, blocking the flow.
+```
+---
+- Asynchronously 
+- Start all 3 tasks together, and wait for them to finish.
+```js
+const fs = require("fs");
+
+fs.readFile("a.txt", "utf-8", function (err, contents) {
+  console.log(contents);
+});
+
+fs.readFile("b.txt", "utf-8", function (err, contents) {
+  console.log(contents);
+});
+
+fs.readFile("a.txt", "utf-8", function (err, contents) {
+  console.log(contents);
+});
+
+```
+```
+ASYNC
+-----
+        Start
+          |
+   -----------------
+   |       |       |
+Read a   Read b   Read a
+   |       |       |
+ (cb)    (cb)    (cb)
+   |       |       |
+ print   print   print
+
+        End (main thread doesn’t wait)
+
+- Tasks branch out in parallel, main thread ends while callbacks finish later.
+```
+> with Async func.s ; PERFORMANCE MASSIVE BOOSTS ( no bottlenecks ) !!!
+### Functional arguments
+Write a calculator program that adds, subtracts, multiplies, divides two arguments.
+
+---
+
+- Approach #1
+- Calling the respective function
+```js
+function sum(a, b) {
+  return a + b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+function divide(a, b) {
+  return a / b;
+}
+
+console.log(sum(1, 2)) // useage
+```
+
+---
+
+- Approach #2
+- Passing a function to another function as a arguement
+```js
+function sum(a, b) {
+  return a + b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+function divide(a, b) {
+  return a / b;
+}
+
+
+// Functional arguments
+// Passing a function to another function as a arguement
+function doOperation(a, b, op) {
+  // WOW , func. name as arg
+
+  // during use; eg: 
+  // console.log(doOperation(1, 2, sum))
+  
+  // a =1
+  // b= 2
+  // op=divide // WOW WOW WOW
+  let val = op(a,b);
+
+  return val;
+}
+// wow
+// doOperation(a, b, op)
+//    a=1 , b=2
+//         |
+//         v
+//       [ op ]  ---> sum / subtract / multiply / divide
+//         |
+//         v
+//      result
+
+function doOperationSimple(a, b, op) {
+  return op(a, b)
+}
+console.log(doOperation(1, 2, sum))
+```
+--- 
+
+```
+Approach #1:   a,b ---> sum()       ---> result
+Approach #2:   a,b,op ---> doOperation(op) ---> result
+
+```
+> if you pass anything other than functions made in code as func. args. you will get error
+
+> Using functions as arguments (functional arguments) is useful when you want to make your code more flexible and reusable; rather than writing separate logic for every case, you can pass a function into another function to decide what exact operation to perform at runtime. This is especially helpful when you don’t know in advance which operation is required, or when the same “workflow” needs to handle many possible operations.
+
+> if you understand func. args. ,callbacks will be easy.
+
+> if you understand callbacks ,async will be easy.
+### Asynchronous code, callbacks
+Let’s look at the code to read from a file asynchronously. Here, we pass in a function as an argument. This function is called a callback since the function gets called back when the file is read 
+```
+const fs = require("fs");
+
+function afterFileRead(err, contents) {
+    console.log(contents);
+}
+
+fs.readFile("a.txt", "utf-8", afterFileRead);
+                  |         |           |
+                  |         |           |
+               string    string      function
+
+```
+A **callback function** is a function that is **passed in as an argument** to another function.
+
+The function is named a callback because it is the function that **gets called back** (executed) after the main operation has finished its work.
+
+Key characteristics based on the sources:
+
+*   **Argument and Execution:** When reading a file asynchronously, for example, a function is provided as an argument. This argument function is the callback.
+*   **Timing:** The function is called back when the first function (which it was fed into, such as `fs.readFile`) has completed its process, like finishing the file read.
+*   **Role:** After the initial function has **done its work**, it will then call back the function which was supplied to it as an argument.
+
+In code examples provided, functions like `afterFileRead` or an inline anonymous function passed to `fs.readFile` serve as the callback function.
+
+---
+
+```js
+// eg
+const fs = require("fs");
+
+fs.readFile(
+  "a.txt", 
+  "utf-8", 
+  function (err, contents) { // callback function 
+    console.log(contents);
+  }
+);
+```
+
+---
+
+- setTimeout
+- setTimeout is another asynchronous function that executes a certain code after some time
+```js
+function run() {
+	console.log("I will run after 1s");
+}
+
+setTimeout(run, 1000);
+console.log("I will run immedietely");
+```
+---
+### Which will Executed First - Node.js Synchronous vs Asynchronous Execution Order
+> Q. Explain the order of execution for the output statements. Which message will be printed first, and why?
+```js
+const fs = require("fs");
+
+function print(err, data) {
+    console.log(data);
+}
+
+fs.readFile("a.txt", "utf-8", print); // asynchronously
+fs.readFile("b.txt", "utf-8", print); // asynchronously
+
+console.log("Done!");
+
+setTimeout(() => {
+    console.log("hello")
+}, 0)
+
+```
+In this Node.js code, `console.log("Done!")` will be executed first, before any of the asynchronous operations (`fs.readFile` and `setTimeout`). 
+
+-  Explanation
+   - `console.log("Done!")` is a simple synchronous statement, so it runs immediately during the initial pass of the code.
+   - `fs.readFile` is asynchronous, so its callback (the `print` function) will be queued for later execution, after the file is read.
+   - `setTimeout(..., 0)` is also asynchronous; its callback gets queued in the event loop to run after all synchronous code has run.
+-  Execution order in output:
+   1. `console.log("Done!")` runs first.
+   2. The `setTimeout` callback (`console.log("hello")`) typically runs next, after the current synchronous code completes.
+   3. The results of `fs.readFile` (the content from `a.txt` and `b.txt`) get logged later, after both file reads complete (which may happen in any order, depending on how fast each file is read by the OS).
+- Pseudocode of execution (simplified):
+  ```js
+  // Synchronous code runs first:
+  console.log("Done!"); // Executes first
+
+  // Asynchronous code executes after the main execution stack is clear:
+  setTimeout(..., 0);      // Executes second (prints "hello")
+
+  fs.readFile(..., print); // Executes third and fourth (prints file contents, order not guaranteed)
+  fs.readFile(..., print);
+  ```
+  ```
+  Done!
+  hello
+  content from `a.txt`
+  content from `b.txt`
+  ```
+  or
+  ```
+  Done!
+  hello
+  content from `b.txt`
+  content from `a.txt`
+  ```  
+
+So, the first thing printed is `"Done!"`, then `"hello"`, then content from `a.txt` and `b.txt` (order of files not guaranteed).
+
+---
+### error-first callback
+The "error-first" callback pattern is a convention in Node.js where the first argument of a callback function is always reserved for an error object. This pattern helps developers handle errors efficiently in asynchronous code.
+
+- Concept of Error-First Arguments/Functions
+  - The first parameter of the callback is always the potential error. If an error occurred during the asynchronous operation, it will be passed as this argument; otherwise, it will be `null` or `undefined`.
+  - The second parameter is the result or data from the operation. If there was no error, this parameter contains the successful result.
+  - This approach allows the programmer to check if `err` is present and respond accordingly before using the data.
+- Example
+  ```js
+  function callback(err, data) {
+    if (err) {
+      // Handle the error (e.g., log it, stop execution)
+      console.log("Error:", err);
+      return;
+    }
+    // Use the data if no error occurred
+    console.log("Data:", data);
+  }
+  ```
+- Advantages
+  - Simplifies error management in asynchronous workflows.
+  - Makes the order of arguments predictable for all Node.js core modules and custom code.
+  - Encourages defensive programming by preventing errors from being missed.
+
+This convention is widely used in Node.js, especially with APIs like `fs.readFile`.
+
+---
+### JS Architecture for async code
+- How JS executes asynchronous code - http://latentflip.com/loupe/
+- Shows realtime process related to js run
+---
+
+- 1. Call Stack
+  - The call stack is a data structure that keeps track of the function calls in your program. It operates in a "Last In, First Out" (LIFO) manner, meaning the last function that was called is the first one to be executed and removed from the stack.
+  - When a function is called, it gets pushed onto the call stack. When the function completes, it's popped off the stack.
+```js
+function first() {
+  console.log("First");
+}
+function second() {
+  first();
+  console.log("Second");
+}
+second();
+```
+
+---
+
+- 2. Web APIs
+  - Web APIs are provided by the browser (or the Node.js runtime) and allow you to perform tasks that are outside the scope of the JavaScript language itself, such as making network requests, setting timers, or handling DOM events.
+- 3. Callback Queue 
+  - The callback queue is a list of tasks (callbacks) that are waiting to be executed once the call stack is empty. These tasks are added to the queue by Web APIs after they have completed their operation.
+- 4. Event loop
+  - The event loop constantly checks if the call stack is empty. If it is, and there are callbacks in the callback queue, it will push the first callback from the queue onto the call stack for execution.
+ 
+
+## 4 Promises and async, await
+`Aaj ghode khuleinge.`
+![alt text](image-2.png)
+
+---
+
+What we’re doing today
+- Classes in JS
+- Revise callbacks
+- Callback hell
+- Promises
+- Async await
+- Assignments
+- Will release a video on how to solve them
+- https://github.com/100xdevs-cohort-3/assignments/
+
+
+### Classes in JS
+- Primitive types
+  - number
+  - string
+  - boolean
+- Complex types
+  - Objects
+  - Arrays
+ 
+---
+
+- Classes
+- In JavaScript, classes are a way to define blueprints for creating objects (these objects are different from the objects defined in the last section).
+- For example
+```js
+class Rectangle {
+   constructor(width, height, color) {
+	    this.width = width;
+	    this.height = height;
+	    this.color = color; 
+   }
+   
+   area() {
+	   const area = this.width * this.height;
+		 return area;
+   }
+   
+   paint() {
+			console.log(`Painting with color ${this.color}`);
+   }
+   
+}
+
+const rect = new Rectangle(2, 4)
+const area = rect.area();
+console.log(area)
+
+```
+
+- Key Concepts
+- Class Declaration:
+  - You declare a class using the class keyword.
+  - Inside a class, you define properties (variables) and methods (functions) that will belong to the objects created from this class.
+- Constructor:
+  - A special method inside the class that is called when you create an instance (an object) of the class.
+  - It’s used to initialize the properties of the object.
+- Methods:
+  - Functions that are defined inside the class and can be used by all instances of the class.
+- Inheritance:
+  - Classes can inherit properties and methods from other classes, allowing you to create a new class based on an existing one.
+- Static Methods:
+  - Methods that belong to the class itself, not to instances of the class. You call them directly on the class.
+- Getters and Setters:
+  - Special methods that allow you to define how properties are accessed and modified.
+ 
+### Inheritance in classes
+Inheritance in JavaScript classes allows one class to inherit properties and methods from another class. This mechanism enables code reuse, making it easier to create new classes that are based on existing ones, without having to duplicate code.
+
+---
+
+- Assignment #1 - Create a Circle class
+```js
+class Circle {
+   constructor(radius, color) {
+       this.radius = radius;  
+       this.color = color;
+   }
+
+   area() {
+      const area = this.radius * this.radius * Math.PI;
+       return area;
+   }
+   
+   paint() {
+			console.log(`Painting with color ${this.color}`);
+   }
+
+}
+
+const circle = new Circle(2, "red")
+const area = circle.area();
+console.log(area)
+```
+
+> Can you see there is code repetition here and in the Rectangle class?
+
+---
+
+ 
+- Assignment #2 - Create a base shape class
+- Base class
+```js
+class Shape {
+    constructor(color) {
+        this.color = color;
+    }
+
+    paint() {
+			console.log(`Painting with color ${this.color}`);
+    }
+
+    area() {
+        throw new Error('The area method must be implemented in the subclass');
+    }
+
+    getDescription() {
+        return `A shape with color ${this.color}`;
+    }
+}
+```
+
+---
+
+- Rectangle class
+```js
+class Rectangle extends Shape {
+    constructor(width, height, color) {
+        super(color);  // Call the parent class constructor to set the color
+        this.width = width;
+        this.height = height;
+    }
+
+    area() {
+        return this.width * this.height;
+    }
+
+    getDescription() {
+        return `A rectangle with width ${this.width}, height ${this.height}, and color ${this.color}`;
+    }
+}
+```
+
+---
+
+- Circle class
+```js
+class Circle extends Shape {
+    constructor(radius, color) {
+        super(color);  // Call the parent class constructor to set the color
+        this.radius = radius;
+    }
+
+    area() {
+        return Math.PI * this.radius * this.radius;
+    }
+
+    getDescription() {
+        return `A circle with radius ${this.radius} and color ${this.color}`;
+    }
+}
+```
+ 
+---
+
+- Try playing with it
+```js
+const circle = new Circle(20);
+console.log(circle.area()); 
+```
+
+### Some more classes
+ 
+- Date
+```js
+const now = new Date(); // Current date and time
+console.log(now.toISOString()); // Outputs the date in ISO format
+```
+ 
+---
+
+- Maps
+```js
+const map = new Map();
+map.set('name', 'Alice');
+map.set('age', 30);
+console.log(map.get('name'));
+```
+
+### Promise class
+
+- Calling a promise is easy, defining your own promise is where things get hard
+- A Promise in JavaScript is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises are used to handle asynchronous operations more effectively than traditional callback functions, providing a cleaner and more manageable way to deal with code that executes asynchronously, such as API calls, file I/O, or timers.
+- Using a function that returns a promise
+  - Ignore the function definition of setTimeoutPromisifed for now
+
+```js
+function setTimeoutPromisified(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function callback() {
+	console.log("3 seconds have passed");
+}
+
+setTimeoutPromisified(3000).then(callback)
+```
+![alt text](image-9.png)
+ 
+### Callback hell
+ 
+- Q: Write code that
+  - logs hi after 1 second
+  - logs hello 3 seconds after step 1
+  - logs hello there 5 seconds after step 2
+ 
+  - Solution (has callback hell)
+  ```js
+  setTimeout(function () {
+    console.log("hi");
+    setTimeout(function () {
+      console.log("hello");
+
+      setTimeout(function () {
+        console.log("hello there");
+      }, 5000);
+    }, 3000);
+  }, 1000);
+  ```
+  - Alt solution (doesnt really have callback hell)
+  ```js
+  function step3Done() {
+    console.log("hello there");
+  }
+
+  function step2Done() {
+    console.log("hello");
+    setTimeout(step3Done, 5000);
+  }
+
+  function step1Done() {
+    console.log("hi");
+    setTimeout(step2Done, 3000);
+  }
+
+  setTimeout(step1Done, 1000);
+  ```
+ 
+---
+
+- Promisified version
+  - Now use the promisified version we saw in the last slide
+  ```js
+  function setTimeoutPromisified(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  ```
+
+  - Solution #1 (has callback hell)
+  ```
+  function setTimeoutPromisified(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  setTimeoutPromisified(1000).then(function () {
+    console.log("hi");
+    setTimeoutPromisified(3000).then(function () {
+      console.log("hello");
+      setTimeoutPromisified(5000).then(function () {
+        console.log("hello there");
+      });
+    });
+  });
+  ```
+
+---
+
+  - Alt solution
+  ```js
+  setTimeoutPromisified(1000)
+    .then(function () {
+      console.log("hi");
+      return setTimeoutPromisified(3000);
+    })
+    .then(function () {
+      console.log("hello");
+      return setTimeoutPromisified(5000);
+    })
+    .then(function () {
+      console.log("hello there");
+    });
+  ```
+### Async await syntax
+- The async and await syntax in JavaScript provides a way to write asynchronous code that looks and behaves like synchronous code, making it easier to read and maintain. 
+- It builds on top of Promises and allows you to avoid chaining .then() and .catch() methods while still working with asynchronous operations.
+- async/await is essentially syntactic sugar on top of Promises. 
+
+---
+
+- Assignment
+  - Write code that
+  - logs hi after 1 second
+  - logs hello 3 seconds after step 1
+  - logs hello there 5 seconds after step 2
+  ```js
+  function setTimeoutPromisified(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async function solve() {
+  	await setTimeoutPromisified(1000);
+  	console.log("hi");
+  	await setTimeoutPromisified(3000);
+  	console.log("hello");
+  	await setTimeoutPromisified(5000);
+  	console.log("hi there");
+  }
+
+  solve();
+  ```
+  - Things to keep in mind
+    - You can only call await inside a function if that function is async
+    - You cant have a top level await 
+
+### Defining your own async function
+- Q: Write a function that
+  - Reads the contents of a file
+  - Trims the extra space from the left and right
+  - Writes it back to the file
+  
+---
+
+- 1. Callback approach
+In the callback approach, the function signature should look something like this 
+```js
+function onDone() {
+	console.log("file has been cleaned");
+}
+cleanFile("a.txt", onDone)
+```
+  - Solution
+  ```js
+  const fs = require("fs");
+  function cleanFile(filePath, cb) {
+    fs.readFile(filePath, "utf-8", function (err, data) {
+      data = data.trim();
+      fs.writeFile(filePath, data, function () {
+        cb();
+      });
+    });
+  }
+
+  function onDone() {
+    console.log("file has been cleaned");
+  }
+  cleanFile("a.txt", onDone);
+  ```
+
+---
+  
+- 2. Promisified approach
+In the promisified approach, the function signature should look something like this 
+```js
+async function main() {
+   await cleanFile("a.txt")
+   console.log("Done cleaning file");
+}
+
+main();
+```
+  - Solution
+  ```js
+  const fs = require("fs");
+  function cleanFile(filePath, cb) {
+    return new Promise(function (resolve) {
+      fs.readFile(filePath, "utf-8", function (err, data) {
+        data = data.trim();
+        fs.writeFile(filePath, data, function () {
+          resolve();
+        });
+      });
+    });
+  }
+
+  async function main() {
+    await cleanFile("a.txt");
+    console.log("Done cleaning file");
+  }
+
+  main();
+  ```
+### err first callback vs rejects in promises
+- Callbacks
+  - fs.readFile function used an err first callback approach to propagate back errors
+```js
+const fs = require("fs")
+function afterDone(err, data) {
+  if (err) {
+    console.log("Error while reading file");
+  } else {
+    console.log(data)
+  }
+}
+
+fs.readFile("a.txt", "utf-8", afterDone);
+```
+
+---
+ 
+- Promises
+  - Promises use the reject  argument to propagate errors
+```js
+const fs = require("fs");
+
+function readFilePromisified(filePath) {
+  return new Promise(function (resolve, reject) {
+    fs.readFile(filePath, "utf-8", function (err, data) {
+      if (err) {
+        reject("Error while reading file");
+      } else {
+        resolve(data);
+      }
+    });
+  });
+}
+
+function onDone(data) {
+  console.log(data);
+}
+
+function onError(err) {
+  console.log("Error: " + err);
+}
+
+readFilePromisified("a.txt").then(onDone).catch(onError);
+```
+
+### Assignment
+![alt text](image-10.png)
+
+## 5 Bash& Terminal
+
+Terminal is nothing but another interface to do things on your machine.
+
+1. `pwd`: Print Working Directory
+
+    ```sh
+    $ pwd
+    ```
+
+2. `cd`: Change Directory
+
+    ```sh
+    $ cd Desktop
+    $ cd ../
+    $ cd Desktop/screenshots
+    $ cd ../..
+    ```
+
+3. `ls`: Listing all the files and folders in your current folder.
+
+    ```sh
+    $ ls
+    ```
+
+4. `mkdir`: Create new folder
+
+    ```sh
+    $ mkdir test
+    ```
+
+5. `touch`: Create new empty file
+
+    ```sh
+    $ touch index.js
+    ```
+
+6. `cat`: Prints contents of the file
+
+    ```sh
+    $ cat index.js
+    $ cat test/index.js
+    ```
+
+7. `vi`: Vim Editor
+
+    ```sh
+    $ vi index.text
+
+    Press `i` for insert mode and write anything in your file
+
+    Bharat
+    Kumar
+    a
+    ab
+
+    Esc + :q! to exit from Vim Editor without saving the file
+    Esc + :wq! to exit from Vim Editor with saving the file
+    ```
+
+8. `mv`: Move the file or folders
+
+    ```sh
+    $ mv index.js new-folder
+    $ mv folder1 folder2
+    ```
+
+9. `cp`: Copy the files or folders
+
+    ```sh
+    $ cp index.js new-folder
+    $ cp -r folder1 folder2
+    ```
+
+10. `clear`: Clear the terminal
+
+    ```sh
+    $ clear
+    ```
+
+11. `nvm`: Node Version Manager - Using this you can install node.
+
+12. `npm`: Node Package Manager
+
+    ```sh
+    $ npm install express
+    $ npm install array
+    ```
+
+13. `node`: Use to run file.
+
+    ```sh
+    $ node index.js
+    ```
+
+14. `git` : entire new segment :0
+
+Bash is `Command Line Interepreter` language that lets you interact with your `Operating System`.
+
+1. `pwd` (Print Working Directory): Display the current working directory
+
+    ```sh
+    $ pwd
+    ```
+
+2. `ls` (List Fies): This command displays a list of files and directories in the current directories.
+
+    ```sh
+    $ ls
+    $ ls -l
+    $ ls -l folder1
+    $ ls -t
+    $ ls -lt
+    $ ls -R
+    $ ls -lR
+    $ ls -lRa
+    $ ls -lr
+    $ ls -s
+    $ ls *.json
+    $ ls Zoo*
+    $ ls -lR | grep .json
+    $ ls ..
+    ```
+
+3. `cd`: Change Directory
+
+    ```sh
+    $ cd folder1
+    $ cd folder2/folder3
+    $ cd ../../
+    ```
+
+4. `mkdir` (Make Directory): Command to create new directory/folder.
+
+    ```sh
+    <!-- Creating one folder/directory at a time -->
+    $ mkdir frontend
+
+    <!-- Creating multiple folder/directory at a time -->
+    $ mkdir folder1 folder2 folder3
+
+    <!-- Creating Recursively folder/directory -->
+    $ mkdir fullstack/frontend/scripts
+    ```
+
+5. `touch`: Command to create new file.
+
+    ```sh
+    <!-- Creating one file at a time -->
+    $ touch newFile.js
+
+    <!-- Creating multiple file at a time -->
+    $ touch file1 file2 file3
+
+    <!-- Creating Recursively file -->
+    $ touch folder1/folder2/mewFile.txt
+    ```
+
+6. `cat` (Concatenate): Command to display the contents of a file, insert and append contents to the file.
+
+    ```sh
+    <!-- Insert Data to File -->
+    $ cat > newFile.js
+
+    <!-- Append Data to File -->
+    $ cat >> newFile.js
+
+    <!-- Print Data of the File File -->
+    $ cat newFile.js
+    ```
+
+7. `mv` (Move File/Folder & Rename File/Folder): Command to move File or Folder one directory/folder to another directory/folder and it is also used to rename File or Folder.
+
+    ```sh
+    <!-- Moving File to Another Folder/Directory -->
+    mv index.js frontend
+
+    <!-- Moving Folder to Another Folder/Directory -->
+    mv folder1 folder2
+
+    <!-- Renaming File -->
+    mv index.js script.js
+
+    <!-- Renaming Folder -->
+    mv folder1 folder2
+    ```
+
+8. `cp` (Copy File or Folder/Directory): Command to copy File or Folder into another Folder/Directory.
+
+    ```sh
+    <!-- Copy File to Another Folder/Directory -->
+    cp index.js frontend
+
+    <!-- Copy Folder to Another Folder/Directory -->
+    cp -r folder1 frontend
+    ```
+
+9. `rm` (Remove File or Folder/Directory): Command to Remove File or Folder/Directory.
+
+    ```sh
+    <!-- Remove File -->
+    rm index.js
+
+    <!-- Remove Empty Folder/Directory -->
+    rmdir folderName
+
+    <!-- Remove Empty Folder/Directory of Folder with Content -->
+    rm -rf folderName
+    ```
+
+10. `chmod` (Change File Permission): Modify the read, write and execute permission of a file.
+
+    ```js
+    ## There are three options for permission groups available to you in Linux. These are
+
+    `users` (u): these permissions will apply to all users, and as a result, they present the greatest security risk and should be assigned with caution.
+
+    `groups` (g): you can assign a group of users specific permissions, which will only impact users within the group.
+
+    `owners` (o): these permissions will only apply to owners and will not affect other groups.
+
+
+    ## There are three kinds of file permissions in Linux:
+
+    `Read` (r): Allows a user or group to view a file.
+
+    `Write` (w): Permits the user to write or modify a file or directory.
+
+    `Execute` (x): A user or grup with execute permissions can execute a file or view a directory.
+
+    $ `chmod ugo+rwx filename` to give read, write, and execute to everyone.
+    $ `chmod -R ugo+rwx foldername` to give read, write, and execute to everyone.
+
+    ## Changing Linux permissions in numeric code
+
+    You may need to know how to change permissions in numeric code in Linux, so to do this you use numbers instead of “r”, “w”, or “x”.
+
+    0 = No Permission
+    1 = Execute
+    2 = Write
+    4 = Read
+
+    => Permission numbers are:
+    0 = ---
+    1 = --x
+    2 = -w-
+    3 = -wx
+    4 = r-
+    5 = r-x
+    6 = rw-
+    7 = rwx
+
+    => For example:
+        `chmod 777 filename/foldername` will give read, write, and execute permissions for everyone.
+
+        `chmod 700 filename/foldername` will give read, write, and execute permissions for the user only.
+
+        `chmod 327 filename/foldername` will give write and execute (3) permission for the user, w (2) for the group, and read, write, and execute for the users.
+    ```
+
+    ```sh
+    <!-- For File -->
+    <!-- Add execute permission for users -->
+    $ chmod u+x index.js
+    <!-- Add write and execute permission for groups -->
+    $ chmod g+wx index.js
+    <!-- Remove execute permission for users -->
+    $ chmod u-x index.js
+    <!-- Add read, write & execute permission for owners -->
+    $ chmod o+rwx index.js
+    <!-- Add read, write & execute permission for all(users, groups & owners) -->
+    $ chmod ugo+rwx index.js
+    $ chmod 777 index.js
+
+    <!-- For Folder/Directory -->
+    <!-- Add execute permission for users -->
+    $ chmod -R u+x folderName
+    <!-- Add write and execute permission for groups -->
+    $ chmod -R g+wx folderName
+    <!-- Remove execute permission for users -->
+    $ chmod -R u-x folderName
+    <!-- Add read, write & execute permission for owners -->
+    $ chmod -R o+rwx folderName
+    <!-- Add read, write & execute permission for all(users, groups & owners) -->
+    $ chmod -R ugo+rwx folderName
+    $ chmod -R 777 folderName
+    ```
+
+11. `echo`: Display message on terminal.
+
+    ```sh
+    $ echo "Hello, World!"
+    $ echo $PATH
+    ```
+
+12. `head`: Show the content from top of the file.
+
+    ```sh
+    <!-- Bydefault show first 10 rows -->
+    $ head index.js
+
+    <!-- Show first 20 rows -->
+    $ head -20 index.js
+    ```
+
+13. `tail`: Show the content from bottom of the file.
+
+    ```sh
+    <!-- Bydefault show last 10 rows -->
+    $ tail index.js
+
+    <!-- Show last 20 rows -->
+    $ tail -20 index.js
+    ```
+
+14. `|` (Pipe Operator): Combine multiple command. `command1 | command2` - Whatever output comes from command1 it flows to command2
+
+    ```sh
+    <!-- gives 5 rows after 15th rows - means shows lines 16 to 20 -->
+    $ tail -n +15 index.js | head -5
+    ```
+
+15. `wc` (Word Cound): Shows numbers of lines, words and characters.
+
+    ```sh
+    <!-- print numbers of lines, words and characters of index.js file -->
+    $ wc index.js
+    ```
+
+16. `grep`: Use for matching operations. Print those line which contains particular characters, words, sentences.
+
+    ```sh
+    <!-- print all line which contains character 'a' -->
+    $ grep "a" index.js
+
+    <!-- print all line which contains word 'Hello' -->
+    $ grep "Hello" index.js
+
+    <!-- print all line which contains sentence 'Hi, Everyone!!' -->
+    $ grep "Hi, Everyone!!" index.js
+
+    <!-- Print all lines which does not contains Bharat -->
+    $ grep -v "Bharat" index.js
+
+    <!-- Print before 5 lines, which line contains Bharat -->
+    $ grep -B 5 "Bharat" data.txt
+
+    <!-- Print after 5 lines, which line contains Bharat -->
+    $ grep -A 5 "Bharat" data.txt
+
+    <!-- Print before and after 5 lines, which line contains Bharat -->
+    $ grep -C 5 "Bharat" data.txt
+
+    <!-- print numbers of lines, words and characters of index.js file which contains word "Bharat" -->
+    $ grep "Bharat" index.js | wc
+
+    <!-- only occurence of a parthicular word -->
+    $ grep "Bharat" index.js | wc -l
+
+    <!-- Print Occurence Count -->
+    $ grep -c "Bharat" index.js
+
+    <!-- Print Matched Line -->
+    $ grep -h "Bharat" index.js
+
+    <!-- ignore case -->
+    $ grep -hi "Bharat" index.js
+
+    <!-- Print matched line data after ignoring case with line number -->
+    $ grep -hin "Bharat" index.js
+
+    <!-- Print those line which contains word "Bharat", but seperate -->
+    $ grep -hinw "Bharat" index.js
+
+    <!-- Print only the matched Part -->
+    $ grep -o "Bharat" index.js
+
+    <!-- For current directory -->
+    $ grep -hir "Bharat" index.js
+    ```
+
+17. `history`: History of all command that you ran.
+
+    ```sh
+    $ history
+    ```
+
+18. `Bash Scripting`: Using Bash Scripting we can Automate our work. It is a language.
+
+    ```sh
+    <!-- script.sh -->
+
+    #!/bin/bash
+    echo "Hello, World!!"
+    mkdir automated_dir
+    cd automated_dir && touch newFile.txt
+    ```
+
+19. `bash`: Command to run bash scripting file.
+
+    ```sh
+    <!-- Run the script.sh file - first it will print "Hello, World", then it will create a folder autemated_dir and after that it will move to automated_dir folder and create newFile.txt inside that folder. -->
+    $ bash script.sh
+    ```
+
+20. `clear`: Clear the terminal
+
+    ```sh
+    $ clear
+    ```
+
+21. `nvm`: Node Version Manager - Using this you can install node.
+
+22. `npm`: Node Package Manager
+
+    ```sh
+    $ npm install express
+    $ npm install array
+    ```
+
+23. `node fileName.js`: Use to run file.
+    ```sh
+    $ node index.js
+    ```
+
