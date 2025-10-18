@@ -5,6 +5,19 @@
 ## Fully Complete
 
 ## Archive
+- AI Complete Crash Course for Beginners | Learn AI & ML Fundamentals from Scratch https://www.youtube.com/watch?v=D1eL1EnxXXQ
+- Hyper Casual Game Dev
+  - https://www.udemy.com/course/unity-mobile-game/?
+  - https://www.udemy.com/course/metroidvania-rpg-2d/?couponCode=DIWALI30couponCode=DIWALI30
+  - https://www.udemy.com/course/3d-tds-alexdev/?couponCode=DIWALI30
+  - https://www.youtube.com/watch?v=UXl_C3ZnRLc
+  - https://www.youtube.com/shorts/dFKDDg7ndb0
+  - https://www.youtube.com/watch?v=EyDMSB7ylfs
+  - https://www.youtube.com/watch?v=nmUSDRj-4UI
+  - https://www.udemy.com/course/complete-game-development-series-03-unity-exterminator/?couponCode=DIWALI30
+  - https://www.youtube.com/watch?v=zkIfCo2JxJY
+  - https://www.youtube.com/watch?v=rNeJt3KejkE
+  - https://www.youtube.com/watch?v=1VX4ctxvVv4&list=PLeDAdh3-S8BL92RMeKPVov36NIBqBV2Up
 - JS DSA
   - https://www.youtube.com/playlist?list=PLC3y8-rFHvwjPxNAKvZpdnsr41E0fCMMP
 - JAVA FullStack
