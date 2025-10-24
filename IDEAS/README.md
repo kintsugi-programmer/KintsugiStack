@@ -5,6 +5,7 @@
 ## Fully Complete
 
 ## Archive
+- https://kartinghandbook.com/
 - AI Complete Crash Course for Beginners | Learn AI & ML Fundamentals from Scratch https://www.youtube.com/watch?v=D1eL1EnxXXQ
 - Hyper Casual Game Dev
   - https://www.udemy.com/course/unity-mobile-game/?
