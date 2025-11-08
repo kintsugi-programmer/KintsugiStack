@@ -97,6 +97,7 @@ LATER
 - [DigitalDrzRepo](https://github.com/kintsugi-programmer/drz): डिजिटल दर्ज़ी Repository 
 - [DigitalDrz](https://digitaldrz.vercel.app/): DigitalDrz (डिजिटल दर्ज़ी) is your exclusive catalog of world-class UI/UX components, custom-built by KintsugiDevStudio.
 - [Google Fonts](https://fonts.google.com/): Highly optimized, customizable, cross-platform fonts with accessibility safety.
+- [realfavicongenerator.net](https://realfavicongenerator.net/favicon-generator/nextjs): NextJS Optimised Favicon Generator, LightHouse ++.
 - [Flaticon](https://www.flaticon.com/): Versatile and stylish collection of fancy icons.
 - [LottieFiles](https://lottiefiles.com/): Lightweight, scalable animations for modern apps—truly goated.
 - [Animata](https://animata.design/): Free & open-source animated ReactJS components.
