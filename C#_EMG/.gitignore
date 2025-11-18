@@ -1,0 +1,64 @@
+## Build
+bin/
+obj/
+out/
+artifacts/
+
+## .NET Core
+project.lock.json
+project.fragment.lock.json
+
+## Rider
+.idea/
+*.sln.iml
+
+## VS Code
+.vscode/
+*.code-workspace
+
+## User-specific
+*.user
+*.userosscache
+*.suo
+*.cache
+*.pidb
+*.svclog
+*.vsp
+*.pdb
+*.mdb
+
+## Logs
+*.log
+
+## ASP.NET 
+appsettings.Development.json
+
+## Packages
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+
+## Test
+TestResult.xml
+TestResults/
+*.coverage
+*.coveragexml
+
+## Temporary
+*.tmp
+*.temp
+*.bak
+
+## Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper*
+*.DotSettings.user
+
+## Mac/Linux
+.DS_Store
+._*
+Thumbs.db
+
+## Publish
+wwwroot/
