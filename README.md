@@ -5,6 +5,125 @@
 
 > Disclaimer: The content presented here is a curated blend of my personal learning journey, experiences, open-source documentation, and invaluable knowledge gained from diverse sources. I do not claim sole ownership over all the material; this is a community-driven effort to learn, share, and grow together.
 
+## SysInit
+### System Update
+```bash
+sudo apt update && sudo apt upgrade && sudo apt autoremove
+```
+
+### Browsers
+
+* [https://www.google.com/chrome/what-you-make-of-it/](https://www.google.com/chrome/what-you-make-of-it/)
+* [https://www.microsoft.com/en-us/edge](https://www.microsoft.com/en-us/edge)
+
+### Brave Browser
+
+```bash
+sudo apt install curl
+curl -fsS https://dl.brave.com/install.sh | sh
+```
+
+### Web WhatsApp
+
+* [https://web.whatsapp.com/](https://web.whatsapp.com/)
+
+### Blender
+
+* [https://www.blender.org/download/](https://www.blender.org/download/)
+* Extract and move to `/opt`:
+
+```bash
+sudo mv ~/Downloads/blender-5.0.0-linux-x64 /opt/blender
+sudo ln -s /opt/blender/blender /usr/local/bin/blender
+```
+
+* Pin `/blender`
+
+### Unity Hub (Linux)
+
+* [https://docs.unity3d.com/hub/manual/InstallHub.html#install-hub-linux](https://docs.unity3d.com/hub/manual/InstallHub.html#install-hub-linux)
+
+```bash
+wget -qO - https://hub.unity3d.com/linux/keys/public | gpg --dearmor | sudo tee /usr/share/keyrings/Unity_Technologies_ApS.gpg > /dev/null
+sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/Unity_Technologies_ApS.gpg] https://hub.unity3d.com/linux/repos/deb stable main" > /etc/apt/sources.list.d/unityhub.list'
+sudo apt update
+sudo apt-get install unityhub
+```
+
+### GNOME Extensions
+
+* [https://extensions.gnome.org/](https://extensions.gnome.org/)
+* [https://chromewebstore.google.com/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep](https://chromewebstore.google.com/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
+* [https://gnome.pages.gitlab.gnome.org/gnome-browser-integration/pages/installation-guide.html](https://gnome.pages.gitlab.gnome.org/gnome-browser-integration/pages/installation-guide.html)
+
+```bash
+sudo apt-get install gnome-browser-connector
+```
+
+#### Recommended Extensions
+
+* [https://extensions.gnome.org/extension/3780/ddterm/](https://extensions.gnome.org/extension/3780/ddterm/)
+* [https://extensions.gnome.org/extension/6976/vscode-search-provider/](https://extensions.gnome.org/extension/6976/vscode-search-provider/)
+* [https://extensions.gnome.org/extension/7117/vscode-workspaces-gnome/](https://extensions.gnome.org/extension/7117/vscode-workspaces-gnome/)
+* [https://extensions.gnome.org/extension/6697/clipqr/](https://extensions.gnome.org/extension/6697/clipqr/)
+* [https://extensions.gnome.org/extension/779/clipboard-indicator/](https://extensions.gnome.org/extension/779/clipboard-indicator/)
+* [https://extensions.gnome.org/extension/1460/vitals/](https://extensions.gnome.org/extension/1460/vitals/)
+* [https://extensions.gnome.org/extension/8790/pomodoro-timer/](https://extensions.gnome.org/extension/8790/pomodoro-timer/)
+* [https://extensions.gnome.org/extension/7591/commands-store/](https://extensions.gnome.org/extension/7591/commands-store/)
+* [https://extensions.gnome.org/extension/5796/stopwatch/](https://extensions.gnome.org/extension/5796/stopwatch/)
+
+### Directory Setup
+
+Inside `/home/bali-king/`:
+
+* Create folder:
+
+```bash
+mkdir ~/BaliGit
+```
+
+* Pin the folder
+
+### VS Code
+
+* [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+* Install via AppCenter
+
+### System Settings Tweaks
+
+* **Settings > Date & Time** → Show Seconds, Week Number
+* **Settings > Accessibility** → Large Text & Medium Cursor
+
+### Essential Packages
+
+```bash
+sudo apt install -y curl build-essential code git-all qbittorrent virtualbox virtualbox-ext-pack
+sudo usermod -a -G vboxusers $USER
+```
+
+### Git Config
+
+```bash
+git config --global user.email "siddhant22496@iiitd.ac.in"
+git config --global user.name "kintsugi-programmer"
+```
+
+### OpenFortiVPN (IIITD VPN)
+
+```bash
+sudo apt install openfortivpn
+sudo systemctl start openfortivpn
+sudo systemctl enable openfortivpn
+sudo openfortivpn vpn.iiitd.edu.in:10443 --username=siddhant22496
+```
+
+### TLDR
+
+```bash
+sudo apt install -y tldr
+sudo tldr --update
+```
+
 ## Technology Ledger
 | Techology | Overview  | Documentation | 
 | :--- | :--- | :--- |
