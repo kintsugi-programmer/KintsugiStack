@@ -98,6 +98,7 @@ mkdir ~/BaliGit
 
 ```bash
 sudo apt install -y curl build-essential code git-all qbittorrent virtualbox virtualbox-ext-pack
+sudo ubuntu-drivers install
 ```
 
 ### VM Linux Fix
@@ -171,6 +172,23 @@ LATER
 ```
 ## Table of Contents
 - [KintsugiStack](#kintsugistack)
+  - [SysInit](#sysinit)
+    - [System Update](#system-update)
+    - [Browsers](#browsers)
+    - [Brave Browser](#brave-browser)
+    - [Web WhatsApp](#web-whatsapp)
+    - [Blender](#blender)
+    - [Unity Hub (Linux)](#unity-hub-linux)
+    - [GNOME Extensions](#gnome-extensions)
+      - [Recommended Extensions](#recommended-extensions)
+    - [Directory Setup](#directory-setup)
+    - [VS Code](#vs-code)
+    - [System Settings Tweaks](#system-settings-tweaks)
+    - [Essential Packages](#essential-packages)
+    - [VM Linux Fix](#vm-linux-fix)
+    - [Git Config](#git-config)
+    - [OpenFortiVPN (IIITD VPN)](#openfortivpn-iiitd-vpn)
+    - [TLDR](#tldr)
   - [Technology Ledger](#technology-ledger)
   - [Code Momos 🥟 Ledger](#code-momos--ledger)
   - [Table of Contents](#table-of-contents)
