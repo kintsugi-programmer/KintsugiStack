@@ -111,6 +111,17 @@ sudo modprobe -r kvm
 sudo rmmod kvm_intel
 sudo rmmod kvm_amd
 sudo rmmod kvm
+sudo systemctl stop libvirtd
+sudo systemctl disable --now libvirtd
+sudo modprobe -r kvm_intel kvm
+sudo tee /etc/modprobe.d/blacklist-kvm.conf >/dev/null <<EOF
+blacklist kvm
+blacklist kvm_intel
+EOF
+sudo update-initramfs -u
+sudo reboot
+bali-king@war-machine:~$ 
+
 ```
 
 ### Git Config
