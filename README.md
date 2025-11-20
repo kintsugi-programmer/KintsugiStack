@@ -98,7 +98,19 @@ mkdir ~/BaliGit
 
 ```bash
 sudo apt install -y curl build-essential code git-all qbittorrent virtualbox virtualbox-ext-pack
+```
+
+### VM Linux Fix
+```bash
 sudo usermod -a -G vboxusers $USER
+sudo systemctl stop libvirtd
+sudo systemctl disable libvirtd
+sudo modprobe -r kvm_intel
+sudo modprobe -r kvm_amd
+sudo modprobe -r kvm
+sudo rmmod kvm_intel
+sudo rmmod kvm_amd
+sudo rmmod kvm
 ```
 
 ### Git Config
