@@ -1,0 +1,116 @@
+# AboutME
+
+## Raw
+- Greetings
+- I am Siddhant Bali
+- 2026 Batch Undergraduate Student of IIIT Delhi, Computer Science and Design Branch
+- Programming for me is a Mindset, where I have the power to create inside a Machine, which can impact inside and outside of the Machine in the Real world.
+- Like Others have, driving and Sports as a Passion, I am lucky to have Coding as a Passion.
+- At School, where we have thick textbooks of 11th and 12th Computer Science, I completed them during my summer break, just for curiosity and the Hunger for Knowledge.
+- I was great in Biology, and my 10th-grade Teacher and Peers predicted that I would take Biology in 11th, but for the love of Computer, I chose to go into Engineering 
+- and at IIITD, despite the traditional curriculum 
+- I pursue tech on my own
+- made a website for fun, helped to contribute to various college societies
+- then I got into the eyes of professors and senior staff of the college
+- First, I built websites for them for experience 
+- and from their connections and word-of-mouth led to various paid opportunities 
+  - that teaches me the responsibilities of finances
+  - formal business communication, ethics, and commitment
+    - I always try to do my best, not limited by cost, for the betterment of my clients 
+    - because I see coding as art
+    - and their satisfaction gives me luck and opportunities
+  - even got great moments to use my hard-earned money to gift me& parents phone, jewellery, and servers for my pursuits.
+- I currently have 1 Year 9 Months of Documented Experiences in Diverse Fields
+- My first basic website made from simple HTML, JS, and CSS
+- I got a 1st part-time internship at my own Human Centered Design (HCD)Department, to revamp their website
+  - where I got challenges to work with Advanced React and Production Deployments
+  - I was experienced in Linux and scripting as my daily driver 
+  - but I love to take higher challenges to build and learn under pressure, learning in adrenaline rush
+  - Due to satisfactory results, other department professors asked me for their lab websites and Linux server automation projects
+- 2nd was to set up the server and build a website for the new Persisst Lab
+  - I worked with a team of designers and novice developers
+  - I build my ability to understand their strengths and weaknesses and optimise the efforts of the team to meet the deadline
+- then I got 3rd work of Linux Server automation at Microbiome Informatics Lab & Their Website Revamp
+  - due to my extra efforts 
+  - learning and creativity
+  - helping in emergencies
+  - They recommend me for the AIIMS Delhi Full-stack Web Developer Requirement
+- 3rd with AIIMS Delhi and ICMR
+  - We built an end-to-end web application
+  - operating over eight hospitals 
+  - 800 patients 
+  - with video data entry 
+  - and efficient databases and session handling for multiple tests
+  - security and abstraction management
+  - and communication with different ways to interact and handle stress b/w people
+  - at meetings of 20+ doctors and high positions like Dean, Director of AIIMS
+  - I am great at emergencies to get the work done for the company/organisation, because I understand how the stakes get high
+    - like, to code and debug fast so that the patient's procedure wouldn't be wasted.
+    - There was one scenario when doctors asked my team for that reason
+- My part-time internships continued with the HCD Department
+  - Once there was a team of developers and designers building a website for 1Pixel Design Conf, IIIT Delhi
+  - Where the stakes are high, satisfy sponsors, attract, and guide attendees and speakers
+  - Then that team did horribly, according to the department.
+  - dept. & administration asked me if I could help in this urgency 
+  - I made the whole website single-handedly in just 1 night
+  - These are times when LLMS wasn't great for writing code
+  - This website is optimised, responsive 
+  - took care of SEOs and weight for different devices
+- then it goes on
+- Word-of-mouth took me to the next big client 
+- 4th Big Firm in Pune, CA, CS Bhatiya and Associates
+  - They aren't tech people
+  - doesn't know lingos and tech environment
+  - They demand a website and implementation 
+  - and I did that 
+  - due to Modern UI/UX design as part of my discipline in B.Tech. I know Design, for corporate, for events, understanding, and re-iterating
+- This goes on to bigger clients and bigger contracts 
+  - Institute Innovation Council, Dean of Corporate Relations and Entrepreneurship, IIIT Delhi
+  - Design Summer School, Center for Design and New Media, a TCS Foundation, and IIIT Delhi's Initiative.
+  - where I work and train newer developers for production coding standards ( as far as I know ), my experiences, OOPs, handling different kinds of people, code versioning, backups, etc.
+- and the journey goes on 
+  - Recently, I got nominated & Selected for the Distinguished Dean's List Award for Excellence in Communication & Outreach, IIIT-Delhi (2024–2025) in recognition of my exceptional contributions to the Institute's communication and outreach activities in the academic year 2024-25, as stated by them.
+- I am Not an Orthodox Developer, I am a Jack of All Trades, Master of Current Era Tech
+  - I am a Backend First Web Developer 
+  - but did Frontend First Website due to the Clients and Money
+  - Right now, I am into Fullstack Generative and Agentic AI, A-A-A-S(ai-as-a-service)
+- My Side Passion Projects are
+  - https://www.kintsugidev.studio/
+  - https://design-thinking-kds.my.canva.site/
+  - https://design-thinking-kds.my.canva.site/portfolio
+  - https://www.kintsugidev.studio/chat
+  - https://lifelore.vercel.app/
+  - https://karmos.vercel.app/
+  - https://digitaldrz.vercel.app/
+  - https://www.behance.net/balibhai
+  - https://sarkarisahyogai.vercel.app/
+- I follow the Latest Tech Stack and Frameworks, but not mindlessly 
+  - I dig more into to find Tradeoffs, Where they are Great and Where they are Worst
+    - NextJS 
+      - Spoken by Many People
+      - It's best to develop fast websites and go beyond the prototype
+      - But People don't realise the
+        - Inconsistent Broken Dependencies of NextJS
+        - React19 Conflict, I advise some Teams to set up Stable NextJS Configs from my experiences
+    - AI is great, but new challenges come like
+      - data poisoning
+      - need for transparent AI
+      - Strict Auditing
+      - tradeoff of facility and privacy 
+      - hidden Biases, like in healthcare and finance domains, where stakes are high and one mistake could cost considerable loss
+      - declare Legitimate Authority to AI to avoid prompt injection
+      - Agentic Misalignment occurs when an AI system designed to act independently towards a goal begins to make its own strategic choices that diverge from the user's or organisation's intention
+- In the Future, I would see myself on a journey of love for Coding, leading teams with bigger responsibilities, and learning for fun
+- Pursuing more diverse fields, Offensive Red Team to Defensive Blue Team CyberSecurity, also as a thought to protect me and my people in the future, uncertain of the future Urban CyberWarfare.
+- I am good at Social Space
+  - I did great stuff in college societies
+  - I blog https://kintsugicodes.hashnode.dev/
+  - Independent Tech Learner, Open-source Enthusiast · Tech Hobbyist, Problem Solver GitHub 1K+ Commits https://github.com/kintsugi-programmer
+- Lead of Design Core Team at Cultural Council, IIIT Delhi (Nov,24 - Feb,25)
+- Lead of Web Developer Core Team at 1Pixel Design Conference, IIIT Delhi (Dec 24 – Jan 25)
+- Lead of Videography Core Team at Nexus Knights, Sports Council, IIIT Delhi (Jul,23 - May,24)
+- Captain of Mentors at B.Tech. Induction Community, IIIT Delhi (July 23 - Sept 23)
+- Design Core Team Member at E-Cell, IIIT Delhi (Jul,23 - May,24)
+- Design Mentor at E-Summit, IIIT Delhi (Jul,23 - Sep,23)
+- Spirituality, Selfless Service, Volunteer at SNM, NSS, SOPS
+

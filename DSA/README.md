@@ -1,25 +1,20 @@
-# god-stack-core-cs
-> Coding, is Meditation
+# god-stack-dsa-problem-solving
+> "Data Structures and Algorithms (DSA) should be viewed as essential tools, akin to the finely tuned parts of a Formula 1 car. The act of problem-solving with DSA serves as a crucial platform to exhibit both intelligence and creative thinking. The coding challenges themselves are simply various permutations of external factors; like the weather, track, wind, and rain in an F1 race. Ultimately, what dictates success in both domains; coding and Formula 1; is the mastery of planning, strategizing, maintaining flow, and ensuring precise code orchestration." - Siddhant Bali
 
 - Author: [Kintsugi-Programmer](https://github.com/kintsugi-programmer)
 
 > Disclaimer: The content presented here is a curated blend of my personal learning journey, experiences, open-source documentation, and invaluable knowledge gained from diverse sources. I do not claim sole ownership over all the material; this is a community-driven effort to learn, share, and grow together.
 
-## Table of Contents
-- [god-stack-core-cs](#god-stack-core-cs)
-  - [Table of Contents](#table-of-contents)
-  - [About](#about)
-
-
-## About
-> god-stack-core-cs
-
-Coding, is Meditation. https://github.com/kintsugi-programmer/god-stack
+- [LeetCode.md](/LeetCode.md)
+- [Theory.md](/Theory.md)
+- [CPP.md](/CPP.md)
+- [STL.md](/CPP.md)
 
 ```
-CoreCS SDE Interview Questions Mastery
+x.cpp - leetcode code
+cppx.cpp - cpp code
+prx.cpp - prereq leetcode
 ```
-
 ---
 End-of-File
 
