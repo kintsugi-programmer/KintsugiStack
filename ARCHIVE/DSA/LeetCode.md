@@ -9,15 +9,13 @@
 > Baidu, Airbnb, Netease, Cisco, Amazon, Aetion, Box, Mathworks, Zoom, Google, Cloudera, Intel, Indeed, Godaddy, Walmart Global Tech, Salesforce, Didi, Affirm, Vmware, Yandex, Microsoft, Adobe, Alibaba, Jpmorgan, Linkedin, Citadel, Emc, Groupon, Intuit, Twitter, Nvidia, Twilio, Valve, Expedia, Yahoo, Zoho, Bookingcom, Wish, Zillow, Morgan-stanley, Drawbridge, Paypal, Huawei, Dropbox, Radius, Zomato, Roblox, Accenture, Goldman-sachs, Lyft, Yelp, Splunk, Bloomberg, Samsung, Bytedance, Servicenow, Quora, Goldman Sachs, Blackrock, Ebay, Ge-digital, Oracle, Qualcomm, Tencent, Uber, Tableau, Spotify, Morgan Stanley, American Express, Sap, Ibm, Deutsche-bank, Snapchat, Dell, Apple, Visa, Works-applications, Facebook, Factset, Audible, Google, Adobe, Facebook, Twilio, Salesforce, Affirm, Docusign, Yahoo, Cisco, Servicenow, Blackrock, Goldman Sachs, Ebay, Vmware, Tiktok, Bookingcom, Electronic-arts, Amazon, Wish, Microsoft, Yandex, Oracle, Qualtrics, Bloomberg, Adobe, Alation, Uber, Nutanix, Jpmorgan, Tesla, Mathworks, Zulily, Google, Hulu, Ibm, Snapchat, Apple, Intuit, Visa, Goldman-sachs, Yelp, Facebook, Walmart Global Tech, Bytedance, Yahoo, Cisco, Vmware, Ebay, Pocket-gems, Amazon, Microsoft, Oracle, Adobe, Uber, Spotify, Google, Linkedin, Hulu, Snapchat, Apple, Goldman-sachs, Yelp, Facebook, Bloomberg, Microsoft, Google, Linkedin, Square, Facebook, Twitter, Bloomberg, Amazon, Meta, Oracle, CrowdStrike, OpenAI, Snowflake
 
 ## Table of Contents
-- [god-stack-dsa-problem-solving](#god-stack-dsa-problem-solving)
+- [LeetCode](#leetcode)
   - [Table of Contents](#table-of-contents)
-  - [About](#about)
   - [Array \& Hashing](#array--hashing)
     - [1 Concatenation of Array \[Easy\]](#1-concatenation-of-array-easy)
     - [2 Contains Duplicate \[Easy\]](#2-contains-duplicate-easy)
     - [3 Valid Anagram \[Easy\]](#3-valid-anagram-easy)
     - [4 Two Sum \[Easy\]](#4-two-sum-easy)
-    - [5 Group Anagrams \[Medium\]](#5-group-anagrams-medium)
     - [6 Top K Frequent Elements \[Medium\]](#6-top-k-frequent-elements-medium)
     - [7 Encode and Decode Strings \[Medium\]](#7-encode-and-decode-strings-medium)
 - [Template](#template)
@@ -1270,6 +1268,7 @@ public:
     - Case 2: sum < target: The total is too small. To make it bigger, the only logical move is to increase the smaller number. So, I must move the left pointer inward (left++).
     - YES
     - textbook-quality solution !!!
+
 ```cpp
 // Solution 4
 class Solution {
@@ -1302,6 +1301,8 @@ public:
 // O(nlogn)
 // Space complexity: 
 // O(n)
+
+```
 ```
 
 ---

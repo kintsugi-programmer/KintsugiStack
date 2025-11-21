@@ -126,6 +126,11 @@ When you compile a Java program:
 
 ## Java Installation & Components
 
+```bash
+sudo apt update
+sudo apt install openjdk-17-jdk
+```
+
 ### JDK, JRE, and JVM Relationship
 ```
 JDK (Java Development Kit)
