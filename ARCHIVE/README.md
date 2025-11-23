@@ -292,6 +292,8 @@ LATER
 - [MUI](https://mui.com/core/): Popular Material Design component library for React.
 - [Awesome Loaders](https://awesome-loaders.netlify.app/): Collection of loading animations.
 - [Hover Dev](https://www.hover.dev/): Addicting, interactive, animated UI components and templates for  React,  Tailwind CSS, Framer motion logo Framer Motion & more. Copy & paste them into your code with 2 clicks.
+- [BulkCompressImages](https://imagecompressr.com/): Bulk Compress Images.
+- [WebP](https://towebp.io/): Bulk Images -> .webp converter.
 
 ## Cloudflare Tunnels
 Deploy applications from local machines using Cloudflare Tunnels.
