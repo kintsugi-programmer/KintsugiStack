@@ -88,7 +88,11 @@ mkdir ~/BaliGit
 
 * [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 * Install via AppCenter
-
+```bash
+# ctrl + p : open command panel vsc
+ext install GitHub.github-vscode-theme
+ext install dsznajder.es7-react-js-snippets
+```
 ### System Settings Tweaks
 
 * **Settings > Date & Time** → Show Seconds, Week Number
