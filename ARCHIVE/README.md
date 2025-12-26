@@ -92,6 +92,7 @@ mkdir ~/BaliGit
 # ctrl + p : open command panel vsc
 ext install GitHub.github-vscode-theme
 ext install dsznajder.es7-react-js-snippets
+ext install bradlc.vscode-tailwindcss
 ```
 ### System Settings Tweaks
 
