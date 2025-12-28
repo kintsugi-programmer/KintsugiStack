@@ -208,6 +208,10 @@ LATER
   - [Cloudflare Tunnels](#cloudflare-tunnels)
   - [SSL Certificate](#ssl-certificate)
   - [REPOS](#repos)
+  - [Prompts](#prompts)
+    - [Notes Formatting](#notes-formatting)
+    - [Notes Formatting Nested Lines](#notes-formatting-nested-lines)
+    - [Clean isometric data visualization chart](#clean-isometric-data-visualization-chart)
   - [KintsugiProgrammer's Teaching Intro](#kintsugiprogrammers-teaching-intro)
     - [Option 1: Direct \& No-Fluff](#option-1-direct--no-fluff)
     - [Version 1: Professional \& Direct](#version-1-professional--direct)
@@ -347,6 +351,24 @@ cloudflared tunnel run my-app
 - https://github.com/GokuMohandas/Made-With-ML
 - https://github.com/sdmg15/Best-websites-a-programmer-should-visit
 - https://github.com/kamranahmedse/developer-roadmap
+
+## Prompts
+
+### Notes Formatting
+```
+Create super depth notes in Markdown (.md) format with 100% information preserved, no loss. Use simple grammar and keep everything clear, direct, and well-structured. using headings, subheadings,paragraphs, statements and code blocks when needed. Include every detail, definition, example, and step exactly from the source. transform the given content into clean, readable .md format.
+```
+
+### Notes Formatting Nested Lines
+```
+Create super depth notes in Markdown (.md) format with 100% information preserved, no loss. Use simple grammar and keep everything clear, direct, and well-structured. using headings, subheadings,paragraphs, statements and code blocks when needed. Include every detail, definition, example, and step exactly from the source. transform the given content into clean, readable .md format.
+and no #, just nested - lines plaintext, add bold wherever necessary
+```
+
+### Clean isometric data visualization chart
+```
+Create a minimalist isometric data visualization chart on a clean white background. Include a short, modern tech-style heading at the top (2–4 words max). The heading should be subtle, clean, and not overpower the visuals. The chart should show visual depth using isometric perspective, soft shadows, and gentle gradients. Use an aesthetic, futuristic design with lots of white space. Include very little text other than the short heading and essential labels or values. Keep typography small, precise, and sans-serif. Focus on clarity, accuracy, and visual storytelling through shapes and depth rather than text. Avoid clutter, strong textures, and heavy backgrounds. No watermark, no border, no extra decorations.
+```
 
 ## KintsugiProgrammer's Teaching Intro 
 ### Option 1: Direct & No-Fluff
