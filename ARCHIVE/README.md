@@ -10,6 +10,15 @@
 ```bash
 sudo apt update && sudo apt upgrade && sudo apt autoremove
 ```
+```bash
+softwareupdate --list
+softwareupdate --install --all
+sudo chown -R $(whoami):admin /opt/homebrew
+brew update        # refresh package list
+brew upgrade       # upgrade installed packages
+brew cleanup       # optional: remove old versions
+brew doctor
+```
 
 ### Browsers
 
